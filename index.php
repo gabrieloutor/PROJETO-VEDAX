@@ -10,4 +10,3 @@ echo '<!DOCTYPE html>
         TESTE
     </body>
 </html>';
-?>
