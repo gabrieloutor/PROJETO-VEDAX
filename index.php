@@ -1,69 +1,309 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>
-			VEDAX
-		</title>
-		<meta charset="UTF-8">
-		<meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação."/>
-		<meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
-		<meta name="author" content="Gabriel Outor">
-		<link rel="stylesheet" type="text/css" href="/projeto-vedax/css/style.css">
-	</head>
-	<body>
-            <nav class="navigation">
-		<ul class="menu">
-			<li class="menuhome">
-				<a href="/projeto-vedax/">Home</a>
-			</li>
-			<li class="menuavedax">
-				<a href="/projeto-vedax/a-vedax.php">A Vedax</a>
-			</li>
-			<li class="menuprodutos">
-				<a href="/projeto-vedax/produtos.php">Produtos</a>
-				<ul>
-					<li class="menuflanges">
-						<a href="/projeto-vedax/flanges.php">Flanges</a>
-					</li>
-					<li class="menurotativos">
-						<a href="/projeto-vedax/flanges-rotativos.php">Flanges Rotativos</a>
-					</li>
-					<li class="menuaforjados">
-						<a href="/projeto-vedax/aneis-forjados.php">Anéis Forjados</a>
-					</li>
-					<li class="menudforjados">
-						<a href="/projeto-vedax/discos-forjados.php">Discos Forjados</a>
-					</li>
-					<li class="menufespeciais">
-						<a href="/projeto-vedax/forjados-especiais.php">Forjados Especiais</a>
-					</li>
-					<li class="menuconexoes">
-						<a href="/projeto-vedax/conexoes-forjados.php">Conexões Forjados</a>
-					</li>
-				</ul>
-			</li>
-			<li class="menuservico">
-				<a href="/projeto-vedax/servico.php">Serviço</a>
-				<ul>
-					<li class="menutratamentotermico">
-						<a href="/projeto-vedax/tratamento-termico.php">Tratamento Térmico</a>
-					</li>
-					<li class="menusoldagem">
-						<a href="/projeto-vedax/soldagem.php">Soldagem</a>
-					</li>
-				</ul>
-			</li>
-			<li class="menumercado">
-				<a href="/projeto-vedax/mercado.php">Mercado</a>
-			</li>
-			<li class="menufaleconosco">
-				<a href="/projeto-vedax/fale-conosco.php">Fale Conosco</a>
-			</li>
-		</ul>
-            </nav>
-            <header class="header-row">
-                TESTE
-            </header>
-	</body>
+   
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação."/>
+      <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
+      <meta name="author" content="Gabriel Outor">
+      <title>
+         Home
+      </title>
+      <!-- INICIO CSS -->
+      <link rel="stylesheet" href="/projeto-vedax/css/bootstrap.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.1024.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.980.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.768.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.480.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
+      <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic'rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css"type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css"type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/ext.phocagallery.css"type="text/css" />
+      <!-- FIM CSS -->
+      <!-- INICIO JAVASCRIPT -->
+      <script src="/vedax/media/jui/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/vedax/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+      <script src="/vedax/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+      <script src="/vedax/media/system/js/caption.js" type="text/javascript"></script>
+      <script src="/vedax/media/jui/js/bootstrap.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/jquery.isotope.min.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/touch.gallery.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/scripts.js" type="text/javascript"></script>
+      <script src="/vedax/media/mod_vt_nivo_slider/js/jquery.nivo.slider.min.js"type="text/javascript"></script>
+      <script src="http://zapt.net/vedax/modules/mod_as_menu/js/script.js" type="text/javascript"></script>
+      <script src="http://zapt.net/vedax/modules/mod_as_menu/js/jquery.mobilemenu.js"type="text/javascript"></script>
+      <script src="http://zapt.net/vedax/modules/mod_as_menu/js/jquery.hovermenu.js"type="text/javascript"></script>
+      <script type="text/javascript">
+      		              jQuery(window).on('load', function() {
+		                 new JCaption('img.caption');
+		              });
+		              jQuery.noConflict()
+      </script>
+      <!-- FIM JAVASCRIPT -->
+   </head>
+   <body class="com_content view-article task- itemid-101 body__">
+      <div class="wrapper">
+         <div class="wrapper-inner">
+            <!-- INICIO HEADER -->
+            <div id="header-row">
+               <div class="wrapper">
+                  <div class="container">
+                     <div class="row">
+                        <header>
+                           <div id="logo" class="span2">
+                              <a href="/vedax">
+                                    <img src="/projeto-vedax/images/logovedax.png" alt="VEDAX" />
+                                </a>
+                           </div>
+                           <div class="moduletable navigation ">
+                              <div class="moduletable-wrapper">
+                                 <style type="text/css">
+                                    #as-menu, #as-menu ul.as-menu li { border-radius:
+                                    5px; } #as-menu ul.as-menu > li > a, #as-menu ul.as-menu > li > span {
+                                    font-size: 14px; font-family: 'Advent Pro', Arial, serif; font-weight:
+                                    600; } #as-menu ul.as-menu > li.active > a, #as-menu ul.as-menu
+                                    > li.asHover > a, #as-menu ul.as-menu > li.current > a, #as-menu ul.as-menu
+                                    > li.active > span, #as-menu ul.as-menu > li.asHover > span, #as-menu ul.as-menu
+                                    > li.current > span, #as-menu ul.as-menu > li > a:hover, #as-menu ul.as-menu
+                                    > li > span:hover, #as-menu ul.as-menu ul li a:hover, #as-menu ul.as-menu
+                                    ul li span:hover, #as-menu ul.as-menu ul li.active > a, #as-menu ul.as-menu
+                                    ul li.asHover > a, #as-menu ul.as-menu ul li.active > span, #as-menu ul.as-menu
+                                    ul li.asHover > span {  } #as-menu ul.as-menu ul { width: 191px;
+                                    -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px;
+                                    -webkit-border-bottom-right-radius: 5px; -moz-border-radius-bottomright:
+                                    5px; border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius:
+                                    5px; -moz-border-radius-bottomleft: 5px; border-bottom-left-radius: 5px;
+                                    } #as-menu ul.as-menu ul li a, #as-menu ul.as-menu ul li span { font-size:
+                                    14px; font-family: 'Advent Pro', Arial, serif; font-weight: 600;  } #as-menu ul.as-menu li li:hover ul, #as-menu ul.as-menu li li.asHover
+                                    ul, #as-menu ul.as-menu li li li:hover ul, #as-menu ul.as-menu li li li.asHover
+                                    ul { left: 191px; }
+                                 </style>
+                                    <script type="text/javascript">
+                                        jQuery(function() {
+                                            jQuery('.as-menu').mobileMenu({});
+                                        });
+                                    </script>
+                                    <!-- INICIO MENU -->
+                                 <div id="as-menu" class="menu-wrapper">
+                                    <ul class="as-menu ">
+                                       <li class="item-101 current active">
+                                          <a href="/vedax/">Home</a>
+                                       </li>
+                                       <li class="item-102">
+                                          <a href="/vedax/index.php/a-vedax">A Vedax</a>
+                                       </li>
+                                       <li class="item-103 deeper parent">
+                                          <a href="/vedax/index.php/produtoss">Produtos</a>
+                                          <ul>
+                                             <li class="item-216">
+                                                <a href="/vedax/index.php/produtoss/flanges">Flanges</a>
+                                             </li>
+                                             <li class="item-223">
+                                                <a href="/vedax/index.php/produtoss/flanges-rotativos">Flanges Rotativos</a>
+                                             </li>
+                                             <li class="item-217">
+                                                <a href="/vedax/index.php/produtoss/aneis-forjados">Anéis Forjados</a>
+                                             </li>
+                                             <li class="item-218">
+                                                <a href="/vedax/index.php/produtoss/discos-forjados">Discos Forjados</a>
+                                             </li>
+                                             <li class="item-219">
+                                                <a href="/vedax/index.php/produtoss/forjados-especiais">Forjados Especiais</a>
+                                             </li>
+                                             <li class="item-220">
+                                                <a href="/vedax/index.php/produtoss/conexoes-forjados">Conexões Forjados</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="item-104 deeper parent">
+                                          <a href="/vedax/index.php/servico">Serviço</a>
+                                          <ul>
+                                             <li class="item-221">
+                                                <a href="/vedax/index.php/servico/tratamento-termico">Tratamento Térmico</a>
+                                             </li>
+                                             <li class="item-222">
+                                                <a href="/vedax/index.php/servico/soldagem">Soldagem</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="item-105">
+                                          <a href="/vedax/index.php/mercado">Mercado</a>
+                                       </li>
+                                       <li class="item-107">
+                                          <a href="/vedax/index.php/fale-conosco">Fale Conosco</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                    <!-- FIM MENU -->
+                                 <script type="text/javascript">
+                                        jQuery(function() {
+           jQuery('ul.as-menu').asmenu({
+              hoverClass: 'asHover',
+              pathClass: 'overideThisToUse',
+              pathLevels: 1,
+              delay: 500,
+              speed: 'normal',
+              autoArrows: false,
+              dropShadows: true,
+              disableHI: false,
+              onInit: function() {},
+              onBeforeShow: function() {},
+              onShow: function() {},
+              onHide: function() {}
+           });
+        });
+                                 </script>
+                              </div>
+                           </div>
+                        </header>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="slider-row">
+               <div class="moduletable  ">
+                  <div class="moduletable-wrapper">
+                     <div class="vt_nivo_slider">
+                        <div id="vtnivo89" class="slider-wrapper theme-default theme-default89 nivocontrol-bottomright nivo-bullets05 nivo-arrows10 captionposition-topleft captionrounded-all"
+                        style="height: auto; width: auto;">
+                           <div class="ribbon">
+                           </div>
+                           <div id="vt_nivo_slider89" class="nivoSlider">
+                              <img src="/vedax/images/fab/fo56.jpg" alt="Vinaora Nivo Slider 3.x" />
+                              <img src="/vedax/images/fab/fo57.jpg" alt="Vinaora Nivo Slider 3.x" />
+                              <img src="/vedax/images/fab/fo58.jpg" alt="Vinaora Nivo Slider 3.x" />
+                           </div>
+                        </div>
+                     </div>
+                     <script type="text/javascript">
+                                    jQuery.noConflict();
+                    jQuery(window).load(function() {
+                       jQuery('#vt_nivo_slider89').nivoSlider({
+                          effect: 'fold',
+                          // Specify sets like: 'fold,fade,sliceDown'
+                          slices: 15,
+                          // For slice animations
+                          boxCols: 8,
+                          // For box animations
+                          boxRows: 4,
+                          // For box animations
+                          animSpeed: 500,
+                          // Slide transition speed
+                          pauseTime: 3000,
+                          // How long each slide will show
+                          startSlide: 2,
+                          // Set starting Slide (0 index)
+                          directionNav: true,
+                          // Next & Prev navigation
+                          controlNav: true,
+                          // 1,2,3... navigation
+                          controlNavThumbs: false,
+                          // Use thumbnails for Control Nav
+                          pauseOnHover: true,
+                          // Stop animation while hovering
+                          manualAdvance: false,
+                          // Force manual transitions
+                          prevText: 'Prev',
+                          // Prev directionNav text
+                          nextText: 'Next',
+                          // Next directionNav text
+                          randomStart: true,
+                          // Start on a random slide
+                          beforeChange: function() {},
+                          // Triggers before a slide transition
+                          afterChange: function() {},
+                          // Triggers after a slide transition
+                          slideshowEnd: function() {},
+                          // Triggers after all slides have been shown
+                          lastSlide: function() {},
+                          // Triggers when last slide is shown
+                          afterLoad: function() {} // Triggers when slider has loaded
+                       });
+                    });
+                     </script>
+                  </div>
+               </div>
+            </div>
+            <!-- FIM HEADER-->
+            <!-- INICIO CONTEUDO -->
+            <div id="content-row">
+               <div class="container">
+                  <div class="content-inner row">
+                     <!-- INICIO ESQUERDA-->
+                     ESQUERDA
+                     <!-- FIM ESQUERDA-->
+                     <!-- PRINCIPAL -->
+                     <div id="component" class="span12">
+                        <div id="system-message-container">
+                            SYSTEM MSG CONTAINER
+                        </div>
+                        <div class="page-item page-item__">
+                           <div class="item_fulltext">
+                               FULLTEXT
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- INICIO FOOTER-->
+      <div id="footer">
+         <div id="footer-row">
+            <div class="container">
+               <div class="row">
+                  <div class="footer-row-1">
+                     <div class="moduletable contactus ">
+                        <div class="moduletable-wrapper">
+                           <div class="mod-custom mod-custom__contactus">
+                              <p>
+                                 <span class="icon-phone">
+                                       0800 553 597
+                                 </span>
+                                 <br />
+                                 <span class="icon-phone">
+                                    +55 11 4161-3597
+                                    <br />
+                                 </span>
+                              </p>
+                              <h4>
+                                 <span class="icon-mail">
+                                       Email:
+                                    <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
+                                 </span>
+                              </h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="copyright-row">
+            <div class="container">
+               <div id="trademark">
+                  Copyright &copy; 2015 VEDAX
+               </div>
+               <div id="copyright-menu" class="row">
+                  <div id="ascopy">
+                     <a href="http://www.astemplates.com/" target="_blank">
+                              &nbsp;&nbsp;&nbsp;&nbsp;DESIGNED BY:&nbsp;&nbsp;AS DESIGNING
+                          </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- FIM FOOTER-->
+      <div id="back-top">
+         <a href="#"><span></span></a>
+      </div>
+   </body>
 
 </html>
