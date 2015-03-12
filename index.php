@@ -35,7 +35,7 @@
       <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
-      <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+      <link href="/projeto-vedax/css/font.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.phocagallery.css" type="text/css" />
