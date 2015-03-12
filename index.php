@@ -39,6 +39,38 @@
       <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.phocagallery.css" type="text/css" />
+      <style type="text/css">
+        #as-menu,#as-menu ul.as-menu li {
+                border-radius:5px;
+        }
+        #as-menu ul.as-menu>li>a,#as-menu ul.as-menu>li>span {
+                font-size:14px;
+                font-family:'Advent Pro',Arial,serif;
+                font-weight:600;
+        }
+        #as-menu ul.as-menu>li.active>a,#as-menu ul.as-menu>li.asHover>a,#as-menu ul.as-menu>li.current>a,#as-menu ul.as-menu>li.active>span,#as-menu ul.as-menu>li.asHover>span,#as-menu ul.as-menu>li.current>span,#as-menu ul.as-menu>li>a:hover,#as-menu ul.as-menu>li>span:hover,#as-menu ul.as-menu ul li a:hover,#as-menu ul.as-menu ul li span:hover,#as-menu ul.as-menu ul li.active>a,#as-menu ul.as-menu ul li.asHover>a,#as-menu ul.as-menu ul li.active>span,#as-menu ul.as-menu ul li.asHover>span {
+        }
+        #as-menu ul.as-menu ul {
+                width:191px;
+                -webkit-border-radius:0px;
+                -moz-border-radius:0px;
+                border-radius:0px;
+                -webkit-border-bottom-right-radius:5px;
+                -moz-border-radius-bottomright:5px;
+                border-bottom-right-radius:5px;
+                -webkit-border-bottom-left-radius:5px;
+                -moz-border-radius-bottomleft:5px;
+                border-bottom-left-radius:5px;
+        }
+        #as-menu ul.as-menu ul li a,#as-menu ul.as-menu ul li span {
+                font-size:14px;
+                font-family:'Advent Pro',Arial,serif;
+                font-weight:600;
+        }
+        #as-menu ul.as-menu li li:hover ul,#as-menu ul.as-menu li li.asHover ul,#as-menu ul.as-menu li li li:hover ul,#as-menu ul.as-menu li li li.asHover ul {
+                left: 191px;
+        }
+     </style>
       <!-- FIM CSS -->
       <!-- INICIO JAVASCRIPT -->
       <script src="/projeto-vedax/js/jquery.min.js" type="text/javascript"></script>
@@ -77,38 +109,6 @@
                            </div>
                            <div class="moduletable navigation ">
                               <div class="moduletable-wrapper">
-                                 <style type="text/css">
-                                    #as-menu,#as-menu ul.as-menu li {
-                                            border-radius:5px;
-                                    }
-                                    #as-menu ul.as-menu>li>a,#as-menu ul.as-menu>li>span {
-                                            font-size:14px;
-                                            font-family:'Advent Pro',Arial,serif;
-                                            font-weight:600;
-                                    }
-                                    #as-menu ul.as-menu>li.active>a,#as-menu ul.as-menu>li.asHover>a,#as-menu ul.as-menu>li.current>a,#as-menu ul.as-menu>li.active>span,#as-menu ul.as-menu>li.asHover>span,#as-menu ul.as-menu>li.current>span,#as-menu ul.as-menu>li>a:hover,#as-menu ul.as-menu>li>span:hover,#as-menu ul.as-menu ul li a:hover,#as-menu ul.as-menu ul li span:hover,#as-menu ul.as-menu ul li.active>a,#as-menu ul.as-menu ul li.asHover>a,#as-menu ul.as-menu ul li.active>span,#as-menu ul.as-menu ul li.asHover>span {
-                                    }
-                                    #as-menu ul.as-menu ul {
-                                            width:191px;
-                                            -webkit-border-radius:0px;
-                                            -moz-border-radius:0px;
-                                            border-radius:0px;
-                                            -webkit-border-bottom-right-radius:5px;
-                                            -moz-border-radius-bottomright:5px;
-                                            border-bottom-right-radius:5px;
-                                            -webkit-border-bottom-left-radius:5px;
-                                            -moz-border-radius-bottomleft:5px;
-                                            border-bottom-left-radius:5px;
-                                    }
-                                    #as-menu ul.as-menu ul li a,#as-menu ul.as-menu ul li span {
-                                            font-size:14px;
-                                            font-family:'Advent Pro',Arial,serif;
-                                            font-weight:600;
-                                    }
-                                    #as-menu ul.as-menu li li:hover ul,#as-menu ul.as-menu li li.asHover ul,#as-menu ul.as-menu li li li:hover ul,#as-menu ul.as-menu li li li.asHover ul {
-                                            left: 191px;
-                                    }
-                                 </style>
                                     <script type="text/javascript">
                                         jQuery(function() {
                                             jQuery('.as-menu').mobileMenu({});
@@ -118,50 +118,50 @@
                                  <div id="as-menu" class="menu-wrapper">
                                     <ul class="as-menu ">
                                        <li class="item-101 current active">
-                                          <a href="/vedax/">Home</a>
+                                          <a href="/projeto-vedax/">Home</a>
                                        </li>
                                        <li class="item-102">
-                                          <a href="/vedax/index.php/a-vedax">A Vedax</a>
+                                          <a href="/projeto-vedax/a-vedax.php">A Vedax</a>
                                        </li>
                                        <li class="item-103 deeper parent">
-                                          <a href="/vedax/index.php/produtoss">Produtos</a>
+                                          <a href="/projeto-vedax/produtos.php">Produtos</a>
                                           <ul>
                                              <li class="item-216">
-                                                <a href="/vedax/index.php/produtoss/flanges">Flanges</a>
+                                                <a href="/projeto-vedax/flanges.php">Flanges</a>
                                              </li>
                                              <li class="item-223">
-                                                <a href="/vedax/index.php/produtoss/flanges-rotativos">Flanges Rotativos</a>
+                                                <a href="/projeto-vedax/flangesrotativos.php">Flanges Rotativos</a>
                                              </li>
                                              <li class="item-217">
-                                                <a href="/vedax/index.php/produtoss/aneis-forjados">Anéis Forjados</a>
+                                                <a href="/projeto-vedax/aneisforjados.php">Anéis Forjados</a>
                                              </li>
                                              <li class="item-218">
-                                                <a href="/vedax/index.php/produtoss/discos-forjados">Discos Forjados</a>
+                                                <a href="/projeto-vedax/discosforjados.php">Discos Forjados</a>
                                              </li>
                                              <li class="item-219">
-                                                <a href="/vedax/index.php/produtoss/forjados-especiais">Forjados Especiais</a>
+                                                <a href="/projeto-vedax/forjadosespeciais.php">Forjados Especiais</a>
                                              </li>
                                              <li class="item-220">
-                                                <a href="/vedax/index.php/produtoss/conexoes-forjados">Conexões Forjados</a>
+                                                <a href="/projeto-vedax/conexoesforjados.php">Conexões Forjados</a>
                                              </li>
                                           </ul>
                                        </li>
                                        <li class="item-104 deeper parent">
-                                          <a href="/vedax/index.php/servico">Serviço</a>
+                                          <a href="/projeto-vedax/servico.php">Serviço</a>
                                           <ul>
                                              <li class="item-221">
-                                                <a href="/vedax/index.php/servico/tratamento-termico">Tratamento Térmico</a>
+                                                <a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
                                              </li>
                                              <li class="item-222">
-                                                <a href="/vedax/index.php/servico/soldagem">Soldagem</a>
+                                                <a href="/projeto-vedax/soldagem.php">Soldagem</a>
                                              </li>
                                           </ul>
                                        </li>
                                        <li class="item-105">
-                                          <a href="/vedax/index.php/mercado">Mercado</a>
+                                          <a href="/projeto-vedax/mercado.php">Mercado</a>
                                        </li>
                                        <li class="item-107">
-                                          <a href="/vedax/index.php/fale-conosco">Fale Conosco</a>
+                                          <a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
                                        </li>
                                     </ul>
                                  </div>
