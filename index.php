@@ -21,28 +21,28 @@
       <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
       <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic'rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css"type="text/css" />
-      <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css"type="text/css" />
-      <link rel="stylesheet" href="/projeto-vedax/css/ext.phocagallery.css"type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/ext.phocagallery.css" type="text/css" />
       <!-- FIM CSS -->
       <!-- INICIO JAVASCRIPT -->
-      <script src="/vedax/media/jui/js/jquery.min.js" type="text/javascript"></script>
-      <script src="/vedax/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
-      <script src="/vedax/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
-      <script src="/vedax/media/system/js/caption.js" type="text/javascript"></script>
-      <script src="/vedax/media/jui/js/bootstrap.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/jquery-noconflict.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/jquery-migrate.min.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/caption.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/bootstrap.js" type="text/javascript"></script>
       <script src="/projeto-vedax/js/jquery.isotope.min.js" type="text/javascript"></script>
       <script src="/projeto-vedax/js/touch.gallery.js" type="text/javascript"></script>
       <script src="/projeto-vedax/js/scripts.js" type="text/javascript"></script>
-      <script src="/vedax/media/mod_vt_nivo_slider/js/jquery.nivo.slider.min.js"type="text/javascript"></script>
-      <script src="http://zapt.net/vedax/modules/mod_as_menu/js/script.js" type="text/javascript"></script>
-      <script src="http://zapt.net/vedax/modules/mod_as_menu/js/jquery.mobilemenu.js"type="text/javascript"></script>
-      <script src="http://zapt.net/vedax/modules/mod_as_menu/js/jquery.hovermenu.js"type="text/javascript"></script>
+      <script src="/projeto-vedax/js/jquery.nivo.slider.min.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/js/script.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/jquery.mobilemenu.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/jquery.hovermenu.js" type="text/javascript"></script>
       <script type="text/javascript">
-      		              jQuery(window).on('load', function() {
-		                 new JCaption('img.caption');
-		              });
-		              jQuery.noConflict()
+            jQuery(window).on('load', function() {
+               new JCaption('img.caption');
+            });
+            jQuery.noConflict()
       </script>
       <!-- FIM JAVASCRIPT -->
    </head>
@@ -63,25 +63,36 @@
                            <div class="moduletable navigation ">
                               <div class="moduletable-wrapper">
                                  <style type="text/css">
-                                    #as-menu, #as-menu ul.as-menu li { border-radius:
-                                    5px; } #as-menu ul.as-menu > li > a, #as-menu ul.as-menu > li > span {
-                                    font-size: 14px; font-family: 'Advent Pro', Arial, serif; font-weight:
-                                    600; } #as-menu ul.as-menu > li.active > a, #as-menu ul.as-menu
-                                    > li.asHover > a, #as-menu ul.as-menu > li.current > a, #as-menu ul.as-menu
-                                    > li.active > span, #as-menu ul.as-menu > li.asHover > span, #as-menu ul.as-menu
-                                    > li.current > span, #as-menu ul.as-menu > li > a:hover, #as-menu ul.as-menu
-                                    > li > span:hover, #as-menu ul.as-menu ul li a:hover, #as-menu ul.as-menu
-                                    ul li span:hover, #as-menu ul.as-menu ul li.active > a, #as-menu ul.as-menu
-                                    ul li.asHover > a, #as-menu ul.as-menu ul li.active > span, #as-menu ul.as-menu
-                                    ul li.asHover > span {  } #as-menu ul.as-menu ul { width: 191px;
-                                    -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px;
-                                    -webkit-border-bottom-right-radius: 5px; -moz-border-radius-bottomright:
-                                    5px; border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius:
-                                    5px; -moz-border-radius-bottomleft: 5px; border-bottom-left-radius: 5px;
-                                    } #as-menu ul.as-menu ul li a, #as-menu ul.as-menu ul li span { font-size:
-                                    14px; font-family: 'Advent Pro', Arial, serif; font-weight: 600;  } #as-menu ul.as-menu li li:hover ul, #as-menu ul.as-menu li li.asHover
-                                    ul, #as-menu ul.as-menu li li li:hover ul, #as-menu ul.as-menu li li li.asHover
-                                    ul { left: 191px; }
+                                    #as-menu,#as-menu ul.as-menu li {
+                                            border-radius:5px;
+                                    }
+                                    #as-menu ul.as-menu>li>a,#as-menu ul.as-menu>li>span {
+                                            font-size:14px;
+                                            font-family:'Advent Pro',Arial,serif;
+                                            font-weight:600;
+                                    }
+                                    #as-menu ul.as-menu>li.active>a,#as-menu ul.as-menu>li.asHover>a,#as-menu ul.as-menu>li.current>a,#as-menu ul.as-menu>li.active>span,#as-menu ul.as-menu>li.asHover>span,#as-menu ul.as-menu>li.current>span,#as-menu ul.as-menu>li>a:hover,#as-menu ul.as-menu>li>span:hover,#as-menu ul.as-menu ul li a:hover,#as-menu ul.as-menu ul li span:hover,#as-menu ul.as-menu ul li.active>a,#as-menu ul.as-menu ul li.asHover>a,#as-menu ul.as-menu ul li.active>span,#as-menu ul.as-menu ul li.asHover>span {
+                                    }
+                                    #as-menu ul.as-menu ul {
+                                            width:191px;
+                                            -webkit-border-radius:0px;
+                                            -moz-border-radius:0px;
+                                            border-radius:0px;
+                                            -webkit-border-bottom-right-radius:5px;
+                                            -moz-border-radius-bottomright:5px;
+                                            border-bottom-right-radius:5px;
+                                            -webkit-border-bottom-left-radius:5px;
+                                            -moz-border-radius-bottomleft:5px;
+                                            border-bottom-left-radius:5px;
+                                    }
+                                    #as-menu ul.as-menu ul li a,#as-menu ul.as-menu ul li span {
+                                            font-size:14px;
+                                            font-family:'Advent Pro',Arial,serif;
+                                            font-weight:600;
+                                    }
+                                    #as-menu ul.as-menu li li:hover ul,#as-menu ul.as-menu li li.asHover ul,#as-menu ul.as-menu li li li:hover ul,#as-menu ul.as-menu li li li.asHover ul {
+                                            left: 191px;
+                                    }
                                  </style>
                                     <script type="text/javascript">
                                         jQuery(function() {
@@ -141,22 +152,22 @@
                                  </div>
                                     <!-- FIM MENU -->
                                  <script type="text/javascript">
-                                        jQuery(function() {
-           jQuery('ul.as-menu').asmenu({
-              hoverClass: 'asHover',
-              pathClass: 'overideThisToUse',
-              pathLevels: 1,
-              delay: 500,
-              speed: 'normal',
-              autoArrows: false,
-              dropShadows: true,
-              disableHI: false,
-              onInit: function() {},
-              onBeforeShow: function() {},
-              onShow: function() {},
-              onHide: function() {}
-           });
-        });
+                                    jQuery(function () {
+                                        jQuery('ul.as-menu').asmenu({
+                                            hoverClass: 'asHover',
+                                            pathClass: 'overideThisToUse',
+                                            pathLevels: 1,
+                                            delay: 500,
+                                            speed: 'normal',
+                                            autoArrows: false,
+                                            dropShadows: true,
+                                            disableHI: false,
+                                            onInit: function () {},
+                                            onBeforeShow: function () {},
+                                            onShow: function () {},
+                                            onHide: function () {}
+                                        });
+                                    });
                                  </script>
                               </div>
                            </div>
@@ -174,57 +185,57 @@
                            <div class="ribbon">
                            </div>
                            <div id="vt_nivo_slider89" class="nivoSlider">
-                              <img src="/vedax/images/fab/fo56.jpg" alt="Vinaora Nivo Slider 3.x" />
-                              <img src="/vedax/images/fab/fo57.jpg" alt="Vinaora Nivo Slider 3.x" />
-                              <img src="/vedax/images/fab/fo58.jpg" alt="Vinaora Nivo Slider 3.x" />
+                              <img src="/projeto-vedax/images/fo56.jpg" alt="Vinaora Nivo Slider 3.x" />
+                              <img src="/projeto-vedax/images/fo57.jpg" alt="Vinaora Nivo Slider 3.x" />
+                              <img src="/projeto-vedax/images/fo58.jpg" alt="Vinaora Nivo Slider 3.x" />
                            </div>
                         </div>
                      </div>
                      <script type="text/javascript">
-                                    jQuery.noConflict();
-                    jQuery(window).load(function() {
-                       jQuery('#vt_nivo_slider89').nivoSlider({
-                          effect: 'fold',
-                          // Specify sets like: 'fold,fade,sliceDown'
-                          slices: 15,
-                          // For slice animations
-                          boxCols: 8,
-                          // For box animations
-                          boxRows: 4,
-                          // For box animations
-                          animSpeed: 500,
-                          // Slide transition speed
-                          pauseTime: 3000,
-                          // How long each slide will show
-                          startSlide: 2,
-                          // Set starting Slide (0 index)
-                          directionNav: true,
-                          // Next & Prev navigation
-                          controlNav: true,
-                          // 1,2,3... navigation
-                          controlNavThumbs: false,
-                          // Use thumbnails for Control Nav
-                          pauseOnHover: true,
-                          // Stop animation while hovering
-                          manualAdvance: false,
-                          // Force manual transitions
-                          prevText: 'Prev',
-                          // Prev directionNav text
-                          nextText: 'Next',
-                          // Next directionNav text
-                          randomStart: true,
-                          // Start on a random slide
-                          beforeChange: function() {},
-                          // Triggers before a slide transition
-                          afterChange: function() {},
-                          // Triggers after a slide transition
-                          slideshowEnd: function() {},
-                          // Triggers after all slides have been shown
-                          lastSlide: function() {},
-                          // Triggers when last slide is shown
-                          afterLoad: function() {} // Triggers when slider has loaded
-                       });
-                    });
+                        jQuery.noConflict();
+                            jQuery(window).load(function () {
+                                jQuery('#vt_nivo_slider89').nivoSlider({
+                                        effect: 'fold',
+                                        // Specify sets like: 'fold,fade,sliceDown'
+                                        slices: 15,
+                                        // For slice animations
+                                        boxCols: 8,
+                                        // For box animations
+                                        boxRows: 4,
+                                        // For box animations
+                                        animSpeed: 500,
+                                        // Slide transition speed
+                                        pauseTime: 3000,
+                                        // How long each slide will show
+                                        startSlide: 2,
+                                        // Set starting Slide (0 index)
+                                        directionNav: true,
+                                        // Next & Prev navigation
+                                        controlNav: true,
+                                        // 1,2,3... navigation
+                                        controlNavThumbs: false,
+                                        // Use thumbnails for Control Nav
+                                        pauseOnHover: true,
+                                        // Stop animation while hovering
+                                        manualAdvance: false,
+                                        // Force manual transitions
+                                        prevText: 'Prev',
+                                        // Prev directionNav text
+                                        nextText: 'Next',
+                                        // Next directionNav text
+                                        randomStart: true,
+                                        // Start on a random slide
+                                        beforeChange: function () {},
+                                        // Triggers before a slide transition
+                                        afterChange: function () {},
+                                        // Triggers after a slide transition
+                                        slideshowEnd: function () {},
+                                        // Triggers after all slides have been shown
+                                        lastSlide: function () {},
+                                        // Triggers when last slide is shown
+                                        afterLoad: function () {} // Triggers when slider has loaded
+                            });
+                        });
                      </script>
                   </div>
                </div>
@@ -264,10 +275,6 @@
                            <div class="mod-custom mod-custom__contactus">
                               <p>
                                  <span class="icon-phone">
-                                       0800 553 597
-                                 </span>
-                                 <br />
-                                 <span class="icon-phone">
                                     +55 11 4161-3597
                                     <br />
                                  </span>
@@ -292,8 +299,8 @@
                </div>
                <div id="copyright-menu" class="row">
                   <div id="ascopy">
-                     <a href="http://www.astemplates.com/" target="_blank">
-                              &nbsp;&nbsp;&nbsp;&nbsp;DESIGNED BY:&nbsp;&nbsp;AS DESIGNING
+                     <a href="http://www.facebook.com/gabriel.outor" target="_blank">
+                              &nbsp;&nbsp;&nbsp;&nbsp;DESENVOLVIDO POR:&nbsp;&nbsp;GABRIEL OUTOR
                           </a>
                   </div>
                </div>
@@ -305,5 +312,4 @@
          <a href="#"><span></span></a>
       </div>
    </body>
-
 </html>
