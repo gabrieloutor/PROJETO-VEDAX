@@ -1169,7 +1169,7 @@ div.modal.fade.in
 	height: 46px;
 	display: block;
 	margin-bottom: 7px;
-	background: url('/images/up.arrow.png') no-repeat center center;
+	background: url('../images/up.arrow.png') no-repeat center center;
 	-webkit-transition: 1s;
 	-moz-transition: 1s;
 	transition: 1s;
