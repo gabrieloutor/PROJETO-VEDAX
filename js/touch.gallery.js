@@ -112,10 +112,10 @@
 		// Listen for arrow keys
 		$(window).bind('keydown', function(e){
 		
-			if (e.keyCode == 37){
+			if (e.keyCode === 37){
 				showPrevious();
 			}
-			else if (e.keyCode==39){
+			else if (e.keyCode===39){
 				showNext();
 			}
 	

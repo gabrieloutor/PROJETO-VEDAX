@@ -81,7 +81,7 @@
       <script src="/projeto-vedax/js/touch.gallery.js" type="text/javascript"></script>
       <script src="/projeto-vedax/js/scripts.js" type="text/javascript"></script>
       <script src="/projeto-vedax/js/jquery.nivo.slider.min.js" type="text/javascript"></script>
-      <script src="/projeto-vedax/js/js/script.js" type="text/javascript"></script>
+      <script src="/projeto-vedax/js/script.js" type="text/javascript"></script>
       <script src="/projeto-vedax/js/jquery.mobilemenu.js" type="text/javascript"></script>
       <script src="/projeto-vedax/js/jquery.hovermenu.js" type="text/javascript"></script>
       <script type="text/javascript">
