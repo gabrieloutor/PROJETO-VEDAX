@@ -9,6 +9,26 @@
       <title>
          VEDAX - HOME
       </title>
+      <!-- INICIO FAVICON -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/projeto-vedax/images/icons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/projeto-vedax/images/icons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/projeto-vedax/images/icons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/projeto-vedax/images/icons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/projeto-vedax/images/icons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/projeto-vedax/images/icons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/projeto-vedax/images/icons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/projeto-vedax/images/icons/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/projeto-vedax/images/icons/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/projeto-vedax/images/icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/projeto-vedax/images/icons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/projeto-vedax/images/icons/favicon-16x16.png">
+      <link rel="manifest" href="/projeto-vedax/images/icons/manifest.json">
+      <link rel="icon" href="/projeto-vedax/images/icons/favicon.ico" />
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/projeto-vedax/images/icons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- FIM FAVICON -->
       <!-- INICIO CSS -->
       <link rel="stylesheet" href="/projeto-vedax/css/bootstrap.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" />
@@ -270,13 +290,13 @@
                            <div class="mod-custom mod-custom__contactus">
                               <p>
                                  <span class="icon-phone">
-                                    +55 11 4161-3597
+                                    &nbsp;&nbsp; +55 11 4161-3597
                                     <br />
                                  </span>
                               </p>
                               <h4>
                                  <span class="icon-mail">
-                                       Email:
+                                       &nbsp;&nbsp; Email:
                                     <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
                                  </span>
                               </h4>
