@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-   
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta charset="UTF-8">
@@ -8,15 +7,11 @@
       <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
       <meta name="author" content="Gabriel Outor">
       <title>
-         Home
+         VEDAX - HOME
       </title>
       <!-- INICIO CSS -->
       <link rel="stylesheet" href="/projeto-vedax/css/bootstrap.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" />
-      <link rel="stylesheet" href="/projeto-vedax/css/media.1024.css" type="text/css" />
-      <link rel="stylesheet" href="/projeto-vedax/css/media.980.css" type="text/css" />
-      <link rel="stylesheet" href="/projeto-vedax/css/media.768.css" type="text/css" />
-      <link rel="stylesheet" href="/projeto-vedax/css/media.480.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
@@ -42,7 +37,7 @@
             jQuery(window).on('load', function() {
                new JCaption('img.caption');
             });
-            jQuery.noConflict()
+            jQuery.noConflict();
       </script>
       <!-- FIM JAVASCRIPT -->
    </head>
