@@ -119,47 +119,47 @@
                                        <li class="item-101 current active">
                                           <a href="/projeto-vedax/">Home</a>
                                        </li>
-                                       <li class="item-102">
+                                       <li>
                                           <a href="/projeto-vedax/a-vedax.php">A Vedax</a>
                                        </li>
-                                       <li class="item-103 deeper parent">
+                                       <li>
                                           <a href="/projeto-vedax/produtos.php">Produtos</a>
                                           <ul>
-                                             <li class="item-216">
+                                             <li>
                                                 <a href="/projeto-vedax/flanges.php">Flanges</a>
                                              </li>
-                                             <li class="item-223">
+                                             <li>
                                                 <a href="/projeto-vedax/flangesrotativos.php">Flanges Rotativos</a>
                                              </li>
-                                             <li class="item-217">
+                                             <li>
                                                 <a href="/projeto-vedax/aneisforjados.php">Anéis Forjados</a>
                                              </li>
-                                             <li class="item-218">
+                                             <li>
                                                 <a href="/projeto-vedax/discosforjados.php">Discos Forjados</a>
                                              </li>
-                                             <li class="item-219">
+                                             <li>
                                                 <a href="/projeto-vedax/forjadosespeciais.php">Forjados Especiais</a>
                                              </li>
-                                             <li class="item-220">
+                                             <li>
                                                 <a href="/projeto-vedax/conexoesforjados.php">Conexões Forjados</a>
                                              </li>
                                           </ul>
                                        </li>
-                                       <li class="item-104 deeper parent">
+                                       <li>
                                           <a href="/projeto-vedax/servico.php">Serviço</a>
                                           <ul>
-                                             <li class="item-221">
+                                             <li>
                                                 <a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
                                              </li>
-                                             <li class="item-222">
+                                             <li>
                                                 <a href="/projeto-vedax/soldagem.php">Soldagem</a>
                                              </li>
                                           </ul>
                                        </li>
-                                       <li class="item-105">
+                                       <li>
                                           <a href="/projeto-vedax/mercado.php">Mercado</a>
                                        </li>
-                                       <li class="item-107">
+                                       <li>
                                           <a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
                                        </li>
                                     </ul>
@@ -288,15 +288,16 @@
                         <div class="moduletable-wrapper">
                            <div class="mod-custom mod-custom__contactus">
                               <p>
+                                  <h4>
                                  <span class="icon-phone">
-                                    &nbsp;&nbsp; +55 11 4161-3597
+                                    &#9743; +55 11 4161-3597
                                     <br />
                                  </span>
+                                  </h4>    
                               </p>
                               <h4>
                                  <span class="icon-mail">
-                                       &nbsp;&nbsp; Email:
-                                    <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
+                                    &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
                                  </span>
                               </h4>
                            </div>

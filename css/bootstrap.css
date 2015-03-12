@@ -6808,16 +6808,6 @@ input.invalid
 	content: "\3e";
 }
 
-.icon-phone:before
-{
-	content: "\3f";
-}
-
-.icon-mail:before
-{
-	content: "\40";
-}
-
 .icon-location:before
 {
 	content: "\41";
