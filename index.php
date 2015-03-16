@@ -41,7 +41,6 @@
       <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
-      <link rel="stylesheet" href="/projeto-vedax/css/ext.phocagallery.css" type="text/css" />
       <style type="text/css">
         #as-menu,#as-menu ul.as-menu li {
                 border-radius:5px;
