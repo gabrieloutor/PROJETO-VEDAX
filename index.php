@@ -43,7 +43,7 @@
                 border-radius:5px;
         }
         #as-menu ul.as-menu>li>a,#as-menu ul.as-menu>li>span {
-                font-size:14px;
+                font-size:15px;
                 font-family:'Advent Pro',Arial,serif;
                 font-weight:600;
         }
@@ -101,7 +101,7 @@
                   <div class="container">
                      <div class="row">
                         <header>
-                           <div id="logo" class="span2">
+                           <div id="logo" class="span">
                               <a href="/vedax">
                                     <img src="/projeto-vedax/images/logovedax.png" alt="VEDAX" />
                                 </a>
