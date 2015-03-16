@@ -65,7 +65,7 @@
                 border-bottom-left-radius:5px;
         }
         #as-menu ul.as-menu ul li a,#as-menu ul.as-menu ul li span {
-                font-size:14px;
+                font-size:15px;
                 font-family:'Advent Pro',Arial,serif;
                 font-weight:600;
         }
