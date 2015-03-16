@@ -34,6 +34,10 @@
       <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.1024.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.980.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.768.css" type="text/css" />
+      <link rel="stylesheet" href="/projeto-vedax/css/media.480.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
       <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
@@ -102,11 +106,11 @@
                      <div class="row">
                         <header>
                            <div id="logo" class="span">
-                              <a href="/vedax">
+                              <a href="/projeto-vedax">
                                     <img src="/projeto-vedax/images/logovedax.png" alt="VEDAX" />
                                 </a>
                            </div>
-                           <div class="moduletable navigation ">
+                           <nav class="moduletable navigation ">
                               <div class="moduletable-wrapper">
                                     <script type="text/javascript">
                                         jQuery(function() {
@@ -184,7 +188,7 @@
                                     });
                                  </script>
                               </div>
-                           </div>
+                           </nav>
                         </header>
                      </div>
                   </div>
@@ -287,14 +291,12 @@
                      <div class="moduletable contactus ">
                         <div class="moduletable-wrapper">
                            <div class="mod-custom mod-custom__contactus">
-                              <p>
                                   <h4>
                                  <span class="icon-phone">
                                     &#9743; +55 11 4161-3597
                                     <br />
                                  </span>
                                   </h4>    
-                              </p>
                               <h4>
                                  <span class="icon-mail">
                                     &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
