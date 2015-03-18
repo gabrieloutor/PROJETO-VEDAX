@@ -72,6 +72,10 @@
         #as-menu ul.as-menu li li:hover ul,#as-menu ul.as-menu li li.asHover ul,#as-menu ul.as-menu li li li:hover ul,#as-menu ul.as-menu li li li.asHover ul {
                 left: 191px;
         }
+        .facebook
+        {
+            color:#ff0000;
+        }
      </style>
       <!-- FIM CSS -->
       <!-- INICIO JAVASCRIPT -->
@@ -266,14 +270,14 @@
                      ESQUERDA
                      <!-- FIM ESQUERDA-->
                      <!-- PRINCIPAL -->
-                     <div id="component" class="span12">
-                        <div id="system-message-container">
-                            SYSTEM MSG CONTAINER
-                        </div>
+                        <div id="component" class="span12">
+                            <div id="system-message-container">
+                                SYSTEM MSG CONTAINER
+                            </div>
                         <div class="page-item page-item__">
-                           <div class="item_fulltext">
+                            <div class="item_fulltext">
                                FULLTEXT
-                           </div>
+                            </div>
                         </div>
                      </div>
                   </div>
@@ -289,18 +293,23 @@
                   <div class="footer-row-1">
                      <div class="moduletable contactus ">
                         <div class="moduletable-wrapper">
-                           <div class="mod-custom mod-custom__contactus">
-                                  <h4>
-                                 <span class="icon-phone">
+                            <div class="mod-custom mod-custom__contactus">
+                                <h4>
+                                <span class="icon-phone">
                                     &#9743; +55 11 4161-3597
-                                    <br />
-                                 </span>
-                                  </h4>    
-                              <h4>
-                                 <span class="icon-mail">
+                                <br />
+                                </span>
+                                </h4>
+                                <h4>
+                                <span class="icon-mail">
                                     &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
-                                 </span>
-                              </h4>
+                                </span>
+                                </h4>
+                                <h4>
+                                <span class="facebook">
+                                    <a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
+                                </span>
+                                </h4>
                            </div>
                         </div>
                      </div>
@@ -310,22 +319,22 @@
          </div>
          <div id="copyright-row">
             <div class="container">
-               <div id="trademark">
-                  Copyright &copy; 2015 VEDAX
-               </div>
-               <div id="copyright-menu" class="row">
-                  <div id="ascopy">
-                     <a href="http://www.facebook.com/gabriel.outor" target="_blank">
-                              &nbsp;&nbsp;&nbsp;&nbsp;DESENVOLVIDO POR:&nbsp;&nbsp;GABRIEL OUTOR
-                          </a>
-                  </div>
-               </div>
+                <div id="trademark">
+                    Copyright &copy; 2015 VEDAX
+                </div>
+                <div id="copyright-menu" class="row">
+                    <div id="ascopy">
+                        <a href="http://www.facebook.com/gabriel.outor" target="_blank">
+                            &nbsp;&nbsp;&nbsp;&nbsp;DESENVOLVIDO POR:&nbsp;&nbsp;GABRIEL OUTOR
+                        </a>
+                    </div>
+                </div>
             </div>
          </div>
       </div>
       <!-- FIM FOOTER-->
       <div id="back-top">
-         <a href="#"><span></span></a>
+        <a href="#"><span></span></a>
       </div>
    </body>
 </html>
