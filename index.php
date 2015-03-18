@@ -206,9 +206,9 @@
                            <div class="ribbon">
                            </div>
                            <div id="vt_nivo_slider89" class="nivoSlider">
-                              <img src="/projeto-vedax/images/fo56.jpg" alt="Foto 1" />
-                              <img src="/projeto-vedax/images/fo57.jpg" alt="Foto 2" />
-                              <img src="/projeto-vedax/images/fo58.jpg" alt="Foto 3" />
+                                <img src="/projeto-vedax/images/PRONTA3.jpg" alt="Foto 1" />
+                                <img src="/projeto-vedax/images/fo57.jpg" alt="Foto 2" />
+                                <img src="/projeto-vedax/images/fo58.jpg" alt="Foto 3" />
                            </div>
                         </div>
                      </div>
