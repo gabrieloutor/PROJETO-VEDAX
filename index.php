@@ -294,6 +294,12 @@
                      <div class="moduletable contactus ">
                         <div class="moduletable-wrapper">
                             <div class="mod-custom mod-custom__contactus">
+                                </h4>
+                                <h4>
+                                <span class="facebook">
+                                    <a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
+                                </span>
+                                </h4>
                                 <h4>
                                 <span class="icon-phone">
                                     &#9743; +55 11 4161-3597
@@ -304,12 +310,6 @@
                                 <span class="icon-mail">
                                     &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
                                 </span>
-                                </h4>
-                                <h4>
-                                <span class="facebook">
-                                    <a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
-                                </span>
-                                </h4>
                            </div>
                         </div>
                      </div>
