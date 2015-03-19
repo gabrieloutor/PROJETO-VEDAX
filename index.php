@@ -206,9 +206,11 @@
                            <div class="ribbon">
                            </div>
                            <div id="vt_nivo_slider89" class="nivoSlider">
-                                <img src="/projeto-vedax/images/PRONTA3.jpg" alt="Foto 1" />
-                                <img src="/projeto-vedax/images/fo57.jpg" alt="Foto 2" />
-                                <img src="/projeto-vedax/images/fo58.jpg" alt="Foto 3" />
+                                <?php $qtfoto=3; 
+                                for ($i = 1; $i <= $qtfoto; $i++){
+                                    echo "<img src=\"/projeto-vedax/images/foto$i.jpg\" alt=\"Foto $i\" />";
+                                } 
+                                ?>
                            </div>
                         </div>
                      </div>
