@@ -164,7 +164,7 @@
                                           </ul>
                                        </li>
                                        <li>
-                                          <a href="/projeto-vedax/mercado.php">Mercado</a>
+                                          <a href="/projeto-vedax/localizacao.php">Localização</a>
                                        </li>
                                        <li>
                                           <a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
@@ -296,7 +296,6 @@
                      <div class="moduletable contactus ">
                         <div class="moduletable-wrapper">
                             <div class="mod-custom mod-custom__contactus">
-                                </h4>
                                 <h4>
                                 <span class="facebook">
                                     <a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
@@ -306,7 +305,14 @@
                                 <span class="icon-phone">
                                     &#9743; +55 11 4161-3597
                                 <br />
+                                </h4>
                                 </span>
+                                <h4>
+                                <span class="icon-phone">
+                                    &#9743; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000
+                                <br />
+                                </span>
+                                </h4>
                                 </h4>
                                 <h4>
                                 <span class="icon-mail">
