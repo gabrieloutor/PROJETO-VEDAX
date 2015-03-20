@@ -2115,13 +2115,16 @@ p .price
 #content-row
 {
 	background-color: #FFFFFF;
-	box-shadow: 0 0 2px 0 #CCCCCC inset;		
+	box-shadow: 0 0 2px 0 #CCCCCC inset;
 }
 
 #content-row .container
 {
 	padding-top: 55px;
 	padding-bottom: 0px;
+        background:#fff url(../images/marcadagua.jpg) no-repeat;
+        font-weight: bold;
+        color: #000000;
 }
 
 .page-header

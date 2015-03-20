@@ -8,7 +8,7 @@
 	<meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
 	<meta name="author" content="Gabriel Outor">
 	<title>
-		VEDAX - EMPRESA
+		Empresa
 	</title>
 	<!-- INICIO FAVICON -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
@@ -43,6 +43,13 @@
 	<link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
 	<link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
 	<style type="text/css">
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			font-family: Tahoma, Geneva, sans-serif, Arial;
+		}
 		#as-menu,
 		#as-menu ul.as-menu li {
 			border-radius: 5px;
@@ -111,7 +118,6 @@
 	<script src="/projeto-vedax/js/jquery.isotope.min.js" type="text/javascript"></script>
 	<script src="/projeto-vedax/js/touch.gallery.js" type="text/javascript"></script>
 	<script src="/projeto-vedax/js/scripts.js" type="text/javascript"></script>
-	<script src="/projeto-vedax/js/jquery.nivo.slider.min.js" type="text/javascript"></script>
 	<script src="/projeto-vedax/js/script.js" type="text/javascript"></script>
 	<script src="/projeto-vedax/js/jquery.mobilemenu.js" type="text/javascript"></script>
 	<script src="/projeto-vedax/js/jquery.hovermenu.js" type="text/javascript"></script>
@@ -148,57 +154,55 @@
 										<!-- INICIO MENU -->
 										<div id="as-menu" class="menu-wrapper">
 											<ul class="as-menu ">
-												<li class="item-101 current active">
-													<a href="/projeto-vedax/">Home</a>
-													<?php $nome='Home' ; ?>
-												</li>
 												<li>
+													<a href="/projeto-vedax/">Home</a>
+													
+												</li>
+												<li class="current active">
 													<a href="/projeto-vedax/empresa.php">Empresa</a>
-													<?php $nome="Empresa" ; ?>
+												
 												</li>
 												<li>
 													<a href="/projeto-vedax/produtos.php">Produtos</a>
-													<?php $nome="Produtos" ; ?>
+													
 													<ul>
 														<li>
 															<a href="/projeto-vedax/aneis.php">Anéis e Discos</a>
-															<?php $nome="Anéis e Discos" ; ?>
+															
 														</li>
 														<li>
 															<a href="/projeto-vedax/conexoes.php">Conexões</a>
-															<?php $nome="Conexões" ; ?>
+															
 														</li>
 														<li>
 															<a href="/projeto-vedax/flanges.php">Flanges</a>
-															<?php $nome="Flanges" ; ?>
+															
 														</li>
 														<li>
 															<a href="/projeto-vedax/flangesespeciais.php">Flanges Especiais</a>
-															<?php $nome="Flanges Especiais" ; ?>
+															
 														</li>
 													</ul>
 												</li>
 												<li>
 													<a href="/projeto-vedax/servico.php">Serviço</a>
-													<?php $nome="Serviço" ; ?>
+												
 													<ul>
 														<li>
 															<a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
-															<?php $nome="Tratamento Térmico" ; ?>
+														
 														</li>
 														<li>
 															<a href="/projeto-vedax/soldagem.php">Soldagem</a>
-															<?php $nome="Soldagem" ; ?>
+											
 														</li>
 													</ul>
 												</li>
 												<li>
 													<a href="/projeto-vedax/localizacao.php">Localização</a>
-													<?php $nome="Localizacao" ; ?>
 												</li>
 												<li>
 													<a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
-													<?php $nome="Fale Conosco" ; ?>
 												</li>
 											</ul>
 										</div>
@@ -238,20 +242,16 @@
 							<div class="page-item page-item__">
 								<div class="item_header">
 									<h2 class="item_title">
-										A Vedax					</h2>
+											A Vedax					
+										</h2>
 								</div>
 								<div class="item_fulltext">
 									<p><span style="font-size: 12pt;">A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo as especificações de normas nacionais e internacionais de fabricação.</span></p>
 									<p><span style="font-size: 12pt;">Nossos rígidos padrões de controle de qualidade no levaram a conformidade em todas as fases produtivas desde a compra de matéria-prima, até ensaios de laboratórios, buscando certifica-se de que todas as características do mateirla estejam de acordo com as normas estipuladas.</span></p>
 									<p><span style="font-size: 12pt;">Através de anos de experiência a Vedax adquiriu know-how no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças 'a tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários, possibilitando o grau de forjamento adequado aos mais rigorosos requisitos, controlando a cada etapa de fabricação os pontos relevantes de forma a garantir um produto de excelente qualidade.</span></p>
-									<p> </p>
+									<p> </p>
 								</div>
-
-
 							</div>
-
-
-
 						</div>
 					</div>
 				</div>
@@ -268,51 +268,54 @@
 							<div class="moduletable-wrapper">
 								<div class="mod-custom mod-custom__contactus">
 									<h4>
-                                <span class="facebook">
-                                    <a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
-                                </span>
-                                </h4>
+											<span class="facebook">
+											<a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
+											</span>
+										</h4>
 									<h4>
-                                <span class="icon-phone">
-                                    &#9743; +55 11 4161-3597
-                                <br />
-                                </h4>
+											<span class="icon-phone">
+											&#9743; +55 11 4161-3597
+											<br />
+										
 									</span>
+                                                                            </h4>
 									<h4>
-                                <span class="adress">
-                                    &#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000
-                                <br />
-                                </span>
-                                </h4>
+											<span class="adress">
+											&#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000
+											<br />
+											</span>
+										</h4>
 									<h4>
-                                <span class="icon-mail">
-                                    &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
-                                </span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div id="copyright-row">
-            <div class="container">
-                <div id="trademark">
-                    Copyright &copy; 2015 VEDAX
-                </div>
-                <div id="copyright-menu" class="row">
-                    <div id="ascopy">
-                        <a href="http://www.facebook.com/gabriel.outor" target="_blank">
-                            &nbsp;&nbsp;&nbsp;&nbsp;DESENVOLVIDO POR:&nbsp;&nbsp;GABRIEL OUTOR
-                        </a>
-                    </div>
-                </div>
-            </div>
-         </div>
-      </div>
-      <!-- FIM FOOTER-->
-      <div id="back-top">
-        <a href="#"><span></span></a>
-      </div>
-   </body>
+										<span class="icon-mail">
+										&#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
+										</span>
+                                                                        </h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright-row">
+			<div class="container">
+				<div id="trademark">
+					Copyright &copy; 2015 VEDAX
+				</div>
+				<div id="copyright-menu" class="row">
+					<div id="ascopy">
+						<a href="http://www.facebook.com/gabriel.outor" target="_blank">
+							&nbsp;&nbsp;&nbsp;&nbsp;DESENVOLVIDO POR:&nbsp;&nbsp;GABRIEL OUTOR
+							</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FIM FOOTER-->
+	<div id="back-top">
+		<a href="#"><span></span></a>
+	</div>
+</body>
+
 </html>

@@ -7,7 +7,7 @@
       <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
       <meta name="author" content="Gabriel Outor">
       <title>
-         VEDAX - HOME
+         Vedax - Home
       </title>
       <!-- INICIO FAVICON -->
       <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
@@ -125,55 +125,54 @@
                                     <ul class="as-menu ">
                                        <li class="item-101 current active">
                                           <a href="/projeto-vedax/">Home</a>
-                                          <?php $nome='Home'; ?>
                                        </li>
                                        <li>
                                           <a href="/projeto-vedax/empresa.php">Empresa</a>
-                                          <?php $nome="Empresa"; ?>
+                                       
                                        </li>
                                        <li>
                                           <a href="/projeto-vedax/produtos.php">Produtos</a>
-                                          <?php $nome="Produtos"; ?>
+                                          
                                           <ul>
                                              <li>
                                                 <a href="/projeto-vedax/aneis.php">Anéis e Discos</a>
-                                                <?php $nome="Anéis e Discos"; ?>
+                                             
                                              </li>
                                              <li>
                                                 <a href="/projeto-vedax/conexoes.php">Conexões</a>
-                                                <?php $nome="Conexões"; ?>
+                                           
                                              </li>
                                              <li>
                                                 <a href="/projeto-vedax/flanges.php">Flanges</a>
-                                                <?php $nome="Flanges"; ?>
+                                             
                                              </li>
                                              <li>
                                                 <a href="/projeto-vedax/flangesespeciais.php">Flanges Especiais</a>
-                                                <?php $nome="Flanges Especiais"; ?>
+                                               
                                              </li>
                                           </ul>
                                        </li>
                                        <li>
                                           <a href="/projeto-vedax/servico.php">Serviço</a>
-                                          <?php $nome="Serviço"; ?>
+                                     
                                           <ul>
                                              <li>
                                                 <a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
-                                                <?php $nome="Tratamento Térmico"; ?>
+                                        
                                              </li>
                                              <li>
                                                 <a href="/projeto-vedax/soldagem.php">Soldagem</a>
-                                                <?php $nome="Soldagem"; ?>
+                                              
                                              </li>
                                           </ul>
                                        </li>
                                        <li>
                                           <a href="/projeto-vedax/localizacao.php">Localização</a>
-                                          <?php $nome="Localizacao"; ?>
+                                
                                        </li>
                                        <li>
                                           <a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
-                                          <?php $nome="Fale Conosco"; ?>
+                                          
                                        </li>
                                     </ul>
                                  </div>
@@ -311,8 +310,8 @@
                                 <span class="icon-phone">
                                     &#9743; +55 11 4161-3597
                                 <br />
-                                </h4>
                                 </span>
+                                </h4>
                                 <h4>
                                 <span class="adress">
                                     &#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000
@@ -323,6 +322,7 @@
                                 <span class="icon-mail">
                                     &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
                                 </span>
+                                </h4>
                            </div>
                         </div>
                      </div>
