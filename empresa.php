@@ -234,7 +234,9 @@
 			</div>
 			<!-- FIM HEADER-->
 			<div id="content-row">
+                            <div class="container2">
 				<div class="container">
+                                    
 					<div class="content-inner row">
 						<div id="component" class="span12">
 							<div id="system-message-container">
@@ -255,7 +257,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
+                                </div>
+                    </div>
 		</div>
 	</div>
 	<!-- INICIO FOOTER-->
