@@ -314,11 +314,10 @@
                                 </h4>
                                 </span>
                                 <h4>
-                                <span class="icon-phone">
-                                    &#9743; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000
+                                <span class="adress">
+                                    &#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000
                                 <br />
                                 </span>
-                                </h4>
                                 </h4>
                                 <h4>
                                 <span class="icon-mail">

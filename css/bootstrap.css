@@ -7724,6 +7724,11 @@ input.invalid
 	content: "\e07a";
 }
 
+#icon-mail
+{
+    width:40px;
+}
+
 .icon-mail-2:before
 {
 	content: "\e07b";
