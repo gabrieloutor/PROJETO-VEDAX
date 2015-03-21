@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8">
-        <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação."/>
+        <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação." />
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
         <meta name="author" content="Gabriel Outor">
         <title>
-            Vedax - Home
+            Localização
         </title>
         <!-- INICIO FAVICON -->
         <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
@@ -19,7 +19,7 @@
         <link rel="apple-touch-icon" sizes="144x144" href="/projeto-vedax/images/icons/apple-icon-144x144.png">
         <link rel="apple-touch-icon" sizes="152x152" href="/projeto-vedax/images/icons/apple-icon-152x152.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/projeto-vedax/images/icons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/projeto-vedax/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/projeto-vedax/images/icons/android-icon-192x192.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/projeto-vedax/images/icons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="/projeto-vedax/images/icons/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/projeto-vedax/images/icons/favicon-16x16.png">
@@ -42,39 +42,73 @@
         <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
         <style type="text/css">
-            #as-menu,#as-menu ul.as-menu li {
-                border-radius:5px;
+            #endereco
+            {
+                font-size:14px;
             }
-            #as-menu ul.as-menu>li>a,#as-menu ul.as-menu>li>span {
-                font-size:15px;
-                font-family:'Advent Pro',Arial,serif;
-                font-weight:600;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: Tahoma, Geneva, sans-serif, Arial;
             }
-            #as-menu ul.as-menu>li.active>a,#as-menu ul.as-menu>li.asHover>a,#as-menu ul.as-menu>li.current>a,#as-menu ul.as-menu>li.active>span,#as-menu ul.as-menu>li.asHover>span,#as-menu ul.as-menu>li.current>span,#as-menu ul.as-menu>li>a:hover,#as-menu ul.as-menu>li>span:hover,#as-menu ul.as-menu ul li a:hover,#as-menu ul.as-menu ul li span:hover,#as-menu ul.as-menu ul li.active>a,#as-menu ul.as-menu ul li.asHover>a,#as-menu ul.as-menu ul li.active>span,#as-menu ul.as-menu ul li.asHover>span {
+            #as-menu,
+            #as-menu ul.as-menu li {
+                border-radius: 5px;
             }
+
+            #as-menu ul.as-menu>li>a,
+            #as-menu ul.as-menu>li>span {
+                font-size: 15px;
+                font-family: 'Advent Pro', Arial, serif;
+                font-weight: 600;
+            }
+
+            #as-menu ul.as-menu>li.active>a,
+            #as-menu ul.as-menu>li.asHover>a,
+            #as-menu ul.as-menu>li.current>a,
+            #as-menu ul.as-menu>li.active>span,
+            #as-menu ul.as-menu>li.asHover>span,
+            #as-menu ul.as-menu>li.current>span,
+            #as-menu ul.as-menu>li>a:hover,
+            #as-menu ul.as-menu>li>span:hover,
+            #as-menu ul.as-menu ul li a:hover,
+            #as-menu ul.as-menu ul li span:hover,
+            #as-menu ul.as-menu ul li.active>a,
+            #as-menu ul.as-menu ul li.asHover>a,
+            #as-menu ul.as-menu ul li.active>span,
+            #as-menu ul.as-menu ul li.asHover>span {}
+
             #as-menu ul.as-menu ul {
-                width:191px;
-                -webkit-border-radius:0px;
-                -moz-border-radius:0px;
-                border-radius:0px;
-                -webkit-border-bottom-right-radius:5px;
-                -moz-border-radius-bottomright:5px;
-                border-bottom-right-radius:5px;
-                -webkit-border-bottom-left-radius:5px;
-                -moz-border-radius-bottomleft:5px;
-                border-bottom-left-radius:5px;
+                width: 191px;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+                -webkit-border-bottom-right-radius: 5px;
+                -moz-border-radius-bottomright: 5px;
+                border-bottom-right-radius: 5px;
+                -webkit-border-bottom-left-radius: 5px;
+                -moz-border-radius-bottomleft: 5px;
+                border-bottom-left-radius: 5px;
             }
-            #as-menu ul.as-menu ul li a,#as-menu ul.as-menu ul li span {
-                font-size:15px;
-                font-family:'Advent Pro',Arial,serif;
-                font-weight:600;
+
+            #as-menu ul.as-menu ul li a,
+            #as-menu ul.as-menu ul li span {
+                font-size: 15px;
+                font-family: 'Advent Pro', Arial, serif;
+                font-weight: 600;
             }
-            #as-menu ul.as-menu li li:hover ul,#as-menu ul.as-menu li li.asHover ul,#as-menu ul.as-menu li li li:hover ul,#as-menu ul.as-menu li li li.asHover ul {
+
+            #as-menu ul.as-menu li li:hover ul,
+            #as-menu ul.as-menu li li.asHover ul,
+            #as-menu ul.as-menu li li li:hover ul,
+            #as-menu ul.as-menu li li li.asHover ul {
                 left: 191px;
             }
-            .facebook
-            {
-                color:#ff0000;
+
+            .facebook {
+                color: #ff0000;
             }
         </style>
         <!-- FIM CSS -->
@@ -87,7 +121,6 @@
         <script src="/projeto-vedax/js/jquery.isotope.min.js" type="text/javascript"></script>
         <script src="/projeto-vedax/js/touch.gallery.js" type="text/javascript"></script>
         <script src="/projeto-vedax/js/scripts.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/jquery.nivo.slider.min.js" type="text/javascript"></script>
         <script src="/projeto-vedax/js/script.js" type="text/javascript"></script>
         <script src="/projeto-vedax/js/jquery.mobilemenu.js" type="text/javascript"></script>
         <script src="/projeto-vedax/js/jquery.hovermenu.js" type="text/javascript"></script>
@@ -97,8 +130,10 @@
             });
             jQuery.noConflict();
         </script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
         <!-- FIM JAVASCRIPT -->
     </head>
+
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
             <div class="wrapper-inner">
@@ -123,8 +158,9 @@
                                             <!-- INICIO MENU -->
                                             <div id="as-menu" class="menu-wrapper">
                                                 <ul class="as-menu ">
-                                                    <li class="item-101 current active">
+                                                    <li>
                                                         <a href="/projeto-vedax/">Home</a>
+
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/empresa.php">Empresa</a>
@@ -166,13 +202,11 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li>
+                                                    <li class="current active">
                                                         <a href="/projeto-vedax/localizacao.php">Localização</a>
-
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
-
                                                     </li>
                                                 </ul>
                                             </div>
@@ -206,95 +240,23 @@
                         </div>
                     </div>
                 </div>
-                <div id="slider-row">
-                    <div class="moduletable  ">
-                        <div class="moduletable-wrapper">
-                            <div class="vt_nivo_slider">
-                                <div id="vtnivo89" class="slider-wrapper theme-default theme-default89 nivocontrol-bottomright nivo-bullets05 nivo-arrows10 captionposition-topleft captionrounded-all"
-                                     style="height: auto; width: auto;">
-                                    <div class="ribbon">
-                                    </div>
-                                    <div id="vt_nivo_slider89" class="nivoSlider">
-                                        <?php
-                                        $qtfoto = 3;
-                                        for ($i = 1; $i <= $qtfoto; $i++) {
-                                            echo "<img src=\"/projeto-vedax/images/foto$i.jpg\" alt=\"Foto $i\" />";
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <script type="text/javascript">
-                                jQuery.noConflict();
-                                jQuery(window).load(function () {
-                                    jQuery('#vt_nivo_slider89').nivoSlider({
-                                        effect: 'fold',
-                                        // Specify sets like: 'fold,fade,sliceDown'
-                                        slices: 15,
-                                        // For slice animations
-                                        boxCols: 8,
-                                        // For box animations
-                                        boxRows: 4,
-                                        // For box animations
-                                        animSpeed: 500,
-                                        // Slide transition speed
-                                        pauseTime: 3000,
-                                        // How long each slide will show
-                                        startSlide: 2,
-                                        // Set starting Slide (0 index)
-                                        directionNav: true,
-                                        // Next & Prev navigation
-                                        controlNav: true,
-                                        // 1,2,3... navigation
-                                        controlNavThumbs: false,
-                                        // Use thumbnails for Control Nav
-                                        pauseOnHover: true,
-                                        // Stop animation while hovering
-                                        manualAdvance: false,
-                                        // Force manual transitions
-                                        prevText: 'Prev',
-                                        // Prev directionNav text
-                                        nextText: 'Next',
-                                        // Next directionNav text
-                                        randomStart: true,
-                                        // Start on a random slide
-                                        beforeChange: function () {
-                                        },
-                                        // Triggers before a slide transition
-                                        afterChange: function () {
-                                        },
-                                        // Triggers after a slide transition
-                                        slideshowEnd: function () {
-                                        },
-                                        // Triggers after all slides have been shown
-                                        lastSlide: function () {
-                                        },
-                                        // Triggers when last slide is shown
-                                        afterLoad: function () {
-                                        } // Triggers when slider has loaded
-                                    });
-                                });
-                            </script>
-                        </div>
-                    </div>
-                </div>
                 <!-- FIM HEADER-->
-                <!-- INICIO CONTEUDO -->
                 <div id="content-row">
                     <div class="container">
-                        <div class="content-inner row">
-                            <!-- INICIO ESQUERDA-->
-                            ESQUERDA
-                            <!-- FIM ESQUERDA-->
-                            <!-- PRINCIPAL -->
+                        <div class="content-inner-row">
                             <div id="component" class="span12">
                                 <div id="system-message-container">
-                                    SYSTEM MSG CONTAINER
                                 </div>
                                 <div class="page-item page-item__">
-                                    <div class="item_fulltext">
-                                        FULLTEXT
+                                    <div class="item_header">
+                                        <h2 class="item_title">
+                                            Localização					
+                                        </h2>
                                     </div>
+                                    <div id="endereco"><center><b>Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000</b></center></div>
+                                    <center>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973" width="600" height="450" frameborder="0" style="border:0"></iframe>
+                                    </center>
                                 </div>
                             </div>
                         </div>
@@ -320,6 +282,7 @@
                                             <span class="icon-phone">
                                                 &#9743; +55 11 4161-3597
                                                 <br />
+
                                             </span>
                                         </h4>
                                         <h4>
@@ -360,4 +323,5 @@
             <a href="#"><span></span></a>
         </div>
     </body>
+
 </html>
