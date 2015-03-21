@@ -31,15 +31,12 @@
         <!-- INICIO CSS -->
         <link rel="stylesheet" href="/projeto-vedax/css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/media.1024.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/media.980.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/media.768.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/media.480.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
         <style type="text/css">
             #endereco
             {
