@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação."/>
+        <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação.">
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
         <meta name="author" content="Gabriel Outor">
-        <title>
-            Página Inicial | Vedax
-        </title>
+        <title>Página Inicial | Vedax</title>
         <!-- INICIO FAVICON -->
         <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/projeto-vedax/images/icons/apple-icon-60x60.png">
@@ -42,9 +40,20 @@
         <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" >
         <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" >
         <style type="text/css">
-            body
-{
-	font-family: 'PT Sans', Arial, serif !important;	font-size: 14px;	}
+            h1
+            {
+                font-size:44px;
+                text-align: center;
+                font-family: 'Frutiger47CondensedLight';
+                font-weight:normal;
+                color:#333;
+            }
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: Tahoma, Geneva, sans-serif, Arial;
+            }
             #as-menu,#as-menu ul.as-menu li {
                 border-radius:5px;
             }

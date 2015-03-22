@@ -6,9 +6,7 @@
         <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação." />
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
         <meta name="author" content="Gabriel Outor">
-        <title>
-            Empresa | Vedax
-        </title>
+        <title>Empresa | Vedax</title>
         <!-- INICIO FAVICON -->
         <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/projeto-vedax/images/icons/apple-icon-60x60.png">
@@ -42,7 +40,14 @@
         <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
         <style type="text/css">
-            h1,
+            h1
+            {
+                font-size:44px;
+                text-align: center;
+                font-family: 'Frutiger47CondensedLight';
+                font-weight:normal;
+                color:#333;
+            }
             h2,
             h3,
             h4,
@@ -57,7 +62,7 @@
             #as-menu ul.as-menu>li>a,
             #as-menu ul.as-menu>li>span {
                 font-size: 15px;
-                font-family: 'Advent Pro', Arial, serif;
+                font-family:'Advent Pro',Arial,serif;
                 font-weight: 600;
             }
 
@@ -92,7 +97,7 @@
             #as-menu ul.as-menu ul li a,
             #as-menu ul.as-menu ul li span {
                 font-size: 15px;
-                font-family: 'Advent Pro', Arial, serif;
+                font-family:'Advent Pro',Arial,serif;
                 font-weight: 600;
             }
 
@@ -244,9 +249,7 @@
                                 </div>
                                 <div class="page-item page-item__">
                                     <div class="item_header">
-                                        <h2 class="item_title">
-                                            A Vedax					
-                                        </h2>
+                                        <h1>A Vedax</h1>					
                                     </div>
                                     <div class="item_fulltext">
                                         <p><span style="font-size: 12pt;">A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo às especificações de normas nacionais e internacionais de fabricação.</span></p>
