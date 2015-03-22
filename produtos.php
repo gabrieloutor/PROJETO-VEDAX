@@ -286,7 +286,9 @@
                     <div class="container">
                         <div class="content-inner row">
                             <!-- INICIO ESQUERDA-->
-                            
+                            <h1>
+                                Produtos
+                            </h1>
                             <!-- FIM ESQUERDA-->
                             <!-- PRINCIPAL -->
                             <div id="component" class="span12">
