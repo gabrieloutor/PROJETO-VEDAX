@@ -246,7 +246,7 @@
                                         // Set starting Slide (0 index)
                                         directionNav: false,
                                         // Next & Prev navigation
-                                        controlNav: true,
+                                        controlNav: false,
                                         // 1,2,3... navigation
                                         controlNavThumbs: false,
                                         // Use thumbnails for Control Nav
