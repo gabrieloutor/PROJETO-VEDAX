@@ -135,13 +135,13 @@
                                             <!-- INICIO MENU -->
                                             <div id="as-menu" class="menu-wrapper">
                                                 <ul class="as-menu ">
-                                                    <li class="item-101 current active">
+                                                    <li>
                                                         <a href="/projeto-vedax/">Home</a>
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/empresa.php">Empresa</a>
                                                     </li>
-                                                    <li>
+                                                    <li class="current active">
                                                         <a href="/projeto-vedax/produtos.php">Produtos</a>
                                                         <ul>
                                                             <li>
@@ -218,7 +218,7 @@
                                     </div>
                                     <div id="vt_nivo_slider89" class="nivoSlider">
                                         <?php
-                                        $qtfoto = 1;
+                                        $qtfoto = 3;
                                         for ($i = 1; $i <= $qtfoto; $i++) {
                                             echo "<img src=\"/projeto-vedax/images/foto$i.jpg\" alt=\"Foto $i\" />";
                                         }
