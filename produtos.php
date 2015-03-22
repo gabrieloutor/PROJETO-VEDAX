@@ -219,7 +219,7 @@
                                     <div id="vt_nivo_slider89" class="nivoSlider">
                                         <?php
                                         $qtfoto = 2;
-                                        for ($i = 1; $i <= $qtfoto; $i++) {
+                                        for ($i = 2; $i <= $qtfoto; $i++) {
                                             echo "<img src=\"/projeto-vedax/images/produto$i.jpg\" alt=\"Foto $i\" />";
                                         }
                                         ?>
