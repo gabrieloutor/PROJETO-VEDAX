@@ -38,13 +38,26 @@
         <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
         <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
         <style type="text/css">
-            #endereco
+            #localizacao
             {
-                font-size: 15px;
+                font-size: 16px;
                 font-family: 'Advent Pro', Arial, serif;
                 font-weight: 600;
                 padding-right:30px;
                 float:left;
+            }
+            #localizacao .endereco
+            {
+                font-size:14px;
+            }
+            #localizacao .endereco1
+            {
+                font-size:14px;
+                text-decoration: underline;
+            }
+            #localizacao .gps
+            {
+                font-size:14px;
             }
             h1,
             h2,
@@ -130,7 +143,6 @@
             });
             jQuery.noConflict();
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
         <!-- FIM JAVASCRIPT -->
     </head>
 
@@ -253,7 +265,12 @@
                                             Localização					
                                         </h2>
                                     </div>
-                                    <div id="endereco"><center><b>Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000</b></center></div>
+                                    <div id="localizacao">Vedax Equipamentos Hidráulos Ltda<br>
+                                    <div class="endereco">Endereço:<br></div>
+                                    <div class="endereco1">Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000 <br></div>
+                                    <div class="gps">GPS:<br></div>
+                                    <div class="gps1">-23.488140, -46.877794<br></div>
+                                    </div>
                                     <center>
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973" width="600" height="450" frameborder="0" style="border:0"></iframe>
                                     </center>
