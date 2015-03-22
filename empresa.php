@@ -7,7 +7,7 @@
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
         <meta name="author" content="Gabriel Outor">
         <title>
-            Empresa
+            Empresa | Vedax
         </title>
         <!-- INICIO FAVICON -->
         <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">

@@ -7,7 +7,7 @@
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
         <meta name="author" content="Gabriel Outor">
         <title>
-            Vedax - Home
+            Página Inicial | Vedax
         </title>
         <!-- INICIO FAVICON -->
         <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
@@ -30,18 +30,21 @@
         <meta name="theme-color" content="#ffffff">
         <!-- FIM FAVICON -->
         <!-- INICIO CSS -->
-        <link rel="stylesheet" href="/projeto-vedax/css/bootstrap.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/media.1024.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/media.980.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/media.768.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/media.480.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" />
-        <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" />
+        <link rel="stylesheet" href="/projeto-vedax/css/bootstrap.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/media.1024.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/media.980.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/media.768.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/media.480.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" >
+        <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" >
         <style type="text/css">
+            body
+{
+	font-family: 'PT Sans', Arial, serif !important;	font-size: 14px;	}
             #as-menu,#as-menu ul.as-menu li {
                 border-radius:5px;
             }
@@ -128,15 +131,12 @@
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/empresa.php">Empresa</a>
-
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/produtos.php">Produtos</a>
-
                                                         <ul>
                                                             <li>
                                                                 <a href="/projeto-vedax/aneis.php">Anéis e Discos</a>
-
                                                             </li>
                                                             <li>
                                                                 <a href="/projeto-vedax/conexoes.php">Conexões</a>
@@ -144,35 +144,28 @@
                                                             </li>
                                                             <li>
                                                                 <a href="/projeto-vedax/flanges.php">Flanges</a>
-
                                                             </li>
                                                             <li>
                                                                 <a href="/projeto-vedax/flangesespeciais.php">Flanges Especiais</a>
-
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/servico.php">Serviço</a>
-
                                                         <ul>
                                                             <li>
                                                                 <a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
-
                                                             </li>
                                                             <li>
                                                                 <a href="/projeto-vedax/soldagem.php">Soldagem</a>
-
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/localizacao.php">Localização</a>
-
                                                     </li>
                                                     <li>
                                                         <a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
-
                                                     </li>
                                                 </ul>
                                             </div>
