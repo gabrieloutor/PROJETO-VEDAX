@@ -54,7 +54,7 @@
                 text-align: center;
                 font-family: 'Frutiger47CondensedLight';
                 font-weight:normal;
-                color:#32B4FF;/*#32B4FF*/
+                color:#32B4FF;/*#FF9966*/
             }
             h2,
             h3,
