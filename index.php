@@ -6,7 +6,7 @@
         <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação.">
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
         <meta name="author" content="Gabriel Outor">
-        <title>Página Inicial | Vedax</title>
+        <title>Página Inicial | Vedax Equipamentos Hidráulicos Ltda</title>
         <!-- INICIO FAVICON -->
         <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/projeto-vedax/images/icons/apple-icon-60x60.png">
@@ -345,12 +345,12 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; 2015 VEDAX
+                        Copyright &copy; 2015 | Vedax Equipamentos Hidráulicos Ltda
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
                             <a href="http://www.facebook.com/gabriel.outor" target="_blank">
-                                &nbsp;&nbsp;&nbsp;&nbsp;DESENVOLVIDO POR:&nbsp;&nbsp;GABRIEL OUTOR
+                                &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;Gabriel Outor
                             </a>
                         </div>
                     </div>
