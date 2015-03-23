@@ -262,7 +262,7 @@
                                     </iframe>
                                     <p id="localizacao">
                                         <span style="font-size: 12pt;">
-                                            Escritórios | Vedax Equipamentos Hidráulicos Ltda
+                                            Fábrica e Escritório | Vedax Equipamentos Hidráulicos Ltda
                                             <br>
                                             <br>
                                             <u>

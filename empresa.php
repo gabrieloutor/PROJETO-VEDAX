@@ -46,7 +46,15 @@
                 text-align: center;
                 font-family: 'Frutiger47CondensedLight';
                 font-weight:normal;
-                color:#333;
+                color:#333;/*#32B4FF*/
+            }
+            .finalempresa
+            {
+                font-size:34px;
+                text-align: center;
+                font-family: 'Frutiger47CondensedLight';
+                font-weight:normal;
+                color:#32B4FF;/*#32B4FF*/
             }
             h2,
             h3,
@@ -249,13 +257,16 @@
                                 </div>
                                 <div class="page-item page-item__">
                                     <div class="item_header">
-                                        <h1>A Vedax</h1>					
+                                        <h1>A VEDAX</h1>					
                                     </div>
                                     <div class="item_fulltext">
                                         <p><span style="font-size: 12pt;">A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo às especificações de normas nacionais e internacionais de fabricação.</span></p>
                                         <p><span style="font-size: 12pt;">Nossos rígidos padrões de controle de qualidade nos levaram à conformidade em todas as fases produtivas, desde a compra de matéria-prima, até ensaios de laboratórios, buscando certificar que todas as características do material estejam de acordo com as normas estipuladas.</span></p>
                                         <p><span style="font-size: 12pt;">Em decorrência de anos de experiência a Vedax adquiriu <i>know-how</i> no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças à tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários. Isso possibilitou um grau de funcionamento adequado aos mais rigorosos requisitos, controlando - a cada etapa de fabricação - os pontos relevantes, o que garante produtos de excelente qualidade.</span></p>
                                         <p> </p>
+                                    </div>
+                                    <div class="finalempresa">
+                                    A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO
                                     </div>
                                 </div>
                             </div>

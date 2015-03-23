@@ -160,7 +160,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="/projeto-vedax/servico.php">Serviço</a>
+                                                        <a href="/projeto-vedax/servico.php">Aplicações</a>
                                                         <ul>
                                                             <li>
                                                                 <a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
