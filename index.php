@@ -160,7 +160,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="/projeto-vedax/servico.php">Aplicações</a>
+                                                        <a href="/projeto-vedax/servico.php">Serviço</a>
                                                         <ul>
                                                             <li>
                                                                 <a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
@@ -326,7 +326,7 @@
                                         </h4>
                                         <h4>
                                             <span class="adress">
-                                                &#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-000
+                                                &#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-900
                                                 <br />
                                             </span>
                                         </h4>

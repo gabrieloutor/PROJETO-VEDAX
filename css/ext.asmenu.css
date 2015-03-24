@@ -70,7 +70,7 @@
 .navigation #as-menu ul.as-menu > li.asHover > a:after,
 .navigation #as-menu ul.as-menu > li.current > a:after
 {
-	background: none repeat scroll 0 0 #FF9966 !important;
+	background: none repeat scroll 0 0 #0D3B97 !important;
 }
 
 .navigation ul.as-menu > li > a:after,
