@@ -65,7 +65,7 @@
             #as-menu ul.as-menu>li.active>a,#as-menu ul.as-menu>li.asHover>a,#as-menu ul.as-menu>li.current>a,#as-menu ul.as-menu>li.active>span,#as-menu ul.as-menu>li.asHover>span,#as-menu ul.as-menu>li.current>span,#as-menu ul.as-menu>li>a:hover,#as-menu ul.as-menu>li>span:hover,#as-menu ul.as-menu ul li a:hover,#as-menu ul.as-menu ul li span:hover,#as-menu ul.as-menu ul li.active>a,#as-menu ul.as-menu ul li.asHover>a,#as-menu ul.as-menu ul li.active>span,#as-menu ul.as-menu ul li.asHover>span {
             }
             #as-menu ul.as-menu ul {
-                width:191px;
+                width:200px;
                 -webkit-border-radius:0px;
                 -moz-border-radius:0px;
                 border-radius:0px;

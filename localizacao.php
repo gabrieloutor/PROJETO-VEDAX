@@ -83,8 +83,7 @@
             #as-menu
              ul.as-menu>li>a, #as-menu ul.as-menu>li>span
             {
-                    font-family: 'Advent
-             Pro',Arial,serif;
+                    font-family: 'Advent Pro',Arial,serif;
                     font-size: 15px;
                     font-weight: 600;
             }
@@ -108,7 +107,7 @@
                     webkit-border-bottom-left-radius: 5px;
                     webkit-border-bottom-right-radius: 5px;
                     webkit-border-radius: 0px;
-                    width: 191px;
+                    width: 200px;
             }
             #as-menu ul.as-menu ul li a, #as-menu ul.as-menu ul li span
             {

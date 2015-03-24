@@ -99,7 +99,7 @@
             #as-menu ul.as-menu ul li.asHover>span {}
 
             #as-menu ul.as-menu ul {
-                width: 191px;
+                width: 200px;
                 -webkit-border-radius: 0px;
                 -moz-border-radius: 0px;
                 border-radius: 0px;
