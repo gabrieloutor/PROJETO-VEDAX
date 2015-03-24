@@ -48,13 +48,22 @@
                 font-weight:normal;
                 color:#333;/*#32B4FF*/
             }
+            .item_fulltext
+            {
+                text-align:justify;
+                
+            }
             .finalempresa
             {
-                font-size:34px;
+                font-size:28px;
                 text-align: center;
-                font-family: 'Frutiger47CondensedLight';
-                font-weight:normal;
-                color:#32B4FF;/*#FF9966*/
+                font-family: 'BellGothicStdBlack';
+                font-weight:bold;
+                color:#0D3B97;/*#FF9966*/
+            }
+            #imgempresa
+            {
+                
             }
             h2,
             h3,
@@ -266,7 +275,14 @@
                                         <p> </p>
                                     </div>
                                     <div class="finalempresa">
-                                    A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO
+                                        A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO<br><br></div>
+                                    <div id="imgempresa">
+                                    <?php
+                                        $qtfoto = 2;
+                                        for ($i = 1; $i <= $qtfoto; $i++) {
+                                            echo "<img src=\"/projeto-vedax/images/empresa$i.png\" alt=\"Foto $i\" />";
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
