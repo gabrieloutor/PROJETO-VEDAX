@@ -220,7 +220,7 @@
                                         <?php
                                         $qtfoto = 3;
                                         for ($i = 1; $i <= $qtfoto; $i++) {
-                                            echo "<img src=\"/projeto-vedax/images/foto$i.jpg\" alt=\"Foto $i\" />";
+                                            echo "<img src=\"/projeto-vedax/images/slide$i.jpg\" alt=\"Foto $i\" />";
                                         }
                                         ?>
                                     </div>
