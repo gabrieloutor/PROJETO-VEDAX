@@ -51,6 +51,7 @@
             .item_fulltext
             {
                 text-align:justify;
+                text-indent:20px
                 
             }
             .finalempresa
