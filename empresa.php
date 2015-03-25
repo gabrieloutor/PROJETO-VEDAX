@@ -207,7 +207,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="servico.php">Serviço</a>
+                                                        <a href="servicos.php">Serviços</a>
 
                                                         <ul>
                                                             <li>

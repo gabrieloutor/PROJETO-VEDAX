@@ -160,7 +160,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="servico.php">Serviço</a>
+                                                        <a href="servicos.php">Serviços</a>
                                                         <ul>
                                                             <li>
                                                                 <a href="tratamentotermico.php">Tratamento Térmico</a>
@@ -285,21 +285,10 @@
                 <div id="content-row">
                     <div class="container">
                         <div class="content-inner row">
-                            <!-- INICIO ESQUERDA-->
-                            <h1>
-                                Produtos
-                            </h1>
-                            <!-- FIM ESQUERDA-->
-                            <!-- PRINCIPAL -->
-                            <div id="component" class="span12">
-                                <div id="system-message-container">
-                                    SYSTEM MSG CONTAINER
-                                </div>
-                                <div class="page-item page-item__">
-                                    <div class="item_fulltext">
-                                        FULLTEXT
-                                    </div>
-                                </div>
+                            <div class="item_header">
+                                <h1>
+                                    Produtos
+                                </h1>
                             </div>
                         </div>
                     </div>
