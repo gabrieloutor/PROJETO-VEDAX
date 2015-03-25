@@ -8,37 +8,37 @@
         <meta name="author" content="Gabriel Outor">
         <title>Página Inicial | Vedax Equipamentos Hidráulicos Ltda</title>
         <!-- INICIO FAVICON -->
-        <link rel="apple-touch-icon" sizes="57x57" href="/projeto-vedax/images/icons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/projeto-vedax/images/icons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/projeto-vedax/images/icons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/projeto-vedax/images/icons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/projeto-vedax/images/icons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/projeto-vedax/images/icons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/projeto-vedax/images/icons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/projeto-vedax/images/icons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/projeto-vedax/images/icons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/projeto-vedax/images/icons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/projeto-vedax/images/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/projeto-vedax/images/icons/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/projeto-vedax/images/icons/favicon-16x16.png">
-        <link rel="manifest" href="/projeto-vedax/images/icons/manifest.json">
-        <link rel="icon" href="/projeto-vedax/images/icons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+        <link rel="manifest" href="images/icons/manifest.json">
+        <link rel="icon" href="images/icons/favicon.ico" />
         <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/projeto-vedax/images/icons/ms-icon-144x144.png">
+        <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <!-- FIM FAVICON -->
         <!-- INICIO CSS -->
-        <link rel="stylesheet" href="/projeto-vedax/css/bootstrap.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/tmpl.default.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/nivo-slider.min.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/default.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/media.1024.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/media.980.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/media.768.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/media.480.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/ext.default.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/ext.asmenu.css" type="text/css" >
-        <link rel="stylesheet" href="/projeto-vedax/css/ext.artslider.css" type="text/css" >
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" >
+        <link rel="stylesheet" href="css/tmpl.default.css" type="text/css" >
+        <link rel="stylesheet" href="css/nivo-slider.min.css" type="text/css" >
+        <link rel="stylesheet" href="css/default.css" type="text/css" >
+        <link rel="stylesheet" href="css/media.1024.css" type="text/css" >
+        <link rel="stylesheet" href="css/media.980.css" type="text/css" >
+        <link rel="stylesheet" href="css/media.768.css" type="text/css" >
+        <link rel="stylesheet" href="css/media.480.css" type="text/css" >
+        <link rel="stylesheet" href="css/ext.default.css" type="text/css" >
+        <link rel="stylesheet" href="css/ext.asmenu.css" type="text/css" >
+        <link rel="stylesheet" href="css/ext.artslider.css" type="text/css" >
         <style type="text/css">
             h1
             {
@@ -91,18 +91,18 @@
         </style>
         <!-- FIM CSS -->
         <!-- INICIO JAVASCRIPT -->
-        <script src="/projeto-vedax/js/jquery.min.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/jquery-noconflict.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/jquery-migrate.min.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/caption.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/bootstrap.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/jquery.isotope.min.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/touch.gallery.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/scripts.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/jquery.nivo.slider.min.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/script.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/jquery.mobilemenu.js" type="text/javascript"></script>
-        <script src="/projeto-vedax/js/jquery.hovermenu.js" type="text/javascript"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/jquery-noconflict.js" type="text/javascript"></script>
+        <script src="js/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="js/caption.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+        <script src="js/touch.gallery.js" type="text/javascript"></script>
+        <script src="js/scripts.js" type="text/javascript"></script>
+        <script src="js/jquery.nivo.slider.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/jquery.mobilemenu.js" type="text/javascript"></script>
+        <script src="js/jquery.hovermenu.js" type="text/javascript"></script>
         <script type="text/javascript">
             jQuery(window).on('load', function () {
                 new JCaption('img.caption');
@@ -122,7 +122,7 @@
                                 <header>
                                     <div id="logo" class="span">
                                         <a href="/projeto-vedax">
-                                            <img src="/projeto-vedax/images/logovedax.png" alt="VEDAX" />
+                                            <img src="images/logovedax.png" alt="VEDAX" />
                                         </a>
                                     </div>
                                     <nav class="moduletable navigation ">
@@ -136,45 +136,45 @@
                                             <div id="as-menu" class="menu-wrapper">
                                                 <ul class="as-menu ">
                                                     <li class="item-101 current active">
-                                                        <a href="/projeto-vedax/">Home</a>
+                                                        <a href="">Home</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/projeto-vedax/empresa.php">Empresa</a>
+                                                        <a href="empresa.php">Empresa</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/projeto-vedax/produtos.php">Produtos</a>
+                                                        <a href="produtos.php">Produtos</a>
                                                         <ul>
                                                             <li>
-                                                                <a href="/projeto-vedax/aneis.php">Anéis e Discos</a>
+                                                                <a href="aneis.php">Anéis e Discos</a>
                                                             </li>
                                                             <li>
-                                                                <a href="/projeto-vedax/conexoes.php">Conexões</a>
+                                                                <a href="conexoes.php">Conexões</a>
 
                                                             </li>
                                                             <li>
-                                                                <a href="/projeto-vedax/flanges.php">Flanges</a>
+                                                                <a href="flanges.php">Flanges</a>
                                                             </li>
                                                             <li>
-                                                                <a href="/projeto-vedax/flangesespeciais.php">Flanges Especiais</a>
+                                                                <a href="flangesespeciais.php">Flanges Especiais</a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="/projeto-vedax/servico.php">Serviço</a>
+                                                        <a href="servico.php">Serviço</a>
                                                         <ul>
                                                             <li>
-                                                                <a href="/projeto-vedax/tratamentotermico.php">Tratamento Térmico</a>
+                                                                <a href="tratamentotermico.php">Tratamento Térmico</a>
                                                             </li>
                                                             <li>
-                                                                <a href="/projeto-vedax/soldagem.php">Soldagem</a>
+                                                                <a href="soldagem.php">Soldagem</a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="/projeto-vedax/localizacao.php">Localização</a>
+                                                        <a href="localizacao.php">Localização</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/projeto-vedax/faleconosco.php">Fale Conosco</a>
+                                                        <a href="faleconosco.php">Fale Conosco</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -220,7 +220,7 @@
                                         <?php
                                         $qtfoto = 3;
                                         for ($i = 1; $i <= $qtfoto; $i++) {
-                                            echo "<img src=\"/projeto-vedax/images/slide$i.jpg\" alt=\"Foto $i\" />";
+                                            echo "<img src=\"images/slide$i.jpg\" alt=\"Foto $i\" />";
                                         }
                                         ?>
                                     </div>
@@ -286,7 +286,6 @@
                     <div class="container">
                         <div class="content-inner row">
                             <!-- INICIO ESQUERDA-->
-                            ESQUERDA
                             <!-- FIM ESQUERDA-->
                             <!-- PRINCIPAL -->
                             <div id="component" class="span12">
