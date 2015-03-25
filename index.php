@@ -121,7 +121,7 @@
                             <div class="row">
                                 <header>
                                     <div id="logo" class="span">
-                                        <a href="/projeto-vedax">
+                                        <a href="index.php">
                                             <img src="images/logovedax.png" alt="VEDAX" />
                                         </a>
                                     </div>
@@ -136,7 +136,7 @@
                                             <div id="as-menu" class="menu-wrapper">
                                                 <ul class="as-menu ">
                                                     <li class="item-101 current active">
-                                                        <a href="">Home</a>
+                                                        <a href="index.php">Home</a>
                                                     </li>
                                                     <li>
                                                         <a href="empresa.php">Empresa</a>
