@@ -141,7 +141,7 @@
                                                     <li>
                                                         <a href="empresa.php">Empresa</a>
                                                     </li>
-                                                    <li class="current active">
+                                                    <li>
                                                         <a href="produtos.php">Produtos</a>
                                                         <ul>
                                                             <li>
@@ -159,7 +159,7 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li>
+                                                    <li class="current active">
                                                         <a href="servicos.php">Serviços</a>
                                                         <ul>
                                                             <li>
