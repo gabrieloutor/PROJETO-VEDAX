@@ -336,7 +336,7 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; 2015 | Vedax Equipamentos Hidráulicos Ltda
+                        Copyright &copy; <?php echo date("Y")?> | Vedax Equipamentos Hidráulicos Ltda
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">

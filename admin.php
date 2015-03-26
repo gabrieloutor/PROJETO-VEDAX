@@ -30,10 +30,20 @@
             <style type="text/css">
                 html { display:none }
             </style>
+            <style type="text/css">
+                /* Responsive Styles */
+                @media (max-width: 480px) {
+                    .view-login .container {
+                        margin-top: -170px;
+                    }
+                    .btn {
+                        font-size: 13px;
+                        padding: 4px 10px 4px;
+                    }
+                }
+            </style>
             <!-- FIM CSS -->
             <!-- INICIO JAVASCRIPT -->
-            
-            <!-- FIM JAVASCRIPT -->
             <script src="js/mootools-core.js" type="text/javascript"></script>
             <script src="js/jquery.min.js" type="text/javascript"></script>
             <script src="js/jquery-noconflict.js" type="text/javascript"></script>
@@ -57,7 +67,7 @@
                     }
                     if (r) {
                         r.open("GET", "./", true);
-                        r.send(null)
+                        r.send(null);
                     }
                 }, 840000);
                 jQuery(document).ready(function () {
@@ -67,28 +77,13 @@
                 jQuery(document).ready(function () {
                     jQuery('.advancedSelect').chosen({"disable_search_threshold": 10, "allow_single_deselect": true, "placeholder_text_multiple": "Selecione alguma op\u00e7\u00e3o", "placeholder_text_single": "Selecione uma op\u00e7\u00e3o", "no_results_text": "Sem resultados correspondentes"});
                 });
-
             </script>
             <script type="text/javascript">
                 jQuery(function ($) {
                     $("#form-login input[name='username']").focus();
                 });
             </script>
-            <style type="text/css">
-                /* Responsive Styles */
-                @media (max-width: 480px) {
-                    .view-login .container {
-                        margin-top: -170px;
-                    }
-                    .btn {
-                        font-size: 13px;
-                        padding: 4px 10px 4px;
-                    }
-                }
-            </style>
-            <!--[if lt IE 9]>
-                    <script src="../media/jui/js/html5.js"></script>
-            <![endif]-->
+            <!-- FIM JAVASCRIPT -->
     </head>
 
     <body class="site com_login view-login layout-default task- itemid- ">
@@ -167,7 +162,7 @@
         </div>
         <div class="navbar navbar-fixed-bottom hidden-phone">
             <p class="pull-right">
-                &copy; 2015 VEDAX		</p>
+                &copy; <?php echo date("Y")?> VEDAX		</p>
             <a href="index.php" target="_blank" class="pull-left"><i class="icon-share icon-white"></i> Ir para página inicial do site.</a>
         </div>
 

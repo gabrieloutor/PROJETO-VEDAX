@@ -149,7 +149,6 @@
                                                             </li>
                                                             <li>
                                                                 <a href="conexoes.php">Conexões</a>
-
                                                             </li>
                                                             <li>
                                                                 <a href="flanges.php">Flanges</a>
@@ -163,10 +162,10 @@
                                                         <a href="servicos.php">Serviços</a>
                                                         <ul>
                                                             <li>
-                                                                <a href="tratamentotermico.php">Tratamento Térmico</a>
+                                                                <a href="soldagem.php">Soldagem</a>
                                                             </li>
                                                             <li>
-                                                                <a href="soldagem.php">Soldagem</a>
+                                                                <a href="tratamentotermico.php">Tratamento Térmico</a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -336,7 +335,7 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; 2015 | Vedax Equipamentos Hidráulicos Ltda
+                        Copyright &copy; <?php echo date("Y")?> | Vedax Equipamentos Hidráulicos Ltda
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
