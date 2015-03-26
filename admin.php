@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr" >
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-            <meta name="description" content="Equipamentos Hidraulicos" />
-            <meta name="generator" content="Joomla! - Open Source Content Management" />
-            <title>VEDAX - Administração</title>
-            <link href="/vedax/administrator/templates/isis/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <title>Administração | Vedax Equipamentos Hidráulicos Ltda</title>
+            <!-- INICIO FAVICON -->
+            <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+            <link rel="icon" type="image/png" sizes="192x192"  href="images/icons/android-icon-192x192.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+            <link rel="manifest" href="images/icons/manifest.json">
+            <link rel="icon" href="images/icons/favicon.ico" />
+            <meta name="msapplication-TileColor" content="#ffffff">
+            <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+            <meta name="theme-color" content="#ffffff">
+            <!-- FIM FAVICON -->
+            <!-- INICIO CSS -->
             <link rel="stylesheet" href="css/chosen.css" type="text/css" />
             <link rel="stylesheet" href="css/template.css" type="text/css" />
             <style type="text/css">
                 html { display:none }
             </style>
+            <!-- FIM CSS -->
+            <!-- INICIO JAVASCRIPT -->
+            
+            <!-- FIM JAVASCRIPT -->
             <script src="js/mootools-core.js" type="text/javascript"></script>
             <script src="js/jquery.min.js" type="text/javascript"></script>
             <script src="js/jquery-noconflict.js" type="text/javascript"></script>
