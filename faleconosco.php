@@ -52,7 +52,7 @@
             {
                 text-align:justify;
                 text-indent:20px
-                
+
             }
             .finalempresa
             {
@@ -64,7 +64,7 @@
             }
             #imgempresa
             {
-                
+
             }
             h2,
             h3,
@@ -270,6 +270,20 @@
                                         <h1>Fale Conosco</h1>					
                                     </div>
                                 </div>
+                                <form action="envia.php" method="post" id="contato">
+                                    <fieldset>
+                                        <legend>Formulário de Contato</legend>
+                                        <label>Seu nome:</label><br />
+                                        <input name="nome" type="text" /><br /><br />
+                                        <label>Seu email:</label><br />
+                                        <input name="email" type="text" /><br /><br />
+                                        <label>Assunto:</label><br />
+                                        <input name="assunto" type="text" /><br /><br />
+                                        <label>Mensagem:</label><br />
+                                        <textarea name="mensagem" rows="10"></textarea><br /><br />
+                                        <input name="submit" type="submit" value="Enviar" style="width: auto;" />
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -318,7 +332,7 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; <?php echo date("Y")?> | Vedax Equipamentos Hidráulicos Ltda
+                        Copyright &copy; <?php echo date("Y") ?> | Vedax Equipamentos Hidráulicos Ltda
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
