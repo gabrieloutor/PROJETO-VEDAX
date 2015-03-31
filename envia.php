@@ -25,7 +25,7 @@ $msg = $mensagem;
         if($nome && $email && $assunto && $mensagem) {
                 if($smtp->Send($to, $from, $subject, $msg)){
                     echo "<script>alert('Contato enviado!');</script>";
-                    echo "<script>window.location = 'index.php';</script>"; //Altere aqui para o endereço de sua página.
+                    echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de sua página.
                     exit;
                 }
        }
