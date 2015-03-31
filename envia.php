@@ -5,6 +5,7 @@ include_once('phpmailer.php'); //Chama o arquivo phpmailer.php com as funções 
 //#########################################
 $nome = $_POST['nome'];
 $email = $_POST['email'];
+$telefone = $_POST['telefone'];
 $assunto = $_POST['assunto'];
 $mensagem = $_POST['mensagem'];
 //#########################################
@@ -20,7 +21,11 @@ $smtp->debug = false; //Somente para usuários avançados que desejam o log do e
 $to = "email@destino.com.br"; //Informe aqui o e-mail que deve receber a mensagem do formulário.
 $from = $email;
 $subject = "Contato - " . $assunto;
-$msg = $mensagem;
+$msg = "Nome: $nome <BR<BR>
+    E-Mail: $email <BR><BR>
+    Telefone: $telefone <BR><BR>
+    Assunto: $assunto <BR><BR>
+    Mensagem: $msg <BR><BR>";
     if (isset($_POST['submit'])) {
         if($nome && $email && $assunto && $mensagem) {
                 if($smtp->Send($to, $from, $subject, $msg)){

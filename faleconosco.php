@@ -48,22 +48,17 @@
                 font-weight:normal;
                 color:#333;/*#32B4FF*/
             }
+            label
+            {
+                font-size:15px;
+                font-family: Tahoma, Geneva, sans-serif, Arial;
+                font-weight:normal;
+                color:#333;/*#32B4FF*/
+            }
             .item_fulltext
             {
                 text-align:justify;
                 text-indent:20px
-
-            }
-            .finalempresa
-            {
-                font-size:28px;
-                text-align: center;
-                font-family: 'BellGothicStdBlack';
-                font-weight:bold;
-                color:#0D3B97;/*#FF9966*/
-            }
-            #imgempresa
-            {
 
             }
             h2,
@@ -269,21 +264,23 @@
                                     <div class="item_header">
                                         <h1>Fale Conosco</h1>					
                                     </div>
+                                    <form action="envia.php" method="post" id="contato">
+                                        <fieldset>
+                                            <legend>Formulário de Contato</legend>
+                                            <label>Seu nome:</label>
+                                            <input name="nome" type="text" /><br /><br />
+                                            <label>Telefone:</label>
+                                            <input name="telefone" type="number" /><br /><br />
+                                            <label>Seu email:</label>
+                                            <input name="email" type="email" /><br /><br />
+                                            <label>Assunto:</label>
+                                            <input name="assunto" type="text" /><br /><br />
+                                            <label>Mensagem:</label>
+                                            <textarea name="mensagem" rows="10"></textarea><br /><br />
+                                            <input name="submit" type="submit" value="ENVIAR" style="width: 100px;" />
+                                        </fieldset>
+                                    </form>
                                 </div>
-                                <form action="envia.php" method="post" id="contato">
-                                    <fieldset>
-                                        <legend>Formulário de Contato</legend>
-                                        <label>Seu nome:</label>
-                                        <input name="nome" type="text" /><br /><br />
-                                        <label>Seu email:</label>
-                                        <input name="email" type="text" /><br /><br />
-                                        <label>Assunto:</label>
-                                        <input name="assunto" type="text" /><br /><br />
-                                        <label>Mensagem:</label>
-                                        <textarea name="mensagem" rows="10"></textarea><br /><br />
-                                        <input name="submit" type="submit" value="Enviar" style="width: auto;" />
-                                    </fieldset>
-                                </form>
                             </div>
                         </div>
                     </div>
