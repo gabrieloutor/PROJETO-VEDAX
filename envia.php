@@ -37,11 +37,6 @@ $msg = "Nome: $nome <BR<BR>
        else {
             echo "<script>alert('Preencha todos os campos!');</script>";
             echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de seu formulário
-            $msg=$msg;
-            $email=$email;
-            $nome=$nome;
-            $telefone=$telefone;
-            $assunto=$assunto;
             exit;
        }
     }

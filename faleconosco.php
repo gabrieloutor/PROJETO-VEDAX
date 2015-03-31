@@ -268,7 +268,7 @@
                                         <fieldset>
                                             <legend>Formulário de Contato</legend>
                                             <label>Seu nome:</label>
-                                            <input name="nome" type="text" /><br /><br />
+                                            <input name="nome" type="text"/><br /><br />
                                             <label>Telefone:</label>
                                             <input name="telefone" type="text" /><br /><br />
                                             <label>Seu email:</label>
