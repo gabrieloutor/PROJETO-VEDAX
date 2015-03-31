@@ -273,13 +273,13 @@
                                 <form action="envia.php" method="post" id="contato">
                                     <fieldset>
                                         <legend>Formulário de Contato</legend>
-                                        <label>Seu nome:</label><br />
+                                        <label>Seu nome:</label>
                                         <input name="nome" type="text" /><br /><br />
-                                        <label>Seu email:</label><br />
+                                        <label>Seu email:</label>
                                         <input name="email" type="text" /><br /><br />
-                                        <label>Assunto:</label><br />
+                                        <label>Assunto:</label>
                                         <input name="assunto" type="text" /><br /><br />
-                                        <label>Mensagem:</label><br />
+                                        <label>Mensagem:</label>
                                         <textarea name="mensagem" rows="10"></textarea><br /><br />
                                         <input name="submit" type="submit" value="Enviar" style="width: auto;" />
                                     </fieldset>
