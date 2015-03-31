@@ -270,7 +270,7 @@
                                             <label>Seu nome:</label>
                                             <input name="nome" type="text" /><br /><br />
                                             <label>Telefone:</label>
-                                            <input name="telefone" type="number" /><br /><br />
+                                            <input name="telefone" type="text" /><br /><br />
                                             <label>Seu email:</label>
                                             <input name="email" type="email" /><br /><br />
                                             <label>Assunto:</label>

@@ -31,6 +31,11 @@ $msg = "Nome: $nome <BR<BR>
                 if($smtp->Send($to, $from, $subject, $msg)){
                     echo "<script>alert('Contato enviado!');</script>";
                     echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de sua página.
+                    $msg=$msg;
+                    $email=$email;
+                    $nome=$nome;
+                    $telefone=$telefone;
+                    $assunto=$assunto;
                     exit;
                 }
        }
