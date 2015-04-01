@@ -12,8 +12,8 @@ $mensagem = $_POST['mensagem'];
 //#########################################
 // Dados da conta de e-mail que fará o envio
 //#########################################
-include 'PHPMailerAutoload.php';
-
+require 'PHPMailerAutoload.php';
+echo "require";
 $mail = new PHPMailer;
 
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
