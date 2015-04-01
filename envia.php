@@ -3,7 +3,7 @@
 //#########################################
 // Recebe as informações do formulário
 //#########################################
-echo "cheguei aqui";
+echo "cheguei aquiteste2";
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
