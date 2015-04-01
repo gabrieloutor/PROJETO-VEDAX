@@ -266,7 +266,7 @@
                                     </div>
                                     <form action="envia.php" method="post" id="contato">
                                         <fieldset>
-                                            <legend>Formulário de Contato1</legend>
+                                            <legend>Formulário de Contato</legend>
                                             <label>Seu nome:</label>
                                             <input name="nome" type="text"/><br /><br />
                                             <label>Telefone:</label>
