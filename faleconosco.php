@@ -262,11 +262,12 @@
                                 </div>
                                 <div class="page-item page-item__">
                                     <div class="item_header">
-                                        <h1>Fale Conosco</h1>					
+                                        <h1>Fale Conosco</h1>
+                                        <?php echo getenv("PASSWORD"); ?>
                                     </div>
                                     <form action="envia.php" method="post" id="contato">
                                         <fieldset>
-                                            <legend>Formulário de Contato</legend>
+                                            <legend>Formulário de Contato1</legend>
                                             <label>Seu nome:</label>
                                             <input name="nome" type="text"/><br /><br />
                                             <label>Telefone:</label>
