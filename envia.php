@@ -1,57 +1,20 @@
-<?php
-require 'PHPMailerAutoload.php';
-//include_once('phpmailer.php'); //Chama o arquivo phpmailer.php com as funções para realizar o envio.
-//#########################################
-// Recebe as informações do formulário
-//#########################################
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$assunto = $_POST['assunto'];
-$mensagem = $_POST['mensagem'];
-//#########################################
-// Dados da conta de e-mail que fará o envio
-//#########################################
-
-echo "require2";
-$mail = new PHPMailer(true);
-echo "TESTE  INSTA";
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.live.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'gabriel.outor@hotmail.com';                 // SMTP username
-$mail->Password = getenv("PASSWORD");                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 25;                                    // TCP port to connect to
-
-$mail->From = 'gabriel.outor@hotmail.com';
-$mail->FromName = 'Mailer';
-$mail->isHTML(true); 
-
-$mail->Subject = "Contato - " . $assunto;
-$mail->Body    = "Nome: $nome <BR<BR>
-    E-Mail: $email <BR><BR>
-    Telefone: $telefone <BR><BR>
-    Assunto: $assunto <BR><BR>
-    Mensagem: $msg <BR><BR>";
-echo "cheguei aqui2";
-    if (isset($_POST['submit'])) {
-        if($nome && $email && $assunto && $mensagem) {
-                if($mail->send()){
-                    echo "<script>alert('Contato enviado!');</script>";
-               //     echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de sua página.
-               //     exit;
-                }else{
-                    echo 'Message could not be sent.';
-                    echo 'Mailer Error: ' . $mail->ErrorInfo;
-                }
-       }
-       else {
-            echo "<script>alert('Preencha todos os campos!');</script>";
-        //    echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de seu formulário
-       //     exit;
-       }
-    }
+<?php 
+//1 – Definimos Para quem vai ser enviado o email 
+$para = "gabriel.outor@hotmail.com"; 
+//2 - resgatar o nome digitado no formulário e grava na variavel $nome 
+$nome = $_POST['nome']; 
+// 3 - resgatar o assunto digitado no formulário e grava na variavel //$assunto 
+$assunto = $_POST['assunto']; 
+//4 – Agora definimos a mensagem que vai ser enviado no e-mail 
+$mensagem = "<strong>Nome: </strong>".$nome; 
+$mensagem .= "<br> <strong>Mensagem: </strong>".$_POST['mensagem']; 
+//5 – agora inserimos as codificações corretas e tudo mais. 
+$headers = "Content-Type:text/html; charset=UTF-8\n"; 
+$headers .= "From: dominio.com.br<sistema@dominio.com.br>\n"; //Vai ser //mostrado que o email partiu deste email e seguido do nome 
+$headers .= "X-Sender: <sistema@dominio.com.br>\n"; //email do servidor //que enviou 
+$headers .= "X-Mailer: PHP v".phpversion()."\n"; 
+$headers .= "X-IP: ".$_SERVER['REMOTE_ADDR']."\n"; 
+$headers .= "Return-Path: <sistema@dominio.com.br>\n"; //caso a msg //seja respondida vai para este email. 
+$headers .= "MIME-Version: 1.0\n"; 
+mail($para, $assunto, $mensagem, $headers); //função que faz o envio do email. 
 ?>
