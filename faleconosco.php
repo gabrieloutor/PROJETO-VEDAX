@@ -266,15 +266,15 @@
                                     </div>
                                     <form action="envia.php" method="post" id="contato">
                                         <fieldset>
-                                            <legend>Formulário de Contato</legend>
+                                            <legend>Formulário de Contato - TESTE 1</legend>
                                             <label>Seu nome:</label>
-                                            <input name="nome" type="text"/><br /><br />
+                                            <input name="nome" type="text" id="nome"/><br /><br />
                                             <label>Telefone:</label>
-                                            <input name="telefone" type="text" /><br /><br />
+                                            <input name="telefone" type="text" id="telefone" /><br /><br />
                                             <label>Seu email:</label>
-                                            <input name="email" type="email" /><br /><br />
+                                            <input name="email" type="text" id="email" /><br /><br />
                                             <label>Assunto:</label>
-                                            <input name="assunto" type="text" /><br /><br />
+                                            <input name="assunto" type="text" id="assunto"/><br /><br />
                                             <label>Mensagem:</label>
                                             <textarea name="mensagem" rows="10"></textarea><br /><br />
                                             <input name="submit" type="submit" value="ENVIAR" style="width: 100px;" />
