@@ -276,7 +276,7 @@
                                             <label>Assunto:</label>
                                             <input name="assunto" type="text" id="assunto"/><br /><br />
                                             <label>Mensagem:</label>
-                                            <textarea name="mensagem" rows="10"></textarea><br /><br />
+                                            <textarea name="mensagem" rows="10" id="mensagem"></textarea><br /><br />
                                             <input name="submit" type="submit" value="ENVIAR" style="width: 100px;" />
                                         </fieldset>
                                     </form>
