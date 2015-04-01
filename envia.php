@@ -1,9 +1,9 @@
 <?php
+require 'PHPMailerAutoload.php';
 //include_once('phpmailer.php'); //Chama o arquivo phpmailer.php com as funções para realizar o envio.
 //#########################################
 // Recebe as informações do formulário
 //#########################################
-echo "cheguei aquiteste2";
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
@@ -12,9 +12,9 @@ $mensagem = $_POST['mensagem'];
 //#########################################
 // Dados da conta de e-mail que fará o envio
 //#########################################
-require 'PHPMailerAutoload.php';
+
 echo "require2";
-$mail = new PHPMailer;
+$mail = new PHPMailer();
 echo "TESTE  INSTA";
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
