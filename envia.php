@@ -14,7 +14,7 @@ $mensagem = $_POST['mensagem'];
 $smtp = new Smtp("smtp.live.com"); //Endereço do SMTP, geralmente localhost.
 $smtp->user = "gabriel.outor@hotmail.com";  //Conta de email
 $smtp->pass = getenv("PASSWORD"); //Senha da Conta de e-mail.
-$smtp->debug = false; //Somente para usuários avançados que desejam o log do envio para testes.
+$smtp->debug = true; //Somente para usuários avançados que desejam o log do envio para testes.
 //#########################################
 // Envio do formulário
 //#########################################
@@ -30,14 +30,14 @@ $msg = "Nome: $nome <BR<BR>
         if($nome && $email && $assunto && $mensagem) {
                 if($smtp->Send($to, $from, $subject, $msg)){
                     echo "<script>alert('Contato enviado!');</script>";
-                    echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de sua página.
-                    exit;
+               //     echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de sua página.
+               //     exit;
                 }
        }
        else {
             echo "<script>alert('Preencha todos os campos!');</script>";
-            echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de seu formulário
-            exit;
+        //    echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de seu formulário
+       //     exit;
        }
     }
 ?>

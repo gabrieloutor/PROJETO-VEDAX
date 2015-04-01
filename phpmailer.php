@@ -8,7 +8,7 @@ class Smtp {
     var $debug = false;
 
     function Smtp($host) {
-        $this->conn = fsockopen($host, 25, $errno, $errstr, 30);
+        $this->conn = fsockopen($host, 465, $errno, $errstr, 30);
         $this->Put("EHLO $host");
     }
 
