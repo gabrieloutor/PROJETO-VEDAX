@@ -35,7 +35,7 @@ $mail->Body    = "Nome: $nome <BR<BR>
     Telefone: $telefone <BR><BR>
     Assunto: $assunto <BR><BR>
     Mensagem: $msg <BR><BR>";
-
+echo "cheguei aqui";
     if (isset($_POST['submit'])) {
         if($nome && $email && $assunto && $mensagem) {
                 if($mail->send()){
