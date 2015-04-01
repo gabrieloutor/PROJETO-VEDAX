@@ -11,7 +11,6 @@ $mensagem = $_POST['mensagem'];
 //#########################################
 // Dados da conta de e-mail que fará o envio
 //#########################################
-$password =  getenv("PASSWORD");
 $smtp = new Smtp("smtp.live.com"); //Endereço do SMTP, geralmente localhost.
 $smtp->user = "gabriel.outor@hotmail.com";  //Conta de email
 $smtp->pass = getenv("PASSWORD"); //Senha da Conta de e-mail.
@@ -36,7 +35,7 @@ $msg = "Nome: $nome <BR<BR>
                 }
        }
        else {
-            echo "<script>alert($password);</script>";
+            echo "<script>alert('Preencha todos os campos!');</script>";
             echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de seu formulário
             exit;
        }

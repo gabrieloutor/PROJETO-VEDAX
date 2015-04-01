@@ -263,7 +263,6 @@
                                 <div class="page-item page-item__">
                                     <div class="item_header">
                                         <h1>Fale Conosco</h1>
-                                        <?php echo getenv("PASSWORD"); ?>
                                     </div>
                                     <form action="envia.php" method="post" id="contato">
                                         <fieldset>
