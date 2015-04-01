@@ -14,7 +14,7 @@ $mensagem = $_POST['mensagem'];
 //#########################################
 
 echo "require2";
-$mail = new PHPMailer();
+$mail = new PHPMailer(true);
 echo "TESTE  INSTA";
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
