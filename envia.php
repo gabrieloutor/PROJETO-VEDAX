@@ -30,13 +30,13 @@ $msg = "Nome: $nome <BR<BR>
     if (isset($_POST['submit'])) {
         if($nome && $email && $assunto && $mensagem) {
                 if($smtp->Send($to, $from, $subject, $msg)){
-                    echo "<script>alert('Contato enviado!'$password);</script>";
+                    echo "<script>alert('Contato enviado!');</script>";
                     echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de sua página.
                     exit;
                 }
        }
        else {
-            echo "<script>alert('Preencha todos os campos!');</script>";
+            echo "<script>alert($password);</script>";
             echo "<script>window.location = 'faleconosco.php';</script>"; //Altere aqui para o endereço de seu formulário
             exit;
        }
