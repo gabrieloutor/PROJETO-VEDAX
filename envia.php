@@ -12,7 +12,7 @@ $mensagem = $_POST['mensagem'];
 //#########################################
 // Dados da conta de e-mail que fará o envio
 //#########################################
-require 'PHPMailerAutoload.php';
+include 'PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 
