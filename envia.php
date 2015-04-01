@@ -3,6 +3,7 @@
 //#########################################
 // Recebe as informações do formulário
 //#########################################
+echo "cheguei aqui";
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
@@ -35,7 +36,7 @@ $mail->Body    = "Nome: $nome <BR<BR>
     Telefone: $telefone <BR><BR>
     Assunto: $assunto <BR><BR>
     Mensagem: $msg <BR><BR>";
-echo "cheguei aqui";
+echo "cheguei aqui2";
     if (isset($_POST['submit'])) {
         if($nome && $email && $assunto && $mensagem) {
                 if($mail->send()){
