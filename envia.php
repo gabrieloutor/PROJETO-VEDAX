@@ -13,9 +13,9 @@ $mensagem = $_POST['mensagem'];
 // Dados da conta de e-mail que fará o envio
 //#########################################
 require 'PHPMailerAutoload.php';
-echo "require";
+echo "require2";
 $mail = new PHPMailer;
-
+echo "TESTE  INSTA";
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
