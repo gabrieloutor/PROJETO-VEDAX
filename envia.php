@@ -3,7 +3,7 @@
 // Learn more -> http://developer.postmarkapp.com/developer-official-libs.html#php
 
 // Install with composer
-require wildbit/postmark-php
+composer require wildbit/postmark-php
 
 //Import
 use Postmark\PostmarkClient;
@@ -17,4 +17,5 @@ $sendResult = $client->sendEmail(
   "Hello from Postmark!",
   "This is just a friendly 'hello' from your friends at Postmark."
 );
+echo "chegou";
 ?>
