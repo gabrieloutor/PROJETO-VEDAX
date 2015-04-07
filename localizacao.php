@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8" >
-        <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação." >
+        <meta name="description" content="<?php echo $descricao; ?>" >
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa,localizacao">
         <meta name="author" content="<?php echo $nomedesenvolvedor; ?>" >
         <title>Localização | <?php echo $empresa; ?></title>
