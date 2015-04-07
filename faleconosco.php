@@ -338,25 +338,25 @@
                                     <div class="mod-custom mod-custom__contactus">
                                         <h4>
                                             <span class="facebook">
-                                                <a target="_blank" href="<?php $linkface ?>">Facebook</a>
+                                                <a target="_blank" href="<?php echo $linkface; ?>">Facebook</a>
                                             </span>
                                         </h4>
                                         <h4>
                                             <span class="icon-phone">
-                                                &#9743; <?php echo $telefonesite ?>
+                                                &#9743; <?php echo $telefonesite; ?>
                                                 <br />
 
                                             </span>
                                         </h4>
                                         <h4>
                                             <span class="adress">
-                                                &#9758; <?php echo $endereco ?>
+                                                &#9758; <?php echo $endereco; ?>
                                                 <br />
                                             </span>
                                         </h4>
                                         <h4>
                                             <span class="icon-mail">
-                                                &#9993; Email: <a href="<?php $emailsite ?>"><?php echo $emailsite ?></a>
+                                                &#9993; Email: <a href="<?php $emailsite; ?>"><?php echo $emailsite; ?></a>
                                             </span>
                                         </h4>
                                     </div>
@@ -369,7 +369,7 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; <?php echo date("Y") ?> | <?php echo $empresa ?>
+                        Copyright &copy; <?php echo date("Y"); ?> | <?php echo $empresa; ?>
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
