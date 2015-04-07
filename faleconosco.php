@@ -356,7 +356,7 @@
                                         </h4>
                                         <h4>
                                             <span class="icon-mail">
-                                                &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
+                                                &#9993; Email: <a href="<?php $emailsite ?>"><?php echo $emailsite ?></a>
                                             </span>
                                         </h4>
                                     </div>
