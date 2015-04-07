@@ -1,9 +1,11 @@
+<?php require "config.ini"; ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr" >
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta charset="UTF-8">
-            <title>Administração | Vedax Equipamentos Hidráulicos Ltda</title>
+            <meta name="author" content="<?php echo $nomedesenvolvedor; ?>" >
+            <title>Administração | <?php echo $empresa; ?></title>
             <!-- INICIO FAVICON -->
             <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
             <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
@@ -162,7 +164,7 @@
         </div>
         <div class="navbar navbar-fixed-bottom hidden-phone">
             <p class="pull-right">
-                &copy; <?php echo date("Y")?> VEDAX		</p>
+                &copy; <?php echo date("Y")?> <?php echo $empresa; ?>		</p>
             <a href="index.php" target="_blank" class="pull-left"><i class="icon-share icon-white"></i> Ir para página inicial do site.</a>
         </div>
 
