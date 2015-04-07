@@ -1,3 +1,4 @@
+<?php require "config.ini"; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -349,7 +350,7 @@
                                         </h4>
                                         <h4>
                                             <span class="adress">
-                                                &#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-900
+                                                &#9758; <?php echo $endereco ?>
                                                 <br />
                                             </span>
                                         </h4>
@@ -368,7 +369,7 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; <?php echo date("Y") ?> | <?php require "config.ini";echo $empresa ?>
+                        Copyright &copy; <?php echo date("Y") ?> | <?php echo $empresa ?>
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
