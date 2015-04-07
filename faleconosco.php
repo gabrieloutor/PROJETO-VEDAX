@@ -6,8 +6,8 @@
         <meta charset="UTF-8">
         <meta name="description" content="Vedax - A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carbono, obedecendo as especificações de normas nacionais e internacionais de fabricação." />
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa">
-        <meta name="author" content="Gabriel Outor">
-        <title>Fale Conosco | Vedax Equipamentos Hidráulicos Ltda</title>
+        <meta name="author" content="<?php echo $nomedesenvolvedor; ?>">
+        <title>Fale Conosco | <?php echo $empresa; ?></title>
         <!-- INICIO FAVICON -->
         <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
