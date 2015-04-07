@@ -373,8 +373,8 @@
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
-                            <a href="http://www.facebook.com/gabriel.outor" target="_blank">
-                                &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;Gabriel Outor
+                            <a href="<?php echo $linkfacedesenvolvedor; ?>" target="_blank">
+                                &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;<?php echo $nomedesenvolvedor; ?>
                             </a>
                         </div>
                     </div>

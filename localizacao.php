@@ -1,3 +1,4 @@
+<?php require "config.ini"; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -302,22 +303,25 @@
                                     <div class="mod-custom mod-custom__contactus">
                                         <h4>
                                             <span class="facebook">
-                                                <a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
+                                                <a target="_blank" href="<?php echo $linkface; ?>">Facebook</a>
                                             </span>
                                         </h4>
                                         <h4>
                                             <span class="icon-phone">
-                                                &#9743; +55 11 4161-3597<br />
+                                                &#9743; <?php echo $telefonesite; ?>
+                                                <br />
+
                                             </span>
                                         </h4>
                                         <h4>
                                             <span class="adress">
-                                                &#9758; Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-900<br />
+                                                &#9758; <?php echo $endereco; ?>
+                                                <br />
                                             </span>
                                         </h4>
                                         <h4>
                                             <span class="icon-mail">
-                                                &#9993; Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
+                                                &#9993; Email: <a href="<?php echo $emailsite; ?>"><?php echo $emailsite; ?></a>
                                             </span>
                                         </h4>
                                     </div>
@@ -330,12 +334,12 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; <?php echo date("Y")?> | Vedax Equipamentos Hidráulicos Ltda
+                        Copyright &copy; <?php echo date("Y"); ?> | <?php echo $empresa; ?>
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
-                            <a href="http://www.facebook.com/gabriel.outor" target="_blank">
-                                &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;Gabriel Outor
+                            <a href="<?php echo $linkfacedesenvolvedor; ?>" target="_blank">
+                                &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;<?php echo $nomedesenvolvedor; ?>
                             </a>
                         </div>
                     </div>
