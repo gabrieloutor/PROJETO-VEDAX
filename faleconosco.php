@@ -1,3 +1,4 @@
+<?php require "config.ini"; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -368,7 +369,7 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; <?php echo date("Y") ?> | Vedax Equipamentos Hidráulicos Ltda
+                        Copyright &copy; <?php echo date("Y") ?> | <?php echo $empresa; ?>
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
