@@ -278,7 +278,7 @@
                                             <br>
                                             GPS: Digite as coordenadas
                                             <u>
-                                                -23.488140, -46.877794
+                                                <?php echo $coordenadasgps; ?>
                                             </u>
                                             <br>
                                             <br>
