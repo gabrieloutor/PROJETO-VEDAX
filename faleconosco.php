@@ -343,7 +343,7 @@
                                         </h4>
                                         <h4>
                                             <span class="icon-phone">
-                                                &#9743; +55 11 4161-3597
+                                                &#9743; <?php echo $telefonesite ?>
                                                 <br />
 
                                             </span>
