@@ -262,17 +262,17 @@
                                     </iframe>
                                     <p id="localizacao">
                                         <span style="font-size: 12pt;">
-                                            Fábrica e Escritório | Vedax Equipamentos Hidráulicos Ltda
+                                            Fábrica e Escritório | <?php echo $empresa; ?>
                                             <br>
                                             <br>
                                             <u>
-                                                Avenida Cachoeira, 634 - Vila Pindorama, Barueri - SP, 06413-900
+                                                <?php echo $endereco; ?>
                                             </u>
                                             <br>
                                             <br>
                                             Telefone:
                                             <u>
-                                                +55 11 4161-3597
+                                                <?php echo $telefonesite; ?>
                                             </u>
                                             <br>
                                             <br>
@@ -282,7 +282,7 @@
                                             </u>
                                             <br>
                                             <br>
-                                            Email: <a href="mailto:comercial@vedax.ind.br">comercial@vedax.ind.br</a>
+                                            Email: <a href="mailto:<?php echo $emailsite; ?>"><?php echo $emailsite; ?></a>
                                         </span>
                                     </p>
                                 </div>
