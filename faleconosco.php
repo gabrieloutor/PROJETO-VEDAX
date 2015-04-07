@@ -1,4 +1,3 @@
-<?php require "config.ini"; ?>
 <!DOCTYPE html>
 <html>
     <head>
