@@ -368,7 +368,7 @@
             <div id="copyright-row">
                 <div class="container">
                     <div id="trademark">
-                        Copyright &copy; <?php echo date("Y") ?> | Vedax Equipamentos Hidráulicos Ltda
+                        Copyright &copy; <?php echo date("Y") ?> | <?php require "config.ini";echo $empresa ?>
                     </div>
                     <div id="copyright-menu" class="row">
                         <div id="ascopy">
