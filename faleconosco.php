@@ -264,22 +264,61 @@
                                     <div class="item_header">
                                         <h1>Fale Conosco</h1>
                                     </div>
-                                    <form action="envia.php" method="post" id="contato">
-                                        <fieldset>
-                                            <legend>Formulário de Contato - TESTE 1</legend>
-                                            <label>Seu nome:</label>
-                                            <input name="nome" type="text" id="nome"/><br /><br />
-                                            <label>Telefone:</label>
-                                            <input name="telefone" type="text" id="telefone" /><br /><br />
-                                            <label>Seu email:</label>
-                                            <input name="email" type="text" id="email" /><br /><br />
-                                            <label>Assunto:</label>
-                                            <input name="assunto" type="text" id="assunto"/><br /><br />
-                                            <label>Mensagem:</label>
-                                            <textarea name="mensagem" rows="10" id="mensagem"></textarea><br /><br />
-                                            <input name="submit" type="submit" value="ENVIAR" style="width: 100px;" />
-                                        </fieldset>
-                                    </form>
+                                    <form action="formail.php" method="POST">
+<font face="Arial Narrow">
+<input type="hidden" name="emaildest" value="seuendereço@seuservidor.com.br"></font>
+<font face="Arial Narrow">
+<input type="hidden" name="redirecionar" value="http://www.suapagina.com.br/msgenviada.htm ">
+</font>
+<center>
+<table width="635" bgcolor="#000000" border="0" align="center" cellspacing="0" cellpadding="1" height="270">
+<tr>
+<td width="633" height="268">
+<div align="center">
+<center>
+<table width="344" bgcolor="#C4C4AA" border="1" cellspacing="0" cellpadding="3" style="border-collapse: collapse" bordercolor="#111111" height="271">
+<tr>
+<td width="93" height="22"><font face="Tahoma" size="2">Seu nome:</font></td>
+<td width="239" height="22">
+<font face="Arial Narrow">
+<input type="text" size="70" name="nome" value=""></font></td>
+</tr>
+<tr>
+<td width="93" height="22"><font face="Tahoma" size="2">Seu E-mail:</font></td>
+<td width="239" height="22">
+<font face="Arial Narrow">
+<input type="text" size="70" name="email" value=""></font></td>
+</tr>
+<tr>
+<td width="93" height="22"><font face="Tahoma" size="2">Assunto:</font></td>
+<td width="239" height="22">
+<font face="Arial Narrow">
+<input type="text" size="70" name="assunto" value=""></font></td>
+</tr>
+<tr>
+<td width="93" height="100"><font face="Tahoma" size="2">Mensagem:</font></td>
+<td width="239" height="100">
+<font face="Arial Narrow">
+<textarea cols="60" rows="6" name="mensagem"></textarea></font></td>
+</tr>
+<tr>
+<td colspan="2" align="center" width="331" height="71">
+<font face="Arial Narrow">
+<input type="submit" value=" Enviar " style="float: left; font-family: Tahoma"></font><font face="Tahoma"><input type="reset" value=" Limpar " style="float: left"></font><font face="Arial Narrow">&nbsp;&nbsp;&nbsp;
+</font></td>
+</tr>
+</table>
+</center>
+</div>
+</td>
+</tr>
+</table>
+</center>
+</form>
+
+<p align="center">
+<a href="corpo.asp"><strong><font color="#000000" face="Tahoma" size="3">Voltar</font></strong></a></p>
+
                                 </div>
                             </div>
                         </div>
