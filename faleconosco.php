@@ -338,7 +338,7 @@
                                     <div class="mod-custom mod-custom__contactus">
                                         <h4>
                                             <span class="facebook">
-                                                <a target="_blank" href="https://www.facebook.com/vedax.conexoes.forjados">Facebook</a>
+                                                <a target="_blank" href="<?php $linkface ?>">Facebook</a>
                                             </span>
                                         </h4>
                                         <h4>
