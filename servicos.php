@@ -307,12 +307,12 @@
                                     <div class="mod-custom mod-custom__contactus">
                                         <h4>
                                             <span class="facebook">
-                                                <a target="_blank" href="<?php echo $linkface; ?>">Facebook</a>
+                                                <a target="_blank" href="<?php echo $facebook; ?>">Facebook</a>
                                             </span>
                                         </h4>
                                         <h4>
                                             <span class="icon-phone">
-                                                &#9743; <?php echo $telefonesite; ?>
+                                                &#9743; <?php echo $telefone; ?>
                                                 <br />
 
                                             </span>
