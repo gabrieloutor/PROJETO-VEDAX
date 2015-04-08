@@ -20,16 +20,21 @@ $conexao = mysqli_connect($url, $login, $senha, $nome);
 if (mysqli_connect_errno()) {
     echo "Não foi possível conectar: " . mysqli_connect_error();
 } else {
-    echo "CONECTADA<br/>";
+    echo "CONECTADO<br/>";
 }
 $resultado = mysqli_query($conexao, "SELECT * from contatos");
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
         //echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
-        $telefone=$row["telefone"];
-        echo substr($telefone, 0, 2) . "<br/>";
-        echo substr($telefone, -1) . "<br/>";
+        //$telefone=$row["telefone"];
+        //echo substr($telefone, 0, 2) . "<br/>";
+        //echo substr($telefone, -1) . "<br/>";
+        $telefone="41613597";
+        if(substr($telefone, -4,1) === '-'){
+            $telefone=substr($telefone, 0,4)."-".substr($telefone, -4);
+        }
+        echo $telefone;
     }
 }
 ?>
