@@ -7,7 +7,7 @@
     </head>
     <body>
 <?php
-
+ini_set('default_charset','UTF-8'); 
 $login = getenv("LOGINDB");
 $senha = getenv("SENHADB");
 $nome = getenv("NOMEDB");
