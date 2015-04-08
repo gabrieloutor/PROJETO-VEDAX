@@ -20,7 +20,7 @@ $conexao = mysqli_connect($url, $login, $senha, $nome);
 if (mysqli_connect_errno()) {
     echo "Não foi possível conectar: " . mysqli_connect_error();
 } else {
-    echo "CONECTADA1<br/>";
+    echo "CONECTADA<br/>";
 }
 $resultado = mysqli_query($conexao, "SELECT * from contatos");
 if ($resultado) {
@@ -28,7 +28,7 @@ if ($resultado) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
         //echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
         $telefone=$row["telefone"];
-        echo substr($telefone, 0, 5) . "<br/>";
+        echo substr($telefone, 0, 2) . "<br/>";
         echo substr($telefone, -1) . "<br/>";
     }
 }
