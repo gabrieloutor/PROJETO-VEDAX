@@ -20,12 +20,12 @@ $conexao = mysqli_connect($url, $login, $senha, $nome);
 if (mysqli_connect_errno()) {
     echo "Não foi possível conectar: " . mysqli_connect_error();
 } else {
-    echo "CONECTADa";
+    echo "CONECTADOoo";
 }
 $resultado = mysqli_query($conexao, "SELECT * from DADOS_EMPRESA");
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
-        echo htmlentities($row["NOME"]);
+        echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
     }
 }
 ?>
