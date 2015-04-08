@@ -22,12 +22,12 @@ if (mysqli_connect_errno()) {
 } else {
     echo "CONECTADO";
 }
-$resultado = mysqli_query($conexao, "SELECT * from dados_empresa");
+$resultado = mysqli_query($conexao, "SELECT * from dados AND SELECT * FROM contatos");
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
-        echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
-        //echo $row["NOME"];
+        //echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
+        echo $row["email"];
     }
 }
 ?>
