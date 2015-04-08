@@ -23,6 +23,10 @@ if (mysqli_connect_errno()) {
     echo "CONECTADO";
 }
 $resultado = mysqli_query($conexao, "SELECT * from DADOS_EMPRESA");
+mysql_query("SET NAMES 'utf8'");
+mysql_query('SET character_set_connection=utf8');
+mysql_query('SET character_set_client=utf8');
+mysql_query('SET character_set_results=utf8');
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
         echo $row["NOME"] . "<br/>";
