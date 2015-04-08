@@ -20,7 +20,7 @@ $conexao = mysqli_connect($url, $login, $senha, $nome);
 if (mysqli_connect_errno()) {
     echo "Não foi possível conectar: " . mysqli_connect_error();
 } else {
-    echo "CONECTADA";
+    echo "CONECTADA1";
 }
 $resultado = mysqli_query($conexao, "SELECT * from dados,contatos");
 if ($resultado) {
