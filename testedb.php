@@ -14,4 +14,9 @@ $conexao = mysqli_connect($url,$login,$senha,$nome);
   }else{
       echo "CONECTADO";
   }
+  $resultado = mysqli_query($conexao, "SELECT * from EMPRESA");
+  if($resultado){
+      while($row = mysqli_fetch_array($resultado) ){
+         echo $row["NOME"]."<br/>";
+} }
   ?>
