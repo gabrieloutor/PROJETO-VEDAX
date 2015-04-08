@@ -30,13 +30,7 @@ if ($resultado) {
         //$telefone=$row["telefone"];
         //echo substr($telefone, 0, 2) . "<br/>";
         //echo substr($telefone, -1) . "<br/>";
-        $telefone="41613597";
-        if(strlen($telefone)===8){
-            $telefone=substr($telefone, 0,4)."-".substr($telefone, -4);
-        }else if(strlen($telefone)===8){
-            
-        }
-        echo $telefone;
+        
     }
 }
 ?>
