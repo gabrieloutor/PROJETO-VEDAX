@@ -22,7 +22,7 @@ if (mysqli_connect_errno()) {
 } else {
     echo "CONECTADA1";
 }
-$resultado = mysqli_query($conexao, "SELECT * from dados,contatos");
+$resultado = mysqli_query($conexao, "SELECT * from 'dados','contatos'");
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
