@@ -31,7 +31,7 @@ if ($resultado) {
         //echo substr($telefone, 0, 2) . "<br/>";
         //echo substr($telefone, -1) . "<br/>";
         $telefone="41613597";
-        if(strlen($telefone)){
+        if(strlen($telefone)===8){
             $telefone=substr($telefone, 0,4)."-".substr($telefone, -4);
         }
         echo $telefone;
