@@ -25,7 +25,7 @@ if (mysqli_connect_errno()) {
 $resultado = mysqli_query($conexao, "SELECT * from DADOS_EMPRESA");
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
-        echo $row["NOME"] . "<br/>";
+        echo htmlspecialchars($row["NOME"]). "<br/>";
     }
 }
 ?>
