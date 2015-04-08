@@ -282,7 +282,7 @@
                                             </u>
                                             <br>
                                             <br>
-                                            Email: <a href="mailto:<?php echo $emailsite; ?>"><?php echo $emailsite; ?></a>
+                                            Email: <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                                         </span>
                                     </p>
                                 </div>
@@ -321,7 +321,7 @@
                                         </h4>
                                         <h4>
                                             <span class="icon-mail">
-                                                &#9993; Email: <a href="mailto:<?php echo $emailsite; ?>"><?php echo $emailsite; ?></a>
+                                                &#9993; Email: <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                                             </span>
                                         </h4>
                                     </div>
