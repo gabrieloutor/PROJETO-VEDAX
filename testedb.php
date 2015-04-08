@@ -24,9 +24,9 @@ if (mysqli_connect_errno()) {
 }
 $resultado = mysqli_query($conexao, "SELECT * from DADOS_EMPRESA");
 if ($resultado) {
-    while ($row = mysqli_fetch_array($resultado)) {
+    while ($row = mysqli_fetch_array(htmlentities($resultado, ENT_COMPAT,'ISO-8859-1', true))) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
-        echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
+        echo $row["NOME"];
     }
 }
 ?>
