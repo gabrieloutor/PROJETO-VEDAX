@@ -27,7 +27,7 @@ if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
         //echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
-        echo $row["email"];
+        echo $row["nome"];
     }
 }
 ?>
