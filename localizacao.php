@@ -265,9 +265,7 @@
                                             Fábrica e Escritório | <?php echo $empresa; ?>
                                             <br>
                                             <br>
-                                            <u>
                                                 <address><?php echo $endereco; ?></address>
-                                            </u>
                                             <br>
                                             <br>
                                             Telefone:
