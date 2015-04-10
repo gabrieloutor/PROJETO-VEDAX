@@ -108,10 +108,7 @@
                                             <label for="mod-login-username" class="element-invisible">
                                                 Nome de Usuário						</label>
                                         </span>
-                                        <input name="username" tabindex="1" id="mod-login-username" type="text" class="input-medium" placeholder="Nome de Usuário" size="15"/>
-                                        <a href="http://zapt.net/vedax/index.php?option=com_users&view=remind" class="btn width-auto hasTooltip" title="Esqueceu seu nome de usuário?">
-                                            <i class="icon-help"></i>
-                                        </a>
+                                        <input name="login" tabindex="1" id="mod-login-username" type="text" class="input-medium" placeholder="Nome de Usuário" size="15" required/>
                                     </div>
                                 </div>
                             </div>
@@ -123,24 +120,7 @@
                                             <label for="mod-login-password" class="element-invisible">
                                                 Senha						</label>
                                         </span>
-                                        <input name="passwd" tabindex="2" id="mod-login-password" type="password" class="input-medium" placeholder="Senha" size="15"/>
-                                        <a href="http://zapt.net/vedax/index.php?option=com_users&view=reset" class="btn width-auto hasTooltip" title="Esqueceu sua senha?">
-                                            <i class="icon-help"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <div class="input-prepend">
-                                        <span class="add-on">
-                                            <i class="icon-comment hasTooltip" title="Idioma"></i>
-                                            <label for="lang" class="element-invisible">
-                                                Idioma							</label>
-                                        </span>
-                                        <select id="lang" name="lang"  class="advancedSelect">
-                                            <option value="" selected="selected">Idioma - Padrão</option>
-                                        </select>
+                                        <input name="password" tabindex="2" id="mod-login-password" type="password" class="input-medium" placeholder="Senha" size="15" required/>
                                     </div>
                                 </div>
                             </div>
