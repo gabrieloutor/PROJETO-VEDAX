@@ -266,7 +266,7 @@
                                             <br>
                                             <br>
                                             <u>
-                                                <address><?php echo $endereco; ?></address>
+                                                <?php echo $endereco; ?>
                                             </u>
                                             <br>
                                             <br>
