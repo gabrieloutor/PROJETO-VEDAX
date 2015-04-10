@@ -104,7 +104,7 @@
                                 <div class="controls">
                                     <div class="input-prepend input-append">
                                         <span class="add-on">
-                                            <i class="icon-user hasTooltip" title="Nome de Usuário"></i>
+                                            <i class="icon-user" title="Nome de Usuário"></i>
                                             <label for="mod-login-username" class="element-invisible">
                                                 Nome de Usuário						</label>
                                         </span>
