@@ -285,8 +285,8 @@
                 <!-- INICIO CONTEUDO -->
                 <div id="content-row">
                     <div class="container">
-                        <div class="content-inner row">
-                            <div class="item_header">
+                        <div class="content-inner-row">
+                            <div id="component" class="span12">
                                 <div class="main-content">
                                     <div class="ruds">
                                         <div class="text-item">
