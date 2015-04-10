@@ -314,10 +314,10 @@
                                             </span>
                                         </h4>
                                         <h4>
-                                            
-                                                &#9758; <address><?php echo $endereco; ?></address>
+                                            <span class="adress">
+                                                &#9758; <?php echo $endereco; ?>
                                                 <br />
-                                            
+                                            </span>
                                         </h4>
                                         <h4>
                                             <span class="icon-mail">
