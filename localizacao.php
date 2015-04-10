@@ -265,9 +265,9 @@
                                             Fábrica e Escritório | <?php echo $empresa; ?>
                                             <br>
                                             <br>
-                                        </span>
-                                                <address><?php echo $endereco; ?></address>
-                                                <span style="font-size: 12pt;">
+                                            <u>
+                                                <?php echo $endereco; ?>
+                                            </u>
                                             <br>
                                             <br>
                                             Telefone:
@@ -314,10 +314,10 @@
                                             </span>
                                         </h4>
                                         <h4>
-                                            <span class="adress">
-                                                &#9758; <?php echo $endereco; ?>
+                                            
+                                                &#9758; <address><?php echo $endereco; ?></address>
                                                 <br />
-                                            </span>
+                                            
                                         </h4>
                                         <h4>
                                             <span class="icon-mail">
