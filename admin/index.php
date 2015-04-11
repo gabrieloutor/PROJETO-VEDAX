@@ -1,4 +1,4 @@
-<?php require "..config/config.ini"; ?>
+<?php require "../config/config.ini"; ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr" >
     <head>
