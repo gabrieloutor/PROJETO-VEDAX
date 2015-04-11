@@ -301,45 +301,31 @@
                                             <div class="block clearfix">
                                                 Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.&nbsp; &nbsp;<br><br>   
                                             </div>
-                                            <div class="block clearfix">
-                                                <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
-                                                    <tbody>         
-                                                        <tr> 
                                             <?php
                                             $tipopeca=0;
-                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca LIMIT 0, 4");
-                                            if ($resultado) {
-                                                while ($row = mysqli_fetch_array($resultado)) {
-                                                    echo "<td>
-                                                                <h3>&nbsp; &nbsp; &nbsp; $row[nome] &nbsp;</h3>             
-                                                                <p><img src=\"images/produto/FLANGE$row[id].jpg\" alt=\"\"></p>
-                                                            </td>";
-                                                }
-                                            }
-                                            ?>
-                                                    </tr>     
-                                                </tbody> 
-                                            </table>   
-                                        </div>
-                                        <div class="block clearfix">
-                                                <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
+                                            $totalpeca=16;
+                                            $totaltabela=$totalpeca/4;
+                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
+                                            for($i=0;$i<$totaltabela;$i++){
+                                                if ($resultado) {
+                                                echo "<div class=\"block clearfix\">
+                                                <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
                                                     <tbody>         
-                                                        <tr> 
-                                            <?php
-                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca LIMIT 4, 8");
-                                            if ($resultado) {
-                                                while ($row = mysqli_fetch_array($resultado)) {
+                                                        <tr>";
+                                                for($j=0;$j<$totalpeca;$j++){
                                                     echo "<td>
                                                                 <h3>&nbsp; &nbsp; &nbsp; $row[nome] &nbsp;</h3>             
                                                                 <p><img src=\"images/produto/FLANGE$row[id].jpg\" alt=\"\"></p>
                                                             </td>";
                                                 }
-                                            }
-                                            ?>
-                                                    </tr>     
+                                                echo "</tr>     
                                                 </tbody> 
                                             </table>   
-                                        </div>
+                                        </div>";
+                                            }
+                                            }
+                                            ?>
+                                                    
                                     </div>
                                 </div>
                             </div>
