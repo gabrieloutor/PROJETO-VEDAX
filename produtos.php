@@ -315,9 +315,11 @@
                                                         <tr>";
                                                 for($j=0;$j<4;$j++){
                                                     $row = mysqli_fetch_array($resultado);
+                                                    $produto= htmlentities($row["nome"], ENT_COMPAT,'ISO-8859-1', true);
+                                                    $img=htmlentities($row["img"], ENT_COMPAT,'ISO-8859-1', true);
                                                     echo "<td>
-                                                                <h3>$row[nome]</h3>             
-                                                                <p><img src=\"images/produto/$row[img]\" alt=\"\"></p>
+                                                                <h3>$produto</h3>             
+                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                 }
                                                 echo "</tr>     
