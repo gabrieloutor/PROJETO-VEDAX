@@ -313,7 +313,7 @@
                                                 if ($resultado) {
                                                 echo "       
                                                         <tr>";
-                                                for($j=0;$j<$totalpeca;$j++){
+                                                for($j=0;$j<4;$j++){
                                                     $row = mysqli_fetch_array($resultado);
                                                     echo "<td>
                                                                 <h3>&nbsp; &nbsp; &nbsp; $row[nome] &nbsp;</h3>             
