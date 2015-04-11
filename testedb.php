@@ -31,7 +31,12 @@ if ($resultado) {
         //$telefone=$row["telefone"];
         //echo substr($telefone, 0, 2) . "<br/>";
         //echo substr($telefone, -1) . "<br/>";
-        echo $row[nome]."</br>";
+        echo $row[id]." ";
+        echo $row[norma]." ";
+        echo $row[nome]." ";
+        echo $row[bitola]." ";
+        echo $row[classe]." ";
+        echo $row[img]."</br>";
     }
 }
 ?>
