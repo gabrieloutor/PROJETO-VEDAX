@@ -317,7 +317,7 @@
                                                     $row = mysqli_fetch_array($resultado);
                                                     echo "<td>
                                                                 <h3>$row[nome]</h3>             
-                                                                <p><img src=\"images/produto/FLANGE$row[id].jpg\" alt=\"\"></p>
+                                                                <p><img src=\"images/produto/$row[img]\" alt=\"\"></p>
                                                             </td>";
                                                 }
                                                 echo "</tr>     
