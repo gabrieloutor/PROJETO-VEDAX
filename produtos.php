@@ -312,7 +312,7 @@
                                                 while ($row = mysqli_fetch_array($resultado)) {
                                                     echo "<td>
                                                                 <h3>&nbsp; &nbsp; &nbsp; $row[nome] &nbsp;</h3>             
-                                                                <p><img src=\"images/produto/flange$row[id].jpg\" alt=\"\"></p>
+                                                                <p><img src=\"images/produto/FLANGE$row[id].jpg\" alt=\"\"></p>
                                                             </td>";
                                                 }
                                             }
