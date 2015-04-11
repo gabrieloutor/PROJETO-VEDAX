@@ -326,7 +326,7 @@
                                                     <tbody>         
                                                         <tr> 
                                             <?php
-                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca LIMIT 0, 4");
+                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca LIMIT 4, 8");
                                             if ($resultado) {
                                                 while ($row = mysqli_fetch_array($resultado)) {
                                                     echo "<td>
