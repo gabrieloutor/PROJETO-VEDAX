@@ -301,6 +301,9 @@
                                             <div class="block clearfix">
                                                 Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.&nbsp; &nbsp;<br><br>   
                                             </div>
+                                            <div class=\"block clearfix\">
+                                                <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
+                                                    <tbody>  
                                             <?php
                                             $tipopeca=0;
                                             $totalpeca=16;
@@ -308,9 +311,7 @@
                                             $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
                                             for($i=0;$i<$totaltabela;$i++){
                                                 if ($resultado) {
-                                                echo "<div class=\"block clearfix\">
-                                                <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
-                                                    <tbody>         
+                                                echo "       
                                                         <tr>";
                                                 for($j=0;$j<$totalpeca;$j++){
                                                     $row = mysqli_fetch_array($resultado);
