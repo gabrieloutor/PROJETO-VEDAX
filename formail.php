@@ -1,4 +1,4 @@
-<?php require "config.ini"; ?>
+<?php require "config/config.ini"; ?>
 <?php
 ini_set ("SMTP","smtp.eb.mil.br");
 

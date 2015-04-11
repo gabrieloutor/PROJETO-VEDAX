@@ -1,4 +1,4 @@
-<?php require "config.ini"; ?>
+<?php require "config/config.ini"; ?>
 <!DOCTYPE html>
 <html>
     <head>
