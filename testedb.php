@@ -20,7 +20,7 @@ $conexao = mysqli_connect($url, $login, $senha, $nome);
 if (mysqli_connect_errno()) {
     echo "Não foi possível conectar: " . mysqli_connect_error();
 } else {
-    echo "CONECTADO<br/>";
+    echo "CONECTADA<br/>";
 }
 $tipopeca=0;
 $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
