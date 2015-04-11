@@ -302,7 +302,7 @@
                                                 Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.&nbsp; &nbsp;<br><br>   
                                             </div>
                                             <div class="block clearfix">
-                                                <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
+                                                <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
                                                     <tbody>  
                                             <?php
                                             $tipopeca=0;
