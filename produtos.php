@@ -304,29 +304,24 @@
                                             <div class="block clearfix">
                                                 <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
                                                     <tbody>         
-                                                        <tr>             
-                                                            <td>
-                                                                <h3>&nbsp; &nbsp; &nbsp; <?php echo $facebook; ?>&nbsp;</h3>             
-                                                                <p><img src="/media/Products/ApplicazioneOnshore/NIPO.jpg" alt=""></p>
-                                                            </td>             
-                                                            <td>
-                                                                <h3>&nbsp; &nbsp; &nbsp; &nbsp; Y PIECES</h3>             
-                                                                <p><img src="/media/Products/ApplicazioneOnshore/Y%20PIECES.jpg" alt=""></p>
-                                                            </td>             
-                                                            <td>
-                                                                <h3>&nbsp; ANCHOR FLANGES</h3>             
-                                                                <p><img src="/media/Products/ApplicazioneOnshore/ANCHOR%20FLANGES.jpg" alt="">
-                                                                </p></td>             
-                                                            <td>
-                                                                <h3>&nbsp; &nbsp; &nbsp; &nbsp;ADAPTORS</h3>
-                                                                <h3><p style="font-size: 12px; font-weight: normal;">
-                                                                        <img src="/media/Products/ApplicazioneOnshore/ADAPTORS.jpg" alt=""></p>
-                                                                </h3>
-                                                            </td>         
-                                                        </tr>     
+                                                        <tr> 
+                                            <?php
+                                            $tipopeca=0;
+                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
+                                            if ($resultado) {
+                                                while ($row = mysqli_fetch_array($resultado)) {
+                                                    echo "<td>
+                                                                <h3>&nbsp; &nbsp; &nbsp; $nome &nbsp;</h3>             
+                                                                <p><img src=\"images/produto/flange$id.jpg\" alt=\"\"></p>
+                                                            </td>";
+                                                }
+                                            }
+                                            ?>   
+                                                                                                                    </tr>     
                                                     </tbody> 
                                                 </table>   
-                                            </div>
+                                                                <!--<h3><p style="font-size: 12px; font-weight: normal;">-->      
+
                                             <div class="block clearfix">
                                                 <table class="columns-3" cl="" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><h3>&nbsp; &nbsp; &nbsp; &nbsp;STUB ENDS</h3><p><img border="0" src="/media/Products/ApplicazioneOnshore/STUB_END.jpg" alt=""></p><p>&nbsp;</p></td><td><h3>&nbsp; &nbsp; &nbsp;SPOOL PIECES</h3><p><img alt="" src="/media/Products/ApplicazioneOnshore/Spoolpiece.jpg" border="0"></p><p>&nbsp;</p></td><td><h3>COMPACT FLANGES</h3><h3><p style="font-size: 12px; font-weight: normal;"><img alt="" src="/media/Products/ApplicazioneOnshore/COMPACT.jpg"></p></h3></td><td><h3>&nbsp; &nbsp; &nbsp; PENETRATOR</h3><p><img alt="" src="/media/Products/ApplicazioneOnshore/PENETRATOR.jpg" border="0"></p><p>&nbsp;</p></td></tr></tbody></table>   
                                             </div>
