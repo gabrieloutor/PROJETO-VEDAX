@@ -147,16 +147,19 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="aneis.php">Anéis e Discos</a>
+                                                                <?php echo $peca=2; ?>
                                                             </li>
                                                             <li>
                                                                 <a href="conexoes.php">Conexões</a>
-
+                                                                <?php echo $peca=3; ?>
                                                             </li>
                                                             <li>
                                                                 <a href="flanges.php">Flanges</a>
+                                                                <?php echo $peca=0; ?>
                                                             </li>
                                                             <li>
                                                                 <a href="flangesespeciais.php">Flanges Especiais</a>
+                                                                <?php echo $peca=1; ?>
                                                             </li>
                                                         </ul>
                                                     </li>

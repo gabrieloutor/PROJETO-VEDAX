@@ -22,7 +22,8 @@ if (mysqli_connect_errno()) {
 } else {
     echo "CONECTADO<br/>";
 }
-$resultado = mysqli_query($conexao, "SELECT * from contatos");
+$tipopeca=0;
+$resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
@@ -30,7 +31,7 @@ if ($resultado) {
         //$telefone=$row["telefone"];
         //echo substr($telefone, 0, 2) . "<br/>";
         //echo substr($telefone, -1) . "<br/>";
-        
+        echo $row[nome];
     }
 }
 ?>
