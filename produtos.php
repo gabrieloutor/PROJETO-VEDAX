@@ -321,10 +321,10 @@
                                                             </td>";
                                                 }
                                                 echo "</tr>     
-                                                </tbody> 
+                                                ";
+                                            }echo "</tbody> 
                                             </table>   
                                         </div>";
-                                            }
                                             }
                                             ?>
                                                     
