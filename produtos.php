@@ -316,7 +316,7 @@
                                                 for($j=0;$j<4;$j++){
                                                     $row = mysqli_fetch_array($resultado);
                                                     echo "<td>
-                                                                <h3>&nbsp; &nbsp; &nbsp; $row[nome] &nbsp;</h3>             
+                                                                <h3>$row[nome]</h3>             
                                                                 <p><img src=\"images/produto/FLANGE$row[id].jpg\" alt=\"\"></p>
                                                             </td>";
                                                 }
