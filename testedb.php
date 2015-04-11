@@ -31,7 +31,7 @@ if ($resultado) {
         //$telefone=$row["telefone"];
         //echo substr($telefone, 0, 2) . "<br/>";
         //echo substr($telefone, -1) . "<br/>";
-        echo $row[nome];
+        echo $row[nome]."</br>";
     }
 }
 ?>
