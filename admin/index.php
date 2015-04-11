@@ -145,7 +145,7 @@
         <div class="navbar navbar-fixed-bottom hidden-phone">
             <p class="pull-right">
                 &copy; <?php echo date("Y")?> <?php echo $empresa; ?>		</p>
-            <a href="index.php" target="_blank" class="pull-left"><i class="icon-share icon-white"></i> Ir para página inicial do site.</a>
+            <a href="../index.php" target="_blank" class="pull-left"><i class="icon-share icon-white"></i> Ir para página inicial do site.</a>
         </div>
 
     </body>
