@@ -307,7 +307,25 @@
                                                         <tr> 
                                             <?php
                                             $tipopeca=0;
-                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
+                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca LIMIT 0, 2");
+                                            if ($resultado) {
+                                                while ($row = mysqli_fetch_array($resultado)) {
+                                                    echo "<td>
+                                                                <h3>&nbsp; &nbsp; &nbsp; $row[nome] &nbsp;</h3>             
+                                                                <p><img src=\"images/produto/FLANGE$row[id].jpg\" alt=\"\"></p>
+                                                            </td>";
+                                                }
+                                            }
+                                            ?>
+                                                    </tr>     
+                                                </tbody> 
+                                            </table>   
+                                        </div>
+                                            <div class="block clearfix">
+                                                <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
+                                                    <tbody>         
+                                                        <tr> 
+                                            <?php
                                             if ($resultado) {
                                                 while ($row = mysqli_fetch_array($resultado)) {
                                                     echo "<td>
@@ -317,13 +335,9 @@
                                                 }
                                             }
                                             ?>   
-                                                                                                                    </tr>     
-                                                    </tbody> 
-                                                </table>   
-                                                                <!--<h3><p style="font-size: 12px; font-weight: normal;">-->      
-
-
-
+                                                    </tr>     
+                                                </tbody> 
+                                            </table>   
                                         </div>
                                     </div>
                                 </div>
