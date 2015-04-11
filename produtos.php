@@ -303,7 +303,7 @@
                                                     <tbody>         
                                                         <tr>             
                                                             <td>
-                                                                <h3>&nbsp; &nbsp; &nbsp; &nbsp;</h3>             
+                                                                <h3>&nbsp; &nbsp; &nbsp; <?php echo $facebook; ?>&nbsp;</h3>             
                                                                 <p><img src="/media/Products/ApplicazioneOnshore/NIPO.jpg" alt=""></p>
                                                             </td>             
                                                             <td>
