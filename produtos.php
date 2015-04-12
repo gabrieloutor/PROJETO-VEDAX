@@ -111,6 +111,12 @@
             });
             jQuery.noConflict();
         </script>
+        <script type="text/javascript">
+            function verifica(var tipopeca){
+                alert(document.getElementById('creditototal').innerHTML);
+                
+            }
+        </script>
         <!-- FIM JAVASCRIPT -->
     </head>
     <body class="com_content view-article task- itemid-101 body__">
@@ -147,16 +153,16 @@
                                                         <a href="produtos.php">Produtos</a>
                                                         <ul>
                                                             <li>
-                                                                <a href="aneis.php">Anéis e Discos</a>
+                                                                <a href="produtos.php" value="aneis" onClick="verifica()">Anéis e Discos</a>
                                                             </li>
                                                             <li>
-                                                                <a href="conexoes.php">Conexões</a>
+                                                                <a href="produtos.php">Conexões</a>
                                                             </li>
                                                             <li>
-                                                                <a href="flanges.php">Flanges</a>
+                                                                <a href="produtos.php">Flanges</a>
                                                             </li>
                                                             <li>
-                                                                <a href="flangesespeciais.php">Flanges Especiais</a>
+                                                                <a href="produtos.php">Flanges Especiais</a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -302,7 +308,7 @@
                                                 <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
                                                     <tbody>  
                                                         <?php
-                                                        $tipopeca = 0;
+                                                        $tipopeca = (int)"<script>document.write(tipopeca)</script>";
                                                         $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
                                                         $totalpeca = mysqli_num_rows($resultado);
                                                         $totaltabela = (int) $totalpeca / 4;
