@@ -307,11 +307,8 @@
                                             <?php
                                             $tipopeca=0;
                                             $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
-                                            echo "CHEGUEI AQUI 1";
-                                            $totalpeca=mysql_affected_rows($resultado);
-                                            echo "CHEGUEI AQUI 2";
+                                            $totalpeca=mysqli_affected_rows($resultado);
                                             $totaltabela=$totalpeca/4;
-                                            echo "CHEGUEI AQUI 3";
                                             for($i=0;$i<$totaltabela;$i++){
                                                 if ($resultado) {
                                                 echo "<tr>";
