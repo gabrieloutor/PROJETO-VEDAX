@@ -267,6 +267,7 @@
                                 <div id="system-message-container">
                                 </div>
                                 <div class="page-item page-item__">
+                                    
                                     <div class="item_header">
                                         <h1>A VEDAX</h1>					
                                     </div>
@@ -287,7 +288,7 @@
                                         ?>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>

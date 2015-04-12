@@ -1,52 +1,52 @@
 .ruds strong,
 .ruds b
 {
-	font-weight:bold;
+    font-weight:bold;
 }
 
 .ruds em
 {
-	font-style:italic;
+    font-style:italic;
 }
 
 .ruds i
 {
-	font-style:italic;
+    font-style:italic;
 }
 
 .ruds a
 {
-	text-decoration:underline;
-	color:#666;
+    text-decoration:underline;
+    color:#666;
 }
 
 .ruds sup
 {
-	font-size:xx-small;
-	vertical-align:top;
+    font-size:xx-small;
+    vertical-align:top;
 }
 
 .ruds ul
 {
-	margin-bottom:10px;
+    margin-bottom:10px;
 }
 
 .ruds ul li
 {
-	list-style-type:disc;
-	list-style-position:outside;
+    list-style-type:disc;
+    list-style-position:outside;
 }
 
 .ruds ol
 {
-	margin-top:5px;
-	margin-bottom:5px;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .ruds ol li
 {
-	list-style-type:decimal;
-	list-style-position:inside;
+    list-style-type:decimal;
+    list-style-position:inside;
 }
 
 .ruds li
@@ -57,77 +57,77 @@
 
 .ruds
 {
-	font-family: 'Frutiger47CondensedLight';
-	font-size:17px;
-	color:#666;
+    font-family: 'Frutiger47CondensedLight';
+    font-size:17px;
+    color:#666;
 }
 
 .ruds a.mail
 {
-	text-decoration:none;
-	color:#FF290B;
+    text-decoration:none;
+    color:#FF290B;
 }
 
 .ruds a.mail:hover
 {
-	color:#666;
+    color:#666;
 }
 
 .ruds .titles
 {
-	border-bottom:dotted 1px #CCC;
-	padding-bottom:8px;
-	margin-bottom:40px;
+    border-bottom:dotted 1px #CCC;
+    padding-bottom:8px;
+    margin-bottom:40px;
 }
 
 .ruds .titles h1
 {
-	text-transform:uppercase;
-	
-	
-	color:#333;
+    text-transform:uppercase;
+
+
+    color:#333;
 }
 
 .ruds .titles h2
 {
-	font-size:20px;
+    font-size:20px;
 
-	
-	margin-top:5px;
+
+    margin-top:5px;
 }
 
 .ruds .block
 {
-	border-bottom:dotted 1px #CCC;
-	 margin-bottom: 30px;
+    border-bottom:dotted 1px #CCC;
+    margin-bottom: 30px;
     padding-bottom: 10px;
 }
 
 .ruds h3
 {
-	font-size:23px;
-	line-height:23px;
-	margin-bottom:20px;
-	color:#333;
+    font-size:20px;
+    line-height:23px;
+    margin-bottom:20px;
+    color:#333;
 }
 
 .ruds .block td
 {
-	vertical-align:top;
+    vertical-align:top;
 }
 
 
 .ruds .block table td
 {
-	padding-right:30px;
+    padding-right:30px;
 }
 
 .ruds .block table.text-left td.padding
 {
-	padding-right:30px;
+    padding-right:30px;
 }
 
 .ruds .block table td.mappa small
 {
-	display:none;
+    display:none;
 }
