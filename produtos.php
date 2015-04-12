@@ -307,12 +307,14 @@
                                             <?php
                                             $tipopeca=0;
                                             $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
+                                            echo "CHEGUEI AQUI 1";
                                             $totalpeca=mysql_affected_rows($resultado);
+                                            echo "CHEGUEI AQUI 2";
                                             $totaltabela=$totalpeca/4;
+                                            echo "CHEGUEI AQUI 3";
                                             for($i=0;$i<$totaltabela;$i++){
                                                 if ($resultado) {
-                                                echo "       
-                                                        <tr>";
+                                                echo "<tr>";
                                                 for($j=0;$j<4;$j++){
                                                     $row = mysqli_fetch_array($resultado);
                                                     $produto= htmlentities($row["nome"], ENT_COMPAT,'ISO-8859-1', true);
@@ -322,8 +324,7 @@
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                 }
-                                                echo "</tr>     
-                                                ";
+                                                echo "</tr>";
                                             }
                                             }
                                             ?>
