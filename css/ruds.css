@@ -1,0 +1,138 @@
+.ruds strong,
+.ruds b
+{
+	font-weight:bold;
+}
+
+.ruds em
+{
+	font-style:italic;
+}
+
+.ruds i
+{
+	font-style:italic;
+}
+
+.ruds a
+{
+	text-decoration:underline;
+	color:#666;
+}
+
+.ruds sup
+{
+	font-size:xx-small;
+	vertical-align:top;
+}
+
+.ruds ul
+{
+	margin-bottom:10px;
+}
+
+.ruds ul li
+{
+	list-style-type:disc;
+	list-style-position:outside;
+}
+
+.ruds ol
+{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.ruds ol li
+{
+	list-style-type:decimal;
+	list-style-position:inside;
+}
+
+.ruds li
+{
+    margin: 3px 0 0 33px;
+}
+
+
+.ruds
+{
+	font-family: 'Frutiger47CondensedLight';
+	font-size:17px;
+	color:#666;
+}
+
+.ruds a.mail
+{
+	text-decoration:none;
+	color:#FF290B;
+}
+
+.ruds a.mail:hover
+{
+	color:#666;
+}
+
+.ruds .titles
+{
+	border-bottom:dotted 1px #CCC;
+	padding-bottom:8px;
+	margin-bottom:40px;
+}
+
+.ruds .titles h1
+{
+	text-transform:uppercase;
+	font-size:68px;
+	line-height:51px;
+	color:#333;
+}
+
+.ruds .titles h2
+{
+	font-size:20px;
+	line-height:20px;
+	color:#999;
+	margin-top:5px;
+}
+
+.ruds .block
+{
+	border-bottom:dotted 1px #CCC;
+	 margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.ruds h3
+{
+	font-size:23px;
+	line-height:23px;
+	margin-bottom:20px;
+	color:#333;
+}
+
+.ruds .block td
+{
+	vertical-align:top;
+}
+
+.ruds .block p
+{
+	margin-bottom:20px;
+	text-align:justify;
+}
+
+.ruds .block table td
+{
+	padding-right:30px;
+}
+
+.ruds .block table.text-left td.padding
+{
+	padding-right:30px;
+}
+
+.ruds .block table td.mappa small
+{
+	display:none;
+}

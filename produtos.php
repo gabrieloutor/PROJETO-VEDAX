@@ -30,6 +30,7 @@
         <!-- FIM FAVICON -->
         <!-- INICIO CSS -->
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css" >
+        <link rel="stylesheet" href="css/ruds.css" type="text/css" >
         <link rel="stylesheet" href="css/tmpl.default.css" type="text/css" >
         <link rel="stylesheet" href="css/nivo-slider.min.css" type="text/css" >
         <link rel="stylesheet" href="css/default.css" type="text/css" >
@@ -147,19 +148,19 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="aneis.php">Anéis e Discos</a>
-                                                                <?php echo $peca=2; ?>
+                                                                <?php echo $peca = 2; ?>
                                                             </li>
                                                             <li>
                                                                 <a href="conexoes.php">Conexões</a>
-                                                                <?php echo $peca=3; ?>
+                                                                <?php echo $peca = 3; ?>
                                                             </li>
                                                             <li>
                                                                 <a href="flanges.php">Flanges</a>
-                                                                <?php echo $peca=0; ?>
+                                                                <?php echo $peca = 0; ?>
                                                             </li>
                                                             <li>
                                                                 <a href="flangesespeciais.php">Flanges Especiais</a>
-                                                                <?php echo $peca=1; ?>
+                                                                <?php echo $peca = 1; ?>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -304,30 +305,76 @@
                                             <div class="block clearfix">
                                                 <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
                                                     <tbody>  
-                                            <?php
-                                            $tipopeca=0;
-                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
-                                            $totalpeca=mysql_fetch_array($resultado);
-                                            $totaltabela=$totalpeca/4;
-                                            for($i=0;$i<$totaltabela;$i++){
-                                                if ($resultado) {
-                                                echo "<tr>";
-                                                for($j=0;$j<4;$j++){
-                                                    $row = mysqli_fetch_array($resultado);
-                                                    $produto= htmlentities($row["nome"], ENT_COMPAT,'ISO-8859-1', true);
-                                                    $img=htmlentities($row["img"], ENT_COMPAT,'ISO-8859-1', true);
-                                                    echo "<td>
+                                                        <?php
+                                                        $tipopeca = 0;
+                                                        $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
+                                                        $totalpeca = mysqli_num_rows($resultado);
+                                                        $totaltabela = (int) $totalpeca / 4;
+                                                        $resto = $totalpeca % 4;
+                                                        if ($resto == 0) {
+                                                            for ($i = 1; $i < $totaltabela; $i++) {
+                                                                if ($resultado) {
+                                                                    echo "<tr>";
+                                                                    for ($j = 1; $j <= 4; $j++) {
+                                                                        $row = mysqli_fetch_array($resultado);
+                                                                        $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        echo "<td>
                                                                 <h3>$produto</h3>             
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
-                                                }
-                                                echo "</tr>";
-                                            }
-                                            }
-                                            ?>
-                                              </tbody> 
-                                            </table>   
-                                        </div>      
+                                                                    }
+                                                                    echo "</tr>";
+                                                                }
+                                                            }
+                                                        } else if ($totaltabela > 1 && $resto != 0) {
+                                                            for ($i = 1; $i < $totaltabela; $i++) {
+                                                                if ($resultado) {
+                                                                    echo "<tr>";
+                                                                    for ($j = 1; $j <= 4; $j++) {
+                                                                        $row = mysqli_fetch_array($resultado);
+                                                                        $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        echo "<td align=\"center\">
+                                                                <h3>$produto</h3>             
+                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
+                                                            </td>";
+                                                                    }
+                                                                    echo "</tr>";
+                                                                }
+                                                            }
+                                                            echo "<tr align=\"center\">";
+                                                            for ($i = 1; $i <= $resto; $i++) {
+                                                                if ($resultado) {
+                                                                    $row = mysqli_fetch_array($resultado);
+                                                                    $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    echo "<td colspan=\"4\">
+                                                                <h3>$produto</h3>             
+                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
+                                                            </td>";
+                                                                }
+                                                            }echo "</tr>";
+                                                        } else if ($totaltabela < 1) {
+                                                            if ($resultado) {
+                                                                echo "<tr align=\"center\">";
+                                                                for ($j = 1; $j <= $totalpeca; $j++) {
+                                                                    $row = mysqli_fetch_array($resultado);
+                                                                    $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    echo "<td>
+                                                                <h3>$produto</h3>             
+                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
+                                                            </td>";
+                                                                }
+                                                                echo "</tr>";
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </tbody> 
+                                                </table>   
+                                            </div>      
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -335,64 +382,63 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- INICIO FOOTER-->
-        <div id="footer">
-            <div id="footer-row">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-row-1">
-                            <div class="moduletable contactus ">
-                                <div class="moduletable-wrapper">
-                                    <div class="mod-custom mod-custom__contactus">
-                                        <h4>
-                                            <span class="facebook">
-                                                <a target="_blank" href="<?php echo $facebook; ?>">Facebook</a>
-                                            </span>
-                                        </h4>
-                                        <h4>
-                                            <span class="icon-phone">
-                                                &#9743; <?php echo $telefone; ?>
-                                                <br />
+            <!-- INICIO FOOTER-->
+            <div id="footer">
+                <div id="footer-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer-row-1">
+                                <div class="moduletable contactus ">
+                                    <div class="moduletable-wrapper">
+                                        <div class="mod-custom mod-custom__contactus">
+                                            <h4>
+                                                <span class="facebook">
+                                                    <a target="_blank" href="<?php echo $facebook; ?>">Facebook</a>
+                                                </span>
+                                            </h4>
+                                            <h4>
+                                                <span class="icon-phone">
+                                                    &#9743; <?php echo $telefone; ?>
+                                                    <br />
 
-                                            </span>
-                                        </h4>
-                                        <h4>
-                                            <span class="adress">
-                                                &#9758; <?php echo $endereco; ?>
-                                                <br />
-                                            </span>
-                                        </h4>
-                                        <h4>
-                                            <span class="icon-mail">
-                                                &#9993; Email: <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
-                                            </span>
-                                        </h4>
+                                                </span>
+                                            </h4>
+                                            <h4>
+                                                <span class="adress">
+                                                    &#9758; <?php echo $endereco; ?>
+                                                    <br />
+                                                </span>
+                                            </h4>
+                                            <h4>
+                                                <span class="icon-mail">
+                                                    &#9993; Email: <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+                                                </span>
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="copyright-row">
-                <div class="container">
-                    <div id="trademark">
-                        Copyright &copy; <?php echo date("Y"); ?> | <?php echo $empresa; ?>
-                    </div>
-                    <div id="copyright-menu" class="row">
-                        <div id="ascopy">
-                            <a href="<?php echo $linkfacedesenvolvedor; ?>" target="_blank">
-                                &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;<?php echo $nomedesenvolvedor; ?>
-                            </a>
+                <div id="copyright-row">
+                    <div class="container">
+                        <div id="trademark">
+                            Copyright &copy; <?php echo date("Y"); ?> | <?php echo $empresa; ?>
+                        </div>
+                        <div id="copyright-menu" class="row">
+                            <div id="ascopy">
+                                <a href="<?php echo $linkfacedesenvolvedor; ?>" target="_blank">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;<?php echo $nomedesenvolvedor; ?>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- FIM FOOTER-->
-        <div id="back-top">
-            <a href="#"><span></span></a>
-        </div>
+            <!-- FIM FOOTER-->
+            <div id="back-top">
+                <a href="#"><span></span></a>
+            </div>
     </body>
 </html>
