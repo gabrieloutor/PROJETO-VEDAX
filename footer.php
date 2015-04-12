@@ -43,7 +43,7 @@
                         </div>
                         <div id="copyright-menu" class="row">
                             <div id="ascopy">
-                                <a href="<?php echo $linkfacedesenvolvedor; ?>" target="_blank">
+                                <a href="<?php echo $facebookdesenvolvedor; ?>" target="_blank">
                                     &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;<?php echo $nomedesenvolvedor; ?>
                                 </a>
                             </div>
