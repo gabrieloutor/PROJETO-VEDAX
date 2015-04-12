@@ -92,7 +92,7 @@
 {
 	font-size:20px;
 	line-height:20px;
-	color:#999;
+	
 	margin-top:5px;
 }
 
@@ -116,11 +116,6 @@
 	vertical-align:top;
 }
 
-.ruds .block p
-{
-	margin-bottom:20px;
-	text-align:justify;
-}
 
 .ruds .block table td
 {

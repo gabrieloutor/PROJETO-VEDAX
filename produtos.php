@@ -314,12 +314,12 @@
                                                         if ($resto == 0) {
                                                             for ($i = 1; $i < $totaltabela; $i++) {
                                                                 if ($resultado) {
-                                                                    echo "<tr>";
+                                                                    echo "<tr align=\"center\">";
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultado);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        echo "<td>
+                                                                        echo "<td align=\"center\">
                                                                 <h3>$produto</h3>             
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
@@ -330,7 +330,7 @@
                                                         } else if ($totaltabela > 1 && $resto != 0) {
                                                             for ($i = 1; $i < $totaltabela; $i++) {
                                                                 if ($resultado) {
-                                                                    echo "<tr>";
+                                                                    echo "<tr align=\"center\">";
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultado);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -362,7 +362,7 @@
                                                                     $row = mysqli_fetch_array($resultado);
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    echo "<td>
+                                                                    echo "<td align=\"center\">
                                                                 <h3>$produto</h3>             
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
