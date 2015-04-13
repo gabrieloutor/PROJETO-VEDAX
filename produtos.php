@@ -182,17 +182,20 @@
                                         <div class="text-item">
 
                                             <div class="titles">
-                                                <h1>PRODUTOS</h1>
+                                                <h1><?php if($tituloproduto==""){
+                                                    $tituloproduto="PRODUTOS";
+                                                } echo $tituloproduto;
+                                                ?></h1>
                                                 <h2>FÁBRICA VEDAX</h2>
                                             </div>
                                             <div class="block clearfix">
-                                                Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.&nbsp; &nbsp;<br><br>   
+                                                <?php $descricaopadrao="Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação";?> 
+                                                <?php if($descricaoproduto==null){$descricaoproduto=$descricaopadrao;}echo$descricaoproduto;?>.&nbsp; &nbsp;<br><br> 
                                             </div>
                                             <div class="block clearfix">
                                                 <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
                                                     <tbody>  
                                                         <?php
-                                                        $tipopeca = 3;
                                                         if ($tipopeca != 0 && $tipopeca != 1 && $tipopeca != 2 && $tipopeca != 3) {
                                                             $resultado = mysqli_query($conexao, "SELECT * FROM produto");
                                                         } else {
