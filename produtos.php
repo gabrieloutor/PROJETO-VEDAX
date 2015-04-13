@@ -298,7 +298,7 @@
                                                                 echo "</tr>";
                                                             }
                                                         }
-                                                        echo"$tipopeca / $totaltabela / $resto</br>";
+                                                        //echo"$tipopeca / $totaltabela / $resto</br>";
                                                         ?>
                                                     </tbody></table></div>
                                         </div>
