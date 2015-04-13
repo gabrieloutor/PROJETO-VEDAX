@@ -18,7 +18,7 @@
     ?>
     <?php
     if(empty($descricaoproduto)){
-        $descricaopadrao="Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação";
+        $descricaopadrao="Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.";
         $descricaoproduto=$descricaopadrao;
         
     }
@@ -208,8 +208,7 @@
                                                 <h2>FÁBRICA VEDAX</h2>
                                             </div>
                                             <div class="block clearfix">
-                                                <?php $descricaopadrao="Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação";?> 
-                                                <?php if($descricaoproduto==null){$descricaoproduto=$descricaopadrao;}echo$descricaoproduto;?>.&nbsp; &nbsp;<br><br> 
+                                                <?php echo $descricaoproduto;?><br><br> 
                                             </div>
                                             <div class="block clearfix">
                                                 <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
