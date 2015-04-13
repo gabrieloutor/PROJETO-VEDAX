@@ -215,7 +215,7 @@
                                                 <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
                                                     <tbody>  
                                                         <?php
-                                                        if ($tipopeca != 0 && $tipopeca != 1 && $tipopeca != 2 && $tipopeca != 3) {
+                                                        if ($tipopeca != 1 && $tipopeca != 2 && $tipopeca != 3 && $tipopeca != 4) {
                                                             $resultado = mysqli_query($conexao, "SELECT * FROM produto");
                                                         } else {
                                                             $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
