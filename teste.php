@@ -5,13 +5,7 @@
     <meta charset="utf-8">
     <title>The Walking Dead</title>    
     <style type="text/css">
-#exemplo{
- width:90%;
- height:auto;
- padding:10px;
- background:#d3d3d3;
- position:relative;
-}
+
 #mouse {
  width:200px;
  height:100px;
@@ -32,8 +26,7 @@
  display: block;
  width:120px;
  opacity: 0;
-
-        -webkit-transition: all 300ms ease;
+-webkit-transition: all 300ms ease;
  -moz-transition: all 300ms ease;
  -ms-transition: all 300ms ease;
  -o-transition: all 300ms ease;

@@ -42,6 +42,28 @@
         <link rel="stylesheet" href="css/ext.asmenu.css" type="text/css" >
         <link rel="stylesheet" href="css/ext.artslider.css" type="text/css" >
         <style type="text/css">
+            #mouse {
+ font-size:16px;
+ position: relative;
+}
+#comentario {
+ position:absolute;
+ padding:2px;
+ background:#333;
+ color:#fff;
+ display: block;
+ width:auto;
+ opacity: 0;
+-webkit-transition: all 300ms ease;
+ -moz-transition: all 300ms ease;
+ -ms-transition: all 300ms ease;
+ -o-transition: all 300ms ease;
+ transition: all 300ms ease;
+ text-align:center;
+}
+#mouse:hover  #comentario{
+      opacity: 0.7;
+}
             .item_fulltext
             {
                 text-align:justify;

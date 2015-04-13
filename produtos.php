@@ -231,9 +231,17 @@
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultado);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    if($classe==""){
+                                                                        $classe="";
+                                                                    }else{
+                                                                        $classe = "Classe : $classe";
+                                                                    }
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        echo "<td align=\"center\">
-                                                                <h3>$produto</h3>             
+                                                                        echo "<td align=\"center\" id=\"mouse\">
+                                                                <h3>$produto</h3>
+                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
@@ -247,9 +255,17 @@
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultado);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    if($classe==""){
+                                                                        $classe="";
+                                                                    }else{
+                                                                        $classe = "Classe : $classe";
+                                                                    }
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        echo "<td align=\"center\">
-                                                                <h3>$produto</h3>             
+                                                                        echo "<td align=\"center\"  id=\"mouse\">
+                                                                <h3>$produto</h3>
+                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
@@ -261,22 +277,32 @@
                                                                 if ($resultado) {
                                                                     $row = mysqli_fetch_array($resultado);
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    if($classe==""){
+                                                                        $classe="";
+                                                                    }else{
+                                                                        $classe = "Classe : $classe";
+                                                                    }
                                                                     $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     if ($resto == 1) {
-                                                                        echo "<td colspan=\"4\">
-                                                                <h3>$produto</h3>             
+                                                                        echo "<td colspan=\"4\"  id=\"mouse\">
+                                                                <h3>$produto</h3>
+                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>             
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
                                                                     if ($resto == 2) {
-                                                                        echo "<td colspan=\"2\">
-                                                                <h3>$produto</h3>             
+                                                                        echo "<td colspan=\"2\"  id=\"mouse\">
+                                                                <h3>$produto</h3>
+                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
                                                                     if ($resto == 3) {
-                                                                        echo "<td colspan=\"1\">
-                                                                <h3>$produto</h3>             
+                                                                        echo "<td colspan=\"1\"  id=\"mouse\">
+                                                                <h3>$produto</h3>
+                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
@@ -288,9 +314,17 @@
                                                                 for ($j = 1; $j <= $totalpeca; $j++) {
                                                                     $row = mysqli_fetch_array($resultado);
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                    if($classe==""){
+                                                                        $classe="";
+                                                                    }else{
+                                                                        $classe = "Classe : $classe";
+                                                                    }
                                                                     $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    echo "<td align=\"center\">
-                                                                <h3>$produto</h3>             
+                                                                    echo "<td align=\"center\" id=\"mouse\">
+                                                                <h3>$produto</h3>
+                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                 }
