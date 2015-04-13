@@ -1,7 +1,7 @@
 <?php require "config/config.ini"; ?>
 <!DOCTYPE html>
 <html>
-    <?php $titulo="Página Iniciala"; $pagina="index.php" ?>
+    <?php $titulo="Página Inicial"; $pagina="index.php" ?>
     <?php include("layout/header.php"); ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
