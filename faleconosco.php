@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <?php $titulo="Fale Conosco"; $pagina="faleconosco.php" ?>
-    <?php include("header.php"); ?>
+    <?php include("layout/header.php"); ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
             <div class="wrapper-inner">
@@ -179,7 +179,7 @@
             </div>
         </div>
         <!-- INICIO FOOTER-->
-        <?php include("footer.php"); ?>
+        <?php include("layout/footer.php"); ?>
         <!-- FIM FOOTER-->
     </body>
 
