@@ -185,20 +185,16 @@
 
                                                         <ul>
                                                             <li>
-                                                                <a href="aneis.php">Anéis e Discos</a>
-
+                                                                <a href="aneis.php" >Anéis e Discos</a>
                                                             </li>
                                                             <li>
                                                                 <a href="conexoes.php">Conexões</a>
-
                                                             </li>
                                                             <li>
                                                                 <a href="flanges.php">Flanges</a>
-
                                                             </li>
                                                             <li>
                                                                 <a href="flangesespeciais.php">Flanges Especiais</a>
-
                                                             </li>
                                                         </ul>
                                                     </li>
