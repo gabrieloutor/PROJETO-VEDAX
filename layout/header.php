@@ -47,7 +47,7 @@
  position: relative;
 }
 #comentario {
- position:absolute;
+ position:relative;
  padding:2px;
  background:#333;
  color:#fff;
