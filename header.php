@@ -26,7 +26,7 @@
         <meta name="theme-color" content="#ffffff">
         <!-- FIM FAVICON -->
         <!-- INICIO CSS -->
-        <?php if($pagina=="index.php"){
+        <?php if($pagina=="produtos.php"){
             echo "<link rel=\"stylesheet\" href=\"css/ruds.css\" type=\"text/css\" >";
         }
         ?>
