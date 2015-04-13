@@ -42,6 +42,20 @@
         <link rel="stylesheet" href="css/ext.asmenu.css" type="text/css" >
         <link rel="stylesheet" href="css/ext.artslider.css" type="text/css" >
         <style type="text/css">
+            .item_fulltext
+            {
+                text-align:justify;
+                text-indent:20px
+
+            }
+            .finalempresa
+            {
+                font-size:28px;
+                text-align: center;
+                font-family: 'BellGothicStdBlack';
+                font-weight:bold;
+                color:#0D3B97;/*#FF9966*/
+            }
             #localizacao
             {
                     float: left;
