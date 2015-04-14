@@ -2,28 +2,27 @@
 <!DOCTYPE html>
 <html>
     <?php
-    if(empty($titulo)){
-        $titulo="Produtos";
+    if (empty($titulo)) {
+        $titulo = "Produtos";
     }
     ?>
     <?php
-    if(empty($tipopeca)){
-        $tipopeca=99;
+    if (empty($tipopeca)) {
+        $tipopeca = 99;
     }
     ?>
     <?php
-    if(empty($tituloproduto)){
-        $tituloproduto="Produtos";
+    if (empty($tituloproduto)) {
+        $tituloproduto = "Produtos";
     }
     ?>
     <?php
-    if(empty($descricaoproduto)){
-        $descricaopadrao="Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.";
-        $descricaoproduto=$descricaopadrao;
-        
+    if (empty($descricaoproduto)) {
+        $descricaopadrao = "Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.";
+        $descricaoproduto = $descricaopadrao;
     }
     ?>
-    <?php $pagina="produtos.php" ?>
+    <?php $pagina = "produtos.php" ?>
     <?php include("layout/header.php"); ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
@@ -208,7 +207,7 @@
                                                 <h2>FÁBRICA VEDAX</h2>
                                             </div>
                                             <div class="block clearfix">
-                                                <?php echo $descricaoproduto;?><br><br> 
+                                                <?php echo $descricaoproduto; ?><br><br> 
                                             </div>
                                             <div class="block clearfix">
                                                 <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
@@ -221,23 +220,21 @@
                                                         }
                                                         $totalpeca = mysqli_num_rows($resultado);
                                                         $totaltabela = (int) $totalpeca / 4;
-
                                                         $resto = $totalpeca % 4;
-
                                                         if ($resto == 0) {
                                                             for ($i = 1; $i < $totaltabela; $i++) {
                                                                 if ($resultado) {
-                                                                    echo "<tr align=\"center\">";
+                                                                    echo "<tr align=\"center\"";
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultado);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if($classe==""){
-                                                                        $classe="";
-                                                                    }else{
-                                                                        $classe = "Classe : $classe";
-                                                                    }
+                                                                        $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        if ($classe == "") {
+                                                                            $classe = "";
+                                                                        } else {
+                                                                            $classe = "Classe : $classe";
+                                                                        }
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         echo "<td align=\"center\" id=\"mouse\">
                                                                 <h3>$produto</h3>
@@ -255,13 +252,13 @@
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultado);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if($classe==""){
-                                                                        $classe="";
-                                                                    }else{
-                                                                        $classe = "Classe : $classe";
-                                                                    }
+                                                                        $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
+                                                                        if ($classe == "") {
+                                                                            $classe = "";
+                                                                        } else {
+                                                                            $classe = "Classe : $classe";
+                                                                        }
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         echo "<td align=\"center\"  id=\"mouse\">
                                                                 <h3>$produto</h3>
@@ -279,9 +276,9 @@
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if($classe==""){
-                                                                        $classe="";
-                                                                    }else{
+                                                                    if ($classe == "") {
+                                                                        $classe = "";
+                                                                    } else {
                                                                         $classe = "Classe : $classe";
                                                                     }
                                                                     $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -316,9 +313,9 @@
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if($classe==""){
-                                                                        $classe="";
-                                                                    }else{
+                                                                    if ($classe == "") {
+                                                                        $classe = "";
+                                                                    } else {
                                                                         $classe = "Classe : $classe";
                                                                     }
                                                                     $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
