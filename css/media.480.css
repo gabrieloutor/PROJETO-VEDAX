@@ -8,7 +8,6 @@
 		text-align: center;
 		margin: 0;
 	}
-	
 	#logo span.slogan
 	{
 		display: block !important;
@@ -193,7 +192,9 @@
 	{
 		margin-left: 0px;	
 	}
-	
+        #copyright-menu{
+            float:left;
+        }
 	.mod-footer
 	{
 		position: relative;
