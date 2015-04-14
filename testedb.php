@@ -14,6 +14,9 @@ $nome = getenv("NOMEDB");
 $url = getenv("URLDB");
 if ($url == null) {
     $url = "127.0.0.1";
+    $login="root";
+    $senha="admin";
+    $nome="vedax";
 }
 $conexao = mysqli_connect($url, $login, $senha, $nome);
 // tratamento de erros
@@ -23,20 +26,20 @@ if (mysqli_connect_errno()) {
     echo "CONECTADA<br/>";
 }
 $tipopeca=0;
-$resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
+$resultado = mysqli_query($conexao, "SELECT * FROM produto");
 if ($resultado) {
     while ($row = mysqli_fetch_array($resultado)) {
         //echo htmlspecialchars($row["NOME"]) "<br/>";
-        //echo htmlentities($row["NOME"], ENT_COMPAT,'ISO-8859-1', true);
+        $norma=$row["norma"];
+        if(in_array("ASME B 16.5",$norma)){
+            echo "ASM";
+        }
         //$telefone=$row["telefone"];
         //echo substr($telefone, 0, 2) . "<br/>";
         //echo substr($telefone, -1) . "<br/>";
-        echo $row[id]." ";
-        echo $row[norma]." ";
-        echo $row[nome]." ";
-        echo $row[bitola]." ";
-        echo $row[classe]." ";
-        echo $row[img]."</br>";
+        //foreach ($norma as $key => $value) {
+        //    echo "$norma e norma:$key";
+        //}
     }
 }
 ?>
