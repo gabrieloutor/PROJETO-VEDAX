@@ -106,9 +106,8 @@
             }
             h1
             {
-                font-size:44px;
+                font: 44px 'Frutiger47CondensedLight';
                 text-align: center;
-                font-family: 'Frutiger47CondensedLight';
                 font-weight:normal;
                 color:#333;
             }

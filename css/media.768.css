@@ -269,9 +269,12 @@
         width: 175px;
         height: 100px;
     }
-    table tr td
+    table tr td 
     {
         display:table;
         overflow:scroll;
+    }
+    .titles h1{
+        text-align:justify; 
     }
 }
