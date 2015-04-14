@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+ 
+    RewriteRule ^produtos/?$ /produtos.php [NC,L]
+</IfModule>
