@@ -1,7 +1,10 @@
 @media (max-width: 480px) 
 {
+    #footer-row .container{
+        padding: 40px 0px 25px 0px;
+    }
     #copyright-row .container{
-        padding: 40px 0px 25px 35px;
+        padding: 40px 0px 25px 0px;
         line-height:200%;
     }
     iframe{
