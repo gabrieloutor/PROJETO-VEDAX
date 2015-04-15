@@ -5,25 +5,19 @@
     if (empty($titulo)) {
         $titulo = "Produtos";
     }
-    ?>
-    <?php
     if (empty($tipopeca)) {
         $tipopeca = 99;
     }
-    ?>
-    <?php
     if (empty($tituloproduto)) {
         $tituloproduto = "Produtos";
     }
-    ?>
-    <?php
     if (empty($descricaoproduto)) {
         $descricaopadrao = "Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.";
         $descricaoproduto = $descricaopadrao;
     }
+    $pagina = "produtos.php";
+    include("layout/header.php"); 
     ?>
-    <?php $pagina = "produtos.php" ?>
-    <?php include("layout/header.php"); ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
             <div class="wrapper-inner">
