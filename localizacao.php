@@ -121,7 +121,7 @@
                                             <br>
                                             <br>
                                             <u>
-                                                <a href="http://maps.apple.com/?daddr=vedax+equipamentos+hidraulicos+ltda"><?php echo $endereco; ?></a>
+                                                <a href="waze://?q=vedax+equipamentos+hidraulicos+ltda"><?php echo $endereco; ?></a>
                                             </u>
                                             <br>
                                             <br>
