@@ -121,7 +121,7 @@
                                             <br>
                                             <br>
                                             <u>
-                                                <a href="waze://?q=vedax+equipamentos+hidraulicos+ltda"><?php echo $endereco; ?></a>
+                                                <a href="<?php echo $urlmaps; ?>"><?php echo $endereco; ?></a>
                                             </u>
                                             <br>
                                             <br>
