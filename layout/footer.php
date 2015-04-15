@@ -9,6 +9,7 @@
                                             <h4>
                                                 <span class="facebook">
                                                     <a target="_blank" href="<?php echo $facebook; ?>">Facebook</a>
+                                                    <div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                                                 </span>
                                             </h4>
                                             <h4>
