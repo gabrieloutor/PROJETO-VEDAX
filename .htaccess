@@ -3,7 +3,7 @@
  
     RewriteRule ^produtos/?$ /produtos.php [NC,L]
     RewriteRule ^produtos/aneis/?$ /aneis.php [NC,L]
-    RewriteRule ^produtos/conexos/?$ /conexoes.php [NC,L]
+    RewriteRule ^produtos/conexoes/?$ /conexoes.php [NC,L]
     RewriteRule ^empresa/?$ /empresa.php [NC,L]
     RewriteRule ^faleconosco/?$ /faleconosco.php [NC,L]
     RewriteRule ^produtos/flanges/?$ /flanges.php [NC,L]
