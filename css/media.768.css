@@ -1,5 +1,9 @@
 @media (max-width: 768px) 
 {
+    iframe{
+        width:420px ;
+        height:200px ;
+    }
     body
     {
         padding: 0 !important;

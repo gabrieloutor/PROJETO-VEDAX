@@ -1,5 +1,9 @@
 @media (max-width: 480px) 
 {
+    iframe{
+        width:350px ;
+        height:200px ;
+    }
     table tr td
     {
         display:table;
