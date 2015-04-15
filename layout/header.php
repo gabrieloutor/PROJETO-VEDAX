@@ -76,6 +76,7 @@
                 text-align: center;
                 font-family: 'BellGothicStdBlack';
                 font-weight:bold;
+                line-height:100%;
                 color:#0D3B97;/*#FF9966*/
             }
             #localizacao

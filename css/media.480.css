@@ -1,5 +1,9 @@
 @media (max-width: 480px) 
 {
+    #imgempresa img{
+        width:320px;
+        float:left;
+    }
     #footer-row .container{
         padding: 40px 0px 25px 0px;
     }
