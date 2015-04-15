@@ -20,7 +20,7 @@
                                             </h4>
                                             <h4>
                                                 <span class="adress">
-                                                    &#9758; <a href="http://maps.apple.com/?q=vedax+equipamentos+hidraulicos+ltda"><?php echo $endereco; ?></a>
+                                                    &#9758; <a href="http://maps.apple.com/?daddr=vedax+equipamentos+hidraulicos+ltda"><?php echo $endereco; ?></a>
                                                     <br />
                                                 </span>
                                             </h4>

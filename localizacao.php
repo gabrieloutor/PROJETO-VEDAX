@@ -121,13 +121,13 @@
                                             <br>
                                             <br>
                                             <u>
-                                                <?php echo $endereco; ?>
+                                                <a href="http://maps.apple.com/?daddr=vedax+equipamentos+hidraulicos+ltda"><?php echo $endereco; ?></a>
                                             </u>
                                             <br>
                                             <br>
                                             Telefone:
                                             <u>
-                                                <?php echo $telefone; ?>
+                                                <a href="tel:<?php echo $telefone; ?>"><?php echo $telefone; ?></a>
                                             </u>
                                             <br>
                                             <br>
