@@ -127,7 +127,7 @@
                                             <br>
                                             Telefone:
                                             <u>
-                                                <a href="tel:<?php echo $telefone; ?>"><?php echo $telefone; ?></a>
+                                                <?php echo $telefone; ?>
                                             </u>
                                             <br>
                                             <br>
