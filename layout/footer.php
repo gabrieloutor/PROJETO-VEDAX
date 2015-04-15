@@ -44,7 +44,7 @@
                         <div id="copyright-menu" class="row">
                             <div id="ascopy">
                                 <a href="<?php echo $facebookdesenvolvedor; ?>" target="_blank">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvido por:&nbsp;<?php echo $nomedesenvolvedor; ?>
+                                    <p>Desenvolvido por:&nbsp;<?php echo $nomedesenvolvedor; ?></p>
                                 </a>
                             </div>
                         </div>
