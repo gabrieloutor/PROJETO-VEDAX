@@ -243,7 +243,7 @@
                                                         if ($resto == 0) {
                                                             for ($g = 1; $g < $totaltabela; $g++) {
                                                                 if ($resultadonorma) {
-                                                                    echo "<tr align=\"center\"";
+                                                                    echo "<tr align=\"center\">";
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultadonorma);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
