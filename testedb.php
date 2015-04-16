@@ -22,26 +22,12 @@ $conexao = mysqli_connect($url, $login, $senha, $nome);
 // tratamento de erros
 if (mysqli_connect_errno()) {
     echo "Não foi possível conectar: " . mysqli_connect_error();
-} else {
-    echo "CONECTADA<br/>";
 }
-$tipopeca=0;
-$resultado = mysqli_query($conexao, "SELECT * FROM produto");
-if ($resultado) {
-    while ($row = mysqli_fetch_array($resultado)) {
-        //echo htmlspecialchars($row["NOME"]) "<br/>";
-        $norma=$row["norma"];
-        if(in_array("ASME B 16.5",$norma)){
-            echo "ASM";
-        }
-        //$telefone=$row["telefone"];
-        //echo substr($telefone, 0, 2) . "<br/>";
-        //echo substr($telefone, -1) . "<br/>";
-        //foreach ($norma as $key => $value) {
-        //    echo "$norma e norma:$key";
-        //}
-    }
-}
+$resultado = mysqli_query($conexao, "SELECT * from empresa");
+  if($resultado){
+      while($row = mysqli_fetch_array($resultado) ){
+         echo $row["rua"]."<br/>";
+} }
 ?>
     </body>
 </html>

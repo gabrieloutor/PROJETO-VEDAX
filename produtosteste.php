@@ -35,7 +35,7 @@
                                 <header>
                                     <div id="logo" class="span">
                                         <a href="index.php">
-                                            <img src="images/logovedax.png" alt="VEDAX" />
+                                            <img src="images/logovedax.png"alt="<?php echo $empresa; ?>" />
                                         </a>
                                     </div>
                                     <nav class="moduletable navigation ">
@@ -209,52 +209,22 @@
                                             <div class="block clearfix">
                                                 <?php echo $descricaoproduto; ?><br><br> 
                                             </div>
-                                            <div class="block clearfix">
-                                                <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
-                                                    <tbody>  
                                                         <?php
-                                                        echo "$tipopeca";
-                                                        echo "
-                                                        <div class=\"block clearfix\">
-                                                <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
-                                                    <tbody>  
-                                                    <tr>
-                                                        <td>
-                                                        </td>
-                                                        <td>
-                                                        </td>
-                                                        <td>
-                                                        </td>
-                                                        <td>
-                                                        </td>
-                                                    </tr>
-                                                            </tbody></table></div>";
-                                                        if ($tipopeca !== 1 && $tipopeca !== 2 && $tipopeca !== 3 && $tipopeca !== 4) {
-                                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto");
-                                                        } else {
-                                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
-                                                        }
-                                                        $row = mysqli_fetch_array($resultado);
-                                                        $norma=$row["norma"];
-                                                        $anterior=$row["norma"];
-                                                        $normas=0;
-                                                        $totalpeca = mysqli_num_rows($resultado);
-                                                        for($i=1;$i<=$totalpeca;$i++){
-                                                            $anterior=$row["norma"];
-                                                            if($norma!==$anterior){
-                                                            $normas++;
-                                                            $norma=$row["norma"];
-                                                        }
-                                                        }
-                                                        echo $totalpeca;
-                                                        $totaltabela = (int) $totalpeca / 4;
-                                                        $resto = $totalpeca % 4;
-                                                        $resultado = mysqli_query($conexao, "SELECT * FROM produto");
-                                                        if ($totaltabela > 1 && $resto != 0) {
-                                                            for ($i = 1; $i <= $totaltabela; $i++) {
-                                                                if ($resultado) {
-                                                                    echo "<tr align=\"center\">";
-                                                                    for ($j = 1; $j <= 4; $j++) {
+                                                        for($i=1;$i<=4;$i++){
+                                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $i");
+                                                            $norma=mysqli_query($conexao, "SELECT DISTINCT(norma) from produto WHERE peca = $i");
+                                                            $norma=mysqli_num_rows($norma);
+                                                            $row = mysqli_fetch_array($norma);
+                                                            $totalpeca = mysqli_num_rows($row);
+                                                            $totaltabela = (int) $totalpeca / 4;
+                                                            $resto = $totalpeca % 4;
+                                                            for($j=1;$j<=$norma;$j++){
+                                                                echo "<div class=\"block clearfix\">
+                                                                        <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
+                                                                            <tbody> ";
+                                                                for($g=1;$g<=$totaltabela;$g++){
+                                                                    echo "<tr>";
+                                                                    for($h=1;$h<=4;$h++){
                                                                         $row = mysqli_fetch_array($resultado);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -266,54 +236,17 @@
                                                                         }
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         echo "<td align=\"center\"  id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                    echo "</tr>";
+                                                                        <h3>$produto</h3>
+                                                                            <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
+                                                                        <p><img src=\"images/produto/$img\" alt=\"\"></p>
+                                                                    </td>";
+                                                                    }echo"</tr>";
                                                                 }
+                                                                echo "</tbody></table></div>";
                                                             }
-                                                            echo "<tr align=\"center\">";
-                                                            for ($i = 1; $i <= $resto; $i++) {
-                                                                if ($resultado) {
-                                                                    $row = mysqli_fetch_array($resultado);
-                                                                    $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if ($classe == "") {
-                                                                        $classe = "";
-                                                                    } else {
-                                                                        $classe = "Classe : $classe";
-                                                                    }
-                                                                    $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if ($resto == 1) {
-                                                                        echo "<td colspan=\"4\"  id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>             
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                    if ($resto == 2) {
-                                                                        echo "<td colspan=\"2\"  id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                    if ($resto == 3) {
-                                                                        echo "<td colspan=\"1\"  id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                }
-                                                            }echo "</tr>";
                                                         }
                                                         //echo"$tipopeca / $totaltabela / $resto</br>";
                                                         ?>
-                                                    </tbody></table></div>
                                         </div>
                                     </div>
                                 </div>

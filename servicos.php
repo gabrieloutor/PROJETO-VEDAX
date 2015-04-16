@@ -14,7 +14,7 @@
                                 <header>
                                     <div id="logo" class="span">
                                         <a href="index.php">
-                                            <img src="images/logovedax.png" alt="VEDAX" />
+                                            <img src="images/logovedax.png"alt="<?php echo $empresa; ?>" />
                                         </a>
                                     </div>
                                     <nav class="moduletable navigation ">

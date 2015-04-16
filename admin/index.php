@@ -94,7 +94,7 @@
             <div id="content">
                 <!-- Begin Content -->
                 <div id="element-box" class="login well">
-                    <img src="../images/logovedax.png" alt="Vedax" />
+                    <img src="../images/logovedax.png"alt="<?php echo $empresa; ?>" />
                     <hr />
                     <div id="system-message-container">
                     </div>
