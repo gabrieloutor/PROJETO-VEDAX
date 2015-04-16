@@ -1,5 +1,9 @@
 @media (max-width: 1199px) 
 {
+    iframe{
+        width:400px; 
+        height:350px;
+    }
     h1,
     h2
     {
