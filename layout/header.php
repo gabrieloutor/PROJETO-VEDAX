@@ -20,7 +20,7 @@
         <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
         <link rel="manifest" href="images/icons/manifest.json">
-        <link rel="icon" href="images/icons/favicon.ico" />
+        <link rel="icon" href="images/icons/favicon.ico" >
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
@@ -177,7 +177,6 @@
             });
             jQuery.noConflict();
         </script>
-        <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
