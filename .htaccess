@@ -1,15 +1,15 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
  
-    RewriteRule ^produtos?$ /produtos.php [NC,L]
-    RewriteRule ^produtos/aneis?$ /aneis.php [NC,L]
-    RewriteRule ^produtos/conexoes?$ /conexoes.php [NC,L]
-    RewriteRule ^empresa?$ /empresa.php [NC,L]
-    RewriteRule ^faleconosco?$ /faleconosco.php [NC,L]
-    RewriteRule ^produtos/flanges?$ /flanges.php [NC,L]
-    RewriteRule ^produtos/flangesespeciais?$ /flangesespeciais.php [NC,L]
-    RewriteRule ^home?$ /index.php [NC,L]
-    RewriteRule ^localizacao?$ /localizacao.php [NC,L]
-    RewriteRule ^produtos?$ /produtos.php [NC,L]
-    RewriteRule ^servicos?$ /servicos.php [NC,L]
+    RewriteRule ^produtos/?$ /produtos.php [NC,L]
+    RewriteRule ^produtos/aneis/?$ /aneis.php [NC,L]
+    RewriteRule ^produtos/conexoes/?$ /conexoes.php [NC,L]
+    RewriteRule ^empresa/?$ /empresa.php [NC,L]
+    RewriteRule ^faleconosco/?$ /faleconosco.php [NC,L]
+    RewriteRule ^produtos/flanges/?$ /flanges.php [NC,L]
+    RewriteRule ^produtos/flangesespeciais/?$ /flangesespeciais.php [NC,L]
+    RewriteRule ^home/?$ /index.php [NC,L]
+    RewriteRule ^localizacao/?$ /localizacao.php [NC,L]
+    RewriteRule ^produtos/?$ /produtos.php [NC,L]
+    RewriteRule ^servicos/?$ /servicos.php [NC,L]
 </IfModule>
