@@ -362,6 +362,7 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- INICIO FOOTER-->
             <?php include("layout/footer.php"); ?>
             <!-- FIM FOOTER-->

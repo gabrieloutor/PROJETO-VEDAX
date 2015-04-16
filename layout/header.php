@@ -49,7 +49,8 @@
                 text-align: center;
             }
             table tr td{
-                text-align: center;
+                font-size:16px;
+                position: relative;
             }
             #face{
                 display:inline-table;
