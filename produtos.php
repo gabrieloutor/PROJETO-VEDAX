@@ -217,16 +217,16 @@
                                             }
                                                 for ($inicio = $inicia; $inicio <= $tipopeca; $inicio++) {
                                                     if ($inicio == 1) {
-                                                        echo "FLANGES</br></br>";
+                                                        echo "FLANGES<br><br>";
                                                     }
                                                     if ($inicio == 2) {
-                                                        echo "FLANGES ESPECIAIS</br></br>";
+                                                        echo "FLANGES ESPECIAIS<br><br>";
                                                     }
                                                     if ($inicio == 3) {
-                                                        echo "ANÉIS E DISCOS</br></br>";
+                                                        echo "ANÉIS E DISCOS<br><br>";
                                                     }
                                                     if ($inicio == 4) {
-                                                        echo "CONEXÕES</br></br>";
+                                                        echo "CONEXÕES<br><br>";
                                                     }
 
                                                     $resultado = mysqli_query($conexao, "SELECT DISTINCT(norma) from produto WHERE peca = $inicio");
@@ -234,7 +234,7 @@
                                                     for ($i = 1; $i <= $qtnorma; $i++) {
                                                         $row = $resultado->fetch_assoc();
                                                         echo $row['norma'] . "<br><div class=\"block clearfix\">
-                                                <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
+                                                <table class=\"columns-3\" width=\"100%\">     
                                                     <tbody>";
                                                         $resultadonorma = mysqli_query($conexao, "SELECT * from produto WHERE peca = $inicio AND norma='$row[norma]'");
                                                         $totalpeca = mysqli_num_rows($resultadonorma);
@@ -257,7 +257,7 @@
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         echo "<td align=\"center\" id=\"mouse\">
                                                                 <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
+                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
@@ -281,7 +281,7 @@
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         echo "<td align=\"center\"  id=\"mouse\">
                                                                 <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
+                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
@@ -304,21 +304,21 @@
                                                                     if ($resto == 1) {
                                                                         echo "<td colspan=\"4\"  id=\"mouse\">
                                                                 <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>             
+                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>             
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
                                                                     if ($resto == 2) {
                                                                         echo "<td colspan=\"2\"  id=\"mouse\">
                                                                 <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
+                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
                                                                     if ($resto == 3) {
                                                                         echo "<td colspan=\"1\"  id=\"mouse\">
                                                                 <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>            
+                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                     }
@@ -340,7 +340,7 @@
                                                                     $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     echo "<td align=\"center\" id=\"mouse\">
                                                                 <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola </br> $classe </div>
+                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
                                                             </td>";
                                                                 }
@@ -352,7 +352,7 @@
                                                 }
                                             
 
-                                            //echo"$tipopeca / $totaltabela / $resto</br>";
+                                            //echo"$tipopeca / $totaltabela / $resto<br>";
                                             ?>
                                         </div>
                                     </div>

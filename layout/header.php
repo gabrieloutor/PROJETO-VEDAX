@@ -42,6 +42,9 @@
         <link rel="stylesheet" href="css/ext.asmenu.css" type="text/css" >
         <link rel="stylesheet" href="css/ext.artslider.css" type="text/css" >
         <style type="text/css">
+            #face{
+                display:inline-table;
+            }
             #mouse {
                 font-size:16px;
                 position: relative;
