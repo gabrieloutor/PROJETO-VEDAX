@@ -292,4 +292,7 @@
     .titles h1{
         text-align:justify; 
     }
+    .item_header h1{
+        text-align:justify; 
+    }
 }
