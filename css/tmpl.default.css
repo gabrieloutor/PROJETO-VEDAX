@@ -1417,7 +1417,6 @@ ul#filters li
     -moz-transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
     transition: opacity 1s ease;
-    background-image: url(../images/bg.gallery.png);	
 }
 
 #galleryOverlay.visible
