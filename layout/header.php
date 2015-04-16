@@ -48,6 +48,9 @@
             table tr{
                 text-align: center;
             }
+            table tr td{
+                text-align: center;
+            }
             #face{
                 display:inline-table;
             }

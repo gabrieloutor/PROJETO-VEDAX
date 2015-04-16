@@ -255,7 +255,7 @@
                                                                             $classe = "Classe : $classe";
                                                                         }
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        echo "<td align=\"center\" id=\"mouse\">
+                                                                        echo "<td id=\"mouse\">
                                                                 <h3>$produto</h3>
                                                                     <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
@@ -267,7 +267,7 @@
                                                         } else if ($totaltabela > 1 && $resto != 0) {
                                                             for ($g = 1; $g < $totaltabela; $g++) {
                                                                 if ($resultadonorma) {
-                                                                    echo "<tr align=\"center\">";
+                                                                    echo "<tr>";
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultadonorma);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -279,7 +279,7 @@
                                                                             $classe = "Classe : $classe";
                                                                         }
                                                                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        echo "<td align=\"center\"  id=\"mouse\">
+                                                                        echo "<td id=\"mouse\">
                                                                 <h3>$produto</h3>
                                                                     <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>
@@ -288,7 +288,7 @@
                                                                     echo "</tr>";
                                                                 }
                                                             }
-                                                            echo "<tr align=\"center\">";
+                                                            echo "<tr>";
                                                             for ($h = 1; $h <= $resto; $h++) {
                                                                 if ($resultadonorma) {
                                                                     $row = mysqli_fetch_array($resultadonorma);
@@ -326,7 +326,7 @@
                                                             }echo "</tr>";
                                                         } else if ($totaltabela < 1) {
                                                             if ($resultadonorma) {
-                                                                echo "<tr align=\"center\">";
+                                                                echo "<tr>";
                                                                 for ($j = 1; $j <= $totalpeca; $j++) {
                                                                     $row = mysqli_fetch_array($resultadonorma);
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -338,7 +338,7 @@
                                                                         $classe = "Classe : $classe";
                                                                     }
                                                                     $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    echo "<td align=\"center\" id=\"mouse\">
+                                                                    echo "<td id=\"mouse\">
                                                                 <h3>$produto</h3>
                                                                     <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>
                                                                 <p><img src=\"images/produto/$img\" alt=\"\"></p>

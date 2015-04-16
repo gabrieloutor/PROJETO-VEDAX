@@ -8,7 +8,7 @@
                                         <div class="mod-custom mod-custom__contactus">
                                             <h4>
                                                 <a target="_blank" href="<?php echo $facebook; ?>">Facebook</a></h4>
-                                                <div class="fb-like" id="face" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                                                <div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                                             
                                             <h4>
                                                 <span class="icon-phone">
