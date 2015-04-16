@@ -42,6 +42,12 @@
         <link rel="stylesheet" href="css/ext.asmenu.css" type="text/css" >
         <link rel="stylesheet" href="css/ext.artslider.css" type="text/css" >
         <style type="text/css">
+            table {
+                width:100%;
+            }
+            table tr{
+                text-align: center;
+            }
             #face{
                 display:inline-table;
             }

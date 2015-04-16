@@ -234,7 +234,7 @@
                                                     for ($i = 1; $i <= $qtnorma; $i++) {
                                                         $row = $resultado->fetch_assoc();
                                                         echo $row['norma'] . "<br><div class=\"block clearfix\">
-                                                <table class=\"columns-3\" width=\"100%\">     
+                                                <table class=\"columns-3\">     
                                                     <tbody>";
                                                         $resultadonorma = mysqli_query($conexao, "SELECT * from produto WHERE peca = $inicio AND norma='$row[norma]'");
                                                         $totalpeca = mysqli_num_rows($resultadonorma);
@@ -243,7 +243,7 @@
                                                         if ($resto == 0) {
                                                             for ($g = 1; $g < $totaltabela; $g++) {
                                                                 if ($resultadonorma) {
-                                                                    echo "<tr align=\"center\">";
+                                                                    echo "<tr>";
                                                                     for ($j = 1; $j <= 4; $j++) {
                                                                         $row = mysqli_fetch_array($resultadonorma);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
