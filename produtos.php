@@ -203,24 +203,49 @@
                                             <div class="block clearfix">
                                                 <?php echo $descricaoproduto; ?><br><br> 
                                             </div>
-                                            <div class="block clearfix">
-                                                <table class="columns-3" width="100%" border="0" cellpadding="0" cellspacing="0">     
-                                                    <tbody>  
-                                                        <?php
-                                                        if ($tipopeca != 1 && $tipopeca != 2 && $tipopeca != 3 && $tipopeca != 4) {
-                                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto");
-                                                        } else {
-                                                            $resultado = mysqli_query($conexao, "SELECT * FROM produto WHERE peca = $tipopeca");
-                                                        }
-                                                        $totalpeca = mysqli_num_rows($resultado);
+
+                                            <?php
+                                            if ($tipopeca != 1 && $tipopeca != 2 && $tipopeca != 3 && $tipopeca != 4) {
+                                                $resultadotipopeca = mysqli_query($conexao, "SELECT DISTINCT(peca) from produto");
+                                                $tipopeca = mysqli_num_rows($resultadotipopeca);
+                                                $inicia=1;
+                                            }else{
+                                                $resultadotipopeca = 1;
+                                                $resultado = mysqli_query($conexao, "SELECT DISTINCT(norma) from produto WHERE peca = $tipopeca");
+                                                $qtnorma = mysqli_num_rows($resultado);
+                                                $inicia=$tipopeca;
+                                            }
+                                                for ($inicio = $inicia; $inicio <= $tipopeca; $inicio++) {
+                                                    if ($inicio == 1) {
+                                                        echo "FLANGES</br></br>";
+                                                    }
+                                                    if ($inicio == 2) {
+                                                        echo "FLANGES ESPECIAIS</br></br>";
+                                                    }
+                                                    if ($inicio == 3) {
+                                                        echo "ANÉIS E DISCOS</br></br>";
+                                                    }
+                                                    if ($inicio == 4) {
+                                                        echo "CONEXÕES</br></br>";
+                                                    }
+
+                                                    $resultado = mysqli_query($conexao, "SELECT DISTINCT(norma) from produto WHERE peca = $inicio");
+                                                    $qtnorma = mysqli_num_rows($resultado);
+                                                    for ($i = 1; $i <= $qtnorma; $i++) {
+                                                        $row = $resultado->fetch_assoc();
+                                                        echo $row['norma'] . "<br><div class=\"block clearfix\">
+                                                <table class=\"columns-3\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">     
+                                                    <tbody>";
+                                                        $resultadonorma = mysqli_query($conexao, "SELECT * from produto WHERE peca = $inicio AND norma='$row[norma]'");
+                                                        $totalpeca = mysqli_num_rows($resultadonorma);
                                                         $totaltabela = (int) $totalpeca / 4;
                                                         $resto = $totalpeca % 4;
                                                         if ($resto == 0) {
-                                                            for ($i = 1; $i < $totaltabela; $i++) {
-                                                                if ($resultado) {
+                                                            for ($g = 1; $g < $totaltabela; $g++) {
+                                                                if ($resultadonorma) {
                                                                     echo "<tr align=\"center\"";
                                                                     for ($j = 1; $j <= 4; $j++) {
-                                                                        $row = mysqli_fetch_array($resultado);
+                                                                        $row = mysqli_fetch_array($resultadonorma);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -240,11 +265,11 @@
                                                                 }
                                                             }
                                                         } else if ($totaltabela > 1 && $resto != 0) {
-                                                            for ($i = 1; $i < $totaltabela; $i++) {
-                                                                if ($resultado) {
+                                                            for ($g = 1; $g < $totaltabela; $g++) {
+                                                                if ($resultadonorma) {
                                                                     echo "<tr align=\"center\">";
                                                                     for ($j = 1; $j <= 4; $j++) {
-                                                                        $row = mysqli_fetch_array($resultado);
+                                                                        $row = mysqli_fetch_array($resultadonorma);
                                                                         $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                         $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -264,9 +289,9 @@
                                                                 }
                                                             }
                                                             echo "<tr align=\"center\">";
-                                                            for ($i = 1; $i <= $resto; $i++) {
-                                                                if ($resultado) {
-                                                                    $row = mysqli_fetch_array($resultado);
+                                                            for ($h = 1; $h <= $resto; $h++) {
+                                                                if ($resultadonorma) {
+                                                                    $row = mysqli_fetch_array($resultadonorma);
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -300,10 +325,10 @@
                                                                 }
                                                             }echo "</tr>";
                                                         } else if ($totaltabela < 1) {
-                                                            if ($resultado) {
+                                                            if ($resultadonorma) {
                                                                 echo "<tr align=\"center\">";
                                                                 for ($j = 1; $j <= $totalpeca; $j++) {
-                                                                    $row = mysqli_fetch_array($resultado);
+                                                                    $row = mysqli_fetch_array($resultadonorma);
                                                                     $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
                                                                     $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -322,9 +347,13 @@
                                                                 echo "</tr>";
                                                             }
                                                         }
-                                                        //echo"$tipopeca / $totaltabela / $resto</br>";
-                                                        ?>
-                                                    </tbody></table></div>
+                                                        echo "</tbody></table></div>";
+                                                    }
+                                                }
+                                            
+
+                                            //echo"$tipopeca / $totaltabela / $resto</br>";
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
