@@ -116,8 +116,18 @@
                                     <div class="item_header">
                                         <h1>Fale Conosco</h1>
                                     </div>
-                                    ADICIONAR FORM COM ENVIO POR EMAIL
-
+                                    <form method="post" action="contato.php">
+                                <p>Nome:
+                                <input type="text" id="nome" name="nome" size="35" /><br />
+                                Email:<input type="text" id="email" name="email" size="35" /><br>
+                                Título<input type="text" id="titulo" name="titulo" size="35" /><br />
+                                Mensagem:</p>
+                                <p>
+                                <textarea name="texto" id="texto" cols="60" rows="10">
+                                </textarea><input type="submit" name="submit" id="submit" value="Submit" />
+                                <input type="reset" name="resetar" id="resetar" value="Resetar" />
+                                </p>
+                                    </form>
                                 </div>
                             </div>
                         </div>
