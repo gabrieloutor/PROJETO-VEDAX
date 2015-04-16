@@ -3,7 +3,8 @@
 <html>
     <?php $titulo="Página Inicial"; $pagina="index.php" ?>
     <?php include("layout/header.php"); ?>
-    <body class="com_content view-article task- itemid-101 body__">
+    
+    <body>
         <div class="wrapper">
             <div class="wrapper-inner">
                 <!-- INICIO HEADER -->
