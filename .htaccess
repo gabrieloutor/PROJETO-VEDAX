@@ -12,6 +12,4 @@
     RewriteRule ^localizacao/?$ /localizacao.php [NC,L]
     RewriteRule ^produtos/?$ /produtos.php [NC,L]
     RewriteRule ^servicos/?$ /servicos.php [NC,L]
-    RewriteCond %{HTTP_HOST} ^gabrieloutor.herokuapp.com [NC]
-    RewriteRule ^(.*)$ http://gabrieloutor.herokuapp.com/$1 [L,R=301]
 </IfModule>
