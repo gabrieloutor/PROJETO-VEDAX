@@ -21,11 +21,13 @@
     $email = $_POST['email'];
     $mensagem = $_POST['mensagem'];
     $mail->Subject = 'MENSAGEM SITE VEDAX';
-    $mail->Body = "Nome: $nome <\br>Email: $email <\br>Mensagem: $mensagem <\br>";
+    $mail->Body = "Nome: $nome 
+            Email: $email 
+            Mensagem: $mensagem <\br>";
 
     if (!$mail->send()) {
         echo 'Message could not be sent.';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
-        header("Location: http://gabrieloutor.herokuapp.com");
+        header("Location: http://gabrieloutor.herokuapp.com/faleconosco.php");
     }
