@@ -1,7 +1,28 @@
 <?php require "config/config.ini"; ?>
 <!DOCTYPE html>
 <html>
-    <?php $titulo = "Fale Conosco";
+    <?php if($titulo==""){
+        $titulo = "Fale Conosco";
+        $tela="<form method=\"post\" action=\"contato.php\">
+                    <p class=\"name\">
+                        <label for=\"name\">Nome</label>
+                        <input type=\"text\" placeholder=\"Seu Nome\" name=\"nome\" />
+                    </p>
+                    <p class=\"email\">
+                        <label for=\"email\">E-mail</label>
+                        <input type=\"text\" placeholder=\"email@exemplo.com.br\" name=\"email\" />
+                    </p>
+                    <p class=\"text\">
+                        <label for=\"mensagem\">Mensagem</label>
+                        <textarea placeholder=\"Escreva sua mensagem\" name=\"mensagem\" /></textarea>
+                    </p>
+                    <p class=\"submit\">
+                        <input type=\"submit\" value=\"Enviar\" />
+                    </p>
+                </form>";
+    }else{
+        $tela= "ENTRE EM CONTATO COM A ADMINISTRACAO PARA RELATAR ESSE ERRO ou ENVIE UM EMAIL PARA cpd@vedax.ind.br";
+    }
     $pagina = "faleconosco.php"
     ?>
 <?php include("layout/header.php"); ?>
@@ -118,23 +139,7 @@
                                     <div class="item_header">
                                         <h1>Fale Conosco</h1>
                                     </div>
-                                    <form method="post" action="contato.php">
-                                        <p class="name">
-                                            <label for="name">Nome</label>
-                                            <input type="text" placeholder="Seu Nome" name="nome" />
-                                        </p>
-                                        <p class="email">
-                                            <label for="email">E-mail</label>
-                                            <input type="text" placeholder="email@exemplo.com.br" name="email" />
-                                        </p>
-                                        <p class="text">
-                                            <label for="mensagem">Mensagem</label>
-                                            <textarea placeholder="Escreva sua mensagem" name="mensagem" /></textarea>
-                                        </p>
-                                        <p class="submit">
-                                            <input type="submit" value="Enviar" />
-                                        </p>
-                                    </form>
+                                    <?php echo $tela; ?>
                                 </div>
                             </div>
                         </div>
