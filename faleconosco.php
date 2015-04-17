@@ -1,8 +1,10 @@
 <?php require "config/config.ini"; ?>
 <!DOCTYPE html>
 <html>
-    <?php $titulo="Fale Conosco"; $pagina="faleconosco.php" ?>
-    <?php include("layout/header.php"); ?>
+    <?php $titulo = "Fale Conosco";
+    $pagina = "faleconosco.php"
+    ?>
+<?php include("layout/header.php"); ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
             <div class="wrapper-inner">
@@ -117,16 +119,21 @@
                                         <h1>Fale Conosco</h1>
                                     </div>
                                     <form method="post" action="contato.php">
-                                <p>Nome:
-                                <input type="text" id="nome" name="nome" size="35" /><br />
-                                Email:<input type="text" id="email" name="email" size="35" /><br>
-                                Título<input type="text" id="titulo" name="titulo" size="35" /><br />
-                                Mensagem:</p>
-                                <p>
-                                <textarea name="texto" id="texto" cols="60" rows="10">
-                                </textarea><input type="submit" name="submit" id="submit" value="Submit" />
-                                <input type="reset" name="resetar" id="resetar" value="Resetar" />
-                                </p>
+                                        <p class="name">
+                                            <label for="name">Nome</label>
+                                            <input type="text" placeholder="Seu Nome" name="nome" />
+                                        </p>
+                                        <p class="email">
+                                            <label for="email">E-mail</label>
+                                            <input type="text" placeholder="email@exemplo.com.br" name="email" />
+                                        </p>
+                                        <p class="text">
+                                            <label for="mensagem">Mensagem</label>
+                                            <textarea placeholder="Escreva sua mensagem" name="mensagem" /></textarea>
+                                        </p>
+                                        <p class="submit">
+                                            <input type="submit" value="Enviar" />
+                                        </p>
                                     </form>
                                 </div>
                             </div>
@@ -136,7 +143,7 @@
             </div>
         </div>
         <!-- INICIO FOOTER-->
-        <?php include("layout/footer.php"); ?>
+<?php include("layout/footer.php"); ?>
         <!-- FIM FOOTER-->
     </body>
 
