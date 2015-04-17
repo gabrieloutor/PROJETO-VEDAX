@@ -21,13 +21,15 @@
     $email = $_POST['email'];
     $mensagem = $_POST['mensagem'];
     $mail->Subject = 'MENSAGEM SITE VEDAX';
-    $mail->Body = "Nome: $nome 
+    $mail->Body = "MENSAGEM ENVIADA ÀS $hora_envio NO DIA $data_envio
+            Nome: $nome 
             Email: $email 
-            Mensagem: $mensagem <\br>";
+            Mensagem: $mensagem ";
 
     if (!$mail->send()) {
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        echo '<script>alert("Mensagem não enviada, tente novamente mais tarde!")</script>';
+        header("Location: http://gabrieloutor.herokuapp.com/faleconosco.php");
     } else {
+        echo '<script>alert("Mensagem enviada com Sucesso!")</script>';
         header("Location: http://gabrieloutor.herokuapp.com/faleconosco.php");
     }
