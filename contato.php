@@ -1,5 +1,6 @@
 <?php require "config/config.ini"; ?>
 <?php
+    echo $titulo;
     // Using Awesome https://github.com/PHPMailer/PHPMailer
     require 'PHPMailer/PHPMailerAutoload.php';
     $mail = new PHPMailer;
@@ -28,8 +29,7 @@
 
     if (!$mail->send()) {
         echo '<script>alert("Mensagem não enviada, tente novamente mais tarde!")</script>';
-        header("Location: http://gabrieloutor.herokuapp.com/faleconosco.php");
     } else {
         echo '<script>alert("Mensagem enviada com Sucesso!")</script>';
-        header("Location: http://gabrieloutor.herokuapp.com/faleconosco.php");
     }
+    header("Location: $redirecionar");
