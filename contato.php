@@ -15,7 +15,7 @@
     $mail->Password = $senha;                         // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable encryption, only 'tls' is accepted
 
-    $mail->From = $email;
+    $mail->From = $destinatario;
     $mail->FromName = 'VEDAX';
     $mail->addAddress($destinatario);                 // Add a recipient
 
