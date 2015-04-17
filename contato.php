@@ -1,9 +1,9 @@
 <?php
 // Using Awesome https://github.com/PHPMailer/PHPMailer
-require 'PHPMailerAutoload.php';
-
+require 'PHPMailer/PHPMailerAutoload.php';
+echo "TESTE1<br>";
 $mail = new PHPMailer;
-
+echo "TESTE2<br>";
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mailgun.org';                     // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
