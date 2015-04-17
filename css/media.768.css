@@ -286,7 +286,7 @@
     }
     table tr td 
     {
-        display:table;
+        display:inline;
         overflow:scroll;
     }
     .titles h1{
