@@ -1,5 +1,10 @@
 <?php require "config/config.ini"; ?>
 <?php
+    if ($urldb=="127.0.0.1") {
+        echo '<script>alert("Mensagem não enviada, tente novamente mais tarde!")</script>';
+        header("Location: $redirecionar");
+        exit;
+    }
     $data_envio = date('d/m/Y');
     $hora_envio = date('H:i:s');
     $nome = $_POST['nome'];
