@@ -1,24 +1,28 @@
-<?
-$nome=$_POST['nome'];
-$email=$_POST['email'];
-$titulo=$_POST['titulo'];
-$texto=$_POST['texto'];
+<?php
+// Using Awesome https://github.com/PHPMailer/PHPMailer
+require 'PHPMailerAutoload.php';
 
-$Destinatario="gabriel.outor@hotmail.com";
+$mail = new PHPMailer;
 
-$Titulo="$titulo";
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.mailgun.org';                     // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = getenv("MAILGUN_SMTP_LOGIN");   // SMTP username
+$mail->Password = getenv("MAILGUN_SMTP_PASSWORD");                          // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable encryption, only 'tls' is accepted
 
-$mensagem1="
-Uma mensagem vinda do site !
-Algum vistante mandou essa mensagem pelo site.
-Nome: $nome
-Email: $email
-Mensagem: $mensagem";
+$mail->From = 'gabriel.outor@hotmail.com';
+$mail->FromName = 'Mailer';
+$mail->addAddress('gabriel.outor@hotmail.com');                 // Add a recipient
 
-mail("$Destinatario","$Titulo", "$mensagem1","From:$email");
-?>
-<html>
-<body>
-Enviado com sucesso !
-</body>
-</html>
+$mail->WordWrap = 50;                                 // Set word wrap to 50 characters
+
+$mail->Subject = 'Hello';
+$mail->Body    = 'Testing some Mailgun awesomness';
+
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
+}
