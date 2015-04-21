@@ -10,5 +10,6 @@
     RewriteRule ^home/?$ /index.php [NC,L]
     RewriteRule ^localizacao/?$ /localizacao.php [NC,L]
     RewriteRule ^produtos/?$ /produtos.php [NC,L]
+    RewriteRule ^produtoslista/?$ /produtoslista.php [NC,L]
     RewriteRule ^servicos/?$ /servicos.php [NC,L]
 </IfModule>
