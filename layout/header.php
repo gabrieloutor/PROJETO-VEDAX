@@ -26,11 +26,6 @@
     <meta name="theme-color" content="#ffffff">
     <!-- FIM FAVICON -->
     <!-- INICIO CSS -->
-    <?php
-    if ($pagina == "produtos.php") {
-        echo "<link rel=\"stylesheet\" href=\"css/ruds.css\" type=\"text/css\" >";
-    }
-    ?>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" >
     <link rel="stylesheet" href="css/tmpl.default.css" type="text/css" >
     <link rel="stylesheet" href="css/nivo-slider.min.css" type="text/css" >
@@ -43,6 +38,16 @@
     <link rel="stylesheet" href="css/ext.default.css" type="text/css" >
     <link rel="stylesheet" href="css/ext.asmenu.css" type="text/css" >
     <link rel="stylesheet" href="css/ext.artslider.css" type="text/css" >
+    <?php
+    if ($pagina == "produtoslista.php") {
+        echo "<link rel=\"stylesheet\" href=\"css/ruds.css\" type=\"text/css\" >";
+    }
+    ?>
+    <?php
+    if ($pagina == "produtos.php") {
+        echo "<link rel=\"stylesheet\" href=\"css/produtos.css\" type=\"text/css\" >";
+    }
+    ?>
     <style type="text/css">
         form{
             font-size: 13px;

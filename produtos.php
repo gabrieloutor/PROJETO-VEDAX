@@ -2,21 +2,9 @@
 <!DOCTYPE html>
 <html>
     <?php
-    if (empty($titulo)) {
-        $titulo = "Produtos";
-    }
-    if (empty($tipopeca)) {
-        $tipopeca = 99;
-    }
-    if (empty($tituloproduto)) {
-        $tituloproduto = "Produtos";
-    }
-    if (empty($descricaoproduto)) {
-        $descricaopadrao = "Produtos em conformidade com os padrões mais conhecidos, como o código ASME, apto para tanto líquido e gás de transporte de fluidos e transformação.";
-        $descricaoproduto = $descricaopadrao;
-    }
+    $titulo = "Produtos";
     $pagina = "produtos.php";
-    include("layout/header.php"); 
+    include("layout/header.php");
     ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
@@ -50,20 +38,6 @@
                                                     </li>
                                                     <li class="current active">
                                                         <a href="produtos.php">Produtos</a>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="aneis.php" >Anéis e Discos</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="conexoes.php">Conexões</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="flanges.php">Flanges</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="flangesespeciais.php">Flanges Especiais</a>
-                                                            </li>
-                                                        </ul>
                                                     </li>
                                                     <li>
                                                         <a href="servicos.php">Serviços</a>
@@ -114,78 +88,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="slider-row">
-                    <div class="moduletable  ">
-                        <div class="moduletable-wrapper">
-                            <div class="vt_nivo_slider">
-                                <div id="vtnivo89" class="slider-wrapper theme-default theme-default89 nivocontrol-bottomright nivo-bullets05 nivo-arrows10 captionposition-topleft captionrounded-all"
-                                     style="height: auto; width: auto;">
-                                    <div class="ribbon">
-                                    </div>
-                                    <div id="vt_nivo_slider89" class="nivoSlider">
-                                        <?php
-                                        $qtfoto = 1;
-                                        for ($i = 1; $i <= $qtfoto; $i++) {
-                                            echo "<img src=\"images/produto$i.jpg\" alt=\"Foto $i\" />";
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <script type="text/javascript">
-                                jQuery.noConflict();
-                                jQuery(window).load(function () {
-                                    jQuery('#vt_nivo_slider89').nivoSlider({
-                                        effect: 'fold',
-                                        // Specify sets like: 'fold,fade,sliceDown'
-                                        slices: 15,
-                                        // For slice animations
-                                        boxCols: 8,
-                                        // For box animations
-                                        boxRows: 4,
-                                        // For box animations
-                                        animSpeed: 500,
-                                        // Slide transition speed
-                                        pauseTime: 3000,
-                                        // How long each slide will show
-                                        startSlide: 2,
-                                        // Set starting Slide (0 index)
-                                        directionNav: false,
-                                        // Next & Prev navigation
-                                        controlNav: false,
-                                        // 1,2,3... navigation
-                                        controlNavThumbs: false,
-                                        // Use thumbnails for Control Nav
-                                        pauseOnHover: true,
-                                        // Stop animation while hovering
-                                        manualAdvance: false,
-                                        // Force manual transitions
-                                        prevText: 'Prev',
-                                        // Prev directionNav text
-                                        nextText: 'Next',
-                                        // Next directionNav text
-                                        randomStart: true,
-                                        // Start on a random slide
-                                        beforeChange: function () {
-                                        },
-                                        // Triggers before a slide transition
-                                        afterChange: function () {
-                                        },
-                                        // Triggers after a slide transition
-                                        slideshowEnd: function () {
-                                        },
-                                        // Triggers after all slides have been shown
-                                        lastSlide: function () {
-                                        },
-                                        // Triggers when last slide is shown
-                                        afterLoad: function () {
-                                        } // Triggers when slider has loaded
-                                    });
-                                });
-                            </script>
-                        </div>
-                    </div>
-                </div>
                 <!-- FIM HEADER-->
                 <!-- INICIO CONTEUDO -->
                 <div id="content-row">
@@ -197,174 +99,252 @@
                                         <div class="text-item">
 
                                             <div class="titles">
-                                                <h1><?php echo $tituloproduto; ?></h1>
-                                                <h2>FÁBRICA VEDAX</h2>
+                                                <h1>PRODUTOS</h1>
+                                                
                                             </div>
-                                            <div class="block clearfix">
-                                                <?php echo $descricaoproduto; ?><br><br> 
+                                            <h2>ANÉIS FORJADOS</h2>
+                                            <div class="one-third last_col">
+                                                <p><strong>Tamanho</strong></p>
+                                                <p>1/2” até 60” todas as classes</p>
+                                                <p><strong>Normas</strong></p>
+                                                <p>As normas internacionais e desenho do cliente</p>
+                                                <p><strong>Tipos de Flanges</strong></p>
+                                                <ul>
+                                                    <li>Welding Neck</li>
+                                                    <li>Slip On</li>
+                                                    <li>Socket Welding</li>
+                                                    <li>Blind, Threaded</li>
+                                                    <li>Lap Joint</li>
+                                                    <li>Orifice flanges</li>
+                                                </ul>
+                                                <p>&nbsp;</p>
+                                                <div class="cols benefits">
+
+
+                                                    <div class="highslide-gallery">
+
+                                                        <a id="gal_600" class="col_1-3 dt_album_cover" href="images/produto/A3.JPG" title="Gallery">
+                                                            <div class="loading-image">
+                                                                <img src="images/produto/A3.JPG" width="290" height="150" alt="Gallery" style="opacity: 1; visibility: visible;">
+                                                            </div>
+                                                        </a>
+                                                    </div>    </div>    
+
                                             </div>
+                                            <div class="two-third"><img class="alignnone" src="images/produto/A2.JPG" alt="" width="417" height="288"><div class="one-half"><br>Os flanges são o nosso principal produto.<p></p>
+                                                    <p style="text-align: justify;">Nossa escala de produção abrange todos os principais padrões dimensionais nacionais e internacionais.<br>
+                                                        Weldo Flange, longa de solda pescoço, espetáculo cego, pá, espaçador e anel de gotejamento completar a nossa gama de produção.</p>
+                                                    <p><a name="forging"></a></p>
+                                                    <p style="text-align: justify;">Além disso, a experiência de nossa equipe, com o apoio da tecnologia dos instrumentos utilizados para a concepção e o cálculo das peças e a simulação do processo de forjamento, permitem-nos encarar de forma eficaz todos os pedidos de flanges de ancoragem, com orientação, bico e todas as peças especiais.</p>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="clearfix"></div>
+                                            <h2>CONEXÕES FORJADOS</h2>
+                                            <div class="two-third"><img title="Forging" src="http://www.officinesantafede.com/corporate/forging.png" alt="" width="537" height="265" /></p>
+                                                <div class="one-half">
+                                                    <p>&nbsp;</p>
+                                                    <p>&nbsp;</p>
+                                                    <p style="text-align: justify;">The installation of the ring roller LAR 200/250 completed with hydraulic press 3200 tons and 5 tons manipulator completes the range of our equipment.</p>
+                                                    <p style="text-align: justify;">This new investment allow us to produce in an efficient and economic way flanges, rings and forgings up to 3 meters diameter and 5 tons in weight.</p>
+                                                    <p style="text-align: justify;"></div>
+                                                <p>&nbsp;</p>
+                                            </div><div class="one-third last_col"><strong>Equipment List</strong></p>
+                                                <ul>
+                                                    <li>Automatic Hydraulic Press 120 MN</li>
+                                                    <li>Robotized Machine Press 25 MN</li>
+                                                    <li>Robotized Machine Press 16 MN</li>
+                                                    <li>Hammer M.AS 50 MN</li>
+                                                    <li>Hammer M.AS 16 MN</li>
+                                                    <li>Hammer M.AS 13 MN</li>
+                                                    <li>Forging Press 31.5 MN</li>
+                                                    <li>Ring Roller LAR 200/250</li>
+                                                </ul>
+                                                <p>&nbsp;</p>
+                                                <div class="cols benefits">
 
-                                            <?php
-                                            if ($tipopeca != 1 && $tipopeca != 2 && $tipopeca != 3 && $tipopeca != 4) {
-                                                $resultadotipopeca = mysqli_query($conexao, "SELECT DISTINCT(peca) from produto");
-                                                $tipopeca = mysqli_num_rows($resultadotipopeca);
-                                                $inicia=1;
-                                            }else{
-                                                $resultadotipopeca = 1;
-                                                $resultado = mysqli_query($conexao, "SELECT DISTINCT(norma) from produto WHERE peca = $tipopeca");
-                                                $qtnorma = mysqli_num_rows($resultado);
-                                                $inicia=$tipopeca;
-                                            }
-                                                for ($inicio = $inicia; $inicio <= $tipopeca; $inicio++) {
-                                                    if ($inicio == 1) {
-                                                        echo "FLANGES<br><br>";
-                                                    }
-                                                    if ($inicio == 2) {
-                                                        echo "FLANGES ESPECIAIS<br><br>";
-                                                    }
-                                                    if ($inicio == 3) {
-                                                        echo "ANÉIS E DISCOS<br><br>";
-                                                    }
-                                                    if ($inicio == 4) {
-                                                        echo "CONEXÕES<br><br>";
-                                                    }
 
-                                                    $resultado = mysqli_query($conexao, "SELECT DISTINCT(norma) from produto WHERE peca = $inicio");
-                                                    $qtnorma = mysqli_num_rows($resultado);
-                                                    for ($i = 1; $i <= $qtnorma; $i++) {
-                                                        $row = $resultado->fetch_assoc();
-                                                        echo $row['norma'] . "<br><div class=\"block clearfix\">
-                                                <table class=\"columns-3\">     
-                                                    <tbody>";
-                                                        $resultadonorma = mysqli_query($conexao, "SELECT * from produto WHERE peca = $inicio AND norma='$row[norma]'");
-                                                        $totalpeca = mysqli_num_rows($resultadonorma);
-                                                        $totaltabela = (int) $totalpeca / 4;
-                                                        $resto = $totalpeca % 4;
-                                                        if ($resto == 0) {
-                                                            for ($g = 1; $g < $totaltabela; $g++) {
-                                                                if ($resultadonorma) {
-                                                                    echo "<tr>";
-                                                                    for ($j = 1; $j <= 4; $j++) {
-                                                                        $row = mysqli_fetch_array($resultadonorma);
-                                                                        $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        if ($classe == "") {
-                                                                            $classe = "";
-                                                                        } else {
-                                                                            $classe = "Classe : $classe";
-                                                                        }
-                                                                        $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        echo "<td id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                    echo "</tr>";
-                                                                }
-                                                            }
-                                                        } else if ($totaltabela > 1 && $resto != 0) {
-                                                            for ($g = 1; $g < $totaltabela; $g++) {
-                                                                if ($resultadonorma) {
-                                                                    echo "<tr>";
-                                                                    for ($j = 1; $j <= 4; $j++) {
-                                                                        $row = mysqli_fetch_array($resultadonorma);
-                                                                        $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        if ($classe == "") {
-                                                                            $classe = "";
-                                                                        } else {
-                                                                            $classe = "Classe : $classe";
-                                                                        }
-                                                                        $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                        echo "<td id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                    echo "</tr>";
-                                                                }
-                                                            }
-                                                            echo "<tr>";
-                                                            for ($h = 1; $h <= $resto; $h++) {
-                                                                if ($resultadonorma) {
-                                                                    $row = mysqli_fetch_array($resultadonorma);
-                                                                    $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if ($classe == "") {
-                                                                        $classe = "";
-                                                                    } else {
-                                                                        $classe = "Classe : $classe";
-                                                                    }
-                                                                    $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if ($resto == 1) {
-                                                                        echo "<td colspan=\"4\"  id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>             
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                    if ($resto == 2) {
-                                                                        echo "<td colspan=\"2\"  id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                    if ($resto == 3) {
-                                                                        echo "<td colspan=\"1\"  id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>            
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                    }
-                                                                }
-                                                            }echo "</tr>";
-                                                        } else if ($totaltabela < 1) {
-                                                            if ($resultadonorma) {
-                                                                echo "<tr>";
-                                                                for ($j = 1; $j <= $totalpeca; $j++) {
-                                                                    $row = mysqli_fetch_array($resultadonorma);
-                                                                    $produto = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $bitola = htmlentities($row["bitola"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    $classe = htmlentities($row["classe"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    if ($classe == "") {
-                                                                        $classe = "";
-                                                                    } else {
-                                                                        $classe = "Classe : $classe";
-                                                                    }
-                                                                    $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                                                                    echo "<td id=\"mouse\">
-                                                                <h3>$produto</h3>
-                                                                    <div id=\"comentario\"> Bitola: $bitola <br> $classe </div>
-                                                                <p><img src=\"images/produto/$img\" alt=\"\"></p>
-                                                            </td>";
-                                                                }
-                                                                echo "</tr>";
-                                                            }
-                                                        }
-                                                        echo "</tbody></table></div>";
-                                                    }
-                                                }
-                                            
+                                                    <div class="highslide-gallery">
 
-                                            //echo"$tipopeca / $totaltabela / $resto<br>";
-                                            ?>
-                                        </div>
-                                    </div>
+                                                        <a id="gal_558" class="col_1-3 dt_album_cover" href="http://www.officinesantafede.com/wp-content/uploads/2012/04/DSC_0149-1024x685.jpg" title="Gallery">
+                                                            <div class="loading-image">
+                                                                <img src="http://www.officinesantafede.com/wp-content/themes/dt-parallax/timthumb.php?src=/wp-content/uploads/2012/04/DSC_0149-1024x685.jpg&amp;q=100&amp;a=c&amp;zc=1&amp;w=290&amp;h=150" alt="Gallery"/>
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>    </div>   
+
+                                        </div><div class="clearfix"></div><a name="materials"></a></p>
+                                        <div class="clearfix"></div>
+                                        <h2>DISCOS FORJADOS</h2>
+                                        <div class="two-third"><img class="alignnone" src="http://www.officinesantafede.com/corporate/materials.png" alt="" width="347" height="194" /></p>
+                                            <div class="one-half">
+                                                <p>&nbsp;</p>
+                                                <p style="text-align: justify;">The huge quantities of raw material and forging and finished flanges available in our stock allow us to manage the delivery requirements of our customer with extreme flexibility and punctuality.</p>
+                                                <p style="text-align: justify;">Here are the approximate inventory of our stock:<br />
+                                                    Raw Materials: 5.500 tons<br />
+                                                    Forgings: 7.300 tons<br />
+                                                    Finished Flanges: 1.600 tons</p>
+                                                <p style="text-align: justify;">These large stock availabilities, together with a flexible and efficient organization, allow us to provide even the most complex projects in a reasonable short time.</p>
+                                                <p>&nbsp;</p>
+                                            </div><div class="clearfix"></div>
+                                            <p>&nbsp;</p>
+                                        </div><div class="one-third last_col"><strong>Materials List</strong></p>
+                                            <ul>
+                                                <li>Carbon steel</li>
+                                                <li>Low temperature carbon steel</li>
+                                                <li>High yield carbon steel</li>
+                                                <li>Low alloy steel</li>
+                                                <li>Austenitic stainless steel</li>
+                                                <li>Duplex &amp; super duplex stainless steel</li>
+                                                <li>Nickel alloy</li>
+                                                <li>Titanium</li>
+                                            </ul>
+                                            <p>&nbsp;</p>
+                                            <div class="cols benefits">
+
+
+                                                <div class="highslide-gallery">
+
+                                                    <a id="gal_593" class="col_1-3 dt_album_cover" href="" title="Gallery">
+                                                        <div class="loading-image">
+                                                            <img src="http://www.officinesantafede.com/wp-content/themes/dt-parallax/timthumb.php?src=/wp-content/uploads/2012/04/aDSC_0014_ok-1024x685.jpg&amp;q=100&amp;a=c&amp;zc=1&amp;w=290&amp;h=150" alt="Gallery"/>
+                                                        </div>
+                                                        <div class="mask"></div>
+                                                        <div class="desc">
+                                                            <h4>Gallery</h4>
+                                                            <div class="desc_text"></div>
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>    </div>    
+
+                                    </div><div class="clearfix"></div><a name="business"></a> <div class="clearfix"></div>
+                                    <h2>FLANGES</h2>
+                                    <p style="text-align: left;"><div class="two-third">
+                                        <p><img class="alignnone" src="http://www.officinesantafede.com/corporate/business.png" alt="" width="349" height="189" /></p>
+                                        <p>Click <a href="http://www.officinesantafede.com/?page_id=655">HERE</a> to see our Reference List.</p>
+                                        <p style="text-align: left;"></div><div class="one-third last_col">
+                                        <p><strong>Project business</strong></p>
+                                        <ul>
+                                            <li>End users</li>
+                                            <li>EPC</li>
+                                            <li>Contractors</li>
+                                            <li>Traders</li>
+                                        </ul>
+                                        <p><strong>Stock business</strong></p>
+                                        <ul>
+                                            <li>Stockists</li>
+                                            <li>Distributors</li>
+                                        </ul>
+                                        <p>&nbsp;</p>
+                                        <div class="cols benefits">
+
+
+                                            <div class="highslide-gallery">
+
+                                                <a id="gal_608" class="col_1-3 dt_album_cover" href="" title="Gallery">
+                                                    <div class="loading-image">
+                                                        <img src="http://www.officinesantafede.com/wp-content/themes/dt-parallax/timthumb.php?src=/wp-content/uploads/2012/04/IMG_7357-e1358439246735.jpg&amp;q=100&amp;a=c&amp;zc=1&amp;w=290&amp;h=150" alt="Gallery"/>
+                                                    </div>
+                                                    <div class="mask"></div>
+                                                    <div class="desc">
+                                                        <h4>Gallery</h4>
+                                                        <div class="desc_text"></div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>    </div>    
+                                    <div class="clearfix"></div><a name="business"></a> <div class="clearfix"></div>
+                                    <h2>FLANGES ROTATIVOS</h2>
+                                    <p style="text-align: left;"><div class="two-third">
+                                        <p><img class="alignnone" src="http://www.officinesantafede.com/corporate/business.png" alt="" width="349" height="189" /></p>
+                                        <p>Click <a href="http://www.officinesantafede.com/?page_id=655">HERE</a> to see our Reference List.</p>
+                                        <p style="text-align: left;"></div><div class="one-third last_col">
+                                        <p><strong>Project business</strong></p>
+                                        <ul>
+                                            <li>End users</li>
+                                            <li>EPC</li>
+                                            <li>Contractors</li>
+                                            <li>Traders</li>
+                                        </ul>
+                                        <p><strong>Stock business</strong></p>
+                                        <ul>
+                                            <li>Stockists</li>
+                                            <li>Distributors</li>
+                                        </ul>
+                                        <p>&nbsp;</p>
+                                        <div class="cols benefits">
+
+
+                                            <div class="highslide-gallery">
+
+                                                <a id="gal_608" class="col_1-3 dt_album_cover" href="" title="Gallery">
+                                                    <div class="loading-image">
+                                                        <img src="http://www.officinesantafede.com/wp-content/themes/dt-parallax/timthumb.php?src=/wp-content/uploads/2012/04/IMG_7357-e1358439246735.jpg&amp;q=100&amp;a=c&amp;zc=1&amp;w=290&amp;h=150" alt="Gallery"/>
+                                                    </div>
+                                                    <div class="mask"></div>
+                                                    <div class="desc">
+                                                        <h4>Gallery</h4>
+                                                        <div class="desc_text"></div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>    </div>    
+                                    <div class="clearfix"></div><a name="business"></a> <div class="clearfix"></div>
+                                    <h2>FORJADOS ESPECIAIS</h2>
+                                    <p style="text-align: left;"><div class="two-third">
+                                        <p><img class="alignnone" src="http://www.officinesantafede.com/corporate/business.png" alt="" width="349" height="189" /></p>
+                                        <p>Click <a href="http://www.officinesantafede.com/?page_id=655">HERE</a> to see our Reference List.</p>
+                                        <p style="text-align: left;"></div><div class="one-third last_col">
+                                        <p><strong>Project business</strong></p>
+                                        <ul>
+                                            <li>End users</li>
+                                            <li>EPC</li>
+                                            <li>Contractors</li>
+                                            <li>Traders</li>
+                                        </ul>
+                                        <p><strong>Stock business</strong></p>
+                                        <ul>
+                                            <li>Stockists</li>
+                                            <li>Distributors</li>
+                                        </ul>
+                                        <p>&nbsp;</p>
+                                        <div class="cols benefits">
+
+
+                                            <div class="highslide-gallery">
+
+                                                <a id="gal_608" class="col_1-3 dt_album_cover" href="" title="Gallery">
+                                                    <div class="loading-image">
+                                                        <img src="http://www.officinesantafede.com/wp-content/themes/dt-parallax/timthumb.php?src=/wp-content/uploads/2012/04/IMG_7357-e1358439246735.jpg&amp;q=100&amp;a=c&amp;zc=1&amp;w=290&amp;h=150" alt="Gallery"/>
+                                                    </div>
+                                                    <div class="mask"></div>
+                                                    <div class="desc">
+                                                        <h4>Gallery</h4>
+                                                        <div class="desc_text"></div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>    </div>  
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            <!-- INICIO FOOTER-->
-            <?php include("layout/footer.php"); ?>
-            <!-- FIM FOOTER-->
-    </body>
+        </div>
+    </div>
+</div>
+<!-- INICIO FOOTER-->
+<?php include("layout/footer.php"); ?>
+<!-- FIM FOOTER-->
+</body>
 </html>

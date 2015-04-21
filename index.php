@@ -35,20 +35,6 @@
                                                     </li>
                                                     <li>
                                                         <a href="produtos.php">Produtos</a>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="aneis.php" >Anéis e Discos</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="conexoes.php">Conexões</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="flanges.php">Flanges</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="flangesespeciais.php">Flanges Especiais</a>
-                                                            </li>
-                                                        </ul>
                                                     </li>
                                                     <li>
                                                         <a href="servicos.php">Serviços</a>
