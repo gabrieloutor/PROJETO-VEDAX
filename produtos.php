@@ -100,7 +100,7 @@
 
                                             <div class="titles">
                                                 <h1>PRODUTOS</h1>
-                                                
+
                                             </div>
                                             <h2>ANÉIS FORJADOS</h2>
                                             <div class="one-third last_col">

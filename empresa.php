@@ -1,8 +1,9 @@
 <?php require "config/config.ini"; ?>
 <!DOCTYPE html>
 <html>
-    <?php $titulo="Empresa"; $pagina="empresa.php" ?>
-    <?php include("layout/header.php"); ?>
+    <?php $titulo = "Empresa";
+    $pagina = "empresa.php" ?>
+<?php include("layout/header.php"); ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
             <div class="wrapper-inner">
@@ -98,7 +99,7 @@
                                 <div id="system-message-container">
                                 </div>
                                 <div class="page-item page-item__">
-                                    
+
                                     <div class="item_header">
                                         <h1>A VEDAX</h1>					
                                     </div>
@@ -111,7 +112,7 @@
                                     <div class="finalempresa">
                                         A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO<br><br></div>
                                     <div id="imgempresa">
-                                    <?php
+                                        <?php
                                         $qtfoto = 2;
                                         for ($i = 1; $i <= $qtfoto; $i++) {
                                             echo "<img src=\"images/empresa$i.png\" alt=\"Foto $i\" /> ";
@@ -119,14 +120,14 @@
                                         ?>
                                     </div>
                                 </div>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- INICIO FOOTER-->
-        <?php include("layout/footer.php"); ?>
+<?php include("layout/footer.php"); ?>
         <!-- FIM FOOTER-->
     </body>
 

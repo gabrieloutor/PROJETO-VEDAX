@@ -1,9 +1,11 @@
 <?php require "config/config.ini"; ?>
 <!DOCTYPE html>
 <html>
-    <?php $titulo="Localização"; $pagina="localizacao.php" ?>
-    <?php include("layout/header.php"); ?>
-        <body class="com_content view-article task- itemid-101 body__">
+    <?php $titulo = "Localização";
+    $pagina = "localizacao.php"
+    ?>
+<?php include("layout/header.php"); ?>
+    <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
             <div class="wrapper-inner">
                 <!-- INICIO HEADER -->
@@ -113,13 +115,13 @@
                                             <br>
                                             Telefone:
                                             <u>
-                                                <?php echo $telefone; ?>
+<?php echo $telefone; ?>
                                             </u>
                                             <br>
                                             <br>
                                             GPS: Digite as coordenadas
                                             <u>
-                                                <?php echo $coordenadasgps; ?>
+<?php echo $coordenadasgps; ?>
                                             </u>
                                             <br>
                                             <br>
@@ -134,7 +136,7 @@
             </div>
         </div>
         <!-- INICIO FOOTER-->
-        <?php include("layout/footer.php"); ?>
+<?php include("layout/footer.php"); ?>
         <!-- FIM FOOTER-->
     </body>
 

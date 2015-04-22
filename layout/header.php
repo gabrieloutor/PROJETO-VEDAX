@@ -84,7 +84,7 @@
             color: #999999;
             display: block;
         }
-        .submit input {
+        input[type="submit"] {
             width: 100px;
             height: 40px;
             background-color: #133141;

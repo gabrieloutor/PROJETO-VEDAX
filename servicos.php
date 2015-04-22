@@ -1,8 +1,10 @@
 <?php require "config/config.ini"; ?>
 <!DOCTYPE html>
 <html>
-    <?php $titulo="Serviços"; $pagina="servicos.php" ?>
-    <?php include("layout/header.php"); ?>
+    <?php $titulo = "Serviços";
+    $pagina = "servicos.php"
+    ?>
+<?php include("layout/header.php"); ?>
     <body class="com_content view-article task- itemid-101 body__">
         <div class="wrapper">
             <div class="wrapper-inner">
@@ -173,7 +175,7 @@
             </div>
         </div>
         <!-- INICIO FOOTER-->
-        <?php include("layout/footer.php"); ?>
+<?php include("layout/footer.php"); ?>
         <!-- FIM FOOTER-->
     </body>
 </html>
