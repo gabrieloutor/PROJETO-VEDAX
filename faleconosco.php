@@ -106,15 +106,15 @@
                                     </div>
                                     <form method="post" action="contato.php">
                                         <p class="name">
-                                            <label for="name">Nome</label>
+                                            <label for="name" >Nome</label>
                                             <input type="text" placeholder="Seu Nome" name="nome" />
                                         </p>
                                         <p class="email">
-                                            <label for="email">E-mail</label>
+                                            <label for="email" >E-mail</label>
                                             <input type="text" placeholder="email@exemplo.com.br" name="email" />
                                         </p>
                                         <p class="text">
-                                            <label for="mensagem">Mensagem</label>
+                                            <label for="mensagem" >Mensagem</label>
                                             <textarea placeholder="Escreva sua mensagem" name="mensagem" ></textarea>
                                         </p>
                                         <p class="submit">
