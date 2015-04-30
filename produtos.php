@@ -348,3 +348,4 @@
 <!-- FIM FOOTER-->
 </body>
 </html>
+<?php mysqli_close($resultado) ?>
