@@ -11,15 +11,13 @@ if ($urldb == null) {
     $nome="vedax";
 }
 $db=new mysqli($urldb,$login,$senha,$nome);
-$statement=$db->prepare("SELECT * FROM produto");
-$statement->bind_param($urldb, $statement)
-//$statement->execute();
+$statement=$db->prepare("SELECT * FROM produto where nome =?");
+$statement->bind_param($nome);
+$statement->execute();
 // tratamento de erros
 /*if (mysqli_connect_errno()) {
     echo "Não foi possível conectar: " . mysqli_connect_error();
 }else{
     echo "CONECTADO";
 }
- * 
- */
 ?>

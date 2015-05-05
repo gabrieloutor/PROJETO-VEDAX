@@ -368,3 +368,4 @@
         <!-- FIM FOOTER-->
     </body>
 </html>
+<?php mysqli_close($conexao)  ?>
