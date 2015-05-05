@@ -2,11 +2,12 @@
 	/* conextando ao BD */
 	require "../config/config.ini";
 	
-	$usuario = $_POST["nome"];
-	$senha = $_POST["senha"];
+	$usuario = $_POST["login"];
+	$senha = $_POST["password"];
+        $senha = sha1($senha);
 	
 	/* Criando a consulta */
-	$query = "SELECT id, nome, email, senha FROM usuarios WHERE nome=? AND senha=?";
+	$query = "SELECT id, nome, senha, acesso FROM usuarios WHERE nome=? AND senha=?";
 	
 	/* Criar um prepared statement */
 	if($stmt = mysqli_prepare($conexao, $query)) {
@@ -19,7 +20,7 @@
 	 mysqli_stmt_execute($stmt);
 
 	  /* Vinculando os resultados */
-	  mysqli_stmt_bind_result($stmt, $id, $nome, $password);
+	  mysqli_stmt_bind_result($stmt, $id, $nome, $password, $acesso);
 
 	  /* Buscar valores */
 	  mysqli_stmt_fetch($stmt);
@@ -28,6 +29,7 @@
   		  echo "Bem Vindo <br>";
 		  echo "id: $id <br>";
 		  echo "nome: $nome <br>";
+                  echo "acesso: $acesso";
 	  }	  
 	  else {
 			echo "usuario ou senha incorretos";
