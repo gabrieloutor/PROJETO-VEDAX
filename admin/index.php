@@ -98,7 +98,7 @@
                     <hr />
                     <div id="system-message-container">
                     </div>
-                    <form action="admin.php" method="post" id="form-login" class="form-inline">
+                    <form action="login.php" method="post" id="form-login" class="form-inline">
                         <fieldset class="loginform">
                             <div class="control-group">
                                 <div class="controls">
@@ -132,10 +132,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" name="option" value="com_login"/>
-                            <input type="hidden" name="task" value="login"/>
-                            <input type="hidden" name="return" value="aW5kZXgucGhw"/>
-                            <input type="hidden" name="d131c61bc03568915bf6ba1b89054498" value="1" />	</fieldset>
+                        </fieldset>
                     </form>
 
                 </div>
