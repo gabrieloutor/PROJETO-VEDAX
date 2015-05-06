@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/nivo-slider.min.css" type="text/css" >
     <link rel="stylesheet" href="css/default.css" type="text/css" >
     <link rel="stylesheet" href="css/media.1280.css" type="text/css" >
+    <link rel="stylesheet" href="css/media.1190.css" type="text/css" >
     <link rel="stylesheet" href="css/media.1024.css" type="text/css" >
     <link rel="stylesheet" href="css/media.980.css" type="text/css" >
     <link rel="stylesheet" href="css/media.768.css" type="text/css" >

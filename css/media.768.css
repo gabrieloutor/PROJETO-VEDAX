@@ -295,4 +295,19 @@
     .item_header h1{
         text-align:justify; 
     }
+    .container,
+    .navbar-static-top .container,
+    .navbar-fixed-top .container,
+    .navbar-fixed-bottom .container
+    {
+        width: auto;
+    }
+    p{
+    margin: 0;
+    padding-bottom: 15px;
+    }
+        .span12
+    {
+        width: auto;
+    }
 }

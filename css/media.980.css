@@ -1,5 +1,8 @@
 @media (max-width: 980px) 
 {	
+    #imgempresa img{
+        width:49%;
+    }
     iframe{
         width:240px; 
         height:300px;
@@ -150,8 +153,22 @@
     }
     #logo
     {
-        width: 200px;
-        height: 100px;
+        width: 12%;
+        height: 1%;
     }
-
+    .container,
+    .navbar-static-top .container,
+    .navbar-fixed-top .container,
+    .navbar-fixed-bottom .container
+    {
+        width: 94%;
+    }
+    p{
+    margin: 0;
+    padding-bottom: 15px;
+    }
+        .span12
+    {
+        width: auto;
+    }
 }

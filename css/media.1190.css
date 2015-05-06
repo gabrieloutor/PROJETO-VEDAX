@@ -1,8 +1,11 @@
-@media (max-width: 1024px) 
+@media (max-width: 1200px) 
 {
+    #imgempresa img{
+        width:49%;
+    }
     iframe{
-        width:400px; 
-        height:350px;
+        width:600px; 
+        height:450px;
     }
     h1,
     h2
@@ -51,23 +54,20 @@
     {
         display: none;
     }
+    #logo
+    {
+        width: 19%;
+        height: 100px;
+    }
+    .span12
+    {
+        width: auto;
+    }
     .container,
     .navbar-static-top .container,
     .navbar-fixed-top .container,
     .navbar-fixed-bottom .container
     {
-        width: 94%;
-    }
-    #logo
-    {
-        width: 20%;
-        height: 100px;
-    }
-    #imgempresa img{
-        width:49%;
-    }
-    .span12
-    {
-        width: auto;
+        width: 89%;
     }
 }

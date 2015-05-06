@@ -53,7 +53,21 @@
     }
     #logo
     {
-        width: 350px;
-        height: 100px
+        width: 30%;
+        height: 100px;
+    }
+    #imgempresa img{
+        width:49%;
+    }
+    .span12
+    {
+        width: auto;
+    }
+    .container,
+    .navbar-static-top .container,
+    .navbar-fixed-top .container,
+    .navbar-fixed-bottom .container
+    {
+        width: 89%;
     }
 }
