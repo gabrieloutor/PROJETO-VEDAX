@@ -4,8 +4,8 @@
 require "../config/config.ini";
 
 $usuario = $_POST["login"];
-$senha = $_POST["password"];
-$senha = sha1($senha);
+$pass = $_POST["password"];
+$senha = sha1($pass);
 
 /* Criando a consulta */
 $query = "SELECT id, nome, senha, acesso FROM usuarios WHERE nome=? AND senha=?";
