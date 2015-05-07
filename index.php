@@ -65,7 +65,7 @@
                             <a class="page-scroll" href="#produts">Produtos</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">Sobre nós</a>
+                            <a class="page-scroll" href="#about">Quem somos</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#location">Localização</a>
@@ -165,8 +165,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Sobre nós</h2>
-                        <h3 class="section-subheading text-muted">Empresa</h3>
+                        <h2 class="section-heading">Empresa</h2>
+                        <h3 class="section-subheading text-muted">Quem somos</h3>
                     </div>
                 </div>
                 <div class="row">
