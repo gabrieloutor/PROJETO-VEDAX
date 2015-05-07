@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="intro-text">
                     <div class="intro-lead-in">Bem vindo a Vedax!</div>
-                    <div class="intro-heading">LEMA ou CATEGORIA da VEDAX</div>
+                    <div class="intro-heading">LEMA da VEDAX</div>
                     <a href="#services" class="page-scroll btn btn-xl">Conheça-nos</a>
                 </div>
             </div>
@@ -140,7 +140,12 @@
                 </div>
                 <div class="row">
                     <?php
-                    for ($i = 1; $i <= 6; $i++) {
+                    $resultado = mysqli_query($conexao, "SELECT * from produtos");
+                    $total = mysqli_num_rows($resultado);
+                    for ($i = 1; $i <= $total; $i++) {
+                        $row = mysqli_fetch_array($resultado);
+                        $nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
                         echo "<div class=\"col-md-4 col-sm-6 portfolio-item\">
                         <a href=\"#portfolioModal$i\" class=\"portfolio-link\" data-toggle=\"modal\">
                             <div class=\"portfolio-hover\">
@@ -148,11 +153,11 @@
                                     <i class=\"fa fa-plus fa-3x\"></i>
                                 </div>
                             </div>
-                            <img src=\"img/aneis.png\" class=\"img-responsive\" alt=\"\">
+                            <img src=\"img/$nome.png\" class=\"img-responsive\" alt=\"\">
                         </a>
                         <div class=\"portfolio-caption\">
-                            <h4>Anéis</h4>
-                            <p class=\"text-muted\">Forjados</p>
+                            <h4>$nome</h4>
+                            <p class=\"text-muted\">$tipo</p>
                         </div>
                     </div>";
                     }
