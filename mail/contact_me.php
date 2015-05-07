@@ -4,6 +4,9 @@ $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 // Using Awesome https://github.com/PHPMailer/PHPMailer
 require 'PHPMailer/PHPMailerAutoload.php';
+$nome = $_POST['name'];
+$email = $_POST['email'];
+$mensagem = $_POST['message'];
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = $smtp;                     // Specify main and backup SMTP servers
