@@ -104,7 +104,7 @@
                                     <div class="item_header">
                                         <h1>Fale Conosco</h1>
                                     </div>
-                                    <form method="post" action="contato.php">
+                                    <form method="post" action="antigo/contato.php">
                                         <label for="name" >Nome</label>
                                         <input type="text" placeholder="Seu Nome" name="nome" /><br><br>
                                         <label for="email" >E-mail</label>
