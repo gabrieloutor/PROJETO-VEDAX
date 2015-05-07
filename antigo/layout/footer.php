@@ -38,9 +38,7 @@
     <div id="copyright-row">
         <div class="container">
             <div id="trademark">
-                Copyright <a href="<?php echo $facebookdesenvolvedor; ?>" target="_blank">
-                    &copy;
-                </a> <?php echo date("Y"); ?> | <?php echo $empresa; ?>
+                Copyright <a href="<?php echo $facebookdesenvolvedor; ?>" target="_blank">&copy;</a> <?php echo date("Y"); ?> | <?php echo $empresa; ?>
             </div>
         </div>
     </div>
