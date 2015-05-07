@@ -2,19 +2,6 @@
 <?php
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['phone']) 		||
-   empty($_POST['message'])	||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-	echo "No arguments Provided!";
-	return false;
-   }
-if ($urldb == "127.0.0.1") {
-        echo "No arguments Provided!";
-	return false;
-}
 // Using Awesome https://github.com/PHPMailer/PHPMailer
 require 'PHPMailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
