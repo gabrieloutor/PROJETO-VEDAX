@@ -2,10 +2,6 @@
 <?php
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
-$nome = $_POST['name'];
-$phone= $_POST['phone'];
-$email = $_POST['email'];
-$mensagem = $_POST['message'];
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['phone']) 		||
