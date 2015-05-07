@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="row">
-                <?php
+                    <?php
                     for ($i = 1; $i <= 6; $i++) {
                         echo "<div class=\"col-md-4 col-sm-6 portfolio-item\">
                         <a href=\"#portfolioModal$i\" class=\"portfolio-link\" data-toggle=\"modal\">
@@ -155,7 +155,7 @@
                         </div>
                     </div>";
                     }
-                ?>
+                    ?>
                 </div>
             </div>
         </section>
@@ -277,18 +277,22 @@
                                         <input name="phone" type="tel" class="form-control" placeholder="Seu Telefone *" id="phone" required data-validation-required-message="Por favor digite seu telefone.">
                                         <p class="help-block text-danger"></p>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
                                     <div class="form-group">
                                         <textarea name="message" class="form-control" placeholder="Mensagem *" id="message" required data-validation-required-message="Por favor digite sua mensagem."></textarea>
                                         <p class="help-block text-danger"></p>
                                     </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
                                     <div id="success"></div>
                                     <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
                                 </div>
+                                </div>
+                                
+                                
+                                <div class="col-md-6">
+                                    
+                                </div>
+                                
                             </div>
                         </form>
                     </div>

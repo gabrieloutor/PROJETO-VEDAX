@@ -672,11 +672,11 @@ section#contact .form-group textarea {
 }
 
 section#contact .form-group input.form-control {
-    height: auto;
+    height: 5px;
 }
 
 section#contact .form-group textarea.form-control {
-    height: 236px;
+    height: 150px;
 }
 
 section#contact .form-control:focus {

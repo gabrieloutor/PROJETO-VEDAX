@@ -32,3 +32,11 @@ iframe{
     height: 260px;
     width: 360px;
 }
+.enderecocontato{
+    font-size:12pt;
+    color:white;
+    text-decoration: none;
+}
+.message{
+    float: left;
+}
