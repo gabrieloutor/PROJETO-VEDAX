@@ -215,13 +215,13 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #0D3B97;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
-    color: #0D3B97;
-    background-color: #fff;
+    color: #fff;
+    background-color: #0D3B97;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
@@ -845,11 +845,6 @@ ul.social-buttons li a:active {
 }
 
 ::-moz-selection {
-    text-shadow: none;
-    background: #0D3B97;
-}
-
-::selection {
     text-shadow: none;
     background: #0D3B97;
 }

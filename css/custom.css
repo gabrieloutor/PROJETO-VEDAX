@@ -4,3 +4,31 @@
     top:11px;
     left:90px;
 }
+#localizacao
+{
+    float: left;
+    line-height: 22px;
+    padding-right: 30px;
+}
+iframe{
+    float:right;
+    width:45%;
+    height:20%;
+}
+.finalempresa
+{
+    font-size:28px;
+    text-align: center;
+    font-family: 'BellGothicStdBlack';
+    font-weight:bold;
+    line-height:100%;
+    color:#0D3B97;/*#0D3B97*/
+}
+#vedaxempresa1,
+#vedaxempresa2{
+    width: 49%;
+}
+.col-md-4 a img{
+    height: 260px;
+    width: 360px;
+}
