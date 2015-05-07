@@ -408,7 +408,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="mail/contact_me.php" name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
