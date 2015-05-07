@@ -126,7 +126,7 @@ fieldset[disabled] .btn-primary.active {
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: #0D3B97;//#337ab7,
+    background-color: #337ab7;//#337ab7,
 }
 
 .btn-xl:hover,
