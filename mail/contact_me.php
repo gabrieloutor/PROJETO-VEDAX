@@ -1,9 +1,9 @@
-<?php require "config/config.ini"; ?>
+<?php require "../config/config.ini"; ?>
 <?php
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 // Using Awesome https://github.com/PHPMailer/PHPMailer
-require 'PHPMailer/PHPMailerAutoload.php';
+require '../PHPMailer/PHPMailerAutoload.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
