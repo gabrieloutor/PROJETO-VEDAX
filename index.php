@@ -85,6 +85,7 @@
             <div class="container">
                 <div class="intro-text">
                     <div class="intro-lead-in">Bem vindo a Vedax!</div>
+                    <div class="intro-heading">LEMA ou CATEGORIA da VEDAX</div>
                     <a href="#services" class="page-scroll btn btn-xl">Conheça-nos</a>
                 </div>
             </div>
