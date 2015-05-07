@@ -30,7 +30,7 @@ img
 a
 {
     text-decoration: none;
-    color: #FF9966;	
+    color: #0D3B97;	
 }
 
 a:hover,
@@ -172,7 +172,7 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus
 {
-    border-color: #FF9966;
+    border-color: #0D3B97;
 }
 
 select:focus,
@@ -485,7 +485,7 @@ img.noborder
 
 .random-image img
 {
-    border: 1px solid #FF9966
+    border: 1px solid #0D3B97
 }
 
 .menudesc img
@@ -849,7 +849,7 @@ span.blockchar
     width: 44px;
     margin-top: 4px;
     background-color: #ffffff;
-    border: 2px solid #FF9966;
+    border: 2px solid #0D3B97;
 }
 
 #footer span.blocknumber
@@ -1967,7 +1967,7 @@ p .price
 #featured-row .mod-newsflash .item img.ico, 
 #featured-row .mod-custom img.ico 
 {
-    background: #FF9966;
+    background: #0D3B97;
     border: 10px solid #FFFFFF;
     border-radius: 50%;
     box-shadow: 0 1px 0 0 #99B5C9;
@@ -2025,7 +2025,7 @@ p .price
 #featured-row .readmore
 {
     background-image: none !important;
-    color: #FF9966;
+    color: #0D3B97;
 }
 
 #featured-row a.readmore:hover,
@@ -2102,7 +2102,7 @@ p .price
 #header-bottom-row h2.item_title,
 #header-bottom-row h3.item_title
 {
-    color: #FF9966;	
+    color: #0D3B97;	
 }
 
 
@@ -2243,7 +2243,7 @@ color: #000000;*/
     margin: 0px auto 25px;
     padding: 0px;
     text-align: center;
-    color: #FF9966;
+    color: #0D3B97;
 }
 
 #content-row-4
@@ -2273,7 +2273,7 @@ color: #000000;*/
     margin: 35px auto 10px;
     padding: 0px;
     text-align: center;
-    color: #FF9966;
+    color: #0D3B97;
 }
 
 #content-row-4 .mod-newsflash .item ul
@@ -2850,13 +2850,13 @@ aside .moduletable ul.nav ul li:last-child
 {
     border-bottom: none;
     margin: 5px 0px 30px 0px;
-    color: #FF9966;
+    color: #0D3B97;
 }
 
 #footer-row h3
 {
     border-bottom: none;
-    color: #FF9966;
+    color: #0D3B97;
 }
 
 #footer-row h4,
@@ -2955,7 +2955,7 @@ aside .moduletable ul.nav ul li:last-child
 #footer-row .moduletable.social li a:hover 
 {
     color: #FFFFFF;
-    background-color: #FF9966 !important;
+    background-color: #0D3B97 !important;
     transition: background 0.5s ease 0.1s;	
 }
 
@@ -3010,7 +3010,7 @@ aside .moduletable ul.nav ul li:last-child
 
 #copyright-menu li a:hover
 {
-    color: #FF9966;
+    color: #0D3B97;
 }
 
 #copyright-menu li a,
@@ -3065,6 +3065,6 @@ aside .moduletable ul.nav ul li:last-child
 
 .footer-map
 {
-    border-top: 9px solid #FF9966;
+    border-top: 9px solid #0D3B97;
 }
 
