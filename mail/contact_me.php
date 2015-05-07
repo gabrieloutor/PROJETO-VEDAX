@@ -22,9 +22,5 @@ $mail->Body = "MENSAGEM ENVIADA HORA-> $hora_envio DIA-> $data_envio
             Nome: $name 
             Email: $email 
             Mensagem: $message ";
-
-if (!$mail->send()) {
-    return false;
-} else {
-    return true;
-}
+$mail->send();
+return true;
