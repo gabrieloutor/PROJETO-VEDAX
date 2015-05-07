@@ -25,6 +25,7 @@ $mail->Subject = 'MENSAGEM SITE VEDAX';
 $mail->Body = "MENSAGEM ENVIADA HORA-> $hora_envio DIA-> $data_envio
             Nome: $name 
             Email: $email 
+            Telefone: $phone    
             Mensagem: $message ";
 $mail->send();
 return true;
