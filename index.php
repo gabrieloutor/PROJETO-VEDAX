@@ -146,6 +146,7 @@
                         $row = mysqli_fetch_array($resultado);
                         $nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                         $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
                         echo "<div class=\"col-md-4 col-sm-6 portfolio-item\">
                         <a href=\"#portfolioModal$i\" class=\"portfolio-link\" data-toggle=\"modal\">
                             <div class=\"portfolio-hover\">
@@ -153,7 +154,7 @@
                                     <i class=\"fa fa-plus fa-3x\"></i>
                                 </div>
                             </div>
-                            <img src=\"img/$nome.png\" class=\"img-responsive\" alt=\"\">
+                            <img src=\"img/$img\" class=\"img-responsive\" alt=\"\">
                         </a>
                         <div class=\"portfolio-caption\">
                             <h4>$nome</h4>
