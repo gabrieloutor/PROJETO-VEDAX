@@ -101,9 +101,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p>A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo às especificações de normas nacionais e internacionais de fabricação.</p>
-                    <p>Nossos rígidos padrões de controle de qualidade nos levaram à conformidade em todas as fases produtivas, desde a compra de matéria-prima, até ensaios de laboratórios, buscando certificar que todas as características do material estejam de acordo com as normas estipuladas.</p>
-                    <p>Em decorrência de anos de experiência a Vedax adquiriu <i>know-how</i> no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças à tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários. Isso possibilitou um grau de funcionamento adequado aos mais rigorosos requisitos, controlando - a cada etapa de fabricação - os pontos relevantes, o que garante produtos de excelente qualidade.</p>
+                    <p class="text-muted">A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo às especificações de normas nacionais e internacionais de fabricação.</p>
+                    <p class="text-muted">Nossos rígidos padrões de controle de qualidade nos levaram à conformidade em todas as fases produtivas, desde a compra de matéria-prima, até ensaios de laboratórios, buscando certificar que todas as características do material estejam de acordo com as normas estipuladas.</p>
+                    <p class="text-muted">Em decorrência de anos de experiência a Vedax adquiriu <i>know-how</i> no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças à tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários. Isso possibilitou um grau de funcionamento adequado aos mais rigorosos requisitos, controlando - a cada etapa de fabricação - os pontos relevantes, o que garante produtos de excelente qualidade.</p>
                     <p> </p>
                     <div class="finalempresa">
                         A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO<br><br></div>
@@ -172,7 +172,7 @@
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="service-heading">TIPO SERVICO 1 --</h4>
+                        <h4 class="service-heading">Soldagem</h4>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
@@ -180,7 +180,7 @@
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="service-heading">TIPO SERVICO 2 -- QUALIDADE</h4>
+                        <h4 class="service-heading">Qualidade</h4>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
@@ -188,43 +188,45 @@
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="service-heading">TIPO SERVICO 3 -- </h4>
+                        <h4 class="service-heading">Tratamento Térmico</h4>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Certificates Aside -->
-        <aside class="clients" id="certificates">
+        <!-- Services Section -->
+        <section id="certificates" class="bg-light-gray">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                        </a>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Certificados</h2>
+                        <h3 class="section-subheading text-muted">FRASE CERTIFICADOS</h3>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                        </a>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <a href="#">
+                                <img src="img/certificates/BRTUV.jpg" class="img-responsive img-centered" id="imgcertificates" alt="BRTUV">
+                            </a>
+                        </span>
+                        <h4 class="service-heading">BRTUV ISO 9001</h4>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                        </a>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <a href="#">
+                                <img src="img/certificates/CRCC.jpg" class="img-responsive img-centered" id="imgcertificates" alt="CRCC PETROBRAS">
+                            </a>
+                        </span>
+                        <h4 class="service-heading">CRCC PETROBRAS</h4>
                     </div>
                 </div>
             </div>
-        </aside>
+        </section>
         
         <!-- Location Section -->
-        <section id="location" class="bg-light-gray">
+        <section id="location">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
