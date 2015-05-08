@@ -117,6 +117,7 @@
                     </div>
                 </div>
             </div>
+            <a id="back-top" href="#"></a>
         </section>
 
         <!-- Produts Grid Section -->
