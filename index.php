@@ -267,7 +267,7 @@
                     <div class="col-sm-4">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973" style="border:0">
                         </iframe>
-                        <p id="localizacao">
+                        
                             <?php
                             $resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
                             $totalempresa = mysqli_num_rows($resultadolocalizacao);
@@ -292,7 +292,7 @@
                                 $coordenadasgps = $row["gpsX"] . ", " . $row["gpsY"];
                                 $urlmaps = htmlentities($row["urlmaps"], ENT_COMPAT, 'ISO-8859-1', true);
                                 $urlmaps = "http://maps.apple.com/?daddr=" . $urlmaps;
-                                echo "<span style=\"font-size: 12pt;\">
+                                echo "<p id=\"localizacao$i\"><span style=\"font-size: 12pt;\">
                                 <u>$tipo</u> | $nome <br><br>
                                 <img src=\"img/icon-location.png\" alt=\"Localização $nome\">
                                 <u><a href=\"$urlmaps\">$endereco</a></u><br><br>
@@ -302,11 +302,11 @@
                                 <a href=\"mailto:$email\"> $email</a><br><br>
                                 GPS: Digite as coordenadas <u>$coordenadasgps</u>
                                 <hr>
-                            </span>";
+                            </span></p>";
                             }
                             ?>
 
-                        </p>
+                        
                     </div>
                 </div>
                 <div class="row">

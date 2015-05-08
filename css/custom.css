@@ -62,7 +62,12 @@ object{
 
     }
 }
-#localizacao
+#localizacao1
+{
+    line-height: 22px;
+    padding-right: 30px;
+}
+#localizacao2
 {
     line-height: 22px;
     padding-right: 30px;
