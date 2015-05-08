@@ -4,6 +4,14 @@
     top:11px;
     left:90px;
 }
+@media(max-width:768px) {
+    #vedaxlogo{
+    height:43px;
+    position: absolute; 
+    top:7px;
+    left:90px;
+}
+}
 #localizacao
 {
     line-height: 22px;

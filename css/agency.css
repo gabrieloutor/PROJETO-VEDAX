@@ -176,7 +176,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #0D3B97;
+    color: #007cd2;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -191,8 +191,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #0D3B97;
-    background-color: #0D3B97;
+    border-color: #007cd2;
+    background-color: #007cd2;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -201,7 +201,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #0D3B97;
+    background-color: #007cd2;
 }
 
 .navbar-default .nav li a {
@@ -239,7 +239,6 @@ fieldset[disabled] .btn-xl.active {
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
-
     .navbar-default .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
