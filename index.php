@@ -32,7 +32,7 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
+
         <!-- NEW RELIC JS -->
         <script src="js/newrelic.js" type="text/javascript"></script>
     </head>
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </header>
-        
+
         <!-- About Section -->
         <section id="about">
             <div class="container">
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Produts Grid Section -->
         <section id="produts" class="bg-light-gray">
             <div class="container">
@@ -194,7 +194,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Services Section -->
         <section id="certificates" class="bg-light-gray">
             <div class="container">
@@ -207,7 +207,7 @@
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <a href="#">
+                            <a href="#BRTUV" class="produts-link" data-toggle="modal">
                                 <img src="img/certificates/BRTUV.jpg" class="img-responsive img-centered" id="imgcertificates" alt="BRTUV">
                             </a>
                         </span>
@@ -215,7 +215,7 @@
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <a href="#">
+                            <a href="#CRCC" class="produts-link" data-toggle="modal">
                                 <img src="img/certificates/CRCC.jpg" class="img-responsive img-centered" id="imgcertificates" alt="CRCC PETROBRAS">
                             </a>
                         </span>
@@ -224,7 +224,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Location Section -->
         <section id="location">
             <div class="container">
@@ -240,30 +240,30 @@
                         </iframe>
                         <p id="localizacao">
                             <?php
-                    $resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
-                    $totalempresa = mysqli_num_rows($resultadolocalizacao);
-                    for ($i = 1; $i <= $totalempresa; $i++) {
-                        $row = mysqli_fetch_array($resultadolocalizacao);
-                        $nome = htmlentities($row["empresa"], ENT_COMPAT, 'ISO-8859-1', true);
-                        $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-                        $email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
-                        $telefone=htmlentities($row["telefone"], ENT_COMPAT,'ISO-8859-1', true);
-                        $telefone="+".substr($telefone, 0,2)." ".substr($telefone, 2,2)." ".substr($telefone, -8,4)."-".substr($telefone, -4,4);// TELEFONE
-                        $rua=htmlentities($row["rua"], ENT_COMPAT,'ISO-8859-1', true);// RUA DA EMPRESA
-                        $nr=$row["nr"];// NR DA EMPRESA
-                        $bairro=htmlentities($row["bairro"], ENT_COMPAT,'ISO-8859-1', true);// BAIRRO DA EMPRESA
-                        $cidade=htmlentities($row["cidade"], ENT_COMPAT,'ISO-8859-1', true);// CIDADE DA EMPRESA
-                        $estado=$row["estado"];// ESTADO ONDE SE LOCALIZA A EMPRESA
-                        $cep=$row["cep"];// CEP DA EMPRESA
-                        if(substr($cep, -4,1) === '-'){
-                            $endereco=$rua.", ".$nr." - ".$bairro.", ".$cidade." - ".$estado.", ".$cep;// ENDERECO COMPLETO
-                        }else{
-                            $endereco=$rua.", ".$nr." - ".$bairro.", ".$cidade." - ".$estado.", ".substr($cep, 0,5)."-".substr($cep, -3);// ENDERECO COMPLETO
-                        }
-                        $coordenadasgps=$row["gpsX"].", ".$row["gpsY"];
-                        $urlmaps=htmlentities($row["urlmaps"], ENT_COMPAT,'ISO-8859-1', true);
-                        $urlmaps="http://maps.apple.com/?daddr=".$urlmaps;
-                        echo "<span style=\"font-size: 12pt;\">
+                            $resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
+                            $totalempresa = mysqli_num_rows($resultadolocalizacao);
+                            for ($i = 1; $i <= $totalempresa; $i++) {
+                                $row = mysqli_fetch_array($resultadolocalizacao);
+                                $nome = htmlentities($row["empresa"], ENT_COMPAT, 'ISO-8859-1', true);
+                                $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
+                                $email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
+                                $telefone = htmlentities($row["telefone"], ENT_COMPAT, 'ISO-8859-1', true);
+                                $telefone = "+" . substr($telefone, 0, 2) . " " . substr($telefone, 2, 2) . " " . substr($telefone, -8, 4) . "-" . substr($telefone, -4, 4); // TELEFONE
+                                $rua = htmlentities($row["rua"], ENT_COMPAT, 'ISO-8859-1', true); // RUA DA EMPRESA
+                                $nr = $row["nr"]; // NR DA EMPRESA
+                                $bairro = htmlentities($row["bairro"], ENT_COMPAT, 'ISO-8859-1', true); // BAIRRO DA EMPRESA
+                                $cidade = htmlentities($row["cidade"], ENT_COMPAT, 'ISO-8859-1', true); // CIDADE DA EMPRESA
+                                $estado = $row["estado"]; // ESTADO ONDE SE LOCALIZA A EMPRESA
+                                $cep = $row["cep"]; // CEP DA EMPRESA
+                                if (substr($cep, -4, 1) === '-') {
+                                    $endereco = $rua . ", " . $nr . " - " . $bairro . ", " . $cidade . " - " . $estado . ", " . $cep; // ENDERECO COMPLETO
+                                } else {
+                                    $endereco = $rua . ", " . $nr . " - " . $bairro . ", " . $cidade . " - " . $estado . ", " . substr($cep, 0, 5) . "-" . substr($cep, -3); // ENDERECO COMPLETO
+                                }
+                                $coordenadasgps = $row["gpsX"] . ", " . $row["gpsY"];
+                                $urlmaps = htmlentities($row["urlmaps"], ENT_COMPAT, 'ISO-8859-1', true);
+                                $urlmaps = "http://maps.apple.com/?daddr=" . $urlmaps;
+                                echo "<span style=\"font-size: 12pt;\">
                                 <u>$tipo</u> | $nome <br><br>
                                 <img src=\"img/icon-location.png\" alt=\"Localização $nome\">
                                 <u><a href=\"$urlmaps\">$endereco</a></u><br><br>
@@ -274,9 +274,9 @@
                                 GPS: Digite as coordenadas <u>$coordenadasgps</u>
                                 <hr>
                             </span>";
-                    }
-                    ?>
-                            
+                            }
+                            ?>
+
                         </p>
                     </div>
                 </div>
@@ -315,7 +315,7 @@
                 </div>
             </div>
         </aside>
-        
+
         <!-- Contact Section -->
         <section id="contact">
             <div class="container">
@@ -360,7 +360,7 @@
                 </div>
             </div>
         </section>
-        
+
         <footer>
             <div class="container">
                 <div class="row">
@@ -532,8 +532,8 @@
             </div>
         </div>
 
-        <!-- produts Modal 6 -->
-        <div class="produts-modal modal fade" id="produtsModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- BRTUV -->
+        <div class="produts-modal modal fade" id="BRTUV" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
@@ -546,11 +546,36 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/produts/dreams-preview.png" alt="">
-                                <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
-                                <p>You can download the PSD template in this produts sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <h2>BRTUV ISO 9001</h2>
+                                <object data="pdf/BRTUV.pdf" type="application/pdf" width="600px" height="850px">
+                                    <a href="pdf/BRTUV.pdf">test.pdf</a>
+                                </object>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CRCC PETROBRAS -->
+        <div class="produts-modal modal fade" id="CRCC" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>CRCC Petrobras</h2>
+                                <object data="pdf/CRCC.pdf" type="application/pdf" width="600px" height="850px">
+                                    <a href="pdf/CRCC.pdf">test.pdf</a>
+                                </object>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
