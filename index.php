@@ -195,8 +195,36 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Clients Aside -->
+        <aside class="clients" id="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/clients/chevron.jpg" id="imgclients" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/clients/petrobras.png" id="imgclients" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/clients/repsol.jpeg" id="imgclients" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/clients/shell.jpeg" id="imgclients" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
-        <!-- Services Section -->
+        <!-- Certificates Section -->
         <section id="certificates" class="bg-light-gray">
             <div class="container">
                 <div class="row">
@@ -288,34 +316,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Clients Aside -->
-        <aside class="clients" id="clients">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </aside>
 
         <!-- Contact Section -->
         <section id="contact">
