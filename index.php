@@ -10,6 +10,7 @@
         <meta name="author" content="<?php echo $nomedesenvolvedor; ?>">
 
         <title><?php echo $empresa; ?></title>
+        <link rel="icon" href="img/favicon.ico" />
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
