@@ -9,7 +9,7 @@
         <meta name="keywords" content="vedax,aço,conexões,flanges,forjados,carbono,empresa,produtos">
         <meta name="author" content="<?php echo $nomedesenvolvedor; ?>">
 
-        <title>Página Inicial | <?php echo $empresa; ?></title>
+        <title><?php echo $empresa; ?></title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
