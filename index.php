@@ -86,49 +86,39 @@
                 <div class="intro-text">
                     <div class="intro-lead-in">Bem vindo a Vedax!</div>
                     <div class="intro-heading">LEMA da VEDAX</div>
-                    <a href="#services" class="page-scroll btn btn-xl">Conheça-nos</a>
+                    <a href="#about" class="page-scroll btn btn-xl">Conheça-nos</a>
                 </div>
             </div>
         </header>
-
-        <!-- Services Section -->
-        <section id="services">
+        
+        <!-- About Section -->
+        <section id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Serviços</h2>
-                        <h3 class="section-subheading text-muted">FRASE SERVICOS</h3>
+                        <h2 class="section-heading">Empresa</h2>
+                        <h3 class="section-subheading text-muted">Quem somos</h3>
                     </div>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">TIPO SERVICO 1 --</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">TIPO SERVICO 2 -- QUALIDADE</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">TIPO SERVICO 3 -- </h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <div class="row">
+                    <p>A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo às especificações de normas nacionais e internacionais de fabricação.</p>
+                    <p>Nossos rígidos padrões de controle de qualidade nos levaram à conformidade em todas as fases produtivas, desde a compra de matéria-prima, até ensaios de laboratórios, buscando certificar que todas as características do material estejam de acordo com as normas estipuladas.</p>
+                    <p>Em decorrência de anos de experiência a Vedax adquiriu <i>know-how</i> no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças à tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários. Isso possibilitou um grau de funcionamento adequado aos mais rigorosos requisitos, controlando - a cada etapa de fabricação - os pontos relevantes, o que garante produtos de excelente qualidade.</p>
+                    <p> </p>
+                    <div class="finalempresa">
+                        A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO<br><br></div>
+                    <div id="imgempresa">
+                        <?php
+                        $qtfoto = 2;
+                        for ($i = 1; $i <= $qtfoto; $i++) {
+                            echo "<img src=\"img/empresa$i.png\" alt=\"Foto $i\" id=\"vedaxempresa$i\" /> ";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Produts Grid Section -->
         <section id="produts" class="bg-light-gray">
             <div class="container">
@@ -167,81 +157,46 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about">
+        <!-- Services Section -->
+        <section id="services">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Empresa</h2>
-                        <h3 class="section-subheading text-muted">Quem somos</h3>
+                        <h2 class="section-heading">Serviços</h2>
+                        <h3 class="section-subheading text-muted">FRASE SERVICOS</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <p>A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo às especificações de normas nacionais e internacionais de fabricação.</p>
-                    <p>Nossos rígidos padrões de controle de qualidade nos levaram à conformidade em todas as fases produtivas, desde a compra de matéria-prima, até ensaios de laboratórios, buscando certificar que todas as características do material estejam de acordo com as normas estipuladas.</p>
-                    <p>Em decorrência de anos de experiência a Vedax adquiriu <i>know-how</i> no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças à tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários. Isso possibilitou um grau de funcionamento adequado aos mais rigorosos requisitos, controlando - a cada etapa de fabricação - os pontos relevantes, o que garante produtos de excelente qualidade.</p>
-                    <p> </p>
-                    <div class="finalempresa">
-                        A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO<br><br></div>
-                    <div id="imgempresa">
-                        <?php
-                        $qtfoto = 2;
-                        for ($i = 1; $i <= $qtfoto; $i++) {
-                            echo "<img src=\"img/empresa$i.png\" alt=\"Foto $i\" id=\"vedaxempresa$i\" /> ";
-                        }
-                        ?>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">TIPO SERVICO 1 --</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Contato</h2>
-                        <h3 class="section-subheading text-muted">Fale Conosco</h3>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">TIPO SERVICO 2 -- QUALIDADE</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <form name="sentMessage" id="contactForm" novalidate>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input name="name" type="text" class="form-control" placeholder="Seu Nome *" id="name" required data-validation-required-message="Por favor digite seu nome.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input name="email" type="email" class="form-control" placeholder="Seu Email *" id="email" required data-validation-required-message="Por favor digite seu email.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input name="phone" type="tel" class="form-control" placeholder="Seu Telefone *" id="phone" required data-validation-required-message="Por favor digite seu telefone.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" placeholder="Mensagem *" id="message" required data-validation-required-message="Por favor digite sua mensagem."></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
-                                </div> 
-                            </form>
-                        </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">TIPO SERVICO 3 -- </h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                 </div>
             </div>
         </section>
         
         <!-- Clients Aside -->
-        <aside class="clients">
+        <aside class="clients" id="certificates">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
@@ -303,6 +258,51 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contato</h2>
+                        <h3 class="section-subheading text-muted">Fale Conosco</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <form name="sentMessage" id="contactForm" novalidate>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input name="name" type="text" class="form-control" placeholder="Seu Nome *" id="name" required data-validation-required-message="Por favor digite seu nome.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="email" type="email" class="form-control" placeholder="Seu Email *" id="email" required data-validation-required-message="Por favor digite seu email.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="phone" type="tel" class="form-control" placeholder="Seu Telefone *" id="phone" required data-validation-required-message="Por favor digite seu telefone.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" placeholder="Mensagem *" id="message" required data-validation-required-message="Por favor digite sua mensagem."></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <footer>
             <div class="container">
                 <div class="row">
