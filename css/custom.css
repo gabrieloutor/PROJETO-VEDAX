@@ -6,11 +6,12 @@
 }
 @media(max-width:768px) {
     #vedaxlogo{
-    height:43px;
-    position: absolute; 
-    top:7px;
-    left:90px;
-}
+        height:43px;
+        position: absolute; 
+        top:7px;
+        left:30px;
+
+    }
 }
 #localizacao
 {
