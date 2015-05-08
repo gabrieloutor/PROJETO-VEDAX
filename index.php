@@ -548,7 +548,7 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>BRTUV ISO 9001</h2>
-                                <object data="pdf/BRTUV.pdf" type="application/pdf" width="600px" height="850px">
+                                <object data="pdf/BRTUV.pdf" type="application/pdf">
                                     <a href="pdf/BRTUV.pdf">test.pdf</a>
                                 </object>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -574,7 +574,7 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>CRCC Petrobras</h2>
-                                <object data="pdf/CRCC.pdf" type="application/pdf" width="600px" height="850px">
+                                <object data="pdf/CRCC.pdf" type="application/pdf">
                                     <a href="pdf/CRCC.pdf">test.pdf</a>
                                 </object>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
