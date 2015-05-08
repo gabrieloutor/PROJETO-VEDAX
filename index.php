@@ -191,70 +191,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Location Section -->
-        <section id="location" class="bg-light-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Localização</h2>
-                        <h3 class="section-subheading text-muted">Endereço</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973" style="border:0">
-                        </iframe>
-                        <p id="localizacao">
-                            <span style="font-size: 12pt;">
-                                Fábrica e Escritório | <?php echo $empresa; ?><br><br>
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path d="M11 22c0 0-7-8-7-15s7-7 7-7 7 0 7 7S11 22 11 22zM15.9 6.1c-0.2-1.2-0.9-2.3-1.9-3C14 3 13.9 3 13.9 2.9c-0.1-0.1-0.3-0.2-0.5-0.3 -0.1-0.1-0.3-0.2-0.4-0.2 -0.1-0.1-0.3-0.1-0.4-0.1 -0.2-0.1-0.3-0.1-0.5-0.2C11.7 2 11.4 2 11 2c0 0 0 0 0 0 0 0 0 0 0 0 -0.3 0-0.7 0-1 0.1C9.3 2.2 8.7 2.5 8.2 2.8c0 0 0 0 0 0C8 3 7.8 3.2 7.6 3.3 7.6 3.4 7.5 3.4 7.4 3.5 7.3 3.6 7.2 3.8 7.1 3.9 7 4 6.9 4.1 6.8 4.3 6.8 4.4 6.7 4.5 6.7 4.6 6.6 4.7 6.5 4.9 6.4 5.1c0 0.1 0 0.2-0.1 0.2C6.2 5.6 6.1 5.8 6.1 6 6 6.4 6 6.7 6 7c0 5 5 12 5 12s5-7 5-12C16 6.7 16 6.4 15.9 6.1zM8 7c0-1.7 1.3-3 3-3s3 1.3 3 3 -1.3 3-3 3S8 8.7 8 7z"></path></svg>
-                                <u><a href="<?php echo $urlmaps; ?>"> <?php echo $endereco; ?></a></u><br><br>
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path d="M17.3 22H17c-2.9 0-8.5-2.8-11.4-5.6S0 7.9 0 5V4.7l0.2-0.3C1.3 2.8 3.4 0 5 0c1.6 0 4.2 2.6 5 4.4 0.6 1.4 0.1 2.2-0.3 2.6C9.1 7.6 8.5 8 8.1 8.3 7.3 8.7 7.3 8.8 7.3 9c0 0.9 1.3 2.2 2.4 3.3 1.1 1.1 2.4 2.4 3.3 2.4 0.2 0 0.3 0 0.7-0.7 0.3-0.5 0.6-1 1.2-1.6 0.4-0.4 0.9-0.6 1.4-0.6 2.2 0 5.6 3.5 5.6 5.3 0 1.6-2.8 3.7-4.4 4.8L17.3 22zM2 5.3c0.2 2.5 2.7 7.4 5 9.7 2.3 2.3 7.2 4.8 9.7 5 1.6-1.1 3.2-2.5 3.3-3 -0.1-0.7-2.5-3.2-3.6-3.2 -0.4 0.4-0.7 0.8-0.9 1.2 -0.5 0.8-1 1.7-2.4 1.7 -1.7 0-3.3-1.5-4.7-3 -1.5-1.5-3-3-3-4.7 0-1.4 0.9-2 1.7-2.4 0.4-0.3 0.8-0.5 1.3-0.9 0 0-0.1-0.4-0.5-1.1C6.9 3.2 5.4 2.1 5 2 4.5 2.1 3.1 3.6 2 5.3z"></path></svg>
-                                <u> <?php echo $telefone; ?></u><br><br>
-                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path d="M20 19H2c-1.1 0-2-0.9-2-2V5c0-1.1 0.9-2 2-2h18c1.1 0 2 0.9 2 2v12C22 18.1 21.1 19 20 19zM19 17l-5.7-5L11 14l-2.3-2L3 17H19zM2 16l5.6-5L2 6V16zM3 5l8 7 8-7H3zM20 6l-5.6 5 5.6 5V6z"></path></svg>
-                                <a href="mailto:<?php echo $email; ?>"> <?php echo $email; ?></a><br><br>
-                                GPS: Digite as coordenadas <u><?php echo $coordenadasgps; ?></u>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <p class="large text-muted">30 Km da Capital</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Clients Aside -->
-        <aside class="clients">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#">
-                            <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
+        
         <!-- Contact Section -->
         <section id="contact">
             <div class="container">
@@ -295,6 +232,69 @@
                                 </div> 
                             </form>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clients Aside -->
+        <aside class="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Location Section -->
+        <section id="location" class="bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Localização</h2>
+                        <h3 class="section-subheading text-muted">Endereço</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973" style="border:0">
+                        </iframe>
+                        <p id="localizacao">
+                            <span style="font-size: 12pt;">
+                                Fábrica e Escritório | <?php echo $empresa; ?><br><br>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path d="M11 22c0 0-7-8-7-15s7-7 7-7 7 0 7 7S11 22 11 22zM15.9 6.1c-0.2-1.2-0.9-2.3-1.9-3C14 3 13.9 3 13.9 2.9c-0.1-0.1-0.3-0.2-0.5-0.3 -0.1-0.1-0.3-0.2-0.4-0.2 -0.1-0.1-0.3-0.1-0.4-0.1 -0.2-0.1-0.3-0.1-0.5-0.2C11.7 2 11.4 2 11 2c0 0 0 0 0 0 0 0 0 0 0 0 -0.3 0-0.7 0-1 0.1C9.3 2.2 8.7 2.5 8.2 2.8c0 0 0 0 0 0C8 3 7.8 3.2 7.6 3.3 7.6 3.4 7.5 3.4 7.4 3.5 7.3 3.6 7.2 3.8 7.1 3.9 7 4 6.9 4.1 6.8 4.3 6.8 4.4 6.7 4.5 6.7 4.6 6.6 4.7 6.5 4.9 6.4 5.1c0 0.1 0 0.2-0.1 0.2C6.2 5.6 6.1 5.8 6.1 6 6 6.4 6 6.7 6 7c0 5 5 12 5 12s5-7 5-12C16 6.7 16 6.4 15.9 6.1zM8 7c0-1.7 1.3-3 3-3s3 1.3 3 3 -1.3 3-3 3S8 8.7 8 7z"></path></svg>
+                                <u><a href="<?php echo $urlmaps; ?>"> <?php echo $endereco; ?></a></u><br><br>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path d="M17.3 22H17c-2.9 0-8.5-2.8-11.4-5.6S0 7.9 0 5V4.7l0.2-0.3C1.3 2.8 3.4 0 5 0c1.6 0 4.2 2.6 5 4.4 0.6 1.4 0.1 2.2-0.3 2.6C9.1 7.6 8.5 8 8.1 8.3 7.3 8.7 7.3 8.8 7.3 9c0 0.9 1.3 2.2 2.4 3.3 1.1 1.1 2.4 2.4 3.3 2.4 0.2 0 0.3 0 0.7-0.7 0.3-0.5 0.6-1 1.2-1.6 0.4-0.4 0.9-0.6 1.4-0.6 2.2 0 5.6 3.5 5.6 5.3 0 1.6-2.8 3.7-4.4 4.8L17.3 22zM2 5.3c0.2 2.5 2.7 7.4 5 9.7 2.3 2.3 7.2 4.8 9.7 5 1.6-1.1 3.2-2.5 3.3-3 -0.1-0.7-2.5-3.2-3.6-3.2 -0.4 0.4-0.7 0.8-0.9 1.2 -0.5 0.8-1 1.7-2.4 1.7 -1.7 0-3.3-1.5-4.7-3 -1.5-1.5-3-3-3-4.7 0-1.4 0.9-2 1.7-2.4 0.4-0.3 0.8-0.5 1.3-0.9 0 0-0.1-0.4-0.5-1.1C6.9 3.2 5.4 2.1 5 2 4.5 2.1 3.1 3.6 2 5.3z"></path></svg>
+                                <u> <?php echo $telefone; ?></u><br><br>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve"><path d="M20 19H2c-1.1 0-2-0.9-2-2V5c0-1.1 0.9-2 2-2h18c1.1 0 2 0.9 2 2v12C22 18.1 21.1 19 20 19zM19 17l-5.7-5L11 14l-2.3-2L3 17H19zM2 16l5.6-5L2 6V16zM3 5l8 7 8-7H3zM20 6l-5.6 5 5.6 5V6z"></path></svg>
+                                <a href="mailto:<?php echo $email; ?>"> <?php echo $email; ?></a><br><br>
+                                GPS: Digite as coordenadas <u><?php echo $coordenadasgps; ?></u>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p class="large text-muted">30 Km da Capital</p>
                     </div>
                 </div>
             </div>
