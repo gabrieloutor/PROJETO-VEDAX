@@ -202,22 +202,22 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <a href="#">
-                            <img src="img/clients/chevron.jpg" id="imgclients" class="img-responsive img-centered" alt="">
+                            <img src="img/clients/chevron.jpg" class="img-responsive img-centered" alt="Chevron">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <a href="#">
-                            <img src="img/clients/petrobras.png" id="imgclients" class="img-responsive img-centered" alt="">
+                            <img src="img/clients/petrobras.png" class="img-responsive img-centered" alt="Petrobras">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <a href="#">
-                            <img src="img/clients/repsol.jpeg" id="imgclients" class="img-responsive img-centered" alt="">
+                            <img src="img/clients/repsol.jpeg" class="img-responsive img-centered" alt="Repsol">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <a href="#">
-                            <img src="img/clients/shell.jpeg" id="imgclients" class="img-responsive img-centered" alt="">
+                            <img src="img/clients/shell.jpeg" class="img-responsive img-centered" alt="Shell">
                         </a>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <a href="#BRTUV" class="produts-link" data-toggle="modal">
-                                <img src="img/certificates/BRTUV.jpg" class="img-responsive img-centered" id="imgcertificates" alt="BRTUV">
+                                <img src="img/certificates/BRTUV.png" class="img-responsive img-centered" id="imgcertificates1" alt="BRTUV">
                             </a>
                         </span>
                         <h4 class="service-heading">BRTUV ISO 9001</h4>
@@ -245,7 +245,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <a href="#CRCC" class="produts-link" data-toggle="modal">
-                                <img src="img/certificates/CRCC.jpg" class="img-responsive img-centered" id="imgcertificates" alt="CRCC PETROBRAS">
+                                <img src="img/certificates/CRCC.jpg" class="img-responsive img-centered" id="imgcertificates2" alt="CRCC PETROBRAS">
                             </a>
                         </span>
                         <h4 class="service-heading">CRCC PETROBRAS</h4>
@@ -292,7 +292,7 @@
                                 $coordenadasgps = $row["gpsX"] . ", " . $row["gpsY"];
                                 $urlmaps = htmlentities($row["urlmaps"], ENT_COMPAT, 'ISO-8859-1', true);
                                 $urlmaps = "http://maps.apple.com/?daddr=" . $urlmaps;
-                                echo "<p id=\"localizacao$i\"><span style=\"font-size: 12pt;\">
+                                echo " <p id=\"localizacao$i\"> <span style=\"font-size: 12pt;\">
                                 <u>$tipo</u> | $nome <br><br>
                                 <img src=\"img/icon-location.png\" alt=\"Localização $nome\">
                                 <u><a href=\"$urlmaps\">$endereco</a></u><br><br>
@@ -301,8 +301,7 @@
                                 <img src=\"img/icon-email.png\" alt=\"Email $nome\"> 
                                 <a href=\"mailto:$email\"> $email</a><br><br>
                                 GPS: Digite as coordenadas <u>$coordenadasgps</u>
-                                <hr>
-                            </span></p>";
+                            </span> </p> <hr>";
                             }
                             ?>
 
@@ -506,7 +505,7 @@
             </div>
         </div>
 
-        <!-- produts Modal 5 -->
+        <!-- Produts Modal 5 -->
         <div class="produts-modal modal fade" id="produtsModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">

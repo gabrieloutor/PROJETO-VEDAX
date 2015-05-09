@@ -1,15 +1,9 @@
 <?php
-
-/* conextando ao BD */
 require "../config/config.ini";
-
 $usuario = $_POST["login"];
 $pass = $_POST["password"];
 $senha = sha1($pass);
-
-/* Criando a consulta */
 $query = "SELECT id, nome, senha, acesso FROM usuarios WHERE nome=? AND senha=?";
-
 /* Criar um prepared statement */
 if ($stmt = mysqli_prepare($conexao, $query)) {
 
@@ -27,21 +21,13 @@ if ($stmt = mysqli_prepare($conexao, $query)) {
     mysqli_stmt_fetch($stmt);
 
     if ($usuario == $nome && $senha == $password) {
-        header("Location: administracao.php");
+        return true;
     } else {
         header("Location: erro.php");
     }
-
-
-    /* Fechando o statement */
     $stmt->close();
 } else
-    echo "Falha no statement, avise ao CPD";
-
-/* Close connection */
+    return false;
 $conexao->close();
-
-// http://php.net/manual/en/mysqli-stmt.bind-result.php	
-// http://php.net/manual/pt_BR/mysqli-stmt.bind-param.php
 ?>		
 

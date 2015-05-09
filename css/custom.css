@@ -2,7 +2,20 @@ object{
     width:600px; 
     height:850px;
 }
-#imgclients{
+#imgcertificates1,
+#imgcertificates2{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-bottom: 7px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+}
+#col-md-3 col-sm-6 a img{
     width: 200px;
     height: 70px;
 }
@@ -43,10 +56,6 @@ object{
     border: 3px solid #ffffff;
     background-color: transparent;
 }
-#imgcertificates{
-    width: 100px;
-    height: 100px;
-}
 #vedaxlogo{
     height:60px;
     position: absolute; 
@@ -75,7 +84,7 @@ object{
 iframe{
     float: right;
     width:49%;
-    height:30%;
+    height:220px;
 }
 .finalempresa
 {
