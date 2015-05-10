@@ -229,22 +229,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
-                        <a href="#">
+                        <a href="#certificates">
                             <img src="img/clients/petrobras.png" class="img-responsive img-centered" alt="Petrobras">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <a href="#">
+                        <a href="#certificates">
                             <img src="img/clients/chevron.jpg" class="img-responsive img-centered" alt="Chevron">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <a href="#">
+                        <a href="#certificates">
                             <img src="img/clients/repsol.jpeg" class="img-responsive img-centered" alt="Repsol">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <a href="#">
+                        <a href="#certificates">
                             <img src="img/clients/shell.jpeg" class="img-responsive img-centered" alt="Shell">
                         </a>
                     </div>
