@@ -322,13 +322,10 @@
                                 $urlmaps = "http://maps.apple.com/?daddr=" . $urlmaps;
                                 echo " <p id=\"localizacao$i\"> <span style=\"font-size: 12pt;\">
                                 <u>$tipo</u> | $nome <br><br>
-                                <img src=\"img/icon-location.png\" alt=\"Localização $nome\">
+                                <img src=\"img/icons/icon-location.png\" alt=\"Localização $nome\">
                                 <u><a href=\"$urlmaps\">$endereco</a></u><br><br>
-                                <img src=\"img/icon-phone.png\" alt=\"Telefone $nome\">
+                                <img src=\"img/icons/icon-phone.png\" alt=\"Telefone $nome\">
                                 <u> $telefone</u><br><br>
-                                <img src=\"img/icon-email.png\" alt=\"Email $nome\"> 
-                                <a href=\"mailto:$email\"> $email</a><br><br>
-                                GPS: Digite as coordenadas <u>$coordenadasgps</u>
                             </span> </p> <hr>";
                             }
                             ?>
