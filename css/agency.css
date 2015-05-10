@@ -490,11 +490,11 @@ section h3.section-subheading {
     width: 80px;
     height: 80px;
     margin-left: 0;
-    border: 7px solid #f1f1f1;
+    border: 5px solid #f1f1f1;
     border-radius: 100%;
     text-align: center;
     color: #fff;
-    background-color: #0D3B97;
+    background-color: #007cd2;
 }
 
 .timeline>li .timeline-image h4 {
