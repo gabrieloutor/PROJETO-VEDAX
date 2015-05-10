@@ -84,8 +84,8 @@
         <header>
             <div class="container">
                 <div class="intro-text">
-                    <div class="intro-lead-in">Bem vindo a Vedax!</div>
-                    <div class="intro-heading">LEMA da VEDAX</div>
+                    <div class="intro-lead-in">Flanges, Conexões e Forjados Especiais</div>
+                    <!--<div class="intro-heading">LEMA da VEDAX</div>-->
                     <a href="#about" class="page-scroll btn btn-xl">Conheça-nos</a>
                 </div>
             </div>
@@ -159,40 +159,68 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services">
+        <section id="processes">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Serviços</h2>
-                        <h3 class="section-subheading text-muted">FRASE SERVICOS</h3>
+                        <h2 class="section-heading">Processos</h2>
+                        <h3 class="section-subheading text-muted">FRASE PROCESSOS</h3>
                     </div>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Soldagem</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Qualidade</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Tratamento Térmico</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
+                <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <?php
+                    $resultadoprocesses = mysqli_query($conexao, "SELECT * from processos");
+                    $totalprocessos = mysqli_num_rows($resultadoprocesses);
+                    for ($i = 1; $i <= $totalprocessos; $i++) {
+                        $row = mysqli_fetch_array($resultadoprocesses);
+                        $titulo = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $explicacao = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+                        if($i%2==1 && $i!==$totalprocessos){
+                            echo "<li>
+                            <div class=\"timeline-image\">
+                                <img class=\"img-circle img-responsive\" src=\"img/processes/$img\" alt=\"$titulo\">
+                            </div>
+                            <div class=\"timeline-panel\">
+                                <div class=\"timeline-heading\">
+                                    <h4>$titulo</h4>
+                                </div>
+                                <div class=\"timeline-body\">
+                                    <p class=\"text-muted\">$explicacao</p>
+                                </div>
+                            </div>
+                        </li>";
+                        }else if($i%2==0 && $i!==$totalprocessos){
+                            echo "<li class=\"timeline-inverted\">
+                            <div class=\"timeline-image\">
+                                <img class=\"img-circle img-responsive\" src=\"img/processes/$img\" alt=\"$titulo\">
+                            </div>
+                            <div class=\"timeline-panel\">
+                                <div class=\"timeline-heading\">
+                                    <h4>$titulo</h4>
+                                </div>
+                                <div class=\"timeline-body\">
+                                    <p class=\"text-muted\">$explicacao</p>
+                                </div>
+                            </div>
+                        </li>";
+                        }else if($i==$totalprocessos){
+                            echo "<li class=\"timeline-inverted\">
+                            <div class=\"timeline-image\">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
+                            </div>
+                        </li>";
+                        }
+                        
+                    }
+                    ?>
+                    </ul>
                 </div>
+            </div>
             </div>
         </section>
         
@@ -202,12 +230,12 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <a href="#">
-                            <img src="img/clients/chevron.jpg" class="img-responsive img-centered" alt="Chevron">
+                            <img src="img/clients/petrobras.png" class="img-responsive img-centered" alt="Petrobras">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <a href="#">
-                            <img src="img/clients/petrobras.png" class="img-responsive img-centered" alt="Petrobras">
+                            <img src="img/clients/chevron.jpg" class="img-responsive img-centered" alt="Chevron">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
