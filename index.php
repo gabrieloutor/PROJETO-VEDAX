@@ -216,7 +216,7 @@
                             </div>
                         </li>";
                         }else if($i==$totalprocessos){
-                            echo "<li class=\"timeline-inverted\">
+                            echo "<li>
                             <div class=\"timeline-image\">
                                 <img class=\"img-circle img-responsive\" src=\"img/processes/$img\" alt=\"$titulo\">
                             </div>
