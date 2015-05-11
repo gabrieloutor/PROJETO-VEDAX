@@ -33,8 +33,6 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- NEW RELIC JS -->
-        <script src="js/newrelic.js" type="text/javascript"></script>
     </head>
 
     <body id="page-top" class="index">
@@ -635,6 +633,9 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="js/agency.js"></script>
+        
+        <!-- NEW RELIC JS -->
+        <script src="js/newrelic.js" type="text/javascript"></script>
 
     </body>
 

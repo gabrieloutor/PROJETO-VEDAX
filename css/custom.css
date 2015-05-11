@@ -74,9 +74,12 @@ object{
 }
 iframe{
     float: right;
-    width:49%;
+    width:40%;
     height:160px;
 }
+#imgempresa{
+        text-align:center;
+    }
 .finalempresa
 {
     font-size:28px;
@@ -89,6 +92,7 @@ iframe{
 .vedaxempresa{
     width: 49%;
     height: 400px;
+    text-align: center;
 }
 .enderecocontato{
     font-size:12pt;
@@ -109,7 +113,6 @@ iframe{
         display: inline;
         -webkit-margin-before: 0.5em;
         -webkit-margin-after: 0.5em;
-        -webkit-margin-start: auto;
         -webkit-margin-end: auto;
         border-top-style: inset;
         border-top-width: 1px;
@@ -128,9 +131,17 @@ iframe{
         left:30px;
     }
     .vedaxempresa{
-        width: 49%;
-        height: 200px;
+        width: 80%;
+        height: 220px;
+        text-align: center;
+        display: inline;
+        padding-right: 3px;
+        padding-bottom: 2px;
     }
+    #imgempresa{
+        text-align:center;
+    }
+    
     .imgproduts{
         width: 400px;
         height: 260px;
@@ -168,7 +179,7 @@ iframe{
 }
 @media(min-width:768px) {
     .vedaxempresa{
-        width: 49%;
+        width: 40%;
         height: 350px;
     }
     iframe{
