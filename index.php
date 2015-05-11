@@ -83,9 +83,18 @@
         <header>
             <div class="container">
                 <div class="intro-text">
-                    <div class="intro-lead-in">Flanges, Conexões e Forjados Especiais</div>
-                    <!--<div class="intro-heading">LEMA da VEDAX</div>-->
-                    <a href="#about" class="page-scroll btn btn-xl">Conheça-nos</a>
+                    <?php
+                    $resultadohome = mysqli_query($conexao, "SELECT * from home");
+                    $totalhome = mysqli_num_rows($resultadohome);
+                    for ($i = 1; $i <= $totalhome; $i++) {
+                        $row = mysqli_fetch_array($resultadohome);
+                        $titulohome = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $botao = htmlentities($row["botao"], ENT_COMPAT, 'ISO-8859-1', true);
+                        echo "<div class=\"intro-lead-in\">$titulohome</div>
+                    <a href=\"#about\" class=\"page-scroll btn btn-xl\">$botao</a>";
+                    }
+                    ?>
+                    
                 </div>
             </div>
         </header>
@@ -104,15 +113,23 @@
                     <p class="text-muted">Nossos rígidos padrões de controle de qualidade nos levaram à conformidade em todas as fases produtivas, desde a compra de matéria-prima, até ensaios de laboratórios, buscando certificar que todas as características do material estejam de acordo com as normas estipuladas.</p>
                     <p class="text-muted">Em decorrência de anos de experiência a Vedax adquiriu <i>know-how</i> no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças à tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários. Isso possibilitou um grau de funcionamento adequado aos mais rigorosos requisitos, controlando - a cada etapa de fabricação - os pontos relevantes, o que garante produtos de excelente qualidade.</p>
                     <p> </p>
-                    <div class="finalempresa">
-                        A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO<br><br></div>
-                    <div id="imgempresa">
+                    
                         <?php
+                    $resultadoquemSomos = mysqli_query($conexao, "SELECT * from quemSomos");
+                    $totalquemSomos = mysqli_num_rows($resultadoquemSomos);
+                    for ($i = 1; $i <= $totalquemSomos; $i++) {
+                        $row = mysqli_fetch_array($resultadoquemSomos);
+                        $textoFrase = htmlentities($row["textoFrase"], ENT_COMPAT, 'ISO-8859-1', true);
                         $qtfoto = 2;
+                        echo "<div class=\"finalempresa\">
+                        A VEDAX AJUDANDO A CONSTRUIR O MAIOR SÍMBOLO BRASILEIRO<br><br></div>
+                    <div id=\"imgempresa\">";
                         for ($i = 1; $i <= $qtfoto; $i++) {
-                            echo "<img src=\"img/about/empresa$i.png\" alt=\"Foto $i\" id=\"vedaxempresa$i\" /> ";
+                            $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
+                            echo "<img src=\"img/about/$img\" alt=\"Foto $i\" class=\"vedaxempresa\" /> ";
                         }
-                        ?>
+                    }
+                    ?>
                     </div>
                 </div>
             </div>

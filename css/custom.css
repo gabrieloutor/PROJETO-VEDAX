@@ -86,8 +86,7 @@ iframe{
     line-height:100%;
     color:#007cd2;
 }
-#vedaxempresa1,
-#vedaxempresa2{
+.vedaxempresa{
     width: 49%;
     height: 400px;
 }
@@ -128,8 +127,7 @@ iframe{
         top:7px;
         left:30px;
     }
-    #vedaxempresa1,
-    #vedaxempresa2{
+    .vedaxempresa{
         width: 49%;
         height: 200px;
     }
@@ -169,8 +167,7 @@ iframe{
 
 }
 @media(min-width:768px) {
-    #vedaxempresa1,
-    #vedaxempresa2{
+    .vedaxempresa{
         width: 49%;
         height: 350px;
     }
