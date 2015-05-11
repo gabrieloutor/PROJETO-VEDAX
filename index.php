@@ -218,9 +218,15 @@
                         }else if($i==$totalprocessos){
                             echo "<li class=\"timeline-inverted\">
                             <div class=\"timeline-image\">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
+                                <img class=\"img-circle img-responsive\" src=\"img/processes/$img\" alt=\"$titulo\">
+                            </div>
+                            <div class=\"timeline-panel\">
+                                <div class=\"timeline-heading\">
+                                    <h4>$titulo</h4>
+                                </div>
+                                <div class=\"timeline-body\">
+                                    <p class=\"text-muted\">$explicacao</p>
+                                </div>
                             </div>
                         </li>";
                         }
