@@ -245,26 +245,20 @@
         <aside class="clients" id="clients">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#clients">
-                            <img src="img/clients/petrobras.png" class="img-responsive img-centered imgclients" alt="Petrobras">
+                    <?php
+                    $resultadoClientes = mysqli_query($conexao, "SELECT * from clientes");
+                    $totalClientes = mysqli_num_rows($resultadoClientes);
+                    for ($i = 1; $i <= $totalClientes; $i++) {
+                        $row = mysqli_fetch_array($resultadoClientes);
+                        $tituloCliente = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+                        echo "<div class=\"col-md-3 col-sm-6\">
+                        <a href=\"#clients\">
+                            <img src=\"img/clients/$imgCliente\" class=\"img-responsive img-centered imgclients\" alt=\"$tituloCliente\">
                         </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#clients">
-                            <img src="img/clients/chevron.jpg" class="img-responsive img-centered imgclients" alt="Chevron">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#clients">
-                            <img src="img/clients/repsol.jpeg" class="img-responsive img-centered imgclients" alt="Repsol">
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <a href="#clients">
-                            <img src="img/clients/shell.jpeg" class="img-responsive img-centered imgclients" alt="Shell">
-                        </a>
-                    </div>
+                    </div>";
+                    }
+                    ?>
                 </div>
             </div>
         </aside>
@@ -278,23 +272,26 @@
                         <h3 class="section-subheading text-muted">FRASE CERTIFICADOS</h3>
                     </div>
                 </div>
+                
                 <div class="row text-center">
-                    <div class="col-md-4 certificates">
-                        <span class="fa-stack fa-4x">
-                            <a href="#BRTUV" class="produts-link" data-toggle="modal">
-                                <img src="img/certificates/BRTUV.png" class="imgcertificates" alt="BRTUV">
+                    <?php
+                    $resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
+                    $totalCertificados = mysqli_num_rows($resultadoCertificados);
+                    for ($i = 1; $i <= $totalCertificados; $i++) {
+                        $row = mysqli_fetch_array($resultadoCertificados);
+                        $tituloCertificado = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $imgCertificado = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+                        $abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
+                        echo "<div class=\"col-md-4 certificates\">
+                        <span class=\"fa-stack fa-4x\">
+                            <a href=\"#$abreviacao\" class=\"produts-link\" data-toggle=\"modal\">
+                                <img src=\"img/certificates/$imgCertificado\" class=\"imgcertificates\" alt=\"$tituloCertificado\">
                             </a>
                         </span>
-                        <h4 class="service-heading">BRTUV ISO 9001</h4>
-                    </div>
-                    <div class="col-md-4 certificates">
-                        <span class="fa-stack fa-4x">
-                            <a href="#CRCC" class="produts-link" data-toggle="modal">
-                                <img src="img/certificates/CRCC.jpg" class="imgcertificates" alt="CRCC PETROBRAS">
-                            </a>
-                        </span>
-                        <h4 class="service-heading">CRCC PETROBRAS</h4>
-                    </div>
+                        <h4 class=\"service-heading\">$tituloCertificado</h4>
+                    </div>";
+                    }
+                    ?>
                 </div>
             </div>
         </section>
