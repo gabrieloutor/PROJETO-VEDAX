@@ -338,7 +338,7 @@
                                 <u><a href=\"$urlmaps\">$endereco</a></u><br><br>
                                 <img src=\"img/icons/icon-phone.png\" alt=\"Telefone $nome\">
                                 <u> $telefone</u><br><br>
-                            </span> </p> <hr>";
+                            </span> </p> <hr class=\"hrlocalizacao\">";
                             }
                             ?>
 
