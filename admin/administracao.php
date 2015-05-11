@@ -137,7 +137,7 @@
                 font-family: 'BellGothicStdBlack';
                 font-weight:bold;
                 line-height:100%;
-                color:#0D3B97;/*#0D3B97*/
+                color:#007cd2;/*#007cd2*/
             }
             #localizacao
             {

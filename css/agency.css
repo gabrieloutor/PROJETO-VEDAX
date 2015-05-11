@@ -69,12 +69,12 @@ h6 {
 }
 
 .btn-primary {
-    border-color: #0D3B97;
+    border-color: #007cd2;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: #0D3B97;
+    background-color: #007cd2;
 }
 
 .btn-primary:hover,
@@ -82,9 +82,9 @@ h6 {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    border-color: #f6bf01;
+    border-color: #fff;
     color: #fff;
-    background-color: #fec503;
+    background-color: #64AFF0;
 }
 
 .btn-primary:active,
@@ -113,7 +113,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-primary .badge {
-    color: #0D3B97;
+    color: #007cd2;
     background-color: #fff;
 }
 
@@ -136,7 +136,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     border-color: #fff;
     color: #fff;
-    background-color: #007cd2;
+    background-color: #64AFF0;
 }
 
 .btn-xl:active,
@@ -165,7 +165,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .btn-xl .badge {
-    color: #0D3B97;
+    color: #007cd2;
     background-color: #fff;
 }
 
@@ -183,7 +183,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #fec503;
+    color: #64AFF0;
 }
 
 .navbar-default .navbar-collapse {
@@ -667,7 +667,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-    border-color: #0D3B97;
+    border-color: #007cd2;
     box-shadow: none;
 }
 
@@ -745,7 +745,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #0D3B97;
+    background-color: #007cd2;
 }
 
 .btn:focus,
@@ -837,7 +837,7 @@ ul.social-buttons li a:active {
 }
 ::selection {
     text-shadow: none;
-    background: #007cd2;
+    background: #64AFF0;
 }
 img::selection {
     background: 0 0;
@@ -848,5 +848,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: #007cd2;
+    webkit-tap-highlight-color: #64AFF0;
 }

@@ -2,6 +2,10 @@
     width: 360px;
     height: 260px;
 }
+.imgprodut{
+    height: 500px;
+    width: auto;
+}
 object{
     width:600px; 
     height:850px;
