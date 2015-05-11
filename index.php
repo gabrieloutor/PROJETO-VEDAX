@@ -138,14 +138,14 @@
                         $nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
                         $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
                         $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-                        echo "<div class=\"col-md-4 col-sm-6 produts-item\">
+                        echo "<div class=\"col-md-4 col-sm-6 produts-item positionproduts\">
                         <a href=\"#produtsModal$i\" class=\"produts-link\" data-toggle=\"modal\">
                             <div class=\"produts-hover\">
                                 <div class=\"produts-hover-content\">
                                     <i class=\"fa fa-plus fa-3x\"></i>
                                 </div>
                             </div>
-                            <img src=\"img/produts/$img\" class=\"img-responsive\" alt=\"$nome $tipo\">
+                            <img src=\"img/produts/$img\" class=\"img-responsive imgproduts\" alt=\"$nome $tipo\">
                         </a>
                         <div class=\"produts-caption\">
                             <h4>$nome</h4>
@@ -229,23 +229,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
-                        <a href="#certificates">
-                            <img src="img/clients/petrobras.png" class="img-responsive img-centered" alt="Petrobras">
+                        <a href="#clients">
+                            <img src="img/clients/petrobras.png" class="img-responsive img-centered imgclients" alt="Petrobras">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <a href="#certificates">
-                            <img src="img/clients/chevron.jpg" class="img-responsive img-centered" alt="Chevron">
+                        <a href="#clients">
+                            <img src="img/clients/chevron.jpg" class="img-responsive img-centered imgclients" alt="Chevron">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <a href="#certificates">
-                            <img src="img/clients/repsol.jpeg" class="img-responsive img-centered" alt="Repsol">
+                        <a href="#clients">
+                            <img src="img/clients/repsol.jpeg" class="img-responsive img-centered imgclients" alt="Repsol">
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <a href="#certificates">
-                            <img src="img/clients/shell.jpeg" class="img-responsive img-centered" alt="Shell">
+                        <a href="#clients">
+                            <img src="img/clients/shell.jpeg" class="img-responsive img-centered imgclients" alt="Shell">
                         </a>
                     </div>
                 </div>
@@ -262,18 +262,18 @@
                     </div>
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4 certificates">
                         <span class="fa-stack fa-4x">
                             <a href="#BRTUV" class="produts-link" data-toggle="modal">
-                                <img src="img/certificates/BRTUV.png" class="img-responsive img-centered" id="imgcertificates1" alt="BRTUV">
+                                <img src="img/certificates/BRTUV.png" class="imgcertificates" alt="BRTUV">
                             </a>
                         </span>
                         <h4 class="service-heading">BRTUV ISO 9001</h4>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 certificates">
                         <span class="fa-stack fa-4x">
                             <a href="#CRCC" class="produts-link" data-toggle="modal">
-                                <img src="img/certificates/CRCC.jpg" class="img-responsive img-centered" id="imgcertificates2" alt="CRCC PETROBRAS">
+                                <img src="img/certificates/CRCC.jpg" class="imgcertificates" alt="CRCC PETROBRAS">
                             </a>
                         </span>
                         <h4 class="service-heading">CRCC PETROBRAS</h4>
@@ -320,7 +320,7 @@
                                 $coordenadasgps = $row["gpsX"] . ", " . $row["gpsY"];
                                 $urlmaps = htmlentities($row["urlmaps"], ENT_COMPAT, 'ISO-8859-1', true);
                                 $urlmaps = "http://maps.apple.com/?daddr=" . $urlmaps;
-                                echo " <p id=\"localizacao$i\"> <span style=\"font-size: 12pt;\">
+                                echo " <p class=\"localizacao\"> <span style=\"font-size: 12pt;\">
                                 <u>$tipo</u> | $nome <br><br>
                                 <img src=\"img/icons/icon-location.png\" alt=\"Localização $nome\">
                                 <u><a href=\"$urlmaps\">$endereco</a></u><br><br>
@@ -331,11 +331,6 @@
                             ?>
 
                         
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <p class="large text-muted">30 Km da Capital</p>
                     </div>
                 </div>
             </div>
@@ -575,7 +570,7 @@
                                 <object data="pdf/BRTUV.pdf" type="application/pdf">
                                     <a href="pdf/BRTUV.pdf">test.pdf</a>
                                 </object>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close PDF</button>
                             </div>
                         </div>
                     </div>
@@ -601,7 +596,7 @@
                                 <object data="pdf/CRCC.pdf" type="application/pdf">
                                     <a href="pdf/CRCC.pdf">test.pdf</a>
                                 </object>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close PDF</button>
                             </div>
                         </div>
                     </div>

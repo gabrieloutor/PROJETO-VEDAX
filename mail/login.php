@@ -25,11 +25,9 @@ if ($stmt = mysqli_prepare($conexao, $query)) {
     } else {
         return false;
     }
-    
     $stmt->close();
 } else
     return false;
-
 $conexao->close();
 ?>		
 

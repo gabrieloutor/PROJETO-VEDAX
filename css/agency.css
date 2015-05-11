@@ -136,7 +136,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     border-color: #fff;
     color: #fff;
-    background-color: #337ab7;
+    background-color: #007cd2;
 }
 
 .btn-xl:active,
@@ -560,9 +560,9 @@ section h3.section-subheading {
 
     .timeline>li .timeline-image {
         left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
+        width: 130px;
+        height: 130px;
+        margin-left: -65px;
     }
 
     .timeline>li .timeline-image h4 {
@@ -580,7 +580,7 @@ section h3.section-subheading {
 
 @media(min-width:992px) {
     .timeline>li {
-        min-height: 150px;
+        min-height: 100px;
     }
 
     .timeline>li .timeline-panel {
@@ -606,7 +606,7 @@ section h3.section-subheading {
 
 @media(min-width:1200px) {
     .timeline>li {
-        min-height: 170px;
+        min-height: 100px;
     }
 
     .timeline>li .timeline-panel {
@@ -614,9 +614,9 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-image {
-        width: 120px;
-        height: 120px;
-        margin-left: -60px;
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
     }
 
     .timeline>li .timeline-image h4 {
@@ -848,5 +848,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: #0D3B97;
+    webkit-tap-highlight-color: #007cd2;
 }

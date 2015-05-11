@@ -8,6 +8,24 @@
         <title>Administração | <?php echo $empresa; ?></title>
         <link rel="icon" href="../img/favicon.ico" />
 
+        <!-- jQuery -->
+        <script src="../js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="../js/classie.js"></script>
+        <script src="../js/cbpAnimatedHeader.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/login.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../js/agency.js"></script>
+        
         <!-- Bootstrap Core CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
 
