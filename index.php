@@ -28,7 +28,7 @@
 
 
     </head>
-
+    <?php flush(); ?>
     <body id="page-top" class="index">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top">
