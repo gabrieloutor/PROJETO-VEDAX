@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require "config/config.ini"; ?>
+<?php require "config/config.ini";  $filtro = array('’' => ':', '&quot;' => '"', '&amp;' => '&', '&lt;' => '<', '&gt;' => '>');?>
 <html lang="pt">
 <head>
 <meta charset="utf-8">
@@ -80,6 +80,9 @@ $totalquemSomos = mysqli_num_rows($resultadoquemSomos);
 for ($i = 1; $i <= $totalquemSomos; $i++) {
 $row = mysqli_fetch_array($resultadoquemSomos);
 $tituloQuemSomos = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+$text = htmlentities($row["texto"], ENT_COMPAT, 'ISO-8859-1', true);
+$resultado = strTr($text, $filtro);
+$texto=nl2br($resultado);
 $fraseQuemSomos = htmlentities($row["frase"], ENT_COMPAT, 'ISO-8859-1', true);
 $textoFrase = htmlentities($row["textoFrase"], ENT_COMPAT, 'ISO-8859-1', true);
 $qtfoto = 2;
@@ -89,9 +92,7 @@ echo "<div class=\"col-lg-12 text-center\">
 </div>
 </div>
 <div class=\"row\">
-<p class=\"text-muted\">A Vedax é uma empresa estabelecida no mercado desde 1975, especializada na fabricação de forjados, na linha de Flanges, Conexões tubulares e Forjados Especiais nos materiais Aço Liga, Inox e Carnono, obedecendo às especificações de normas nacionais e internacionais de fabricação.</p>
-<p class=\"text-muted\">Nossos rígidos padrões de controle de qualidade nos levaram à conformidade em todas as fases produtivas, desde a compra de matéria-prima, até ensaios de laboratórios, buscando certificar que todas as características do material estejam de acordo com as normas estipuladas.</p>
-<p class=\"text-muted\">Em decorrência de anos de experiência a Vedax adquiriu <i>know-how</i> no processo de forjamento e tratamento térmico de Anéis, Discos, Flanges e Conexões, com base nas normas ASME, API, DNV, entre outras. Esta capacidade foi conquistada graças à tecnologia investida em nossos processos de fabricação e capacitação de nossos funcionários. Isso possibilitou um grau de funcionamento adequado aos mais rigorosos requisitos, controlando - a cada etapa de fabricação - os pontos relevantes, o que garante produtos de excelente qualidade.</p>
+<p class=\"text-muted\">$texto</p>
 <p> </p>
 <div class=\"finalempresa\">
 $textoFrase<br><br></div>
@@ -121,8 +122,10 @@ $resultado = mysqli_query($conexao, "SELECT * from produtos");
 $total = mysqli_num_rows($resultado);
 for ($i = 1; $i <= $total; $i++) {
 $row = mysqli_fetch_array($resultado);
-$nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-$tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
+$nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+$nome = strTr($nom, $filtro);
+$tip = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
+$tipo = strTr($tip, $filtro);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class=\"col-md-4 col-sm-6 produts-item positionproduts\">
 <a href=\"#produtsModal$i\" class=\"produts-link\" data-toggle=\"modal\">
@@ -159,9 +162,10 @@ $resultadoprocesses = mysqli_query($conexao, "SELECT * from processos");
 $totalprocessos = mysqli_num_rows($resultadoprocesses);
 for ($i = 1; $i <= $totalprocessos; $i++) {
 $row = mysqli_fetch_array($resultadoprocesses);
-$titulo = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$exp = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
-$expl = stripslashes($exp);
+$titul = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+$titulo = strTr($titul, $filtro);
+$ex = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$expl = strTr($ex, $filtro);
 $explicacao=nl2br($expl);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 if($i%2==1 && $i!==$totalprocessos && $titulo!=="tratamento t&eacute;rmico"){
@@ -256,7 +260,8 @@ $resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
 $totalCertificados = mysqli_num_rows($resultadoCertificados);
 for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadoCertificados);
-$tituloCertificado = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloCertificado = strTr($tituloCertificad, $filtro);
 $imgCertificado = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 $abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class=\"col-md-4 certificates\">
@@ -396,12 +401,15 @@ $resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos");
 $totalprodutos = mysqli_num_rows($resultadoprodutos);
 for ($i = 1; $i <= $totalprodutos; $i++) {
 $row = mysqli_fetch_array($resultadoprodutos);
-$nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true); 
-$tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$desc = htmlentities($row["descricao"], ENT_COMPAT, 'ISO-8859-1', true);
-$descri = stripslashes($desc);
+$nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true); 
+$nome = strTr($nom, $filtro);
+$tip = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
+$tipo = strTr($tip, $filtro);
+$des = htmlentities($row["descricao"], ENT_COMPAT, 'ISO-8859-1', true);
+$desc = strTr($des, $filtro);
 $descricao=nl2br($descri);
-$expl = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$exp = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$expl = strTr($exp, $filtro);
 $expli = stripslashes($expl);
 $explicacao=nl2br($expli);
 $img = htmlentities($row["imgprodut"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -433,52 +441,41 @@ $explicacao
 </div>";
 }
 ?>
-<div class="produts-modal modal fade" id="BRTUV" tabindex="-1" role="dialog" aria-hidden="true">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal">
-<div class="lr">
-<div class="rl">
+<?php
+$resultadocert = mysqli_query($conexao, "SELECT * from certificados");
+$totalcert = mysqli_num_rows($resultadocert);
+for ($i = 1; $i <= $totalcert; $i++) {
+$row = mysqli_fetch_array($resultadocert);
+$tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloCertificado = strTr($tituloCertificad, $filtro);
+$imgCertificado = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
+$pdfCertificado = htmlentities($row["pdf"], ENT_COMPAT, 'ISO-8859-1', true);
+$abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
+echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='dialog' aria-hidden='true'>
+<div class='modal-content'>
+<div class='close-modal' data-dismiss='modal'>
+<div class='lr'>
+<div class='rl'>
 </div>
 </div>
 </div>
-<div class="container">
-<div class="row">
-<div class="col-lg-8 col-lg-offset-2">
-<div class="modal-body">
-<h2>BRTUV ISO 9001</h2>
-<object data="pdf/BRTUV.pdf" type="application/pdf">
-<a href="pdf/BRTUV.pdf">test.pdf</a>
+<div class='container'>
+<div class='row'>
+<div class='col-lg-8 col-lg-offset-2'>
+<div class='modal-body'>
+<h2>$tituloCertificado</h2>
+<object data='pdf/$pdfCertificado' type='application/pdf'>
+<a href='pdf/$pdfCertificado'>test.pdf</a>
 </object>
-<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close PDF</button>
+<button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> Close PDF</button>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="produts-modal modal fade" id="CRCC" tabindex="-1" role="dialog" aria-hidden="true">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal">
-<div class="lr">
-<div class="rl">
-</div>
-</div>
-</div>
-<div class="container">
-<div class="row">
-<div class="col-lg-8 col-lg-offset-2">
-<div class="modal-body">
-<h2>CRCC Petrobras</h2>
-<object data="pdf/CRCC.pdf" type="application/pdf">
-<a href="pdf/CRCC.pdf">test.pdf</a>
-</object>
-<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close PDF</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>";
+}
+?>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
