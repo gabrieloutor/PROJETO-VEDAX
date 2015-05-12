@@ -160,7 +160,9 @@ $totalprocessos = mysqli_num_rows($resultadoprocesses);
 for ($i = 1; $i <= $totalprocessos; $i++) {
 $row = mysqli_fetch_array($resultadoprocesses);
 $titulo = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$explicacao = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$exp = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$expl = stripslashes($exp);
+$explicacao=nl2br($expl);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 if($i%2==1 && $i!==$totalprocessos){
 echo "<li>
@@ -382,8 +384,12 @@ for ($i = 1; $i <= $totalprodutos; $i++) {
 $row = mysqli_fetch_array($resultadoprodutos);
 $nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true); 
 $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$descricao = htmlentities($row["descricao"], ENT_COMPAT, 'ISO-8859-1', true);
-$explicacao = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$desc = htmlentities($row["descricao"], ENT_COMPAT, 'ISO-8859-1', true);
+$descri = stripslashes($desc);
+$descricao=nl2br($descri);
+$expl = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$expli = stripslashes($expl);
+$explicacao=nl2br($expli);
 $img = htmlentities($row["imgprodut"], ENT_COMPAT, 'ISO-8859-1', true);
 echo"<div class=\"produts-modal modal fade\" id=\"produtsModal$i\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">
 <div class=\"modal-content\">
