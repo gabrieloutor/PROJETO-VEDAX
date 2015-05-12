@@ -392,8 +392,7 @@ $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
 $descricao = htmlentities($row["descricao"], ENT_COMPAT, 'ISO-8859-1', true);
 $explicacao = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
 $img = htmlentities($row["imgprodut"], ENT_COMPAT, 'ISO-8859-1', true);
-echo"<!-- produts Modal $i -->
-<div class=\"produts-modal modal fade\" id=\"produtsModal$i\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">
+echo"<div class=\"produts-modal modal fade\" id=\"produtsModal$i\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">
 <div class=\"modal-content\">
 <div class=\"close-modal\" data-dismiss=\"modal\">
 <div class=\"lr\">
@@ -405,7 +404,6 @@ echo"<!-- produts Modal $i -->
 <div class=\"row\">
 <div class=\"col-lg-8 col-lg-offset-2\">
 <div class=\"modal-body\">
-<!-- Project Details Go Here -->
 <h2>$nome</h2>
 <p class=\"item-intro text-muted\">$tipo</p>
 <img class=\"img-responsive img-centered imgprodut\" src=\"img/produts/$img\" alt=\"$nome $tipo\">
