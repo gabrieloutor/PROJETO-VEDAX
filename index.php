@@ -195,13 +195,6 @@ echo "<li>
 <div class=\"timeline-image\">
 <img class=\"img-circle img-responsive\" src=\"img/processes/$img\" alt=\"$titulo\">
 </div>
-<div class=\"timeline-panel\">
-<div class=\"timeline-heading\">
-<h4>$titulo</h4>
-</div>
-<div class=\"timeline-body\">
-<p class=\"text-muted\">$explicacao</p>
-</div>
 </div>
 </li>";
 }
