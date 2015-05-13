@@ -1,4 +1,30 @@
 <?php require "../config/config.ini"; ?>
+<?php
+if (!isset($_POST['login'])){
+    $error = "";
+}   else {
+    $usuario = $_POST["login"];
+    $senha = $_POST["password"];
+    $query = "SELECT id, nome, senha, acesso FROM usuarios WHERE nome=? AND senha=?";
+    if ($stmt = mysqli_prepare($conexao, $query)) {
+        mysqli_stmt_bind_param($stmt, "ss", $usuario, $senha);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $id, $nome, $password, $acesso);
+        mysqli_stmt_fetch($stmt);
+        if ($usuario == $nome && $senha == $password) {
+            $error = "<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>LOGADO </strong></div>";
+         
+        } else {
+            $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>REJEITADO</strong></div>";
+           
+        }
+        $stmt->close();
+    } else {
+        $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>REJEITADO</strong></div>";
+    }
+    $conexao->close();
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,10 +44,6 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="../js/classie.js"></script>
         <script src="../js/cbpAnimatedHeader.js"></script>
-
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/login.js"></script>
 
         <!-- Custom Theme JavaScript -->
         <script src="../js/agency.js"></script>
@@ -56,7 +78,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <form name="loginForm" id="loginForm" novalidate>
+                            <form action="index.php" method="POST" id="loginForm" novalidate>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input name="login" type="text" class="form-control" placeholder="Seu Login *" id="name" required data-validation-required-message="Por favor digite seu login.">
@@ -69,7 +91,7 @@
                                 </div>
                                 <div class="clearfix"></div>
                                 <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
+                                    <div id="success"><?php echo $error; ?></div>
                                     <button type="submit" class="btn btn-xl">Acessar</button>
                                 </div> 
                             </form>
