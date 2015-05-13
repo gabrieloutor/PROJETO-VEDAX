@@ -10,7 +10,7 @@ $(function() {
             var login = $("input#login").val();
             var password = $("input#password").val();
             $.ajax({
-                url: "././mail/login.php",
+                url: "./mail/login.php",
                 type: "POST",
                 data: {
                     login: login,
