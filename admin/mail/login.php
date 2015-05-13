@@ -21,7 +21,7 @@ if ($stmt = mysqli_prepare($conexao, $query)) {
     mysqli_stmt_fetch($stmt);
 
     if ($usuario == $nome && $senha == $password) {
-        return false; 
+        return true; 
     } else {
         return false;
     }
