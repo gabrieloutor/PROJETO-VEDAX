@@ -2,7 +2,7 @@
 require "../config/config.ini";
 $usuario = $_POST["login"];
 $senha = $_POST["password"];
-$query = "SELECT id, nome, senha, acesso FROM usuarios WHERE nome=? AND senha=?";
+$query = "SELECT id, nome, senha FROM usuarios WHERE nome=? AND senha=?";
 /* Criar um prepared statement */
 if ($stmt = mysqli_prepare($conexao, $query)) {
 
@@ -14,7 +14,7 @@ if ($stmt = mysqli_prepare($conexao, $query)) {
     mysqli_stmt_execute($stmt);
 
     /* Vinculando os resultados */
-    mysqli_stmt_bind_result($stmt, $id, $nome, $password, $acesso);
+    mysqli_stmt_bind_result($stmt, $id, $nome, $password);
 
     /* Buscar valores */
     mysqli_stmt_fetch($stmt);
