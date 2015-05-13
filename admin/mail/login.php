@@ -3,6 +3,11 @@ require "../config/config.ini";
 $usuario = $_POST["login"];
 $senha = $_POST["password"];
 $query = "SELECT id, nome, senha FROM usuarios WHERE nome=? AND senha=?";
+echo "<script>
+{
+alert('Eu sou um alert!');
+}
+</script>";
 /* Criar um prepared statement */
 if ($stmt = mysqli_prepare($conexao, $query)) {
 
