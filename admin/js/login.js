@@ -25,10 +25,18 @@ $(function() {
                         .append("<strong>LOGADO </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
-
+                    $('#loginForm').trigger("reset");
+                },
+                error: function() {
+                    // Fail message
+                    $('#success').html("<div class='alert alert-danger'>");
+                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-danger').append("<strong>Usuário ou senha incorretos.");
+                    $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#loginForm').trigger("reset");
-                }
+                },
             })
         },
         filter: function() {
