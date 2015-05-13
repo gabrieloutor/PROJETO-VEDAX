@@ -9,11 +9,6 @@ $(function() {
             // get values from FORM
             var login = $("input#login").val();
             var password = $("input#password").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
             $.ajax({
                 url: "././mail/login.php",
                 type: "POST",
@@ -23,8 +18,6 @@ $(function() {
                 },
                 cache: false,
                 success: function() {
-                    // Success message
-                    alert(url);
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
