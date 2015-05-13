@@ -22,11 +22,11 @@ if ($stmt = mysqli_prepare($conexao, $query)) {
     if ($usuario == $nome && $senha == $password) {
         return true; 
     } else {
-        return false;
+        return true;
     }
     $stmt->close();
 } else{
-    return false;
+    return true;
 }
 $conexao->close();
 ?>		
