@@ -1,8 +1,7 @@
 <?php
 require "../config/config.ini";
 $usuario = $_POST["login"];
-$pass = $_POST["password"];
-$senha = sha1($pass);
+$senha = $_POST["password"];
 $query = "SELECT id, nome, senha, acesso FROM usuarios WHERE nome=? AND senha=?";
 /* Criar um prepared statement */
 if ($stmt = mysqli_prepare($conexao, $query)) {
