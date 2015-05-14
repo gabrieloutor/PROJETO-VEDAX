@@ -268,9 +268,9 @@ echo "<li>
 </div>
 </li>";
 }
-
 }
-echo "</ul>
+echo "
+</ul>
 </div>
 </div>
 </div>
