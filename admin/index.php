@@ -72,7 +72,7 @@ if (!isset($_POST['login'])){
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading">Administração</h2>
-                        <img src="../img/logos/logovedax.png"alt="<?php echo $empresa; ?>" />
+                        <img src="../img/logos/logovedax.png"alt="<?php echo $empresa; ?>" id="logovedax" />
                     </div>
                 </div>
                 <div class="row">

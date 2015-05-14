@@ -10,4 +10,19 @@
         width: 50%;
         height: auto;
     }
+    .col-md-6{
+        left:0%;
+    }
+    section h2.section-heading{
+        float: left;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+    #logovedax{
+        left:0%;
+        display:block;
+        margin: 10px;
+        padding: 10px;
+    }
 }
