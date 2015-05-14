@@ -4,31 +4,43 @@ $filtro = array('’' => ':', '&quot;' => '"', '&amp;' => '&', '&lt;' => '<', '&
 if (!isset($tipoLinguagem)){
     $urlLing="en.php";
     $img = "usa.png";
-    $resultadopaginas = mysqli_query($conexao, "SELECT * from paginas");
-    $totalpaginas = mysqli_num_rows($resultadopaginas);
-    $resultadohome = mysqli_query($conexao, "SELECT * from home");
-    $totalhome = mysqli_num_rows($resultadohome);
-    $resultadoquemSomos = mysqli_query($conexao, "SELECT * from quemSomos");
-    $totalquemSomos = mysqli_num_rows($resultadoquemSomos);
-    $resultadopro = mysqli_query($conexao, "SELECT * from produtos");
-    $totalpro = mysqli_num_rows($resultadopro);
-    $resultadoprocesses = mysqli_query($conexao, "SELECT * from processos");
-    $totalprocessos = mysqli_num_rows($resultadoprocesses);
-    $resultadoClientes = mysqli_query($conexao, "SELECT * from clientes");
-    $totalClientes = mysqli_num_rows($resultadoClientes);
-    $resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
-    $totalCertificados = mysqli_num_rows($resultadoCertificados);
-    $resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
-    $totalempresa = mysqli_num_rows($resultadolocalizacao);
-    $resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos");
-    $totalprodutos = mysqli_num_rows($resultadoprodutos);
-    $resultadocert = mysqli_query($conexao, "SELECT * from certificados");
-    $totalcert = mysqli_num_rows($resultadocert);
+    $pag="paginas";
+    $hom="home";
+    $qms="quemSomos";
+    $prod="produtos";
+    $proc="processos";
+    $emp="empresa";
     $nomeContato="Seu Nome";
     $telefoneContato="Seu Telefone";
     $emailContato="Sua Mensagem";
     $mensagemContato="Mensagem";
+    $msgNomeContat="Por favor digite seu nome";
+    $msgEmailContat="Por favor digite seu email";
+    $msgTelContat="Por favor digite seu telefone";
+    $msgMensagemContat="Por favor digite sua mensagem";
+    $botao="Enviar Mensagem";
+    $botaoProd="Fechar Produto";
+    $botaoPdf="Fechar PDF";
 }
+$resultadopaginas = mysqli_query($conexao, "SELECT * from $pag");
+$totalpaginas = mysqli_num_rows($resultadopaginas);
+$resultadohome = mysqli_query($conexao, "SELECT * from $hom");
+$totalhome = mysqli_num_rows($resultadohome);
+$resultadoquemSomos = mysqli_query($conexao, "SELECT * from $qms");
+$totalquemSomos = mysqli_num_rows($resultadoquemSomos);
+$resultadopro = mysqli_query($conexao, "SELECT * from $prod");
+$totalpro = mysqli_num_rows($resultadopro);
+$resultadoprocesses = mysqli_query($conexao, "SELECT * from $proc");
+$totalprocessos = mysqli_num_rows($resultadoprocesses);
+$resultadoClientes = mysqli_query($conexao, "SELECT * from clientes");
+$totalClientes = mysqli_num_rows($resultadoClientes);
+$resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
+$totalCertificados = mysqli_num_rows($resultadoCertificados);
+$resultadolocalizacao = mysqli_query($conexao, "SELECT * from $emp");
+$totalempresa = mysqli_num_rows($resultadolocalizacao);
+$resultadoprodutos = mysqli_query($conexao, "SELECT * from $prod");
+$totalprodutos = mysqli_num_rows($resultadoprodutos);
+$resultadocert = mysqli_query($conexao, "SELECT * from certificados");
 $ano=date("Y");
 echo "<!DOCTYPE html>
 <html lang='pt'>
@@ -171,9 +183,13 @@ echo "</div>
 <section id='processes'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>
-<h2 class='section-heading'>Processos</h2>
-<h3 class='section-subheading text-muted'></h3>
+<div class='col-lg-12 text-center'>";
+if($urlLing=="en.php"){
+    echo "<h2 class='section-heading'>Processos</h2>";
+}else{
+    echo "<h2 class='section-heading'>Processes</h2>";
+}
+echo"<h3 class='section-subheading text-muted'></h3>
 </div>
 </div>
 <div class='row'>
@@ -365,7 +381,7 @@ if($urlLing=="en.php"){
 <h3 class='section-subheading text-muted'>Fale Conosco</h3>";
 }else{
     echo "<h2 class='section-heading'>Contact</h2>
-<h3 class='section-subheading text-muted'>Fale Conosco</h3>";
+<h3 class='section-subheading text-muted'>Contact Us</h3>";
 }
 echo "</div>
 </div>
@@ -375,28 +391,28 @@ echo "</div>
 <form name='sentMessage' id='contactForm' novalidate>
 <div class='col-md-6'>
 <div class='form-group'>
-<input name='name' type='text' class='form-control' placeholder='$nomeContato *' id='name' required data-validation-required-message='Por favor digite seu nome.'>
+<input name='name' type='text' class='form-control' placeholder='$nomeContato *' id='name' required data-validation-required-message='$msgNomeContat'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<input name='email' type='email' class='form-control' placeholder='$emailContato *' id='email' required data-validation-required-message='Por favor digite seu email.'>
+<input name='email' type='email' class='form-control' placeholder='$emailContato *' id='email' required data-validation-required-message='$msgEmailContat'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<input name='phone' type='tel' class='form-control' placeholder='$telefoneContato *' id='phone' required data-validation-required-message='Por favor digite seu telefone.'>
+<input name='phone' type='tel' class='form-control' placeholder='$telefoneContato *' id='phone' required data-validation-required-message='$msgTelContat'>
 <p class='help-block text-danger'></p>
 </div>
 </div>
 <div class='col-md-6'>
 <div class='form-group'>
-<textarea name='message' class='form-control' placeholder='$mensagemContato *' id='message' required data-validation-required-message='Por favor digite sua mensagem.'></textarea>
+<textarea name='message' class='form-control' placeholder='$mensagemContato *' id='message' required data-validation-required-message='$msgMensagemContat'></textarea>
 <p class='help-block text-danger'></p>
 </div>
 </div>
 <div class='clearfix'></div>
 <div class='col-lg-12 text-center'>
 <div id='success'></div>
-<button type='submit' class='btn btn-xl'>Enviar Mensagem</button>
+<button type='submit' class='btn btn-xl'>$botao</button>
 </div> 
 </form>
 </div>
@@ -464,7 +480,7 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <p>
 $explicacao
 </p>
-<button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> Fechar Produto</button>
+<button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> $botaoProd</button>
 </div>
 </div>
 </div>
@@ -472,7 +488,7 @@ $explicacao
 </div>
 </div>";
 }
-for ($i = 1; $i <= $totalcert; $i++) {
+for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadocert);
 $tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $tituloCertificado = strTr($tituloCertificad, $filtro);
@@ -495,7 +511,7 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <object data='pdf/$pdfCertificado' type='application/pdf'>
 <a href='pdf/$pdfCertificado'>test.pdf</a>
 </object>
-<button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> Close PDF</button>
+<button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> $botaoPdf</button>
 </div>
 </div>
 </div>
