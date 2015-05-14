@@ -204,7 +204,8 @@ $expl = strTr($ex, $filtro);
 $explicacao=nl2br($expl);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 if($i%2==1 && $i!==$totalprocessos && $titulo!=="tratamento t&eacute;rmico"){
-echo "<li>
+echo "
+<li>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
 </div>
@@ -264,7 +265,6 @@ echo "<li>
 echo "<li>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
-</div>
 </div>
 </li>";
 }
