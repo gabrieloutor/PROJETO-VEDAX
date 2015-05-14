@@ -24,6 +24,10 @@ if (!isset($tipoLinguagem)){
     $totalprodutos = mysqli_num_rows($resultadoprodutos);
     $resultadocert = mysqli_query($conexao, "SELECT * from certificados");
     $totalcert = mysqli_num_rows($resultadocert);
+    $nomeContato="Seu Nome";
+    $telefoneContato="Seu Telefone";
+    $emailContato="Sua Mensagem";
+    $mensagemContato="Mensagem";
 }
 $ano=date("Y");
 echo "<!DOCTYPE html>
@@ -129,9 +133,13 @@ echo "</div>
 <section id='produts' class='bg-light-gray'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>
-<h2 class='section-heading'>Produtos</h2>
-<h3 class='section-subheading text-muted'></h3>
+<div class='col-lg-12 text-center'>";
+if($urlLing=="en.php"){
+    echo "<h2 class='section-heading'>Produtos</h2>";
+}else{
+    echo "<h2 class='section-heading'>Products</h2>";
+}
+echo "<h3 class='section-subheading text-muted'></h3>
 </div>
 </div>
 <div class='row'>";
@@ -270,9 +278,13 @@ echo "</div>
 <section id='certificates' class='bg-light-gray'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>
-<h2 class='section-heading'>Certificados</h2>
-<h3 class='section-subheading text-muted'></h3>
+<div class='col-lg-12 text-center'>";
+if($urlLing=="en.php"){
+    echo "<h2 class='section-heading'>Certificados</h2>";
+}else{
+    echo "<h2 class='section-heading'>Certificates</h2>";
+}
+echo "<h3 class='section-subheading text-muted'></h3>
 </div>
 </div>
 <div class='row text-center'>";
@@ -297,10 +309,15 @@ echo "</div>
 <section id='location'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>
-<h2 class='section-heading'>Localização</h2>
-<h3 class='section-subheading text-muted'>Endereço</h3>
-</div>
+<div class='col-lg-12 text-center'>";
+if($urlLing=="en.php"){
+    echo "<h2 class='section-heading'>Localização</h2>
+<h3 class='section-subheading text-muted'>Endereço</h3>";
+}else{
+    echo "<h2 class='section-heading'>Location</h2>
+<h3 class='section-subheading text-muted'>Address</h3>";
+}
+echo "</div>
 </div>
 <div class='row'>
 <div class='col-sm-4'>
@@ -342,10 +359,15 @@ echo "</div>
 <section id='contact'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>
-<h2 class='section-heading'>Contato</h2>
-<h3 class='section-subheading text-muted'>Fale Conosco</h3>
-</div>
+<div class='col-lg-12 text-center'>";
+if($urlLing=="en.php"){
+    echo "<h2 class='section-heading'>Contato</h2>
+<h3 class='section-subheading text-muted'>Fale Conosco</h3>";
+}else{
+    echo "<h2 class='section-heading'>Contact</h2>
+<h3 class='section-subheading text-muted'>Fale Conosco</h3>";
+}
+echo "</div>
 </div>
 <div class='row'>
 <div class='col-lg-12'>
@@ -353,21 +375,21 @@ echo "</div>
 <form name='sentMessage' id='contactForm' novalidate>
 <div class='col-md-6'>
 <div class='form-group'>
-<input name='name' type='text' class='form-control' placeholder='Seu Nome *' id='name' required data-validation-required-message='Por favor digite seu nome.'>
+<input name='name' type='text' class='form-control' placeholder='$nomeContato *' id='name' required data-validation-required-message='Por favor digite seu nome.'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<input name='email' type='email' class='form-control' placeholder='Seu Email *' id='email' required data-validation-required-message='Por favor digite seu email.'>
+<input name='email' type='email' class='form-control' placeholder='$emailContato *' id='email' required data-validation-required-message='Por favor digite seu email.'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<input name='phone' type='tel' class='form-control' placeholder='Seu Telefone *' id='phone' required data-validation-required-message='Por favor digite seu telefone.'>
+<input name='phone' type='tel' class='form-control' placeholder='$telefoneContato *' id='phone' required data-validation-required-message='Por favor digite seu telefone.'>
 <p class='help-block text-danger'></p>
 </div>
 </div>
 <div class='col-md-6'>
 <div class='form-group'>
-<textarea name='message' class='form-control' placeholder='Mensagem *' id='message' required data-validation-required-message='Por favor digite sua mensagem.'></textarea>
+<textarea name='message' class='form-control' placeholder='$mensagemContato *' id='message' required data-validation-required-message='Por favor digite sua mensagem.'></textarea>
 <p class='help-block text-danger'></p>
 </div>
 </div>

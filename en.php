@@ -23,4 +23,8 @@ $resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos_en");
 $totalprodutos = mysqli_num_rows($resultadoprodutos);
 $resultadocert = mysqli_query($conexao, "SELECT * from certificados");
 $totalcert = mysqli_num_rows($resultadocert);
+$nomeContato="Your Name";
+$telefoneContato="Your Phone";
+$emailContato="Your Email";
+$mensagemContato="Message";
 include "index.php";
