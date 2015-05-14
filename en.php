@@ -17,7 +17,7 @@ $msgNomeContat="Please enter your name.";
 $msgEmailContat="Please enter your email.";
 $msgTelContat="Please enter your phone number.";
 $msgMensagemContat="Please enter a message.";
-$botao="Send Message";
+$botaoM="Send Message";
 $botaoProd="Close Product";
 $botaoPdf="Close PDF";
 include "index.php";

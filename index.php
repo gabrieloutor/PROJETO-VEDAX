@@ -18,7 +18,7 @@ if (!isset($tipoLinguagem)){
     $msgEmailContat="Por favor digite seu email";
     $msgTelContat="Por favor digite seu telefone";
     $msgMensagemContat="Por favor digite sua mensagem";
-    $botao="Enviar Mensagem";
+    $botaoM="Enviar Mensagem";
     $botaoProd="Fechar Produto";
     $botaoPdf="Fechar PDF";
 }
@@ -412,7 +412,7 @@ echo "</div>
 <div class='clearfix'></div>
 <div class='col-lg-12 text-center'>
 <div id='success'></div>
-<button type='submit' class='btn btn-xl'>$botao</button>
+<button type='submit' class='btn btn-xl'>$botaoM</button>
 </div> 
 </form>
 </div>
