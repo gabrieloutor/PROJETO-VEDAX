@@ -1,20 +1,30 @@
 <?php 
 require "config/config.ini";  
 $filtro = array('’' => ':', '&quot;' => '"', '&amp;' => '&', '&lt;' => '<', '&gt;' => '>');
-$resultadopaginas = mysqli_query($conexao, "SELECT * from paginas");
-$totalpaginas = mysqli_num_rows($resultadopaginas);
-$resultadohome = mysqli_query($conexao, "SELECT * from home");
-$totalhome = mysqli_num_rows($resultadohome);
-$resultadoquemSomos = mysqli_query($conexao, "SELECT * from quemSomos");
-$totalquemSomos = mysqli_num_rows($resultadoquemSomos);
-$resultadopro=mysqli_query($conexao, "SELECT * from produtos");
-$totalpro=mysqli_num_rows($resultadopro);
-$resultadoprocesses = mysqli_query($conexao, "SELECT * from processos");
-$totalprocessos = mysqli_num_rows($resultadoprocesses);
-$resultadoClientes = mysqli_query($conexao, "SELECT * from clientes");
-$totalClientes = mysqli_num_rows($resultadoClientes);
-$resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
-$totalCertificados = mysqli_num_rows($resultadoCertificados);
+if (!isset($tipoLinguagem)){
+    $urlLing="en.php";
+    $img = "usa.png";
+    $resultadopaginas = mysqli_query($conexao, "SELECT * from paginas");
+    $totalpaginas = mysqli_num_rows($resultadopaginas);
+    $resultadohome = mysqli_query($conexao, "SELECT * from home");
+    $totalhome = mysqli_num_rows($resultadohome);
+    $resultadoquemSomos = mysqli_query($conexao, "SELECT * from quemSomos");
+    $totalquemSomos = mysqli_num_rows($resultadoquemSomos);
+    $resultadopro = mysqli_query($conexao, "SELECT * from produtos");
+    $totalpro = mysqli_num_rows($resultadopro);
+    $resultadoprocesses = mysqli_query($conexao, "SELECT * from processos");
+    $totalprocessos = mysqli_num_rows($resultadoprocesses);
+    $resultadoClientes = mysqli_query($conexao, "SELECT * from clientes");
+    $totalClientes = mysqli_num_rows($resultadoClientes);
+    $resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
+    $totalCertificados = mysqli_num_rows($resultadoCertificados);
+    $resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
+    $totalempresa = mysqli_num_rows($resultadolocalizacao);
+    $resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos");
+    $totalprodutos = mysqli_num_rows($resultadoprodutos);
+    $resultadocert = mysqli_query($conexao, "SELECT * from certificados");
+    $totalcert = mysqli_num_rows($resultadocert);
+}
 $ano=date("Y");
 echo "<!DOCTYPE html>
 <html lang='pt'>
@@ -50,6 +60,9 @@ echo "<!DOCTYPE html>
 <img src='img/logos/logovedax.png' alt='$empresa' id='vedaxlogo' />
 </a>
 </div>
+<a class='iconLing' href='$urlLing' >
+<img src='img/icons/$img' alt='icon' id='iconLinguagem' />
+</a>
 <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
 <ul class='nav navbar-nav navbar-right'>
 <li class='hidden'>
@@ -293,8 +306,6 @@ echo "</div>
 <div class='col-sm-4'>
 <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973' style='border:0'>
 </iframe>";
-$resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
-$totalempresa = mysqli_num_rows($resultadolocalizacao);
 for ($i = 1; $i <= $totalempresa; $i++) {
 $row = mysqli_fetch_array($resultadolocalizacao);
 $nome = htmlentities($row["empresa"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -398,8 +409,6 @@ echo "</div>
 </div>
 </div>
 </footer>";
-$resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos");
-$totalprodutos = mysqli_num_rows($resultadoprodutos);
 for ($i = 1; $i <= $totalprodutos; $i++) {
 $row = mysqli_fetch_array($resultadoprodutos);
 $nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true); 
@@ -441,8 +450,6 @@ $explicacao
 </div>
 </div>";
 }
-$resultadocert = mysqli_query($conexao, "SELECT * from certificados");
-$totalcert = mysqli_num_rows($resultadocert);
 for ($i = 1; $i <= $totalcert; $i++) {
 $row = mysqli_fetch_array($resultadocert);
 $tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
