@@ -419,7 +419,7 @@ echo "</div>
 <button type='submit' class='btn btn-xl'>$botaoM</button>
 </div> 
 </form>
-<h2 class='section-heading'>Email Departamentos:</h2>
+<h2 class='section-heading emailsdepart'>Email Departamentos:</h2>
 <ul class='grid cs-style-3'>";
 for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadocont);
