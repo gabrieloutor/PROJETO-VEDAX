@@ -22,6 +22,8 @@ if (!isset($tipoLinguagem)){
     $botaoProd="Fechar Produto";
     $botaoPdf="Fechar PDF";
 }
+$resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento");
+$totalcont = mysqli_num_rows($resultadocont);
 $resultadopaginas = mysqli_query($conexao, "SELECT * from $pag");
 $totalpaginas = mysqli_num_rows($resultadopaginas);
 $resultadohome = mysqli_query($conexao, "SELECT * from $hom");
@@ -61,6 +63,8 @@ echo "<!DOCTYPE html>
 <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' type='text/css' href='css/component.css' />
+<script src='js/modernizr.custom.js'></script>
 </head>
 <body id='page-top' class='index'>
 <nav class='navbar navbar-default navbar-fixed-top'>
@@ -415,6 +419,22 @@ echo "</div>
 <button type='submit' class='btn btn-xl'>$botaoM</button>
 </div> 
 </form>
+<h2 class='section-heading'>Email Departamentos:</h2>
+<ul class='grid cs-style-3'>";
+for ($i = 1; $i <= $totalcont; $i++) {
+$row = mysqli_fetch_array($resultadocont);
+$email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
+$departamento = htmlentities($row["departamento"], ENT_COMPAT, 'ISO-8859-1', true);
+echo "<li>
+<figure>
+<h2 class='section-email-contact'>$departamento</h2>
+<figcaption>
+<h3>$email</h3>
+</figcaption>
+</figure>
+</li>";
+}
+echo "</ul>
 </div>
 </div>
 </div>
