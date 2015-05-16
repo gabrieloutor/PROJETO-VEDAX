@@ -1,4 +1,4 @@
-section h2.emailsdepart{font-size:30px;}
+section h2.emailsdepart{line-height: 70px; font-size:30px;}
 .section-email-contact{font-size:18px; color:white;}
 img#iconLinguagem{margin-left: 91%; margin-top: 7px; position: absolute; display:inline;}
 .imgproduts{width:360px;height:260px;}
@@ -18,10 +18,12 @@ iframe{float:right;width:40%;height:160px;}
 .vedaxempresa{width:49%;height:400px;text-align:center;}
 .enderecocontato{font-size:12pt;color:white;text-decoration:none;}
 .message{float:right;}
-@media(max-width:768px){.hrlocalizacao{margin-top:20px;margin-bottom:20px;border:0px;width:100%;border-top:3px solid #eee}
+@media(max-width:768px){.grid{padding: 0px 10px 100px 10px; }
+section h2.emailsdepart{line-height: 70px;font-size:30px;}
+.hrlocalizacao{margin-top:20px;margin-bottom:20px;border:0px;width:100%;border-top:3px solid #eee}
 .timeline>li .timeline-image{width: 110px; height: 110px;}
 img#iconLinguagem{margin-left: 89%; margin-top: 7px; position: absolute; display:inline;}
-iframe{float:left;width:100%;}
+iframe{float:left;width:100%; margin-bottom: 20px;}
 .localizacao{float:left;}
 #vedaxlogo{height:43px;position:absolute;top:7px;left:30px;}
 .vedaxempresa{width:80%;height:220px;text-align:center;display:inline;padding-right:3px;padding-bottom:2px;}
