@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+echo "<!DOCTYPE html>
 <html lang='pt'>
 <head>
 <meta charset='utf-8'>
@@ -41,9 +42,10 @@
 </nav>
 <header>
 <div class='container'>
-<div class='intro-text'><div class='intro-lead-in'>Página Inexistente</div>
+<div class='intro-text'><div class='intro-lead-in'>$error</div>
 <a href='index.php' class='page-scroll btn btn-xl'>Página Inicial</a></div>
 </div>
 </header>
 </body>
-</html>
+</html>";
+
