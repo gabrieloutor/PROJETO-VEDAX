@@ -12,15 +12,14 @@ if (!isset($_POST['login'])){
         mysqli_stmt_bind_result($stmt, $id, $nome, $password, $acesso);
         mysqli_stmt_fetch($stmt);
         if ($usuario == $nome && $senha == $password) {
-            $error = "<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>LOGADO </strong></div>";
-         
+            header("Location: administracao.php");
         } else {
-            $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>REJEITADO</strong></div>";
+            $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>Usuário ou Senha incorretos</strong></div>";
            
         }
         $stmt->close();
     } else {
-        $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>REJEITADO</strong></div>";
+        $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>Usuário ou Senha incorretos</strong></div>";
     }
     $conexao->close();
 }
