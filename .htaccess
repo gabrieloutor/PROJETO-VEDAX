@@ -2,3 +2,4 @@ ErrorDocument 404 /errors/404.php
 ErrorDocument 503 /errors/503.php
 ErrorDocument 401 /errors/401.php
 ErrorDocument 407 /errors/407.php
+ErrorDocument 509 /errors/509.php
