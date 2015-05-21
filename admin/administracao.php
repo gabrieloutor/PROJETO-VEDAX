@@ -54,7 +54,7 @@ echo "<!DOCTYPE html>
 <meta name='keywords' content='vedax,aço,conexões,flanges,forjados,carbono,empresa,produtos'>
 <meta name='author' content='$nomedesenvolvedor'>
 <title>Administração | $empresa</title>
-<link rel='icon' href='img/favicon.ico' />
+<link rel='icon' href='../img/favicon.ico' />
 <link href='../css/bootstrap.min.css' rel='stylesheet'>
 <link href='../css/agency.css' rel='stylesheet'>
 <link href='../css/custom.css' rel='stylesheet'>
@@ -94,7 +94,7 @@ $row = mysqli_fetch_array($resultadopaginas);
 $nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
 $referencia = htmlentities($row["referencia"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<li>
-<input class='campo_menu' type='text' value='$nome'>
+<a class='page-scroll' href='#$referencia'>$nome</a>
 </li>";
 }
 echo "</ul>
@@ -113,7 +113,7 @@ echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
 <a class='btn btn-xl'><input class='campo_botaohome' type='text' value='$botao'></a>";
 }
 echo "</div>
-<button type='button' name='' value='' class='salvarhome'>Salvar Home</button>
+<input type='submit' class='salvarhome' formaction='salvar.php' value='Salvar Home'>
 </div>
 </header>
 <section id='about'>
@@ -141,7 +141,7 @@ $textoFrase<br><br></div>
 <div id='imgempresa'>";
 for ($i = 1; $i <= $qtfoto; $i++) {
 $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
-echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
+echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
 }
 echo "</div>
@@ -176,7 +176,7 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <i class='fa fa-plus fa-3x'></i>
 </div>
 </div>
-<img src='img/produts/inicial/$img' class='img-responsive imgproduts' alt='$nome $tipo'>
+<img src='../img/produts/inicial/$img' class='img-responsive imgproduts' alt='$nome $tipo'>
 </a>
 <div class='produts-caption'>
 <h4>$nome</h4>
@@ -214,7 +214,7 @@ if($i%2==1 && $i!==$totalprocessos && $titulo!=="tratamento t&eacute;rmico"){
 echo "
 <li>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -228,7 +228,7 @@ echo "
 }else if($i%2==0 && $i!==$totalprocessos && $titulo!=="tratamento t&eacute;rmico"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -242,7 +242,7 @@ echo "<li class='timeline-inverted'>
 }else if ($i%2==0 && $titulo=="tratamento t&eacute;rmico"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -257,7 +257,7 @@ echo "<li class='timeline-inverted'>
 else if ($i%2!==0 && $titulo=="tratamento t&eacute;rmico"){
 echo "<li>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -271,7 +271,7 @@ echo "<li>
 }else if($i==$totalprocessos){
 echo "<li>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 </li>";
 }
@@ -291,7 +291,7 @@ $tituloCliente = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-3 col-sm-6'>
 <a href='#clients'>
-<img src='img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente'>
+<img src='../img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente'>
 </a>
 </div>";
 }
@@ -320,7 +320,7 @@ $abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-4 certificates'>
 <span class='fa-stack fa-4x'>
 <a href='#$abreviacao' class='produts-link' data-toggle='modal'>
-<img src='img/certificates/$imgCertificado' class='imgcertificates' alt='$tituloCertificado'>
+<img src='../img/certificates/$imgCertificado' class='imgcertificates' alt='$tituloCertificado'>
 </a>
 </span>
 <h4 class='service-heading'>$tituloCertificado</h4>
@@ -369,9 +369,9 @@ $urlmaps = htmlentities($row["urlmaps"], ENT_COMPAT, 'ISO-8859-1', true);
 $urlmaps = "http://maps.apple.com/?daddr=".$urlmaps;
 echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <u>$tipo</u> | $nome <br><br>
-<img src='img/icons/icon-location.png' alt='Localização $nome'>
+<img src='../img/icons/icon-location.png' alt='Localização $nome'>
 <u><a href='$urlmaps'>$endereco</a></u><br><br>
-<img src='img/icons/icon-phone.png' alt='Telefone $nome'>
+<img src='../img/icons/icon-phone.png' alt='Telefone $nome'>
 <u> $telefone</u><br><br>
 </span> </p> <hr class='hrlocalizacao'>";
 }
@@ -498,7 +498,7 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <div class='modal-body'>
 <h2>$nome</h2>
 <p class='item-intro text-muted'>$tipo</p>
-<img class='img-responsive img-centered imgprodut' src='img/produts/$img' alt='$nome $tipo'>
+<img class='img-responsive img-centered imgprodut' src='../img/produts/$img' alt='$nome $tipo'>
 <p>$descricao</p>
 <p>
 $explicacao

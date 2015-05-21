@@ -1,3 +1,10 @@
+.col-md-6{
+    left:25%;
+}
+#success{
+    width: 75%;
+    padding-left: 25%;
+}
 .campo_menu{
     width:50%;
     float:right;
@@ -8,7 +15,7 @@
     color:black;
     text-align: center;
 }
-button.salvarhome {
+input.salvarhome {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     color: #050505;
@@ -46,4 +53,25 @@ button.salvarhome {
 }.salvarhome:active {
 	position:relative;
 	top:1px;
+}
+@media(max-width:992px){
+    section#contact .form-group input.form-control{
+        width: 50%;
+        height: auto;
+    }
+    .col-md-6{
+        left:0%;
+    }
+    section h2.section-heading{
+        float: left;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+    #logovedax{
+        left:0%;
+        display:block;
+        margin: 10px;
+        padding: 10px;
+    }
 }
