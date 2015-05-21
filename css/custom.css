@@ -18,10 +18,11 @@ iframe{float:right;width:40%;height:160px;}
 .vedaxempresa{width:49%;height:400px;text-align:center;}
 .enderecocontato{font-size:12pt;color:white;text-decoration:none;}
 .message{float:right;}
-@media(max-width:768px){.grid{padding: 0px 10px 100px 10px; }
+@media(max-width:768px){
+.grid{padding: 0px 10px 100px 10px; }
 section h2.emailsdepart{margin-left: 10px; line-height: 70px;font-size:30px;}
 .hrlocalizacao{margin-top:20px;margin-bottom:20px;border:0px;width:100%;border-top:3px solid #eee}
-.timeline>li .timeline-image{width: 110px; height: 110px;}
+.timeline>li .timeline-image{margin-left: -15px; width: 110px; height: 110px;}
 iframe{float:left;width:100%; margin-bottom: 20px;}
 .localizacao{float:left;}
 #vedaxlogo{height:43px;position:absolute;top:7px;left:30px;}
