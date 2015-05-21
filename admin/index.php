@@ -52,8 +52,8 @@ if (!isset($_POST['login'])){
 
         <!-- Custom CSS -->
         <link href="../css/agency.css" rel="stylesheet">
-        <link href="css/custom.css" rel="stylesheet">
         <link href="../css/custom.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -71,7 +71,7 @@ if (!isset($_POST['login'])){
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading">Administração</h2>
-                        <img src="../img/logos/logovedax.png"alt="<?php echo $empresa; ?>" id="logovedax" />
+                        <img src="../img/logos/logovedax.png" alt="<?php echo $empresa; ?>" id="logovedax" />
                     </div>
                 </div>
                 <div class="row">
