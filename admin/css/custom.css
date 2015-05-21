@@ -1,28 +1,49 @@
-.col-md-6{
-    left:25%;
+.campo_menu{
+    width:50%;
+    float:right;
+    border: solid 1px gray;
 }
-#success{
-    width: 75%;
-    padding-left: 25%;
+.campo_botaohome,
+.campo_titulohome{
+    color:black;
+    text-align: center;
 }
-@media(max-width:992px){
-    section#contact .form-group input.form-control{
-        width: 50%;
-        height: auto;
-    }
-    .col-md-6{
-        left:0%;
-    }
-    section h2.section-heading{
-        float: left;
-        margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 40px;
-    }
-    #logovedax{
-        left:0%;
-        display:block;
-        margin: 10px;
-        padding: 10px;
-    }
+button.salvarhome {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #050505;
+    padding: 13px 27px;
+    background: -moz-linear-gradient(
+        top,
+        #f0f0f0 0%,
+        #ffffff);
+    background: -webkit-gradient(
+        linear, left top, left bottom,
+        from(#f0f0f0),
+        to(#378de5));
+    -moz-border-radius: 44px;
+    -webkit-border-radius: 44px;
+    border-radius: 44px;
+    border: 2px solid #000000;
+    -moz-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 1px rgba(255,255,255,0.7);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 1px rgba(255,255,255,0.7);
+    box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 1px rgba(255,255,255,0.7);
+    text-shadow:
+        0px -1px 0px rgba(000,000,000,0.4),
+        0px 1px 0px rgba(255,255,255,0.3);
+}
+.salvarhome:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+}.salvarhome:active {
+	position:relative;
+	top:1px;
 }

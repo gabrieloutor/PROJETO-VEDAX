@@ -1,5 +1,5 @@
 <?php 
-require "config/config.ini";  
+require "../config/config.ini";  
 $filtro = array('’' => ':', '&quot;' => '"', '&amp;' => '&', '&lt;' => '<', '&gt;' => '>');
 if (!isset($tipoLinguagem)){
     $urlLing="en.php";
@@ -58,6 +58,7 @@ echo "<!DOCTYPE html>
 <link href='../css/bootstrap.min.css' rel='stylesheet'>
 <link href='../css/agency.css' rel='stylesheet'>
 <link href='../css/custom.css' rel='stylesheet'>
+<link href='css/custom.css' rel='stylesheet'>
 <link href='font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -77,11 +78,11 @@ echo "<!DOCTYPE html>
 <span class='icon-bar'></span>
 </button>
 <a class='navbar-brand page-scroll' href='#page-top' >
-<img src='img/logos/logovedax.png' alt='$empresa' id='vedaxlogo' />
+<img src='../img/logos/logovedax.png' alt='$empresa' id='vedaxlogo' />
 </a>
 </div>
 <a class='iconLing' href='$urlLing' >
-<img src='img/icons/$img' alt='icon' id='iconLinguagem' />
+<img src='../img/icons/$img' alt='icon' id='iconLinguagem' />
 </a>
 <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
 <ul class='nav navbar-nav navbar-right'>
@@ -93,7 +94,7 @@ $row = mysqli_fetch_array($resultadopaginas);
 $nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
 $referencia = htmlentities($row["referencia"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<li>
-<a class='page-scroll' href='#$referencia'>$nome</a>
+<input class='campo_menu' type='text' value='$nome'>
 </li>";
 }
 echo "</ul>
@@ -107,10 +108,12 @@ for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
 $titulohome = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $botao = htmlentities($row["botao"], ENT_COMPAT, 'ISO-8859-1', true);
-echo "<div class='intro-lead-in'>$titulohome</div>
-<a href='#about' class='page-scroll btn btn-xl'>$botao</a>";
+echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
+<div class='intro-lead-in'><input class='campo_titulohome' type='text' value='$titulohome'></div>
+<a class='btn btn-xl'><input class='campo_botaohome' type='text' value='$botao'></a>";
 }
 echo "</div>
+<button type='button' name='' value='' class='salvarhome'>Salvar Home</button>
 </div>
 </header>
 <section id='about'>
