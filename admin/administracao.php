@@ -1,4 +1,11 @@
 <?php 
+session_start(); 
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['password']) == true)) { 
+    unset($_SESSION['login']); 
+    unset($_SESSION['password']); 
+    header('location:index.php'); 
+} 
+$logado = $_SESSION['login'];
 require "../config/config.ini";  
 $filtro = array('’' => ':', '&quot;' => '"', '&amp;' => '&', '&lt;' => '<', '&gt;' => '>');
 if (!isset($tipoLinguagem)){
