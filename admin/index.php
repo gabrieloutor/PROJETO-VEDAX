@@ -1,5 +1,6 @@
 <?php require "../config/config.ini"; ?>
 <?php
+session_start();
 if (!isset($_POST['login'])){
     $error = "";
 }   else {
@@ -12,13 +13,19 @@ if (!isset($_POST['login'])){
         mysqli_stmt_bind_result($stmt, $id, $nome, $password, $acesso);
         mysqli_stmt_fetch($stmt);
         if ($usuario == $nome && $senha == $password) {
+            $_SESSION['login'] = $usuario;
+            $_SESSION['password'] = $senha;
             header("Location: administracao.php");
         } else {
+            unset ($_SESSION['login']);
+            unset ($_SESSION['password']);
             $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>Usuário ou Senha incorretos</strong></div>";
            
         }
         $stmt->close();
     } else {
+        unset ($_SESSION['login']);
+        unset ($_SESSION['password']);
         $error = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button><strong>Usuário ou Senha incorretos</strong></div>";
     }
     $conexao->close();
