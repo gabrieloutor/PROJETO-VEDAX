@@ -1,5 +1,6 @@
 <?php
-echo "chegoy";
-header ("Location: http://gabrieloutor.herokuapp.com");
-?>
-
+if(!isset($_POST['homeForm'])==true){
+    echo "HOMEFORM";
+}else{
+    echo"NAO É HOMEFORM";
+}

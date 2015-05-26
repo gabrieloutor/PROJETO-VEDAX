@@ -111,7 +111,7 @@ echo "<li>
 </nav>
 <header>
 <div class='container'>
-<form action='salvar.php' method='POST' id='homeForm' novalidate>
+<form action='salvar.php' method='POST' name='homeForm' id='homeForm' novalidate>
 <div class='intro-text'>
 <?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
@@ -557,7 +557,6 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <script src='../js/classie.js'></script>
 <script src='../js/cbpAnimatedHeader.js'></script>
 <script src='../js/jqBootstrapValidation.js'></script>
-<script src='../js/contact_me.js'></script>
 <script src='../js/agency.js'></script>
 </body>
 </html>
