@@ -51,27 +51,28 @@ $resultadoprodutos = mysqli_query($conexao, "SELECT * from $prod");
 $totalprodutos = mysqli_num_rows($resultadoprodutos);
 $resultadocert = mysqli_query($conexao, "SELECT * from certificados");
 $ano=date("Y");
-echo "<!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang='pt'>
 <head>
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='$descricao'>
-<meta name='keywords' content='vedax,aço,conexões,flanges,forjados,carbono,empresa,produtos'>
-<meta name='author' content='$nomedesenvolvedor'>
-<title>Administração | $empresa</title>
+<meta name='description' content='<?php echo $descricao ?>'>
+<meta name='author' content='<?php echo $nomedesenvolvedor ?>'>
+<title>Administração | <?php echo $empresa ?></title>
 <link rel='icon' href='../img/favicon.ico' />
 <link href='../css/bootstrap.min.css' rel='stylesheet'>
+<link href='../css/bootstrap.css' rel='stylesheet'>
 <link href='../css/agency.css' rel='stylesheet'>
 <link href='../css/custom.css' rel='stylesheet'>
 <link href='css/custom.css' rel='stylesheet'>
-<link href='font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+<link href='font-awesome/../css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link rel='stylesheet' type='text/css' href='css/component.css' />
+<link rel='stylesheet' type='text/css' href='../css/component.css' />
 <script src='../js/modernizr.custom.js'></script>
 </head>
 <body id='page-top' class='index'>
@@ -85,48 +86,50 @@ echo "<!DOCTYPE html>
 <span class='icon-bar'></span>
 </button>
 <a class='navbar-brand page-scroll' href='#page-top' >
-<img src='../img/logos/logovedax.png' alt='$empresa' id='vedaxlogo' />
+<img src='../img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' />
 </a>
 </div>
-<a class='iconLing' href='$urlLing' >
-<img src='../img/icons/$img' alt='icon' id='iconLinguagem' />
+<a class='iconLing' href='<?php echo $urlLing ?>' >
+<img src='../img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
 </a>
 <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
 <ul class='nav navbar-nav navbar-right'>
 <li class='hidden'>
 <a href='#page-top'></a>
-</li>";
-for ($i = 1; $i <= $totalpaginas; $i++) {
+</li>
+<?php for ($i = 1; $i <= $totalpaginas; $i++) {
 $row = mysqli_fetch_array($resultadopaginas);
 $nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
 $referencia = htmlentities($row["referencia"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<li>
 <a class='page-scroll' href='#$referencia'>$nome</a>
 </li>";
-}
-echo "</ul>
+}?>
+</ul>
 </div>
 </div>
 </nav>
 <header>
 <div class='container'>
-<div class='intro-text'>";
-for ($i = 1; $i <= $totalhome; $i++) {
+<form action='salvar.php' method='POST' id='homeForm' novalidate>
+<div class='intro-text'>
+<?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
 $titulohome = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $botao = htmlentities($row["botao"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
 <div class='intro-lead-in'><input class='campo_titulohome' type='text' value='$titulohome'></div>
 <a class='btn btn-xl'><input class='campo_botaohome' type='text' value='$botao'></a>";
-}
-echo "</div>
-<input type='submit' class='salvarhome' formaction='salvar.php' value='Salvar Home'>
+}?>
+</div>
+<input type='submit' value='Salvar Home'>
+</form>
 </div>
 </header>
 <section id='about'>
 <div class='container'>
-<div class='row'>";
-for ($i = 1; $i <= $totalquemSomos; $i++) {
+<div class='row'>
+<?php for ($i = 1; $i <= $totalquemSomos; $i++) {
 $row = mysqli_fetch_array($resultadoquemSomos);
 $tituloQuemSomos = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $text = htmlentities($row["texto"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -150,8 +153,8 @@ for ($i = 1; $i <= $qtfoto; $i++) {
 $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
-}
-echo "</div>
+}?>
+</div>
 </div>
 </div>
 <a id='back-top' href='#'></a>
@@ -159,17 +162,17 @@ echo "</div>
 <section id='produts' class='bg-light-gray'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>";
-if($urlLing=="en.php"){
+<div class='col-lg-12 text-center'>
+<?php if($urlLing=="en.php"){
     echo "<h2 class='section-heading'>Produtos</h2>";
 }else{
     echo "<h2 class='section-heading'>Products</h2>";
-}
-echo "<h3 class='section-subheading text-muted'></h3>
+}?>
+<h3 class='section-subheading text-muted'></h3>
 </div>
 </div>
-<div class='row'>";
-for ($i = 1; $i <= $totalpro; $i++) {
+<div class='row'>
+<?php for ($i = 1; $i <= $totalpro; $i++) {
 $row = mysqli_fetch_array($resultadopro);
 $nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
 $nome = strTr($nom, $filtro);
@@ -190,26 +193,26 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <p class='text-muted'>$tipo</p>
 </div>
 </div>";
-}
-echo "</div>
+}?>
+</div>
 </div>
 </section>
 <section id='processes'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>";
-if($urlLing=="en.php"){
+<div class='col-lg-12 text-center'>
+<?php if($urlLing=="en.php"){
     echo "<h2 class='section-heading'>Processos</h2>";
 }else{
     echo "<h2 class='section-heading'>Processes</h2>";
-}
-echo"<h3 class='section-subheading text-muted'></h3>
+}?>
+<h3 class='section-subheading text-muted'></h3>
 </div>
 </div>
 <div class='row'>
 <div class='col-lg-12'>
-<ul class='timeline'>";
-for ($i = 1; $i <= $totalprocessos; $i++) {
+<ul class='timeline'>
+<?php for ($i = 1; $i <= $totalprocessos; $i++) {
 $row = mysqli_fetch_array($resultadoprocesses);
 $titul = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $titulo = strTr($titul, $filtro);
@@ -282,8 +285,7 @@ echo "<li>
 </div>
 </li>";
 }
-}
-echo "
+}?>
 </ul>
 </div>
 </div>
@@ -291,8 +293,8 @@ echo "
 </section>
 <aside class='clients' id='clients'>
 <div class='container'>
-<div class='row'>";
-for ($i = 1; $i <= $totalClientes; $i++) {
+<div class='row'>
+<?php for ($i = 1; $i <= $totalClientes; $i++) {
 $row = mysqli_fetch_array($resultadoClientes);
 $tituloCliente = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -301,24 +303,24 @@ echo "<div class='col-md-3 col-sm-6'>
 <img src='../img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente'>
 </a>
 </div>";
-}
-echo "</div>
+}?>
+</div>
 </div>
 </aside>
 <section id='certificates' class='bg-light-gray'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>";
-if($urlLing=="en.php"){
+<div class='col-lg-12 text-center'>
+<?php if($urlLing=="en.php"){
     echo "<h2 class='section-heading'>Certificados</h2>";
 }else{
     echo "<h2 class='section-heading'>Certificates</h2>";
-}
-echo "<h3 class='section-subheading text-muted'></h3>
+}?>
+<h3 class='section-subheading text-muted'></h3>
 </div>
 </div>
-<div class='row text-center'>";
-for ($i = 1; $i <= $totalCertificados; $i++) {
+<div class='row text-center'>
+<?php for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadoCertificados);
 $tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $tituloCertificado = strTr($tituloCertificad, $filtro);
@@ -332,28 +334,28 @@ echo "<div class='col-md-4 certificates'>
 </span>
 <h4 class='service-heading'>$tituloCertificado</h4>
 </div>";
-}
-echo "</div>
+}?>
+</div>
 </div>
 </section>
 <section id='location'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>";
-if($urlLing=="en.php"){
+<div class='col-lg-12 text-center'>
+<?php if($urlLing=="en.php"){
     echo "<h2 class='section-heading'>Localização</h2>
 <h3 class='section-subheading text-muted'>Endereço</h3>";
 }else{
     echo "<h2 class='section-heading'>Location</h2>
 <h3 class='section-subheading text-muted'>Address</h3>";
-}
-echo "</div>
+}?>
+</div>
 </div>
 <div class='row'>
 <div class='col-sm-4'>
 <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973' style='border:0'>
-</iframe>";
-for ($i = 1; $i <= $totalempresa; $i++) {
+</iframe>
+<?php for ($i = 1; $i <= $totalempresa; $i++) {
 $row = mysqli_fetch_array($resultadolocalizacao);
 $nome = htmlentities($row["empresa"], ENT_COMPAT, 'ISO-8859-1', true);
 $tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -381,23 +383,23 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <img src='../img/icons/icon-phone.png' alt='Telefone $nome'>
 <u> $telefone</u><br><br>
 </span> </p> <hr class='hrlocalizacao'>";
-}
-echo "</div>
+}?>
+</div>
 </div>
 </div>
 </section>
 <section id='contact'>
 <div class='container'>
 <div class='row'>
-<div class='col-lg-12 text-center'>";
-if($urlLing=="en.php"){
+<div class='col-lg-12 text-center'>
+<?php if($urlLing=="en.php"){
     echo "<h2 class='section-heading'>Contato</h2>
 <h3 class='section-subheading text-muted'>Fale Conosco</h3>";
 }else{
     echo "<h2 class='section-heading'>Contact</h2>
 <h3 class='section-subheading text-muted'>Contact Us</h3>";
-}
-echo "</div>
+}?>
+</div>
 </div>
 <div class='row'>
 <div class='col-lg-12'>
@@ -405,33 +407,33 @@ echo "</div>
 <form name='sentMessage' id='contactForm' novalidate>
 <div class='col-md-6'>
 <div class='form-group'>
-<input name='name' type='text' class='form-control' placeholder='$nomeContato *' id='name' required data-validation-required-message='$msgNomeContat'>
+<input name='name' type='text' class='form-control' placeholder='<?php echo $nomeContato ?> *' id='name' required data-validation-required-message='<?php echo $msgNomeContat ?>'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<input name='email' type='email' class='form-control' placeholder='$emailContato *' id='email' required data-validation-required-message='$msgEmailContat'>
+<input name='email' type='email' class='form-control' placeholder='<?php echo $emailContato ?> *' id='email' required data-validation-required-message='<?php echo $msgEmailContat ?>'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<input name='phone' type='tel' class='form-control' placeholder='$telefoneContato *' id='phone' required data-validation-required-message='$msgTelContat'>
+<input name='phone' type='tel' class='form-control' placeholder='<?php echo $telefoneContato ?> *' id='phone' required data-validation-required-message='<?php echo $msgTelContat ?>'>
 <p class='help-block text-danger'></p>
 </div>
 </div>
 <div class='col-md-6'>
 <div class='form-group'>
-<textarea name='message' class='form-control' placeholder='$mensagemContato *' id='message' required data-validation-required-message='$msgMensagemContat'></textarea>
+<textarea name='message' class='form-control' placeholder='<?php echo $mensagemContato ?> *' id='message' required data-validation-required-message='<?php echo $msgMensagemContat ?>'></textarea>
 <p class='help-block text-danger'></p>
 </div>
 </div>
 <div class='clearfix'></div>
 <div class='col-lg-12 text-center'>
 <div id='success'></div>
-<button type='submit' class='btn btn-xl'>$botaoM</button>
+<button type='submit' class='btn btn-xl'><?php echo $botaoM ?></button>
 </div> 
 </form>
 <h2 class='section-heading emailsdepart'>Email Departamentos:</h2>
-<ul class='grid cs-style-3'>";
-for ($i = 1; $i <= $totalcont; $i++) {
+<ul class='grid cs-style-3'>
+<?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadocont);
 $email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
 $departamento = htmlentities($row["departamento"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -443,8 +445,8 @@ echo "<li>
 </figcaption>
 </figure>
 </li>";
-}
-echo "</ul>
+}?>
+</ul>
 </div>
 </div>
 </div>
@@ -454,7 +456,7 @@ echo "</ul>
 <div class='container'>
 <div class='row'>
 <div class='col-md-4'>
-<span class='copyright'>Copyright <a href='$facebookdesenvolvedor' target='_blank'>&copy;</a>$empresa $ano </span>
+<span class='copyright'>Copyright <a href='<?php echo $facebookdesenvolvedor ?>' target='_blank'>&copy;</a><?php echo "$empresa $ano"; ?> </span>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline social-buttons'>
@@ -476,8 +478,8 @@ echo "</ul>
 </div>
 </div>
 </div>
-</footer>";
-for ($i = 1; $i <= $totalprodutos; $i++) {
+</footer>
+<?php for ($i = 1; $i <= $totalprodutos; $i++) {
 $row = mysqli_fetch_array($resultadoprodutos);
 $nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true); 
 $nome = strTr($nom, $filtro);
@@ -548,8 +550,8 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 </div>
 </div>
 </div>";
-}
-echo "<script src='../js/jquery.js'></script>
+}?>
+<script src='../js/jquery.js'></script>
 <script src='../js/bootstrap.min.js'></script>
 <script src='../js/jquery.easing.min.js'></script>
 <script src='../js/classie.js'></script>
@@ -558,4 +560,4 @@ echo "<script src='../js/jquery.js'></script>
 <script src='../js/contact_me.js'></script>
 <script src='../js/agency.js'></script>
 </body>
-</html>";
+</html>
