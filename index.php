@@ -82,7 +82,7 @@ $ano=date("Y");
 <img src='img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' />
 </a>
 </div>
-<a class='iconLing' href='$urlLing' >
+<a class='iconLing' href='<?php echo $urlLing ?>' >
 <img src='img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
 </a>
 <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
