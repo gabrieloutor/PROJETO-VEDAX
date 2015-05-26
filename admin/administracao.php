@@ -7,7 +7,6 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['password']) == 
 } 
 $logado = $_SESSION['login'];
 require "../config/config.ini";  
-$filtro = array('’' => ':', '&quot;' => '"', '&amp;' => '&', '&lt;' => '<', '&gt;' => '>');
 if (!isset($tipoLinguagem)){
     $urlLing="en.php";
     $img = "usa.png";
@@ -115,39 +114,39 @@ echo "<li>
 <div class='intro-text'>
 <?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
-$titulohome = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$botao = htmlentities($row["botao"], ENT_COMPAT, 'ISO-8859-1', true);
+$titulohome = $row["titulo"];
+$botao = $row["botao"];
 echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
-<div class='intro-lead-in'><input class='campo_titulohome' type='text' value='$titulohome'></div>
-<a class='btn btn-xl'><input class='campo_botaohome' type='text' value='$botao'></a>";
+<div class='intro-lead-in'><input class='campo_titulohome' name='titulo' type='text' value='$titulohome'></div>
+<a class='btn btn-xl'><input class='campo_botaohome' name='botao' type='text' value='$botao'></a>";
 }?>
 </div>
-<input type='submit' value='Salvar Home'>
+<input type='hidden' name='salvarHome' value='1'>
+<input type='submit' class='salvarhome' value='Salvar Home'>
 </form>
 </div>
 </header>
 <section id='about'>
 <div class='container'>
+<form action='salvar.php' method='POST' name='aboutForm' id='aboutForm' novalidate>
 <div class='row'>
 <?php for ($i = 1; $i <= $totalquemSomos; $i++) {
 $row = mysqli_fetch_array($resultadoquemSomos);
-$tituloQuemSomos = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$text = htmlentities($row["texto"], ENT_COMPAT, 'ISO-8859-1', true);
-$resultado = strTr($text, $filtro);
-$texto=nl2br($resultado);
-$fraseQuemSomos = htmlentities($row["frase"], ENT_COMPAT, 'ISO-8859-1', true);
-$textoFrase = htmlentities($row["textoFrase"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloQuemSomos = $row["titulo"];
+$texto = $row["texto"];
+$fraseQuemSomos = $row["frase"];
+$textoFrase = $row["textoFrase"];
 $qtfoto = 2;
 echo "<div class='col-lg-12 text-center'>
-<h2 class='section-heading'>$tituloQuemSomos</h2>
-<h3 class='section-subheading text-muted'>$fraseQuemSomos</h3>
+<h2 class='section-heading'><input class='campo_titulohome' name='tituloQuemSomos' type='text' value='$tituloQuemSomos'></h2>
+<h3 class='section-subheading text-muted'><input name='fraseQuemSomos' class='campo_titulohome' type='text' value='$fraseQuemSomos'></h3>
 </div>
 </div>
 <div class='row'>
-<p class='text-muted'>$texto</p>
+<p class='text-muted'><textarea name='textoQuemSomos' class='campo_texto' >$texto</textarea></p>
 <p> </p>
 <div class='finalempresa'>
-$textoFrase<br><br></div>
+<textarea name='textoFraseQuemSomos' class='campo_textoFrase' >$textoFrase</textarea><br><br></div>
 <div id='imgempresa'>";
 for ($i = 1; $i <= $qtfoto; $i++) {
 $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
@@ -155,6 +154,9 @@ echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
 }?>
 </div>
+<input type='hidden' name='salvarAbout' value='1'>
+<input type='submit' class='salvarabout' value='Salvar Quem Somos'>
+</form>
 </div>
 </div>
 <a id='back-top' href='#'></a>
@@ -462,7 +464,7 @@ echo "<li>
 <ul class='list-inline social-buttons'>
 <li><a href='#'><i class='fa fa-twitter'></i></a>
 </li>
-<li><a href='$facebook' target='_blank'><i class='fa fa-facebook'></i></a>
+<li><a href='<?php echo $facebook ?>' target='_blank'><i class='fa fa-facebook'></i></a>
 </li>
 <li><a href='#'><i class='fa fa-linkedin'></i></a>
 </li>
@@ -540,8 +542,8 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <div class='col-lg-8 col-lg-offset-2'>
 <div class='modal-body'>
 <h2>$tituloCertificado</h2>
-<object data='pdf/$pdfCertificado' type='application/pdf'>
-<a href='pdf/$pdfCertificado'>test.pdf</a>
+<object data='../pdf/$pdfCertificado' type='application/pdf'>
+<a href='../pdf/$pdfCertificado'>test.pdf</a>
 </object>
 <button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> $botaoPdf</button>
 </div>

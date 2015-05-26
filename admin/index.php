@@ -69,7 +69,7 @@ if (!isset($_POST['login'])){
                     <div class="col-lg-12">
                         <div class="row">
                             <form action="index.php" method="POST" id="loginForm" novalidate>
-                                <div class="col-md-6">
+                                <div class="col-md-6 formadmin">
                                     <div class="form-group">
                                         <input name="login" type="text" class="form-control" placeholder="Seu Login *" id="name" required data-validation-required-message="Por favor digite seu login.">
                                         <p class="help-block text-danger"></p>

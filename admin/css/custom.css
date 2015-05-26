@@ -1,5 +1,13 @@
-.col-md-6{
+.formadmin{
     left:25%;
+}
+.campo_texto{
+    width: 100%;
+    height: 250px;
+}
+.campo_textoFrase{
+    width: 100%;
+    text-align: center;
 }
 #success{
     width: 75%;
@@ -13,9 +21,13 @@
 .campo_botaohome,
 .campo_titulohome{
     color:black;
-    text-align: center;
+    text-align: center;;
 }
-input.salvarhome {
+.salvarabout{
+    margin-left:40%;
+}
+input.salvarhome,
+input.salvarabout{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     color: #050505;
@@ -45,12 +57,15 @@ input.salvarhome {
         0px -1px 0px rgba(000,000,000,0.4),
         0px 1px 0px rgba(255,255,255,0.3);
 }
-.salvarhome:hover {
+.salvarhome:hover,
+.salvarabout:hover{
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
 	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
 	background-color:#378de5;
-}.salvarhome:active {
+}
+.salvarhome:active,
+.salvarabout:active{
 	position:relative;
 	top:1px;
 }

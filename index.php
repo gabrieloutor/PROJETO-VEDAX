@@ -1,6 +1,5 @@
 <?php 
-require "config/config.ini";  
-$filtro = array('’' => ':', '&quot;' => '"', '&amp;' => '&', '&lt;' => '<', '&gt;' => '>');
+require "config/config.ini";
 if (!isset($tipoLinguagem)){
     $urlLing="en.php";
     $img = "usa.png";
@@ -107,8 +106,8 @@ echo "<li>
 <div class='intro-text'>
 <?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
-$titulohome = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$botao = htmlentities($row["botao"], ENT_COMPAT, 'ISO-8859-1', true);
+$titulohome = $row["titulo"];
+$botao = $row["botao"];
 echo "<div class='intro-lead-in'>$titulohome</div>
 <a href='#about' class='page-scroll btn btn-xl'>$botao</a>";
 }?>
@@ -120,12 +119,12 @@ echo "<div class='intro-lead-in'>$titulohome</div>
 <div class='row'>
 <?php for ($i = 1; $i <= $totalquemSomos; $i++) {
 $row = mysqli_fetch_array($resultadoquemSomos);
-$tituloQuemSomos = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$text = htmlentities($row["texto"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloQuemSomos = $row["titulo"];
+$text = $row["texto"];
 $resultado = strTr($text, $filtro);
 $texto=nl2br($resultado);
-$fraseQuemSomos = htmlentities($row["frase"], ENT_COMPAT, 'ISO-8859-1', true);
-$textoFrase = htmlentities($row["textoFrase"], ENT_COMPAT, 'ISO-8859-1', true);
+$fraseQuemSomos = $row["frase"];
+$textoFrase = $row["textoFrase"];
 $qtfoto = 2;
 echo "<div class='col-lg-12 text-center'>
 <h2 class='section-heading'>$tituloQuemSomos</h2>
@@ -451,7 +450,7 @@ echo "<li>
 <ul class='list-inline social-buttons'>
 <li><a href='#'><i class='fa fa-twitter'></i></a>
 </li>
-<li><a href='$facebook' target='_blank'><i class='fa fa-facebook'></i></a>
+<li><a href='<?php echo $facebook ?>' target='_blank'><i class='fa fa-facebook'></i></a>
 </li>
 <li><a href='#'><i class='fa fa-linkedin'></i></a>
 </li>
