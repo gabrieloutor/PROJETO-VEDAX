@@ -98,7 +98,7 @@ $ano=date("Y");
 </li>
 <?php for ($i = 1; $i <= $totalpaginas; $i++) {
 $row = mysqli_fetch_array($resultadopaginas);
-$nome = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
+$nome = replaceaccents($row["nome"]);
 $referencia = htmlentities($row["referencia"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<li>
 <a class='page-scroll' href='#$referencia'>$nome</a>
@@ -114,8 +114,8 @@ echo "<li>
 <div class='intro-text'>
 <?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
-$titulohome = $row["titulo"];
-$botao = $row["botao"];
+$titulohome = replaceaccents($row["titulo"]);
+$botao = replaceaccents($row["botao"]);
 echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
 <div class='intro-lead-in'><input class='campo_titulohome' name='titulo' type='text' value='$titulohome'></div>
 <a class='btn btn-xl'><input class='campo_botaohome' name='botao' type='text' value='$botao'></a>";
@@ -132,10 +132,10 @@ echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
 <div class='row'>
 <?php for ($i = 1; $i <= $totalquemSomos; $i++) {
 $row = mysqli_fetch_array($resultadoquemSomos);
-$tituloQuemSomos = $row["titulo"];
-$texto = $row["texto"];
-$fraseQuemSomos = $row["frase"];
-$textoFrase = $row["textoFrase"];
+$tituloQuemSomos = replaceaccents($row["titulo"]);
+$texto = replaceaccents($row["texto"]);
+$fraseQuemSomos = replaceaccents($row["frase"]);
+$textoFrase = replaceaccents($row["textoFrase"]);
 $qtfoto = 2;
 echo "<div class='col-lg-12 text-center'>
 <h2 class='section-heading'><input class='campo_titulohome' name='tituloQuemSomos' type='text' value='$tituloQuemSomos'></h2>
@@ -154,7 +154,7 @@ echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
 }?>
 </div>
-<input type='hidden' name='salvarAbout' value='1'>
+<input type='hidden' name='salvarAbout' value='1'><br/>
 <input type='submit' class='salvarabout' value='Salvar Quem Somos'>
 </form>
 </div>
@@ -562,3 +562,4 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <script src='../js/agency.js'></script>
 </body>
 </html>
+<?php mysqli_close($conexao)  ?>

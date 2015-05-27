@@ -1,6 +1,5 @@
 <?php
 header( 'Content-Type: text/html; charset=utf-8' );
-require "../config/config.ini";
 require "administracao.php";
 if(!isset($_POST['salvarHome'])==false){
     $titulo=htmlentities($_POST['titulo']);

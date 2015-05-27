@@ -1,5 +1,5 @@
 <?php
-$urlLing="index.php";
+$urlLing="administracao.php";
 $img = "bra.png";
 $tipoLinguagem = "BRA";
 $pag="paginas_en";
@@ -19,4 +19,4 @@ $msgMensagemContat="Please enter a message.";
 $botaoM="Send Message";
 $botaoProd="Close Product";
 $botaoPdf="Close PDF";
-include "index.php";
+include "administracao.php";

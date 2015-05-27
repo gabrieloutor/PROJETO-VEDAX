@@ -5,7 +5,8 @@ if (!isset($_POST['login'])){
     $error = "";
 }   else {
     $usuario = $_POST["login"];
-    $senha = $_POST["password"];
+    $senh = $_POST["password"];
+    $senha = sha1($senh);
     $query = "SELECT id, nome, senha, acesso FROM usuarios WHERE nome=? AND senha=?";
     if ($stmt = mysqli_prepare($conexao, $query)) {
         mysqli_stmt_bind_param($stmt, "ss", $usuario, $senha);
@@ -93,3 +94,4 @@ if (!isset($_POST['login'])){
     </body>
     
 </html>
+<?php mysqli_close($conexao)  ?>
