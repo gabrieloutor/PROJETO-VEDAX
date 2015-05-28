@@ -1,3 +1,13 @@
+.infoLogin{
+    margin-left: 15%;
+    position: fixed;
+    color:white;
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius:3px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
 .formadmin{
     left:25%;
 }
@@ -70,6 +80,9 @@ input.salvarabout{
 	top:1px;
 }
 @media(max-width:992px){
+    .campo_titulohome{
+        width: 90%;
+    }
     section#contact .form-group input.form-control{
         width: 50%;
         height: auto;
@@ -89,4 +102,16 @@ input.salvarabout{
         margin: 10px;
         padding: 10px;
     }
+}
+@media(min-width:992px){
+    #vedaxlogo{left:20px;}
+    .infoLogin{
+    margin-left: 5%;
+}
+}
+@media(min-width:1200px){
+    #vedaxlogo{left:90px;}
+    .infoLogin{
+    margin-left: 15%;
+}
 }
