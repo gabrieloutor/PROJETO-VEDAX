@@ -130,7 +130,7 @@ echo "<li>
 </nav>
 <header>
 <div class='container'>
-<form action='salvar.php' method='POST' name='homeForm' id='homeForm'>
+<form action='salvar.php' method='POST' name='homeForm'>
 <div class='intro-text'>
 <?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
@@ -149,20 +149,20 @@ echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
 </header>
 <section id='about'>
 <div class='container'>
+<form action='salvar.php' method='POST' name='salvarAbout' novalidate>
 <div class='row'>
-<form action='salvar.php' method='POST' name='aboutForm' id='aboutForm' novalidate>
 <div class='col-lg-12 text-center'>
 <h2 class='section-heading'><input class='campo_titulohome' name='tituloQuemSomos' type='text' value='<?php echo $tituloQuemSomos ?>'></h2>
 <h3 class='section-subheading text-muted'><input class='campo_titulohome' name='fraseQuemSomos' type='text' value='<?php echo $fraseQuemSomos ?>'></h3>
 </div>
 </div>
+<div class='row'>
 <?php for ($i = 1; $i <= $totalquemSomos; $i++) {
 $row = mysqli_fetch_array($resultadoquemSomos);
 $texto = replaceaccents($row["texto$db"]);
 $textoFrase = replaceaccents($row["textoFrase$db"]);
 $qtfoto = 2;
-echo "<div class='row'>
-<p class='text-muted'><textarea name='textoQuemSomos' class='campo_texto' >$texto</textarea></p>
+echo "<p class='text-muted'><textarea name='textoQuemSomos' class='campo_texto' >$texto</textarea></p>
 <p> </p>
 <div class='finalempresa'>
 <textarea name='textoFraseQuemSomos' class='campo_textoFrase' >$textoFrase</textarea><br><br></div>
@@ -174,6 +174,7 @@ echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }?>
 </div>
 </div>
+<input type='hidden' name='tipoLinguagem' value='<?php echo $tipoLinguagem ?>'>
 <input type='hidden' name='salvarAbout' value='1'><br/>
 <input type='submit' class='salvarabout' value='Salvar Quem Somos'>
 </form>
@@ -182,14 +183,14 @@ echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 </section>
 <section id='produts' class='bg-light-gray'>
 <div class='container'>
+<form action='salvar.php' method='POST' name='salvarProducts' novalidate>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<h2 class='section-heading'><?php echo $tituloProdutos; ?></h2>
-<h3 class='section-subheading text-muted'><?php echo $fraseProdutos; ?></h3>
+<h2 class='section-heading'><input class='campo_titulohome' name='tituloProdutos' type='text' value='<?php echo $tituloProdutos ?>'></h2>
+<h3 class='section-subheading text-muted'><input class='campo_titulohome' name='fraseProdutos' type='text' value='<?php echo $fraseProdutos ?>'></h3>
 </div>
 </div>
 <div class='row'>
-<form action='salvar.php' method='POST' name='aboutForm' id='aboutForm' novalidate>
 <?php for ($i = 1; $i <= $totalpro; $i++) {
 $row = mysqli_fetch_array($resultadopro);
 $nome = replaceaccents($row["nome$db"]);
@@ -205,21 +206,25 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <img src='../img/produts/inicial/$img' class='img-responsive imgproduts' alt='$nome $tipo'>
 </a>
 <div class='produts-caption'>
-<h4><input class='campo_botaohome' name='botao' type='text' value='$nome'></h4>
-<p class='text-muted'><input class='campo_botaohome' name='botao' type='text' value='$tipo'></p>
+<h4><input class='campo_botaohome' name='nome$i' type='text' value='$nome'></h4>
+<p class='text-muted'><input class='campo_botaohome' name='tipo$i' type='text' value='$tipo'></p>
 </div>
 </div>";
 }?>
-</form>
+<input type='hidden' name='tipoLinguagem' value='<?php echo $tipoLinguagem ?>'>
+<input type='hidden' name='salvarProducts' value='<?php echo $totalpro ?>'><br/>
+<input type='submit' class='salvarabout' value='Salvar Produto'>
 </div>
+</form>
 </div>
 </section>
 <section id='processes'>
 <div class='container'>
+<form action='salvar.php' method='POST' name='salvarProcessos' novalidate>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<h2 class='section-heading'><?php echo $tituloProcessos; ?></h2>
-<h3 class='section-subheading text-muted'><?php echo $fraseProcessos; ?></h3>
+<h2 class='section-heading'><input class='campo_titulohome' name='tituloProcessos' type='text' value='<?php echo $tituloProcessos ?>'></h2>
+<h3 class='section-subheading text-muted'><input class='campo_titulohome' name='fraseProcessos' type='text' value='<?php echo $fraseProcessos ?>'></h3>
 </div>
 </div>
 <div class='row'>
@@ -227,13 +232,10 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <ul class='timeline'>
 <?php for ($i = 1; $i <= $totalprocessos; $i++) {
 $row = mysqli_fetch_array($resultadoprocesses);
-$titul = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$titulo = strTr($titul, $filtro);
-$ex = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
-$expl = strTr($ex, $filtro);
-$explicacao=nl2br($expl);
+$titulo = replaceaccents($row["titulo$db"]);
+$explicacao = replaceaccents($row["explicacao$db"]);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-if($i%2==1 && $i!==$totalprocessos && $titulo!=="tratamento t&eacute;rmico"){
+if($i%2==1 && $i!==$totalprocessos && $titulo!=="tratamento térmico"){
 echo "
 <li>
 <div class='timeline-image'>
@@ -241,53 +243,53 @@ echo "
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
-<h4>$titulo</h4>
+<h4><input class='campo_botaohome' name='titulo$i' type='text' value='$titulo'></h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='text-muted'><textarea name='explicacao$i' class='campo_textoExplicacao' >$explicacao</textarea></p>
 </div>
 </div>
 </li>";
-}else if($i%2==0 && $i!==$totalprocessos && $titulo!=="tratamento t&eacute;rmico"){
+}else if($i%2==0 && $i!==$totalprocessos && $titulo!=="tratamento térmico"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
-<h4>$titulo</h4>
+<h4><input class='campo_botaohome' name='titulo$i' type='text' value='$titulo'></h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='text-muted'><textarea name='explicacao$i' class='campo_textoExplicacao' >$explicacao</textarea></p>
 </div>
 </div>
 </li>";
-}else if ($i%2==0 && $titulo=="tratamento t&eacute;rmico"){
+}else if ($i%2==0 && $titulo=="tratamento térmico"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
-<h4>$titulo (<a href='http://www.steeltrat.com.br' target='_blank'>Steeltrat</a>)</h4>
+<h4><input class='campo_botaohome' name='titulo$i' type='text' value='$titulo'> (<a href='http://www.steeltrat.com.br' target='_blank'>Steeltrat</a>)</h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='text-muted'><textarea name='explicacao$i' class='campo_textoExplicacao' >$explicacao</textarea></p>
 </div>
 </div>
 </li>";
 }
-else if ($i%2!==0 && $titulo=="tratamento t&eacute;rmico"){
+else if ($i%2!==0 && $titulo=="tratamento térmico"){
 echo "<li>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='../img/processes/$img' alt='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
-<h4>$titulo (<a href='http://www.steeltrat.com.br' target='_blank'>Steeltrat</a>)</h4>
+<h4><input class='campo_botaohome' name='titulo$i' type='text' value='$titulo'> (<a href='http://www.steeltrat.com.br' target='_blank'>Steeltrat</a>)</h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='text-muted'><textarea name='explicacao$i' class='campo_textoExplicacao' >$explicacao</textarea></p>
 </div>
 </div>
 </li>";
@@ -302,6 +304,10 @@ echo "<li>
 </ul>
 </div>
 </div>
+<input type='hidden' name='tipoLinguagem' value='<?php echo $tipoLinguagem ?>'>
+<br/><br/><input type='hidden' name='salvarProcessos' value='<?php echo $totalprocessos ?>'><br/>
+<input type='submit' class='salvarabout' value='Salvar Processo'>
+</form>
 </div>
 </section>
 <aside class='clients' id='clients'>
@@ -480,15 +486,11 @@ echo "<li>
 </footer>
 <?php for ($i = 1; $i <= $totalprodutos; $i++) {
 $row = mysqli_fetch_array($resultadoprodutos);
-$nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true); 
-$nome = strTr($nom, $filtro);
-$tip = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tipo = strTr($tip, $filtro);
-$des = htmlentities($row["descricao"], ENT_COMPAT, 'ISO-8859-1', true);
-$desc = strTr($des, $filtro);
+$nome = replaceaccents($row["nome"]);
+$tipo = replaceaccents($row["tipo"]);
+$desc = replaceaccents($row["descricao"]);
 $descricao=nl2br($desc);
-$exp = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
-$expl = strTr($exp, $filtro);
+$expl = replaceaccents($row["explicacao"]);
 $expli = stripslashes($expl);
 $explicacao=nl2br($expli);
 $img = htmlentities($row["imgprodut"], ENT_COMPAT, 'ISO-8859-1', true);
