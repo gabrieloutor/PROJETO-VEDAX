@@ -1,14 +1,9 @@
 <?php 
 require "config/config.ini";
 if (!isset($tipoLinguagem)){
+    $db="";
     $urlLing="en.php";
     $img = "usa.png";
-    $pag="paginas";
-    $hom="home";
-    $qms="quemSomos";
-    $prod="produtos";
-    $proc="processos";
-    $emp="empresa";
     $nomeContato="Seu Nome";
     $telefoneContato="Seu Telefone";
     $emailContato="Sua Mensagem";
@@ -21,25 +16,25 @@ if (!isset($tipoLinguagem)){
     $botaoProd="Fechar Produto";
     $botaoPdf="Fechar PDF";
 }
-$resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento");
+$resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento$db");
 $totalcont = mysqli_num_rows($resultadocont);
-$resultadopaginas = mysqli_query($conexao, "SELECT * from $pag");
+$resultadopaginas = mysqli_query($conexao, "SELECT * from paginas");
 $totalpaginas = mysqli_num_rows($resultadopaginas);
-$resultadohome = mysqli_query($conexao, "SELECT * from $hom");
+$resultadohome = mysqli_query($conexao, "SELECT * from home");
 $totalhome = mysqli_num_rows($resultadohome);
-$resultadoquemSomos = mysqli_query($conexao, "SELECT * from $qms");
+$resultadoquemSomos = mysqli_query($conexao, "SELECT * from quemsomos");
 $totalquemSomos = mysqli_num_rows($resultadoquemSomos);
-$resultadopro = mysqli_query($conexao, "SELECT * from $prod");
+$resultadopro = mysqli_query($conexao, "SELECT * from produtos");
 $totalpro = mysqli_num_rows($resultadopro);
-$resultadoprocesses = mysqli_query($conexao, "SELECT * from $proc");
+$resultadoprocesses = mysqli_query($conexao, "SELECT * from processos");
 $totalprocessos = mysqli_num_rows($resultadoprocesses);
 $resultadoClientes = mysqli_query($conexao, "SELECT * from clientes");
 $totalClientes = mysqli_num_rows($resultadoClientes);
 $resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
 $totalCertificados = mysqli_num_rows($resultadoCertificados);
-$resultadolocalizacao = mysqli_query($conexao, "SELECT * from $emp");
+$resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
 $totalempresa = mysqli_num_rows($resultadolocalizacao);
-$resultadoprodutos = mysqli_query($conexao, "SELECT * from $prod");
+$resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos");
 $totalprodutos = mysqli_num_rows($resultadoprodutos);
 $resultadocert = mysqli_query($conexao, "SELECT * from certificados");
 $ano=date("Y");
@@ -91,7 +86,31 @@ $ano=date("Y");
 </li>
 <?php for ($i = 1; $i <= $totalpaginas; $i++) {
 $row = mysqli_fetch_array($resultadopaginas);
-$nome = replaceaccents($row["nome"]);
+if($i==1){
+    $tituloQuemSomos=replaceaccents($row["titulo$db"]);
+    $fraseQuemSomos=replaceaccents($row["frase$db"]);
+}
+if($i==2){
+    $tituloProdutos=replaceaccents($row["titulo$db"]);
+    $fraseProdutos=replaceaccents($row["frase$db"]);
+}
+if($i==3){
+    $tituloProcessos=replaceaccents($row["titulo$db"]);
+    $fraseProcessos=replaceaccents($row["frase$db"]);
+}
+if($i==4){
+    $tituloCertificado=replaceaccents($row["titulo$db"]);
+    $fraseCertificado=replaceaccents($row["frase$db"]);
+}
+if($i==5){
+    $tituloLocalizacao=replaceaccents($row["titulo$db"]);
+    $fraseLocalizacao=replaceaccents($row["frase$db"]);
+}
+if($i==6){
+    $tituloContato=replaceaccents($row["titulo$db"]);
+    $fraseContato=replaceaccents($row["frase$db"]);
+}
+$nome = replaceaccents($row["nome$db"]);
 $referencia = htmlentities($row["referencia"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<li>
 <a class='page-scroll' href='#$referencia'>$nome</a>
@@ -106,8 +125,8 @@ echo "<li>
 <div class='intro-text'>
 <?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
-$titulohome = replaceaccents($row["titulo"]);
-$botao = replaceaccents($row["botao"]);
+$titulohome = replaceaccents($row["titulo$db"]);
+$botao = replaceaccents($row["botao$db"]);
 echo "<div class='intro-lead-in'>$titulohome</div>
 <a href='#about' class='page-scroll btn btn-xl'>$botao</a>";
 }?>
@@ -117,21 +136,19 @@ echo "<div class='intro-lead-in'>$titulohome</div>
 <section id='about'>
 <div class='container'>
 <div class='row'>
-<?php for ($i = 1; $i <= $totalquemSomos; $i++) {
-$row = mysqli_fetch_array($resultadoquemSomos);
-$tituloQuemSomos = replaceaccents($row["titulo"]);
-$text = replaceaccents($row["texto"]);
-$texto=nl2br($text);
-$fraseQuemSomos = replaceaccents($row["frase"]);
-$textoFrase = replaceaccents($row["textoFrase"]);
-$qtfoto = 2;
-echo "<div class='col-lg-12 text-center'>
-<h2 class='section-heading'>$tituloQuemSomos</h2>
-<h3 class='section-subheading text-muted'>$fraseQuemSomos</h3>
+<div class='col-lg-12 text-center'>
+<h2 class='section-heading'><?php echo $tituloQuemSomos ?></h2>
+<h3 class='section-subheading text-muted'><?php echo $fraseQuemSomos ?></h3>
 </div>
 </div>
 <div class='row'>
-<p class='text-muted'>$texto</p>
+<?php for ($i = 1; $i <= $totalquemSomos; $i++) {
+$row = mysqli_fetch_array($resultadoquemSomos);
+$text = replaceaccents($row["texto$db"]);
+$texto=nl2br($text);
+$textoFrase = replaceaccents($row["textoFrase$db"]);
+$qtfoto = 2;
+echo "<p class='text-muted'>$texto</p>
 <p> </p>
 <div class='finalempresa'>
 $textoFrase<br><br></div>
@@ -144,7 +161,7 @@ echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 </div>
 </div>
 </div>
-<a id='back-top' href='#'></a>
+<a class='back-top page-scroll' href='#'></a>
 </section>
 <section id='produts' class='bg-light-gray'>
 <div class='container'>
@@ -161,10 +178,8 @@ echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 <div class='row'>
 <?php for ($i = 1; $i <= $totalpro; $i++) {
 $row = mysqli_fetch_array($resultadopro);
-$nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-$nome = strTr($nom, $filtro);
-$tip = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tipo = strTr($tip, $filtro);
+$nome = replaceaccents($row["nome$db"]);
+$tipo = replaceaccents($row["tipo$db"]);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <a href='#produtsModal$i' class='produts-link' data-toggle='modal'>
@@ -201,10 +216,8 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <ul class='timeline'>
 <?php for ($i = 1; $i <= $totalprocessos; $i++) {
 $row = mysqli_fetch_array($resultadoprocesses);
-$titul = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$titulo = strTr($titul, $filtro);
-$ex = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
-$expl = strTr($ex, $filtro);
+$titulo = replaceaccents($row["titulo$db"]);
+$expl = replaceaccents($row["explicacao$db"]);
 $explicacao=nl2br($expl);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 if($i%2==1 && $i!==$totalprocessos && $titulo!=="tratamento t&eacute;rmico"){
@@ -283,7 +296,7 @@ echo "<li>
 <div class='row'>
 <?php for ($i = 1; $i <= $totalClientes; $i++) {
 $row = mysqli_fetch_array($resultadoClientes);
-$tituloCliente = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloCliente = replaceaccents($row["titulo"]);
 $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-3 col-sm-6'>
 <a href='#clients'>
@@ -309,10 +322,9 @@ echo "<div class='col-md-3 col-sm-6'>
 <div class='row text-center'>
 <?php for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadoCertificados);
-$tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tituloCertificado = strTr($tituloCertificad, $filtro);
+$tituloCertificado = replaceaccents($row["titulo"]);
 $imgCertificado = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-$abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$abreviacao = replaceaccents($row["abreviacao"]);
 echo "<div class='col-md-4 certificates'>
 <span class='fa-stack fa-4x'>
 <a href='#$abreviacao' class='produts-link' data-toggle='modal'>
@@ -344,15 +356,15 @@ echo "<div class='col-md-4 certificates'>
 </iframe>
 <?php for ($i = 1; $i <= $totalempresa; $i++) {
 $row = mysqli_fetch_array($resultadolocalizacao);
-$nome = htmlentities($row["empresa"], ENT_COMPAT, 'ISO-8859-1', true);
-$tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
+$nome = replaceaccents($row["empresa"]);
+$tipo = replaceaccents($row["tipo$db"]);
+$email = replaceaccents($row["email"]);
 $telefone = htmlentities($row["telefone"], ENT_COMPAT, 'ISO-8859-1', true);
 $telefone = "+" . substr($telefone, 0, 2) . " " . substr($telefone, 2, 2) . " " . substr($telefone, -8, 4) . "-" . substr($telefone, -4, 4); // TELEFONE
-$rua = htmlentities($row["rua"], ENT_COMPAT, 'ISO-8859-1', true); // RUA DA EMPRESA
+$rua = replaceaccents($row["rua"]);
 $nr = $row["nr"]; // NR DA EMPRESA
-$bairro = htmlentities($row["bairro"], ENT_COMPAT, 'ISO-8859-1', true); // BAIRRO DA EMPRESA
-$cidade = htmlentities($row["cidade"], ENT_COMPAT, 'ISO-8859-1', true); // CIDADE DA EMPRESA
+$bairro = replaceaccents($row["bairro"]);
+$cidade = replaceaccents($row["cidade"]);
 $estado = $row["estado"]; // ESTADO ONDE SE LOCALIZA A EMPRESA
 $cep = $row["cep"]; // CEP DA EMPRESA
 if (substr($cep, -4, 1) === '-') {
@@ -422,8 +434,8 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <ul class='grid cs-style-3'>
 <?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadocont);
-$email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
-$departamento = htmlentities($row["departamento"], ENT_COMPAT, 'ISO-8859-1', true);
+$email = replaceaccents($row["email"]);
+$departamento = replaceaccents($row["departamento$db"]);
 echo "<li>
 <figure>
 <h2 class='section-email-contact'>$departamento</h2>
@@ -468,15 +480,12 @@ echo "<li>
 </footer>
 <?php for ($i = 1; $i <= $totalprodutos; $i++) {
 $row = mysqli_fetch_array($resultadoprodutos);
-$nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true); 
-$nome = strTr($nom, $filtro);
-$tip = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tipo = strTr($tip, $filtro);
-$des = htmlentities($row["descricao"], ENT_COMPAT, 'ISO-8859-1', true);
-$desc = strTr($des, $filtro);
+
+$nome = replaceaccents($row["nome"]);
+$tipo = replaceaccents($row["tipo"]);
+$desc = replaceaccents($row["descricao"]);
 $descricao=nl2br($desc);
-$exp = htmlentities($row["explicacao"], ENT_COMPAT, 'ISO-8859-1', true);
-$expl = strTr($exp, $filtro);
+$expl = replaceaccents($row["explicacao"]);
 $expli = stripslashes($expl);
 $explicacao=nl2br($expli);
 $img = htmlentities($row["imgprodut"], ENT_COMPAT, 'ISO-8859-1', true);

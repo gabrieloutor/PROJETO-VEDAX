@@ -1,13 +1,8 @@
 <?php
+$db="_en";
 $urlLing="index.php";
 $img = "bra.png";
 $tipoLinguagem = "BRA";
-$pag="paginas_en";
-$hom="home_en";
-$qms="quemSomos_en";
-$prod="produtos_en";
-$proc="processos_en";
-$emp="empresa_en";
 $nomeContato="Your Name";
 $telefoneContato="Your Phone";
 $emailContato="Your Email";

@@ -13,7 +13,7 @@ if (!isset($_POST['login'])){
         mysqli_stmt_execute($stmt);
         mysqli_stmt_bind_result($stmt, $id, $nome, $password, $acesso);
         mysqli_stmt_fetch($stmt);
-        if ($usuario == $nome && $senha == $password) {
+        if (strcasecmp($usuario, $nome) == 0  && strcasecmp($senha, $password) == 0) {
             $_SESSION['login'] = $usuario;
             $_SESSION['password'] = $senha;
             header("Location: administracao.php");

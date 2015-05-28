@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['password']) == true)) { 
+if((!isset ($_SESSION['login']) == true) && (!isset ($_SESSION['password']) == true)) { 
     unset($_SESSION['login']); 
     unset($_SESSION['password']); 
     header('location:index.php'); 
@@ -8,14 +8,9 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['password']) == 
 $logado = $_SESSION['login'];
 require "../config/config.ini";  
 if (!isset($tipoLinguagem)){
+    $db="";
     $urlLing="en.php";
     $img = "usa.png";
-    $pag="paginas";
-    $hom="home";
-    $qms="quemSomos";
-    $prod="produtos";
-    $proc="processos";
-    $emp="empresa";
     $nomeContato="Seu Nome";
     $telefoneContato="Seu Telefone";
     $emailContato="Sua Mensagem";
@@ -28,25 +23,25 @@ if (!isset($tipoLinguagem)){
     $botaoProd="Fechar Produto";
     $botaoPdf="Fechar PDF";
 }
-$resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento");
+$resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento$db");
 $totalcont = mysqli_num_rows($resultadocont);
-$resultadopaginas = mysqli_query($conexao, "SELECT * from $pag");
+$resultadopaginas = mysqli_query($conexao, "SELECT * from paginas");
 $totalpaginas = mysqli_num_rows($resultadopaginas);
-$resultadohome = mysqli_query($conexao, "SELECT * from $hom");
+$resultadohome = mysqli_query($conexao, "SELECT * from home");
 $totalhome = mysqli_num_rows($resultadohome);
-$resultadoquemSomos = mysqli_query($conexao, "SELECT * from $qms");
+$resultadoquemSomos = mysqli_query($conexao, "SELECT * from quemsomos");
 $totalquemSomos = mysqli_num_rows($resultadoquemSomos);
-$resultadopro = mysqli_query($conexao, "SELECT * from $prod");
+$resultadopro = mysqli_query($conexao, "SELECT * from produtos");
 $totalpro = mysqli_num_rows($resultadopro);
-$resultadoprocesses = mysqli_query($conexao, "SELECT * from $proc");
+$resultadoprocesses = mysqli_query($conexao, "SELECT * from processos");
 $totalprocessos = mysqli_num_rows($resultadoprocesses);
 $resultadoClientes = mysqli_query($conexao, "SELECT * from clientes");
 $totalClientes = mysqli_num_rows($resultadoClientes);
 $resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
 $totalCertificados = mysqli_num_rows($resultadoCertificados);
-$resultadolocalizacao = mysqli_query($conexao, "SELECT * from $emp");
+$resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
 $totalempresa = mysqli_num_rows($resultadolocalizacao);
-$resultadoprodutos = mysqli_query($conexao, "SELECT * from $prod");
+$resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos");
 $totalprodutos = mysqli_num_rows($resultadoprodutos);
 $resultadocert = mysqli_query($conexao, "SELECT * from certificados");
 $ano=date("Y");
@@ -98,7 +93,31 @@ $ano=date("Y");
 </li>
 <?php for ($i = 1; $i <= $totalpaginas; $i++) {
 $row = mysqli_fetch_array($resultadopaginas);
-$nome = replaceaccents($row["nome"]);
+if($i==1){
+    $tituloQuemSomos=replaceaccents($row["titulo$db"]);
+    $fraseQuemSomos=replaceaccents($row["frase$db"]);
+}
+if($i==2){
+    $tituloProdutos=replaceaccents($row["titulo$db"]);
+    $fraseProdutos=replaceaccents($row["frase$db"]);
+}
+if($i==3){
+    $tituloProcessos=replaceaccents($row["titulo$db"]);
+    $fraseProcessos=replaceaccents($row["frase$db"]);
+}
+if($i==4){
+    $tituloCertificado=replaceaccents($row["titulo$db"]);
+    $fraseCertificado=replaceaccents($row["frase$db"]);
+}
+if($i==5){
+    $tituloLocalizacao=replaceaccents($row["titulo$db"]);
+    $fraseLocalizacao=replaceaccents($row["frase$db"]);
+}
+if($i==6){
+    $tituloContato=replaceaccents($row["titulo$db"]);
+    $fraseContato=replaceaccents($row["frase$db"]);
+}
+$nome = replaceaccents($row["nome$db"]);
 $referencia = htmlentities($row["referencia"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<li>
 <a class='page-scroll' href='#$referencia'>$nome</a>
@@ -110,39 +129,38 @@ echo "<li>
 </nav>
 <header>
 <div class='container'>
-<form action='salvar.php' method='POST' name='homeForm' id='homeForm' novalidate>
+<form action='salvar.php' method='POST' name='homeForm' id='homeForm'>
 <div class='intro-text'>
 <?php for ($i = 1; $i <= $totalhome; $i++) {
 $row = mysqli_fetch_array($resultadohome);
-$titulohome = replaceaccents($row["titulo"]);
-$botao = replaceaccents($row["botao"]);
+$titulohome = replaceaccents($row["titulo$db"]);
+$botao = replaceaccents($row["botao$db"]);
 echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
 <div class='intro-lead-in'><input class='campo_titulohome' name='titulo' type='text' value='$titulohome'></div>
 <a class='btn btn-xl'><input class='campo_botaohome' name='botao' type='text' value='$botao'></a>";
 }?>
 </div>
 <input type='hidden' name='salvarHome' value='1'>
+<input type='hidden' name='tipoLinguagem' value='<?php echo $tipoLinguagem ?>'>
 <input type='submit' class='salvarhome' value='Salvar Home'>
 </form>
 </div>
 </header>
 <section id='about'>
 <div class='container'>
-<form action='salvar.php' method='POST' name='aboutForm' id='aboutForm' novalidate>
 <div class='row'>
+<form action='salvar.php' method='POST' name='aboutForm' id='aboutForm' novalidate>
+<div class='col-lg-12 text-center'>
+<h2 class='section-heading'><input class='campo_titulohome' name='tituloQuemSomos' type='text' value='<?php echo $tituloQuemSomos ?>'></h2>
+<h3 class='section-subheading text-muted'><input class='campo_titulohome' name='fraseQuemSomos' type='text' value='<?php echo $fraseQuemSomos ?>'></h3>
+</div>
+</div>
 <?php for ($i = 1; $i <= $totalquemSomos; $i++) {
 $row = mysqli_fetch_array($resultadoquemSomos);
-$tituloQuemSomos = replaceaccents($row["titulo"]);
-$texto = replaceaccents($row["texto"]);
-$fraseQuemSomos = replaceaccents($row["frase"]);
-$textoFrase = replaceaccents($row["textoFrase"]);
+$texto = replaceaccents($row["texto$db"]);
+$textoFrase = replaceaccents($row["textoFrase$db"]);
 $qtfoto = 2;
-echo "<div class='col-lg-12 text-center'>
-<h2 class='section-heading'><input class='campo_titulohome' name='tituloQuemSomos' type='text' value='$tituloQuemSomos'></h2>
-<h3 class='section-subheading text-muted'><input name='fraseQuemSomos' class='campo_titulohome' type='text' value='$fraseQuemSomos'></h3>
-</div>
-</div>
-<div class='row'>
+echo "<div class='row'>
 <p class='text-muted'><textarea name='textoQuemSomos' class='campo_texto' >$texto</textarea></p>
 <p> </p>
 <div class='finalempresa'>
@@ -154,10 +172,10 @@ echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
 }?>
 </div>
+</div>
 <input type='hidden' name='salvarAbout' value='1'><br/>
 <input type='submit' class='salvarabout' value='Salvar Quem Somos'>
 </form>
-</div>
 </div>
 <a id='back-top' href='#'></a>
 </section>
@@ -165,21 +183,16 @@ echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<?php if($urlLing=="en.php"){
-    echo "<h2 class='section-heading'>Produtos</h2>";
-}else{
-    echo "<h2 class='section-heading'>Products</h2>";
-}?>
-<h3 class='section-subheading text-muted'></h3>
+<h2 class='section-heading'><?php echo $tituloProdutos; ?></h2>
+<h3 class='section-subheading text-muted'><?php echo $fraseProdutos; ?></h3>
 </div>
 </div>
 <div class='row'>
+<form action='salvar.php' method='POST' name='aboutForm' id='aboutForm' novalidate>
 <?php for ($i = 1; $i <= $totalpro; $i++) {
 $row = mysqli_fetch_array($resultadopro);
-$nom = htmlentities($row["nome"], ENT_COMPAT, 'ISO-8859-1', true);
-$nome = strTr($nom, $filtro);
-$tip = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tipo = strTr($tip, $filtro);
+$nome = replaceaccents($row["nome$db"]);
+$tipo = replaceaccents($row["tipo$db"]);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <a href='#produtsModal$i' class='produts-link' data-toggle='modal'>
@@ -191,11 +204,12 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <img src='../img/produts/inicial/$img' class='img-responsive imgproduts' alt='$nome $tipo'>
 </a>
 <div class='produts-caption'>
-<h4>$nome</h4>
-<p class='text-muted'>$tipo</p>
+<h4><input class='campo_botaohome' name='botao' type='text' value='$nome'></h4>
+<p class='text-muted'><input class='campo_botaohome' name='botao' type='text' value='$tipo'></p>
 </div>
 </div>";
 }?>
+</form>
 </div>
 </div>
 </section>
@@ -203,12 +217,8 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<?php if($urlLing=="en.php"){
-    echo "<h2 class='section-heading'>Processos</h2>";
-}else{
-    echo "<h2 class='section-heading'>Processes</h2>";
-}?>
-<h3 class='section-subheading text-muted'></h3>
+<h2 class='section-heading'><?php echo $tituloProcessos; ?></h2>
+<h3 class='section-subheading text-muted'><?php echo $fraseProcessos; ?></h3>
 </div>
 </div>
 <div class='row'>
@@ -313,12 +323,8 @@ echo "<div class='col-md-3 col-sm-6'>
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<?php if($urlLing=="en.php"){
-    echo "<h2 class='section-heading'>Certificados</h2>";
-}else{
-    echo "<h2 class='section-heading'>Certificates</h2>";
-}?>
-<h3 class='section-subheading text-muted'></h3>
+<h2 class='section-heading'><?php echo $tituloCertificado; ?></h2>
+<h3 class='section-subheading text-muted'><?php echo $fraseCertificado; ?></h3>
 </div>
 </div>
 <div class='row text-center'>
@@ -344,13 +350,8 @@ echo "<div class='col-md-4 certificates'>
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<?php if($urlLing=="en.php"){
-    echo "<h2 class='section-heading'>Localização</h2>
-<h3 class='section-subheading text-muted'>Endereço</h3>";
-}else{
-    echo "<h2 class='section-heading'>Location</h2>
-<h3 class='section-subheading text-muted'>Address</h3>";
-}?>
+<h2 class='section-heading'><?php echo $tituloLocalizacao; ?></h2>
+<h3 class='section-subheading text-muted'><?php echo $fraseLocalizacao; ?></h3>
 </div>
 </div>
 <div class='row'>
@@ -394,13 +395,8 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<?php if($urlLing=="en.php"){
-    echo "<h2 class='section-heading'>Contato</h2>
-<h3 class='section-subheading text-muted'>Fale Conosco</h3>";
-}else{
-    echo "<h2 class='section-heading'>Contact</h2>
-<h3 class='section-subheading text-muted'>Contact Us</h3>";
-}?>
+<h2 class='section-heading'><?php echo $tituloContato; ?></h2>
+<h3 class='section-subheading text-muted'><?php echo $fraseContato; ?></h3>
 </div>
 </div>
 <div class='row'>
