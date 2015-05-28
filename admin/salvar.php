@@ -36,7 +36,7 @@ if(!isset($_POST['salvarHome'])==false){
     for($i=1;$i<=$_POST['salvarProcessos']-1;$i++){
         $titulo=htmlentities($_POST["titulo$i"]);
         $explicacao=htmlentities($_POST["explicacao$i"]);
-        $dados = mysqli_query($conexao, "UPDATE processos SET titulo$db = '$titulo', explicacao$db='$explicacao' WHERE id = '$i'");
+        $dados = mysqli_query($conexao, "UPDATE processos SET titulo$db = '$titulo', explicacao$db='$explicacao' WHERE id = $i");
     }
 }else{
     echo "NÃO É FORM";
