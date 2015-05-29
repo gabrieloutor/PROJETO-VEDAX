@@ -11,37 +11,52 @@ if ($_POST['tipoLinguagem']!=="BRA"){
 
 if(!isset($_POST['salvarHome'])==false){
     $titulo=htmlentities($_POST['titulo']);
+    $titulo=addslashes($titulo);
     $botao=htmlentities($_POST['botao']);
     $mysqli_query = mysqli_query($conexao, "UPDATE `home` SET `titulo$db` = '$titulo', `botao$db` = '$botao' WHERE id = '1'");
 }else if (!isset($_POST['salvarAbout'])==false){
     $titulo=htmlentities($_POST['tituloQuemSomos']);
+    $titulo=addslashes($titulo);
     $frase=htmlentities($_POST['fraseQuemSomos']);
+    $frase=addslashes($frase);
     $pagina = mysqli_query($conexao, "UPDATE paginas SET titulo$db='$titulo', frase$db='$frase' WHERE id = '1'");
     $textoQuemSomos=htmlentities($_POST['textoQuemSomos']);
     $textoFraseQuemSomos=htmlentities($_POST['textoFraseQuemSomos']);
+    $textoQuemSomos=addslashes($textoQuemSomos);
+    $textoFraseQuemSomos=addslashes($textoFraseQuemSomos);
     $dados = mysqli_query($conexao, "UPDATE quemsomos SET texto$db='$textoQuemSomos', textoFrase$db='$textoFraseQuemSomos' WHERE id = '1'");
 }else if (!isset($_POST['salvarProducts'])==false){
     $titulo=htmlentities($_POST['tituloProdutos']);
     $frase=htmlentities($_POST['fraseProdutos']);
+    $titulo=addslashes($titulo);
+    $frase=addslashes($frase);
     $pagina = mysqli_query($conexao, "UPDATE paginas SET titulo$db='$titulo', frase$db='$frase' WHERE id = '2'");
     for($i=1;$i<=$_POST['salvarProducts'];$i++){
         $nome=htmlentities($_POST["nome$i"]);
+        $nome=addslashes($nome);
         $tipo=htmlentities($_POST["tipo$i"]);
+        $tipo=addslashes($tipo);
         $dados = mysqli_query($conexao, "UPDATE produtos SET nome$db = '$nome', tipo$db='$tipo' WHERE id = '$i'");
     }
 }else if (!isset($_POST['salvarProcessos'])==false){
     $titulo=htmlentities($_POST['tituloProcessos']);
     $frase=htmlentities($_POST['fraseProcessos']);
+    $titulo=addslashes($titulo);
+    $frase=addslashes($frase);
     $pagina = mysqli_query($conexao, "UPDATE paginas SET titulo$db='$titulo', frase$db='$frase' WHERE id = '3'");
     for($i=1;$i<=$_POST['salvarProcessos']-1;$i++){
         $titulo=htmlentities($_POST["titulo$i"]);
         $explicacao=htmlentities($_POST["explicacao$i"]);
+        $explicacao=addslashes($explicacao);
+        $titulo=addslashes($titulo);
         $dados = mysqli_query($conexao, "UPDATE processos SET titulo$db = '$titulo', explicacao$db='$explicacao' WHERE id = $i");
       
     }
 }else if (!isset($_POST['salvarLocalizacao'])==false){
     $titulo=htmlentities($_POST['tituloLocalizacao']);
     $frase=htmlentities($_POST['fraseLocalizacao']);
+    $titulo=addslashes($titulo);
+    $frase=addslashes($frase);
     $pagina = mysqli_query($conexao, "UPDATE paginas SET titulo$db='$titulo', frase$db='$frase' WHERE id = '5'");
     for($i=1;$i<=$_POST['salvarLocalizacao'];$i++){
         $empresa=htmlentities($_POST["empresa$i"]);
