@@ -355,10 +355,11 @@ echo "<div class='col-md-4 certificates'>
 </section>
 <section id='location'>
 <div class='container'>
+<form action='salvar.php' method='POST' name='salvarLocalizacao' novalidate>
 <div class='row'>
 <div class='col-lg-12 text-center'>
-<h2 class='section-heading'><?php echo $tituloLocalizacao; ?></h2>
-<h3 class='section-subheading text-muted'><?php echo $fraseLocalizacao; ?></h3>
+<h2 class='section-heading'><input class='campo_titulohome' name='tituloLocalizacao' type='text' value='<?php echo $tituloLocalizacao ?>'></h2>
+<h3 class='section-subheading text-muted'><input class='campo_titulohome' name='fraseLocalizacao' type='text' value='<?php echo $fraseLocalizacao ?>'></h3>
 </div>
 </div>
 <div class='row'>
@@ -367,35 +368,37 @@ echo "<div class='col-md-4 certificates'>
 </iframe>
 <?php for ($i = 1; $i <= $totalempresa; $i++) {
 $row = mysqli_fetch_array($resultadolocalizacao);
-$nome = htmlentities($row["empresa"], ENT_COMPAT, 'ISO-8859-1', true);
-$tipo = htmlentities($row["tipo"], ENT_COMPAT, 'ISO-8859-1', true);
-$email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
+$nome = replaceaccents($row["empresa"]);
+$tipo = replaceaccents($row["tipo$db"]);
 $telefone = htmlentities($row["telefone"], ENT_COMPAT, 'ISO-8859-1', true);
-$telefone = "+" . substr($telefone, 0, 2) . " " . substr($telefone, 2, 2) . " " . substr($telefone, -8, 4) . "-" . substr($telefone, -4, 4); // TELEFONE
-$rua = htmlentities($row["rua"], ENT_COMPAT, 'ISO-8859-1', true); // RUA DA EMPRESA
+$rua = replaceaccents($row["rua"]);
 $nr = $row["nr"]; // NR DA EMPRESA
-$bairro = htmlentities($row["bairro"], ENT_COMPAT, 'ISO-8859-1', true); // BAIRRO DA EMPRESA
-$cidade = htmlentities($row["cidade"], ENT_COMPAT, 'ISO-8859-1', true); // CIDADE DA EMPRESA
+$bairro = replaceaccents($row["bairro"]);
+$cidade = replaceaccents($row["cidade"]);
 $estado = $row["estado"]; // ESTADO ONDE SE LOCALIZA A EMPRESA
 $cep = $row["cep"]; // CEP DA EMPRESA
-if (substr($cep, -4, 1) === '-') {
-$endereco = $rua . ", " . $nr . " - " . $bairro . ", " . $cidade . " - " . $estado . ", " . $cep; // ENDERECO COMPLETO
-} else {
-$endereco = $rua . ", " . $nr . " - " . $bairro . ", " . $cidade . " - " . $estado . ", " . substr($cep, 0, 5) . "-" . substr($cep, -3); // ENDERECO COMPLETO
-}
-$coordenadasgps = $row["gpsX"] . ", " . $row["gpsY"];
 $urlmaps = htmlentities($row["urlmaps"], ENT_COMPAT, 'ISO-8859-1', true);
 $urlmaps = "http://maps.apple.com/?daddr=".$urlmaps;
 echo "<p class='localizacao'> <span style='font-size: 12pt;'>
-<u>$tipo</u> | $nome <br><br>
-<img src='../img/icons/icon-location.png' alt='Localização $nome'>
-<u><a href='$urlmaps'>$endereco</a></u><br><br>
+<u><input class='campo_botaohome' name='tipo$i' type='text' value='$tipo'></u> | <input class='campo_botaohome' name='empresa$i' type='text' value='$nome'> <br><br>
 <img src='../img/icons/icon-phone.png' alt='Telefone $nome'>
-<u> $telefone</u><br><br>
+Telefone: <input class='campo_botaohome' name='telefone$i' type='text' value='$telefone'><br> <u>*APENAS O NÚMERO COM DDD DO PAIS E DO ESTADO TUDO JUNTO</u></br></br>
+<img src='../img/icons/icon-location.png' alt='Localização $nome'>
+Rua: <input class='campo_botaohome' name='rua$i' type='text' value='$rua'><br><br>
+Nr: <input class='campo_botaohome' name='nr$i' type='text' value='$nr'><br><br>
+Bairro: <input class='campo_botaohome' name='bairro$i' type='text' value='$bairro'><br><br>
+Cidade: <input class='campo_botaohome' name='cidade$i' type='text' value='$cidade'><br><br>
+Estado: <input class='campo_botaohome' name='estado$i' type='text' value='$estado'><br><br>
+Cep: <input class='campo_botaohome' name='cep$i' type='text' value='$cep'><br><br>
+<br><br>
 </span> </p> <hr class='hrlocalizacao'>";
 }?>
 </div>
 </div>
+<input type='hidden' name='tipoLinguagem' value='<?php echo $tipoLinguagem ?>'>
+<br/><br/><input type='hidden' name='salvarLocalizacao' value='<?php echo $totalempresa ?>'><br/>
+<input type='submit' class='salvarabout' value='Salvar Localizacao'>
+</form>
 </div>
 </section>
 <section id='contact'>

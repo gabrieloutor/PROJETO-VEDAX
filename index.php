@@ -358,7 +358,6 @@ echo "<div class='col-md-4 certificates'>
 $row = mysqli_fetch_array($resultadolocalizacao);
 $nome = replaceaccents($row["empresa"]);
 $tipo = replaceaccents($row["tipo$db"]);
-$email = replaceaccents($row["email"]);
 $telefone = htmlentities($row["telefone"], ENT_COMPAT, 'ISO-8859-1', true);
 $telefone = "+" . substr($telefone, 0, 2) . " " . substr($telefone, 2, 2) . " " . substr($telefone, -8, 4) . "-" . substr($telefone, -4, 4); // TELEFONE
 $rua = replaceaccents($row["rua"]);
@@ -372,7 +371,6 @@ $endereco = $rua . ", " . $nr . " - " . $bairro . ", " . $cidade . " - " . $esta
 } else {
 $endereco = $rua . ", " . $nr . " - " . $bairro . ", " . $cidade . " - " . $estado . ", " . substr($cep, 0, 5) . "-" . substr($cep, -3); // ENDERECO COMPLETO
 }
-$coordenadasgps = $row["gpsX"] . ", " . $row["gpsY"];
 $urlmaps = htmlentities($row["urlmaps"], ENT_COMPAT, 'ISO-8859-1', true);
 $urlmaps = "http://maps.apple.com/?daddr=".$urlmaps;
 echo "<p class='localizacao'> <span style='font-size: 12pt;'>

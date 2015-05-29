@@ -37,6 +37,23 @@ if(!isset($_POST['salvarHome'])==false){
         $titulo=htmlentities($_POST["titulo$i"]);
         $explicacao=htmlentities($_POST["explicacao$i"]);
         $dados = mysqli_query($conexao, "UPDATE processos SET titulo$db = '$titulo', explicacao$db='$explicacao' WHERE id = $i");
+      
+    }
+}else if (!isset($_POST['salvarLocalizacao'])==false){
+    $titulo=htmlentities($_POST['tituloLocalizacao']);
+    $frase=htmlentities($_POST['fraseLocalizacao']);
+    $pagina = mysqli_query($conexao, "UPDATE paginas SET titulo$db='$titulo', frase$db='$frase' WHERE id = '5'");
+    for($i=1;$i<=$_POST['salvarLocalizacao'];$i++){
+        $empresa=htmlentities($_POST["empresa$i"]);
+        $tipo=htmlentities($_POST["tipo$i"]);
+        $telefone=htmlentities($_POST["telefone$i"]);
+        $rua=htmlentities($_POST["rua$i"]);
+        $nr=htmlentities($_POST["nr$i"]);
+        $bairro=htmlentities($_POST["bairro$i"]);
+        $cidade=htmlentities($_POST["cidade$i"]);
+        $estado=htmlentities($_POST["estado$i"]);
+        $cep=htmlentities($_POST["cep$i"]);
+        $dados = mysqli_query($conexao, "UPDATE empresa SET empresa = '$empresa', tipo$db='$tipo', telefone='$telefone', rua='$rua', nr='$nr', bairro='$bairro', cidade='$cidade', estado='$estado', cep='$cep' WHERE id = $i");
     }
 }else{
     echo "NÃO É FORM";
