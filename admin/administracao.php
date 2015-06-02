@@ -317,7 +317,7 @@ echo "<li>
 $row = mysqli_fetch_array($resultadoClientes);
 $tituloCliente = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-echo "<div class='col-md-3 col-sm-6'>
+echo "<div class='col-md-3 col-sm-6 clients'>
 <a href='#clients'>
 <img src='../img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente'>
 </a>
