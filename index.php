@@ -49,28 +49,6 @@ $ano=date("Y");
 <meta name='keywords' content='vedax,aço,conexões,flanges,forjados,carbono,empresa,produtos'>
 <meta name='author' content='<?php echo $nomedesenvolvedor ?>'>
 <title><?php echo $empresa ?></title>
-<script type="text/javascript">
-function id(el) {
-	return document.getElementById(el);
-}
-function hide(el) {
-	id(el).style.display = 'none';//escondendo tudo
-}
-window.onload = function() {
-	id('all').style.display = 'block';//liberando qndo terminar
-	hide('loading');
-}
-</script>
-<style>
-#loading { 
-	display: block;
-	width: 200px;
-}
-.content { margin: 0 auto; }
-#all {
-	width: 1280px; overflow: hidden;
-}
-</style>
 <link rel='icon' href='img/favicon.ico' />
 <link href='css/bootstrap.min.css' rel='stylesheet'>
 <link href='css/bootstrap.css' rel='stylesheet'>
@@ -84,6 +62,7 @@ window.onload = function() {
 <link rel='stylesheet' type='text/css' href='css/component.css' />
 <script src='js/modernizr.custom.js'></script>
 </head>
+<div id='loader'></div>
 <body id='page-top' class='index'>
 <nav class='navbar navbar-default navbar-fixed-top'>
 <div class='container'>
@@ -570,8 +549,12 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <script src='js/jqBootstrapValidation.js'></script>
 <script src='js/contact_me.js'></script>
 <script src='js/agency.js'></script>
-<script type="text/javascript">
-	hide('all');
+<script type='text/javascript'>
+		// Este evendo é acionado após o carregamento da página
+		jQuery(window).load(function() {
+			//Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+			jQuery("#loader").delay(2000).fadeOut("slow");
+		});
 </script>
 </body>
 </html>
