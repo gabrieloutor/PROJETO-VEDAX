@@ -6,7 +6,7 @@ if (!isset($tipoLinguagem)){
     $img = "usa.png";
     $nomeContato="Seu Nome";
     $telefoneContato="Seu Telefone";
-    $emailContato="Sua Mensagem";
+    $emailContato="Sua Email";
     $mensagemContato="Mensagem";
     $msgNomeContat="Por favor digite seu nome";
     $msgEmailContat="Por favor digite seu email";
