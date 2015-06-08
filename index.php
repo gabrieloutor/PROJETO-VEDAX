@@ -62,8 +62,8 @@ $ano=date("Y");
 <link rel='stylesheet' type='text/css' href='css/component.css' />
 <script src='js/modernizr.custom.js'></script>
 </head>
-<div id='loader'></div>
 <body id='page-top' class='index'>
+<div id='loader'></div>
 <nav class='navbar navbar-default navbar-fixed-top'>
 <div class='container'>
 <div class='navbar-header page-scroll'>
@@ -74,7 +74,7 @@ $ano=date("Y");
 <span class='icon-bar'></span>
 </button>
 <a class='navbar-brand page-scroll' href='#page-top' >
-<img src='img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' />
+<img src='img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
 </a>
 <a class='iconLing' href='<?php echo $urlLing ?>' >
 <img src='img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
@@ -162,7 +162,7 @@ echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 </div>
 </div>
 </div>
-<a class='back-top page-scroll' href='#'></a>
+<a class='back-top page-scroll' href='#page-top'></a>
 </section>
 <section id='produts' class='bg-light-gray'>
 <div class='container'>
@@ -189,7 +189,7 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <i class='fa fa-plus fa-3x'></i>
 </div>
 </div>
-<img src='img/produts/inicial/$img' class='img-responsive imgproduts' alt='$nome $tipo'>
+<img src='img/produts/inicial/$img' class='img-responsive imgproduts' alt='$nome $tipo' title='$nome $tipo'>
 </a>
 <div class='produts-caption'>
 <h4>$nome</h4>
@@ -225,7 +225,7 @@ if($i%2==1 && $i!==$totalprocessos && $titulo!=="tratamento térmico"){
 echo "
 <li>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -239,7 +239,7 @@ echo "
 }else if($i%2==0 && $i!==$totalprocessos && $titulo!=="tratamento térmico"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -253,7 +253,7 @@ echo "<li class='timeline-inverted'>
 }else if ($i%2==0 && $titulo=="tratamento térmico"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -268,7 +268,7 @@ echo "<li class='timeline-inverted'>
 else if ($i%2!==0 && $titulo=="tratamento térmico"){
 echo "<li>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
 </div>
 <div class='timeline-panel'>
 <div class='timeline-heading'>
@@ -282,7 +282,7 @@ echo "<li>
 }else if($i==$totalprocessos){
 echo "<li>
 <div class='timeline-image'>
-<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo'>
+<img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
 </div>
 </li>";
 }
@@ -301,7 +301,7 @@ $tituloCliente = replaceaccents($row["titulo"]);
 $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-3 col-sm-6 clients'>
 <a href='#clients'>
-<img src='img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente'>
+<img src='img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente' title='$tituloCliente'>
 </a>
 </div>";
 }?>
@@ -329,7 +329,7 @@ $abreviacao = replaceaccents($row["abreviacao"]);
 echo "<div class='col-md-4 certificates'>
 <span class='fa-stack fa-4x'>
 <a href='#$abreviacao' class='produts-link' data-toggle='modal'>
-<img src='img/certificates/$imgCertificado' class='imgcertificates' alt='$tituloCertificado'>
+<img src='img/certificates/$imgCertificado' class='imgcertificates' alt='$tituloCertificado' title='$tituloCertificado'>
 </a>
 </span>
 <h4 class='service-heading'>$tituloCertificado</h4>
@@ -497,7 +497,7 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <div class='modal-body'>
 <h2>$nome</h2>
 <p class='item-intro text-muted'>$tipo</p>
-<img class='img-responsive img-centered imgprodut' src='img/produts/$img' alt='$nome $tipo'>
+<img class='img-responsive img-centered imgprodut' src='img/produts/$img' alt='$nome $tipo' title='$nome $tipo' >
 <p>$descricao</p>
 <p>
 $explicacao
