@@ -3,7 +3,6 @@
 date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
-// Using Awesome https://github.com/PHPMailer/PHPMailer
 require '../PHPMailer/PHPMailerAutoload.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
