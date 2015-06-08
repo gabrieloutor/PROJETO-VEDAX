@@ -1,5 +1,6 @@
 <?php require "../config/config.ini"; ?>
 <?php
+setlocale (LC_ALL, 'pt_BR');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 // Using Awesome https://github.com/PHPMailer/PHPMailer
