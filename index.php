@@ -61,6 +61,15 @@ $ano=date("Y");
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 <link rel='stylesheet' type='text/css' href='css/component.css' />
 <script src='js/modernizr.custom.js'></script>
+<script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 </head>
 <body id='page-top' class='index'>
 <div id='loader'></div>
@@ -460,6 +469,7 @@ echo "<li>
 <ul class='list-inline social-buttons'>
 <li><a href='<?php echo $facebook ?>' target='_blank'><i class='fa fa-facebook'></i></a>
 </li>
+<div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 </ul>
 </div>
 <div class='col-md-4'>
