@@ -80,13 +80,12 @@ $ano=date("Y");
 <span class='icon-bar'></span>
 </button>
 <a class='navbar-brand page-scroll' href='#page-top' >
-<img src='../img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' />
+<img src='img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
+</a>
+<a class='iconLing' href='<?php echo $urlLing ?>' >
+<img src='img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
 </a>
 </div>
-<a class='iconLing' href='<?php echo $urlLing ?>' >
-<img src='../img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
-</a>
-<div class='infoLogin'> Olá, <u><?php echo $_SESSION['loginInfor'] ?></u></div>
 <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
 <ul class='nav navbar-nav navbar-right'>
 <li class='hidden'>
