@@ -19,7 +19,8 @@ iframe{float:right;width:40%;height:160px;}
 .vedaxempresa{width:49%;height:400px;text-align:center;}
 .enderecocontato{font-size:12pt;color:white;text-decoration:none;}
 .message{float:right;}
-@media(max-width:768px){div.col-md-4.certificates{left:25%;}
+@media(max-width:768px){.imgprodut{height:250px;width:auto;}
+div.col-md-4.certificates{left:25%;}
 .grid{padding: 0px 10px 100px 10px; }
 section h2.emailsdepart{margin-left: 10px; line-height: 70px;font-size:30px;}
 .hrlocalizacao{margin-top:20px;margin-bottom:20px;border:0px;width:100%;border-top:3px solid #eee}
@@ -64,7 +65,7 @@ img#iconLinguagem{position: fixed; left: 96.5%;}
 iframe{float:left;margin-bottom:20px;width:100%;height:200px;}
 .img-circle{float:left;width:140px;height:140px;border-radius:50%;}
 }
-@media(min-width:1200px){
+@media(min-width:1200px){.imgprodut{height:500px;width:auto;}
 .container-fluid>.navbar-collapse, .container-fluid>.navbar-header,
 .container>.navbar-collapse, .container>.navbar-header{margin-right:0;margin-left:0}
 img#iconLinguagem{position: fixed; left: 96.5%;}
