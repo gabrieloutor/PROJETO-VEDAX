@@ -319,7 +319,7 @@ $tituloCliente = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
 $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-3 col-sm-6 clients'>
 <a href='#clients'>
-<img src='../img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente'>
+<img src='../img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente' title='$tituloCliente' >
 </a>
 </div>";
 }?>
@@ -344,7 +344,7 @@ $abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-4 certificates'>
 <span class='fa-stack fa-4x'>
 <a href='#$abreviacao' class='produts-link' data-toggle='modal'>
-<img src='../img/certificates/$imgCertificado' class='imgcertificates' alt='$tituloCertificado'>
+<img src='../img/certificates/$imgCertificado' class='imgcertificates' alt='$tituloCertificado' title='$tituloCertificado'>
 </a>
 </span>
 <h4 class='service-heading'>$tituloCertificado</h4>
