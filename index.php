@@ -522,11 +522,10 @@ $explicacao
 }
 for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadocert);
-$tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tituloCertificado = strTr($tituloCertificad, $filtro);
-$imgCertificado = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-$pdfCertificado = htmlentities($row["pdf"], ENT_COMPAT, 'ISO-8859-1', true);
-$abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloCertificado = replaceaccents($row["titulo"]);
+$imgCertificado = replaceaccents($row["img"]);
+$pdfCertificado = replaceaccents($row["pdf"]);
+$abreviacao = replaceaccents($row["abreviacao"]);
 echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='dialog' aria-hidden='true'>
 <div class='modal-content'>
 <div class='close-modal' data-dismiss='modal'>

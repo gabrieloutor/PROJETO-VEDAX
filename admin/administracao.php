@@ -443,8 +443,8 @@ Cep: <input class='campo_botaohome' name='cep$i' type='text' value='$cep'><br><b
 <ul class='grid cs-style-3'>
 <?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadocont);
-$email = htmlentities($row["email"], ENT_COMPAT, 'ISO-8859-1', true);
-$departamento = htmlentities($row["departamento"], ENT_COMPAT, 'ISO-8859-1', true);
+$email = replaceaccents($row["email"]);
+$departamento = replaceaccents($row["departamento$db"]);
 echo "<li>
 <figure>
 <h2 class='section-email-contact'>$departamento</h2>
@@ -468,12 +468,9 @@ echo "<li>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline social-buttons'>
-<li><a href='#'><i class='fa fa-twitter'></i></a>
-</li>
 <li><a href='<?php echo $facebook ?>' target='_blank'><i class='fa fa-facebook'></i></a>
 </li>
-<li><a href='#'><i class='fa fa-linkedin'></i></a>
-</li>
+<div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 </ul>
 </div>
 <div class='col-md-4'>
@@ -526,11 +523,10 @@ $explicacao
 }
 for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadocert);
-$tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tituloCertificado = strTr($tituloCertificad, $filtro);
-$imgCertificado = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-$pdfCertificado = htmlentities($row["pdf"], ENT_COMPAT, 'ISO-8859-1', true);
-$abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$tituloCertificado = replaceaccents($row["titulo"]);
+$imgCertificado = replaceaccents($row["img"]);
+$pdfCertificado = replaceaccents($row["pdf"]);
+$abreviacao = replaceaccents($row["abreviacao"]);
 echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='dialog' aria-hidden='true'>
 <div class='modal-content'>
 <div class='close-modal' data-dismiss='modal'>
