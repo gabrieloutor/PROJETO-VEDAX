@@ -71,6 +71,12 @@ $ano=date("Y");
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 </head>
+<style type="text/css">
+::-webkit-scrollbar {width:10px;}
+::-webkit-scrollbar-track {background:#efefef;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.1);}
+::-webkit-scrollbar-thumb {border-radius:5px;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.5);}
+::-webkit-scrollbar-thumb {background:#007cd2;}
+</style>
 <body id='page-top' class='index'>
 <div id='loader'></div>
 <nav class='navbar navbar-default navbar-fixed-top'>
