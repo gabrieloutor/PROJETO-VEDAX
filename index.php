@@ -149,7 +149,7 @@ echo "<div class='intro-lead-in'>$titulohome</div>
 </div>
 </div>
 </header>
-<section id='about'>
+<section id='about' class='bg-light-gray'>
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
@@ -179,7 +179,7 @@ echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 </div>
 <a class='back-top page-scroll' href='#page-top'></a>
 </section>
-<section id='produts' class='bg-light-gray'>
+<section id='produts' >
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
@@ -215,7 +215,7 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 </div>
 </div>
 </section>
-<section id='processes'>
+<section id='processes' class='bg-light-gray'>
 <div class='container'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
