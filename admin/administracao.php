@@ -336,10 +336,9 @@ echo "<div class='col-md-3 col-sm-6 clients'>
 <div class='row text-center'>
 <?php for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadoCertificados);
-$tituloCertificad = htmlentities($row["titulo"], ENT_COMPAT, 'ISO-8859-1', true);
-$tituloCertificado = strTr($tituloCertificad, $filtro);
+$tituloCertificado = replaceaccents($row["titulo"]);
 $imgCertificado = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-$abreviacao = htmlentities($row["abreviacao"], ENT_COMPAT, 'ISO-8859-1', true);
+$abreviacao = replaceaccents($row["abreviacao"]);
 echo "<div class='col-md-4 certificates'>
 <span class='fa-stack fa-4x'>
 <a href='#$abreviacao' class='produts-link' data-toggle='modal'>
