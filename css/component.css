@@ -45,7 +45,9 @@
 	color: #fff;
 }
 
-.grid figcaption span:before {
+.grid figcaption span:before,
+.grid figcaption span:hover,
+.grid figcaption span:focus{
 	content: 'by ';
 }
 
