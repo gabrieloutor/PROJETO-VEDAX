@@ -392,7 +392,7 @@ $urlmaps = "http://maps.apple.com/?daddr=".$urlmaps;
 echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <u>$tipo</u> | $nome <br><br>
 <img src='img/icons/icon-location.png' alt='Localização $nome'>
-<u><a href='$urlmaps'>$endereco</a></u><br><br>
+<u><a href='$urlmaps' target='_blank'>$endereco</a></u><br><br>
 <img src='img/icons/icon-phone.png' alt='Telefone $nome'>
 <u> $telefone</u><br><br>
 </span> </p> <hr class='hrlocalizacao'>";
@@ -480,7 +480,7 @@ echo "<li>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline quicklinks'>
-<li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br'><img src='img/google-safe-browsing.png' alt ='' /></a>
+<li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br' target='_blank' ><img src='img/google-safe-browsing.png' alt ='' /></a>
 </li>
 </ul>
 </div>
