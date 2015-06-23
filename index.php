@@ -70,13 +70,13 @@ $ano=date("Y");
             js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-</head>
 <style type="text/css">
 ::-webkit-scrollbar {width:10px;}
 ::-webkit-scrollbar-track {background:#efefef;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.1);}
 ::-webkit-scrollbar-thumb {border-radius:5px;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.5);}
 ::-webkit-scrollbar-thumb {background:#007cd2;}
 </style>
+</head>
 <body id='page-top' class='index'>
 <div id='loader'></div>
 <nav class='navbar navbar-default navbar-fixed-top'>
@@ -475,7 +475,8 @@ echo "<li>
 <ul class='list-inline social-buttons'>
 <li><a href='<?php echo $facebook ?>' target='_blank'><i class='fa fa-facebook'></i></a>
 </li>
-<div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+<li><div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+</li>
 </ul>
 </div>
 <div class='col-md-4'>

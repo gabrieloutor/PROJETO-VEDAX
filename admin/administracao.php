@@ -61,13 +61,28 @@ $ano=date("Y");
 <link href='../css/agency.css' rel='stylesheet'>
 <link href='../css/custom.css' rel='stylesheet'>
 <link href='css/custom.css' rel='stylesheet'>
-<link href='font-awesome/../css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+<link href='font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 <link rel='stylesheet' type='text/css' href='../css/component.css' />
 <script src='../js/modernizr.custom.js'></script>
+<script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+<style type="text/css">
+::-webkit-scrollbar {width:10px;}
+::-webkit-scrollbar-track {background:#efefef;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.1);}
+::-webkit-scrollbar-thumb {border-radius:5px;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.5);}
+::-webkit-scrollbar-thumb {background:#007cd2;}
+</style>
 </head>
 <body id='page-top' class='index'>
 <nav class='navbar navbar-default navbar-fixed-top'>
@@ -80,10 +95,10 @@ $ano=date("Y");
 <span class='icon-bar'></span>
 </button>
 <a class='navbar-brand page-scroll' href='#page-top' >
-<img src='img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
+<img src='../img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
 </a>
 <a class='iconLing' href='<?php echo $urlLing ?>' >
-<img src='img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
+<img src='../img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
 </a>
 </div>
 <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
@@ -468,14 +483,13 @@ echo "<li>
 <ul class='list-inline social-buttons'>
 <li><a href='<?php echo $facebook ?>' target='_blank'><i class='fa fa-facebook'></i></a>
 </li>
-<div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+<li><div class="fb-like" data-href="<?php echo $facebook; ?>" data-width="40" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+</li>
 </ul>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline quicklinks'>
-<li><a href='#'>Privacy Policy</a>
-</li>
-<li><a href='#'>Terms of Use</a>
+<li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br' target='_blank' ><img src='../img/google-safe-browsing.png' alt ='' /></a>
 </li>
 </ul>
 </div>
