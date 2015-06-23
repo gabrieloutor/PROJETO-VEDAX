@@ -480,9 +480,7 @@ echo "<li>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline quicklinks'>
-<li><a href='#'>Privacy Policy</a>
-</li>
-<li><a href='#'>Terms of Use</a>
+<li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br'><img src='img/google-safe-browsing.png' alt ='' /></a>
 </li>
 </ul>
 </div>
