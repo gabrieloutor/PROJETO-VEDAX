@@ -14,4 +14,5 @@ $msgMensagemContat="Please enter a message.";
 $botaoM="Send Message";
 $botaoProd="Close Product";
 $botaoPdf="Close PDF";
+$emailsM="Emails department";
 include "index.php";

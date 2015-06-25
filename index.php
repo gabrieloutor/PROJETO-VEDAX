@@ -15,6 +15,7 @@ if (!isset($tipoLinguagem)){
     $botaoM="Enviar Mensagem";
     $botaoProd="Fechar Produto";
     $botaoPdf="Fechar PDF";
+    $emailsM="Emails por departamentos";
 }
 $resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento$db");
 $totalcont = mysqli_num_rows($resultadocont);
@@ -444,7 +445,7 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <button type='submit' class='btn btn-xl'><?php echo $botaoM ?></button>
 </div> 
 </form>
-<h2 class='section-heading emailsdepart'>Emails por departamentos:</h2>
+<h2 class='section-heading emailsdepart'><?php echo $emailsM ?> :</h2>
 <ul class='grid cs-style-3'>
 <?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadocont);
