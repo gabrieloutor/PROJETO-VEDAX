@@ -426,34 +426,7 @@ Cep: <input class='campo_botaohome' name='cep$i' type='text' value='$cep'><br><b
 <div class='row'>
 <div class='col-lg-12'>
 <div class='row'>
-<form name='sentMessage' id='contactForm' novalidate>
-<div class='col-md-6'>
-<div class='form-group'>
-<input name='name' type='text' class='form-control' placeholder='<?php echo $nomeContato ?> *' id='name' required data-validation-required-message='<?php echo $msgNomeContat ?>'>
-<p class='help-block text-danger'></p>
-</div>
-<div class='form-group'>
-<input name='email' type='email' class='form-control' placeholder='<?php echo $emailContato ?> *' id='email' required data-validation-required-message='<?php echo $msgEmailContat ?>'>
-<p class='help-block text-danger'></p>
-</div>
-<div class='form-group'>
-<input name='phone' type='tel' class='form-control' placeholder='<?php echo $telefoneContato ?> *' id='phone' required data-validation-required-message='<?php echo $msgTelContat ?>'>
-<p class='help-block text-danger'></p>
-</div>
-</div>
-<div class='col-md-6'>
-<div class='form-group'>
-<textarea name='message' class='form-control' placeholder='<?php echo $mensagemContato ?> *' id='message' required data-validation-required-message='<?php echo $msgMensagemContat ?>'></textarea>
-<p class='help-block text-danger'></p>
-</div>
-</div>
-<div class='clearfix'></div>
-<div class='col-lg-12 text-center'>
-<div id='success'></div>
-<button type='submit' class='btn btn-xl'><?php echo $botaoM ?></button>
-</div> 
-</form>
-<h2 class='section-heading emailsdepart'>Email Departamentos:</h2>
+<h2 class='section-heading emailsdepart'>Emails por departamentos:</h2>
 <ul class='grid cs-style-3'>
 <?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadocont);
