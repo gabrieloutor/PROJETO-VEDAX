@@ -315,7 +315,7 @@ $row = mysqli_fetch_array($resultadoClientes);
 $tituloCliente = replaceaccents($row["titulo"]);
 $imgCliente = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<div class='col-md-3 col-sm-6 clients'>
-<a href='#clients'>
+<a href='#clients' class='page-scroll'>
 <img src='img/clients/$imgCliente' class='img-responsive img-centered imgclients' alt='$tituloCliente' title='$tituloCliente'>
 </a>
 </div>";

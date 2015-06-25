@@ -8,6 +8,7 @@ if((!isset ($_SESSION['login']) == true) && (!isset ($_SESSION['password']) == t
 $logado = $_SESSION['login'];
 require "../config/config.ini";  
 if (!isset($tipoLinguagem)){
+    $tipoLinguagem="USA";
     $db="";
     $urlLing="en.php";
     $img = "usa.png";
@@ -161,7 +162,7 @@ echo "<div id='aviso'>Não utilize \"\" ou caracteres especiais no Site!</div>
 </form>
 </div>
 </header>
-<section id='about'>
+<section id='about' class='bg-light-gray'>
 <div class='container'>
 <form action='salvar.php' method='POST' name='salvarAbout' novalidate>
 <div class='row'>
@@ -195,7 +196,7 @@ echo "<img src='../img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 </div>
 <a id='back-top' href='#'></a>
 </section>
-<section id='produts' class='bg-light-gray'>
+<section id='produts'>
 <div class='container'>
 <form action='salvar.php' method='POST' name='salvarProducts' novalidate>
 <div class='row'>
@@ -232,7 +233,7 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 </form>
 </div>
 </section>
-<section id='processes'>
+<section id='processes' class='bg-light-gray'>
 <div class='container'>
 <form action='salvar.php' method='POST' name='salvarProcessos' novalidate>
 <div class='row'>
@@ -500,13 +501,11 @@ echo "<li>
 $row = mysqli_fetch_array($resultadoprodutos);
 $nome = replaceaccents($row["nome"]);
 $tipo = replaceaccents($row["tipo"]);
-$desc = replaceaccents($row["descricao"]);
-$descricao=nl2br($desc);
-$expl = replaceaccents($row["explicacao"]);
-$expli = stripslashes($expl);
-$explicacao=nl2br($expli);
+$descricao = replaceaccents($row["descricao"]);
+$explicacao = replaceaccents($row["explicacao"]);
 $img = htmlentities($row["imgprodut"], ENT_COMPAT, 'ISO-8859-1', true);
-echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' role='dialog' aria-hidden='true'>
+echo"<form action='salvar.php' method='POST' name='salvarProdutosProntos' novalidate>
+<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' role='dialog' aria-hidden='true'>
 <div class='modal-content'>
 <div class='close-modal' data-dismiss='modal'>
 <div class='lr'>
@@ -518,22 +517,24 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <div class='row'>
 <div class='col-lg-8 col-lg-offset-2'>
 <div class='modal-body'>
-<h2>$nome</h2>
-<p class='item-intro text-muted'>$tipo</p>
+<h2><input class='campo_botaohome' name='nome$i' type='text' value='$nome'></h2>
+<p class='item-intro text-muted'><input class='campo_botaohome' name='tipo$i' type='text' value='$tipo'></p>
 <img class='img-responsive img-centered imgprodut' src='../img/produts/$img' alt='$nome $tipo'>
-<p>$descricao</p>
-<p>
-$explicacao
-</p>
+<textarea name='descricao$i' class='campo_textoExplicacao' >$descricao</textarea>
+<textarea name='explicacao$i' class='campo_textoExplicacao' >$explicacao</textarea>
 <button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> $botaoProd</button>
+<input type='hidden' name='tipoLinguagem' value='$tipoLinguagem'>
+<br/><br/><input type='hidden' name='salvarProdutosProntos' value='$totalprodutos'><br/>
+<input type='submit' class='salvarabout' value='Salvar Produto'>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>";
-}
-for ($i = 1; $i <= $totalCertificados; $i++) {
+</div>
+</form>";
+} ?>
+<?php for ($i = 1; $i <= $totalCertificados; $i++) {
 $row = mysqli_fetch_array($resultadocert);
 $tituloCertificado = replaceaccents($row["titulo"]);
 $imgCertificado = replaceaccents($row["img"]);

@@ -70,6 +70,14 @@ if(!isset($_POST['salvarHome'])==false){
         $cep=htmlentities($_POST["cep$i"]);
         $dados = mysqli_query($conexao, "UPDATE empresa SET empresa = '$empresa', tipo$db='$tipo', telefone='$telefone', rua='$rua', nr='$nr', bairro='$bairro', cidade='$cidade', estado='$estado', cep='$cep' WHERE id = $i");
     }
+}else if (!isset($_POST['salvarProdutosProntos'])==false){
+    for($i=1;$i<=$_POST['salvarProducts'];$i++){
+        $nome=htmlentities($_POST["nome$i"]);
+        $nome=addslashes($nome);
+        $tipo=htmlentities($_POST["tipo$i"]);
+        $tipo=addslashes($tipo);
+        $dados = mysqli_query($conexao, "UPDATE produtos SET nome$db = '$nome', tipo$db='$tipo' WHERE id = '$i'");
+    }
 }else{
     echo "NÃO É FORM";
 }
