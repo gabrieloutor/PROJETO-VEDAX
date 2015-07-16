@@ -20,7 +20,7 @@ h4,
 h5,
 h6{text-transform:uppercase;font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
 .img-centered{margin:0 auto;}
-.bg-light-gray{background-color:rgba(237, 237, 237, 1);}
+.bg-light-gray{background-color:rgba(240, 240, 240, 1);}
 .bg-darkest-gray{background-color:#222;}
 .btn-primary{border-color:#007cd2;text-transform:uppercase;font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;color:#fff;background-color:#007cd2;}
 .btn-primary:hover,
