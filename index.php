@@ -480,7 +480,7 @@ echo "<li>
 <div class='container'>
 <div class='row'>
 <div class='col-md-4'>
-<span class='copyright'>Copyright <a href='<?php echo $facebookdesenvolvedor ?>' target='_blank'>&copy;</a><?php echo "$empresa $ano"; ?> </span>
+<span class='copyright'>Copyright &copy; <?php echo "$empresa $ano"; ?> </span>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline social-buttons'>
