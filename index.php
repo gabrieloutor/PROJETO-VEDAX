@@ -175,7 +175,7 @@ $text = replaceaccents($row["texto$db"]);
 $texto=nl2br($text);
 $textoFrase = replaceaccents($row["textoFrase$db"]);
 $qtfoto = 2;
-echo "<p class='text-muted'>$texto</p>
+echo "<p class='text-muted textoQuemSomos'>$texto</p>
 <p> </p>
 <div class='finalempresa'>
 $textoFrase<br><br></div>
@@ -471,6 +471,44 @@ echo "<li>
 </li>";
 }?>
 </ul>
+<!--
+<div style="width: 100%; margin-top: 10px; float: left;">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr height="30">
+<td width="50%" style="vertical-align: top;">
+<div class="accordionCard" id="accordion1">
+<div class="accordionCard-group">
+<div class="accordionCard-heading">
+<a class="sabores" href="#collapse1" data-parent="#accordion1" data-toggle="collapse">SETOR 1</a>
+</div>
+<div class="accordionCard-body collapse in" id="collapse1">
+<div class="accordionCard-inner">
+EMAIL SETOR 1
+</div>
+</div>
+</div>
+</div>
+</td>
+<td width="50%" style="vertical-align: top;">
+<div class="accordionCard" id="accordion1">
+<div class="accordionCard-group">
+<div class="accordionCard-heading">
+<a class="sabores" href="#collapse2" data-parent="#accordion1" data-toggle="collapse">SETOR 2</a>
+</div>
+<div class="accordionCard-body collapse" id="collapse2">
+<div class="accordionCard-inner">
+EMAIL SETOR 2
+</div>
+</div>
+</div>
+</div>
+</td>
+<tr></tr>
+</tbody>
+</table>
+</div>
+!-->
 </div>
 </div>
 </div>
