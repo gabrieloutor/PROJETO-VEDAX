@@ -1,5 +1,5 @@
 body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;}
-.text-muted{color:#777;}
+.text-muted{color:#777; text-align: justify;}
 .text-primary{color:#007cd2;}
 p{font-size:14px;line-height:1.75;}
 p.large{font-size:16px;}
