@@ -133,7 +133,7 @@ section h3.section-subheading{margin-bottom:75px;text-transform:none;font-family
 .timeline>li .timeline-panel{float:right;position:relative;width:100%;padding:0 20px 0 120px;text-align:left;}
 .timeline>li .timeline-panel:before{right:auto;left:-15px;border-right-width:15px;border-left-width:0;}
 .timeline>li .timeline-panel:after{right:auto;left:-14px;border-right-width:14px;border-left-width:0;}
-.timeline>li .timeline-image{z-index:100;position:absolute;left:0;width:80px;height:80px;margin-left:0;border:5px solid #e3e4e9;border-radius:100%;text-align:center;color:#fff;background-color:#007cd2;}
+.timeline>li .timeline-image{z-index:100;position:absolute;left:0;width:80px;height:80px;margin-left:0;border:5px solid #c9cace;border-radius:100%;text-align:center;color:#fff;background-color:#007cd2;}
 .timeline>li .timeline-image h4{margin-top:12px;font-size:10px;line-height:14px;}
 .timeline>li.timeline-inverted>.timeline-panel{float:right;padding:0 20px 0 120px;text-align:left;}
 .timeline>li.timeline-inverted>.timeline-panel:before{right:auto;left:-15px;border-right-width:15px;border-left-width:0;}
