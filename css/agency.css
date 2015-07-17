@@ -125,7 +125,7 @@ section h3.section-subheading{margin-bottom:75px;text-transform:none;font-family
 @media(min-width:767px){#produts .produts-item{margin:0 0 30px;}
 }
 .timeline{position:relative;padding:0;list-style:none;}
-.timeline:before{content:"";position:absolute;top:0;bottom:0;left:40px;width:2px;margin-left:-1.5px;background-color:#e3e4e9;}
+.timeline:before{content:"";position:absolute;top:0;bottom:0;left:40px;width:2.5px;margin-left:-1.5px;background-color:#c9cace;}
 .timeline>li{position:relative;margin-bottom:100px;min-height:50px;}
 .timeline>li:before,
 .timeline>li:after{content:" ";display:table;}
