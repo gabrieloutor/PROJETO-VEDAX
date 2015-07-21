@@ -31,7 +31,6 @@ $destinatario=$row[1];
 $mail->From = $destinatario;
 $mail->FromName = 'VEDAX';
 $mail->addAddress($destinatario); 
-$mail->addCC('gabriel.outor@hotmail.com'); // Add a recipient
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->Subject = 'Site Vedax';
