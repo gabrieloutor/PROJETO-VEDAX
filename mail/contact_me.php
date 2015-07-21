@@ -1,6 +1,6 @@
 <?php require "../config/config.ini"; ?>
 <?php
-header('Content-type: text/html; charset=ISO-8859-1');
+header("Content-Type: text/html; charset=ISO-8859-1", true); 
 date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
@@ -8,7 +8,7 @@ require '../PHPMailer/PHPMailerAutoload.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$departamento=$_POST['departament'];
+$departamento=replaceaccents($_POST['departament']);
 $message = $_POST['message'];
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
