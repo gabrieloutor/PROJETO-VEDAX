@@ -16,7 +16,7 @@ $mail->Host = $smtp;                     // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                            // Enable SMTP authentication
 $mail->Username = $emailcontato;               // SMTP username
 $mail->Password = $senha;                         // SMTP password
-//$mail->SMTPSecure = 'tls';                        // Enable encryption, only 'tls' is accepted
+$mail->SMTPSecure = 'tls';                        // Enable encryption, only 'tls' is accepted
 
 if ($_POST['tipoLinguagem']!=="BRA"){
     $db="";
