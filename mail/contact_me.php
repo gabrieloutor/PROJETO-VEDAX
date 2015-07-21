@@ -9,9 +9,10 @@ $name = replaceaccents(htmlentities($_POST['name']));
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $departamento=$_POST['departament'];
-$message = replaceaccents(htmlentities($_POST['message']));
+$message = $_POST['message'];
 $mail = new PHPMailer;
-$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->isSMTP();    
+$mail->isHTML(true);  // Set mailer to use SMTP
 $mail->Host = $smtp;                     // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                            // Enable SMTP authentication
 $mail->Username = $emailcontato;               // SMTP username
@@ -35,16 +36,13 @@ $mail->addAddress($destinatario);                 // Add a recipient
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->Subject = 'Site Vedax';
-$mail->Body = "<html>
-<body>
-HORA-> $hora_envio 
+$mail->Body = "
+            HORA-> $hora_envio 
             DIA-> $data_envio
             Nome: $name 
             Email: $email 
             Telefone: $phone  
             Departamento: $departamento
-            Mensagem: $message 
-</body>
-</html>MENSAGEM ENVIADA ";
+            Mensagem: $message ";
 $mail->send();
 return true;
