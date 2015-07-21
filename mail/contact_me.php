@@ -1,11 +1,10 @@
 <?php require "../config/config.ini"; ?>
 <?php
-header( 'Content-Type: text/html; charset=utf-8' );
 date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 require '../PHPMailer/PHPMailerAutoload.php';
-$name = replaceaccents(htmlentities($_POST['name']));
+$name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $departamento=$_POST['departament'];
@@ -27,7 +26,6 @@ if ($_POST['tipoLinguagem']!=="BRA"){
 $departamento=htmlentities($departamento);
 $dados = mysqli_query($conexao, "SELECT * from contato WHERE departamento$db='$departamento'");
 $row = mysqli_fetch_array($dados);
-$departamento=replaceaccents($departamento);
 
 $destinatario=$row[1];
 $mail->From = $destinatario;
@@ -43,6 +41,6 @@ $mail->Body = "
             Email: $email 
             Telefone: $phone  
             Departamento: $departamento
-            Mensagem: $message ";
+            Mensagem: $message This is the HTML message body <b>in bold!</b>";
 $mail->send();
 return true;
