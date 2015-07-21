@@ -15,5 +15,5 @@ $botaoM="Send Message";
 $botaoProd="Close Product";
 $botaoPdf="Close PDF";
 $msgDepartaments="Please select a department";
-$dep="Departament";
+$dep="Select a Department";
 include "index.php";

@@ -8,7 +8,7 @@ if (!isset($tipoLinguagem)){
     $telefoneContato="Seu Telefone";
     $emailContato="Seu Email";
     $mensagemContato="Mensagem";
-    $dep="Departamento";
+    $dep="Selecione um Departamento";
     $msgNomeContat="Por favor digite seu nome";
     $msgEmailContat="Por favor digite seu email";
     $msgTelContat="Por favor digite seu telefone";
@@ -17,7 +17,6 @@ if (!isset($tipoLinguagem)){
     $botaoM="Enviar Mensagem";
     $botaoProd="Fechar Produto";
     $botaoPdf="Fechar PDF";
-    $emailsM="Emails por departamentos";
 }
 $resultadoconta = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento$db");
 $resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento$db");
