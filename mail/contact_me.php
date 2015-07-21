@@ -7,7 +7,7 @@ require '../PHPMailer/PHPMailerAutoload.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$departamento=$_POST['departaments'];
+$departamento=$_POST['departament'];
 $message = $_POST['message'];
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
