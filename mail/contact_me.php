@@ -26,6 +26,7 @@ if ($_POST['tipoLinguagem']!=="BRA"){
 $departamento=htmlentities($departamento);
 $dados = mysqli_query($conexao, "SELECT * from contato WHERE departamento$db='$departamento'");
 $row = mysqli_fetch_array($dados);
+$departamento=replaceaccents($departamento);
 
 $destinatario=$row[1];
 $mail->From = $destinatario;
