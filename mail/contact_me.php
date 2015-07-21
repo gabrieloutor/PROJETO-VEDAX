@@ -1,6 +1,6 @@
 <?php require "../config/config.ini"; ?>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+header('Content-type: text/html; charset=ISO-8859-1');
 date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
