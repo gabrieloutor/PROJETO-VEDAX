@@ -35,7 +35,7 @@ $mail->addAddress($destinatario);                 // Add a recipient
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->Subject = 'Site Vedax';
 $mail->Body = "MENSAGEM ENVIADA 
-            HORA-> $hora_envio 
+            HORÁ-> $hora_envio 
             DIA-> $data_envio
             Nome: $name 
             Email: $email 
