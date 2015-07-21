@@ -467,6 +467,7 @@ echo "<option value='$departamento'>$departamento</option>";
 <div class='col-lg-12 text-center'>
 <div id='success'></div>
 <button type='submit' class='btn btn-xl'><?php echo $botaoM ?></button>
+<input type='hidden' name='tipoLinguagem' id='tipoLinguagem' value='<?php echo $tipoLinguagem ?>'>
 </div> 
 </form>
 <h2 class='section-heading emailsdepart'><?php echo $emailsM ?> :</h2>

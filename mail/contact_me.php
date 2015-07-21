@@ -17,6 +17,16 @@ $mail->Username = $emailcontato;               // SMTP username
 $mail->Password = $senha;                         // SMTP password
 $mail->SMTPSecure = 'tls';                        // Enable encryption, only 'tls' is accepted
 
+if ($_POST['tipoLinguagem']!=="BRA"){
+    $db="";
+}else if($_POST['tipoLinguagem']=="BRA"){
+    $db="_en";
+}
+$departamento=htmlentities($departamento);
+$dados = mysqli_query($conexao, "SELECT * from contato WHERE departamento$db='$departamento'");
+$row = mysqli_fetch_array($dados);
+
+$destinatario=$row[1];
 $mail->From = $destinatario;
 $mail->FromName = 'VEDAX';
 $mail->addAddress($destinatario);                 // Add a recipient
