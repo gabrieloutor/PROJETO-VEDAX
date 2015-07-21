@@ -4,11 +4,11 @@ date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 require '../PHPMailer/PHPMailerAutoload.php';
-$name = $_POST['name'];
+$name = replaceaccents($_POST['name']);
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $departamento=$_POST['departament'];
-$message = $_POST['message'];
+$message = replaceaccents($_POST['message']);
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = $smtp;                     // Specify main and backup SMTP servers
