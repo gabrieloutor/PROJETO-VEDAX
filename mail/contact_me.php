@@ -1,6 +1,6 @@
 <?php require "../config/config.ini"; ?>
 <?php
-header("Content-Type: text/html; charset=iso-8859-1", true);
+header( 'Content-Type: text/html; charset=utf-8' );
 date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
@@ -35,7 +35,7 @@ $mail->addAddress($destinatario);                 // Add a recipient
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->Subject = 'Site Vedax';
-$mail->Body = "MENSAGEM ENVIADA 
+$mail->Body = "<meta charset='utf-8' />MENSAGEM ENVIADA 
             HORA-> $hora_envio 
             DIA-> $data_envio
             Nome: $name 
