@@ -5,11 +5,11 @@ date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 require '../PHPMailer/PHPMailerAutoload.php';
-$name = $_POST['name'];
+$name = htmlentities($_POST['name']);
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $departamento=$_POST['departament'];
-$message = $_POST['message'];
+$message = htmlentities($_POST['message']);
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = $smtp;                     // Specify main and backup SMTP servers
@@ -36,7 +36,7 @@ $mail->addAddress($destinatario);                 // Add a recipient
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->Subject = 'Site Vedax';
 $mail->Body = "MENSAGEM ENVIADA 
-            HORÁ-> $hora_envio 
+            HORA-> $hora_envio 
             DIA-> $data_envio
             Nome: $name 
             Email: $email 
