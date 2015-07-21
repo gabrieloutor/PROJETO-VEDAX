@@ -8,6 +8,7 @@ if (!isset($tipoLinguagem)){
     $telefoneContato="Seu Telefone";
     $emailContato="Seu Email";
     $mensagemContato="Mensagem";
+    $dep="Departamento";
     $msgNomeContat="Por favor digite seu nome";
     $msgEmailContat="Por favor digite seu email";
     $msgTelContat="Por favor digite seu telefone";
@@ -446,7 +447,7 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 </div>
 <div class='form-group'>
 <select type='text' name='departament' class='form-control' id='departament' required data-validation-required-message='<?php echo $msgDepartaments; ?>'>
-<option value=''>Departamento</option>
+<option value=''><?php echo $dep ?></option>
 <?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadoconta);
 $email = replaceaccents($row["email"]);
@@ -470,60 +471,6 @@ echo "<option value='$departamento'>$departamento</option>";
 <button type='submit' class='btn btn-xl'><?php echo $botaoM ?></button>
 </div> 
 </form>
-<h2 class='section-heading emailsdepart'><?php echo $emailsM ?> :</h2>
-<ul class='grid cs-style-3'>
-<?php for ($i = 1; $i <= $totalcont; $i++) {
-$row = mysqli_fetch_array($resultadocont);
-$email = replaceaccents($row["email"]);
-$departamento = replaceaccents($row["departamento$db"]);
-echo "<li>
-<figure>
-<h2 class='section-email-contact'>$departamento</h2>
-<figcaption>
-<h3>$email</h3>
-</figcaption>
-</figure>
-</li>";
-}?>
-</ul>
-<!--
-<div style="width: 100%; margin-top: 10px; float: left;">
-<table width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr height="30">
-<td width="50%" style="vertical-align: top;">
-<div class="accordionCard" id="accordion1">
-<div class="accordionCard-group">
-<div class="accordionCard-heading">
-<a class="sabores" href="#collapse1" data-parent="#accordion1" data-toggle="collapse">SETOR 1</a>
-</div>
-<div class="accordionCard-body collapse in" id="collapse1">
-<div class="accordionCard-inner">
-EMAIL SETOR 1
-</div>
-</div>
-</div>
-</div>
-</td>
-<td width="50%" style="vertical-align: top;">
-<div class="accordionCard" id="accordion1">
-<div class="accordionCard-group">
-<div class="accordionCard-heading">
-<a class="sabores" href="#collapse2" data-parent="#accordion1" data-toggle="collapse">SETOR 2</a>
-</div>
-<div class="accordionCard-body collapse" id="collapse2">
-<div class="accordionCard-inner">
-EMAIL SETOR 2
-</div>
-</div>
-</div>
-</div>
-</td>
-<tr></tr>
-</tbody>
-</table>
-</div>
-!-->
 </div>
 </div>
 </div>
