@@ -42,5 +42,13 @@ $mail->Body = "
             Telefone: $phone  
             Departamento: $departamento
             Mensagem: $message This is the HTML message body <b>in bold!</b>";
+$mail->AltBody = "
+            HORA-> $hora_envio 
+            DIA-> $data_envio
+            Nome: $name 
+            Email: $email 
+            Telefone: $phone  
+            Departamento: $departamento
+            Mensagem: $message This is the HTML message body in bold!";
 $mail->send();
 return true;
