@@ -445,7 +445,7 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<select name='departament' class='form-control' id='departament' required data-validation-required-message='<?php echo $msgDepartaments; ?>'>
+<select type='text' name='departament' class='form-control' id='departament' required data-validation-required-message='<?php echo $msgDepartaments; ?>'>
 <option value=''>Departamento</option>
 <?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadoconta);
