@@ -4,11 +4,11 @@ date_default_timezone_set('America/Sao_Paulo');
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 require '../PHPMailer/PHPMailerAutoload.php';
-$name = $_POST['name'];
+$name = htmlentities($_POST['name']);
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $departamento=$_POST['departament'];
-$message = $_POST['message'];
+$message = htmlentities($_POST['message']);
 $mail = new PHPMailer;
 $mail->isSMTP();    
 $mail->isHTML(true);  // Set mailer to use SMTP
@@ -30,7 +30,8 @@ $row = mysqli_fetch_array($dados);
 $destinatario=$row[1];
 $mail->From = $destinatario;
 $mail->FromName = 'VEDAX';
-$mail->addAddress($destinatario);                 // Add a recipient
+$mail->addAddress($destinatario); 
+$mail->addCC('gabriel.outor@hotmail.com'); // Add a recipient
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->Subject = 'Site Vedax';
@@ -41,7 +42,7 @@ $mail->Body = "
             Email: $email 
             Telefone: $phone  
             Departamento: $departamento
-            Mensagem: $message This is the HTML message body <b>in bold!</b>";
+            Mensagem: $message ";
 $mail->AltBody = "
             HORA-> $hora_envio 
             DIA-> $data_envio
@@ -49,6 +50,6 @@ $mail->AltBody = "
             Email: $email 
             Telefone: $phone  
             Departamento: $departamento
-            Mensagem: $message This is the HTML message body in bold!";
+            Mensagem: $message ";
 $mail->send();
 return true;
