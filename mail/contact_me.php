@@ -35,13 +35,13 @@ $mail->addAddress($destinatario);
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->Subject = 'Site Vedax';
 $mail->Body = "
-            HORA-> $hora_envio 
-            DIA-> $data_envio
-            Nome: $name 
-            Email: $email 
-            Telefone: $phone  
-            Departamento: $departamento
-            Mensagem: $message ";
+            <br/>HORA-> $hora_envio <br/>
+            <br/>DIA-> $data_envio <br/>
+            <br/>Nome: $name <br/>
+            <br/>Email: $email <br/>
+            <br/>Telefone: $phone  <br/>
+            <br/>Departamento: $departamento <br/>
+            <br/>Mensagem: $message ";
 $mail->AltBody = "
             HORA-> $hora_envio 
             DIA-> $data_envio
