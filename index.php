@@ -12,11 +12,13 @@ if (!isset($tipoLinguagem)){
     $msgEmailContat="Por favor digite seu email";
     $msgTelContat="Por favor digite seu telefone";
     $msgMensagemContat="Por favor digite sua mensagem";
+    $msgDepartaments="Por favor selecione um departamento";
     $botaoM="Enviar Mensagem";
     $botaoProd="Fechar Produto";
     $botaoPdf="Fechar PDF";
     $emailsM="Emails por departamentos";
 }
+$resultadoconta = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento$db");
 $resultadocont = mysqli_query($conexao, "SELECT * from contato GROUP BY departamento$db");
 $totalcont = mysqli_num_rows($resultadocont);
 $resultadopaginas = mysqli_query($conexao, "SELECT * from paginas");
@@ -440,6 +442,18 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 </div>
 <div class='form-group'>
 <input name='phone' type='tel' class='form-control' placeholder='<?php echo $telefoneContato ?> *' id='phone' required data-validation-required-message='<?php echo $msgTelContat ?>'>
+<p class='help-block text-danger'></p>
+</div>
+<div class='form-group'>
+<select name='departaments' class='form-control' id='departaments' required data-validation-required-message='<?php echo $msgDepartaments; ?>'>
+<option value=''>Departamento</option>
+<?php for ($i = 1; $i <= $totalcont; $i++) {
+$row = mysqli_fetch_array($resultadoconta);
+$email = replaceaccents($row["email"]);
+$departamento = replaceaccents($row["departamento$db"]);
+echo "<option value='$departamento'>$departamento</option>";
+}?>
+</select>
 <p class='help-block text-danger'></p>
 </div>
 </div>

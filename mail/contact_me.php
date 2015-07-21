@@ -7,6 +7,7 @@ require '../PHPMailer/PHPMailerAutoload.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
+$departamento=$_POST['departaments'];
 $message = $_POST['message'];
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -27,7 +28,8 @@ $mail->Body = "MENSAGEM ENVIADA
             DIA-> $data_envio
             Nome: $name 
             Email: $email 
-            Telefone: $phone    
+            Telefone: $phone  
+            Departamento: $departamento
             Mensagem: $message ";
 $mail->send();
 return true;
