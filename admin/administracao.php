@@ -490,8 +490,8 @@ echo"<form action='salvar.php' method='POST' name='salvarProdutosProntos' novali
 <div class='row'>
 <div class='col-lg-8 col-lg-offset-2'>
 <div class='modal-body'>
-<h2><input class='campo_botaohome' name='nome$i' type='text' value='$nome'></h2>
-<p class='item-intro text-muted'><input class='campo_botaohome' name='tipo$i' type='text' value='$tipo'></p>
+<h2>$nome</h2>
+<p class='item-intro text-muted'>$tipo</p>
 <img class='img-responsive img-centered imgprodut' src='../img/produts/$img' alt='$nome $tipo'>
 <textarea name='descricao$i' class='campo_textoExplicacao' >$descricao</textarea>
 <textarea name='explicacao$i' class='campo_textoExplicacao' >$explicacao</textarea>

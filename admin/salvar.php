@@ -71,12 +71,12 @@ if(!isset($_POST['salvarHome'])==false){
         $dados = mysqli_query($conexao, "UPDATE empresa SET empresa = '$empresa', tipo$db='$tipo', telefone='$telefone', rua='$rua', nr='$nr', bairro='$bairro', cidade='$cidade', estado='$estado', cep='$cep' WHERE id = $i");
     }
 }else if (!isset($_POST['salvarProdutosProntos'])==false){
-    for($i=1;$i<=$_POST['salvarProducts'];$i++){
-        $nome=htmlentities($_POST["nome$i"]);
-        $nome=addslashes($nome);
-        $tipo=htmlentities($_POST["tipo$i"]);
-        $tipo=addslashes($tipo);
-        $dados = mysqli_query($conexao, "UPDATE produtos SET nome$db = '$nome', tipo$db='$tipo' WHERE id = '$i'");
+    for($i=1;$i<=$_POST['salvarProdutosProntos'];$i++){
+        $descricao=htmlentities($_POST["descricao$i"]);
+        $explicacao=htmlentities($_POST["explicacao$i"]);
+        $descricao=addslashes($descricao);
+        $explicacao=addslashes($explicacao);
+        $dados = mysqli_query($conexao, "UPDATE produtos SET descricao$db = '$descricao', explicacao$db='$explicacao' WHERE id = '$i'");
     }
 }else{
     echo "NÃO É FORM";
