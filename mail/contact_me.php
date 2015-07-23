@@ -8,7 +8,7 @@ $name = htmlentities($_POST['name']);
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $departamento=$_POST['departament'];
-$message = $_POST['message'];
+$message = nl2br(htmlentities($_POST['message']));
 $mail = new PHPMailer;
 $mail->isSMTP();    
 $mail->isHTML(true);  // Set mailer to use SMTP
@@ -40,7 +40,6 @@ $mail->Body = "
             <br/>Nome: $name <br/>
             <br/>Email: $email <br/>
             <br/>Telefone: $phone  <br/>
-            <br/>Departamento: $departamento <br/>
             <br/>Mensagem: $message ";
 $mail->AltBody = "
             HORA-> $hora_envio 
@@ -48,7 +47,6 @@ $mail->AltBody = "
             Nome: $name 
             Email: $email 
             Telefone: $phone  
-            Departamento: $departamento
             Mensagem: $message ";
 $mail->send();
 return true;
