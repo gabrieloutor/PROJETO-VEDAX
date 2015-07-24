@@ -96,7 +96,7 @@ $ano=date("Y");
 <span class='icon-bar'></span>
 </button>
 <a class='navbar-brand page-scroll' href='#page-top' >
-<img src='../img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
+<img src='../img/logos/logovedax3.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
 </a>
 <a class='iconLing' href='<?php echo $urlLing ?>' >
 <img src='../img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
