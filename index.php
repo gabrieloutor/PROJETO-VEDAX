@@ -104,9 +104,9 @@ $ano=date("Y");
 <a class='navbar-brand page-scroll' href='#page-top' >
 <img src='img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
 </a>
-<!--<a class='iconLing' href='<?php echo $urlLing ?>' >
+<a class='iconLing' href='<?php echo $urlLing ?>' >
 <img src='img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
-</a>-->
+</a>
 </div>
 <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
 <ul class='nav navbar-nav navbar-right'>
