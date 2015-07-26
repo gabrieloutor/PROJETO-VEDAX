@@ -36,6 +36,7 @@ $totalClientes = mysqli_num_rows($resultadoClientes);
 $resultadoCertificados = mysqli_query($conexao, "SELECT * from certificados");
 $totalCertificados = mysqli_num_rows($resultadoCertificados);
 $resultadolocalizacao = mysqli_query($conexao, "SELECT * from empresa");
+$resultadodescricaco = mysqli_query($conexao, "SELECT * from empresa");
 $totalempresa = mysqli_num_rows($resultadolocalizacao);
 $resultadoprodutos = mysqli_query($conexao, "SELECT * from produtos");
 $totalprodutos = mysqli_num_rows($resultadoprodutos);
@@ -48,6 +49,10 @@ $ano=date("Y");
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
+<?php 
+$row = mysqli_fetch_array($resultadodescricaco);
+$descricao=replaceaccents($row["descricao$db"]);
+?>
 <meta name='description' content='<?php echo $descricao ?>'>
 <meta name='keywords' content='vedax,aço,conexões,flanges,forjados,carbono,empresa,produtos'>
 <meta name='author' content='<?php echo $nomedesenvolvedor ?>'>
