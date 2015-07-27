@@ -8,7 +8,7 @@ if (!isset($tipoLinguagem)){
     $telefoneContato="Seu Telefone";
     $emailContato="Seu Email";
     $mensagemContato="Mensagem";
-    $dep="Selecione um Departamento";
+    $dep="Selecione um Departamento * ";
     $msgNomeContat="Por favor digite seu nome";
     $msgEmailContat="Por favor digite seu email";
     $msgTelContat="Por favor digite seu telefone";
