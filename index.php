@@ -266,7 +266,7 @@ echo "
 <h4>$titulo</h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='large text-muted'>$explicacao</p>
 </div>
 </div>
 </li>";
@@ -280,7 +280,7 @@ echo "<li class='timeline-inverted'>
 <h4>$titulo</h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='large text-muted'>$explicacao</p>
 </div>
 </div>
 </li>";
@@ -294,7 +294,7 @@ echo "<li class='timeline-inverted'>
 <h4>$titulo (<a href='http://www.steeltrat.com.br' target='_blank'>Steeltrat</a>)</h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='large text-muted'>$explicacao</p>
 </div>
 </div>
 </li>";
@@ -309,7 +309,7 @@ echo "<li>
 <h4>$titulo (<a href='http://www.steeltrat.com.br' target='_blank'>Steeltrat</a>)</h4>
 </div>
 <div class='timeline-body'>
-<p class='text-muted'>$explicacao</p>
+<p class='large text-muted'>$explicacao</p>
 </div>
 </div>
 </li>";
