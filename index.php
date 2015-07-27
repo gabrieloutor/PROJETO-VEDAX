@@ -182,7 +182,7 @@ $text = replaceaccents($row["texto$db"]);
 $texto=nl2br($text);
 $textoFrase = replaceaccents($row["textoFrase$db"]);
 $qtfoto = 2;
-echo "<p class='text-muted textoQuemSomos'>$texto</p>
+echo "<p class='large text-muted textoQuemSomos'>$texto</p>
 <p> </p>
 <div class='finalempresa'>
 $textoFrase<br><br></div>
