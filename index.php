@@ -251,10 +251,11 @@ echo "<div class='col-md-4 col-sm-6 produts-item positionproduts'>
 <?php for ($i = 1; $i <= $totalprocessos; $i++) {
 $row = mysqli_fetch_array($resultadoprocesses);
 $titulo = replaceaccents($row["titulo$db"]);
+$titulot = replaceaccents($row["titulo"]);
 $expl = replaceaccents($row["explicacao$db"]);
 $explicacao=nl2br($expl);
 $img = htmlentities($row["img"], ENT_COMPAT, 'ISO-8859-1', true);
-if($i%2==1 && $i!==$totalprocessos && ($titulo!=="TRATAMENTO TÉRMICO" || $titulo!=="HEAT TREATMENT")){
+if($i%2==1 && $i!==$totalprocessos && $titulot!=="TRATAMENTO TÉRMICO"){
 echo "
 <li>
 <div class='timeline-image'>
@@ -269,7 +270,7 @@ echo "
 </div>
 </div>
 </li>";
-}else if($i%2==0 && $i!==$totalprocessos && ($titulo!=="TRATAMENTO TÉRMICO" || $titulo!=="HEAT TREATMENT")){
+}else if($i%2==0 && $i!==$totalprocessos && $titulot!=="TRATAMENTO TÉRMICO"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
@@ -283,7 +284,7 @@ echo "<li class='timeline-inverted'>
 </div>
 </div>
 </li>";
-}else if ($i%2==0 && ($titulo=="TRATAMENTO TÉRMICO" || $titulo=="HEAT TREATMENT")){
+}else if ($i%2==0 && $titulot=="TRATAMENTO TÉRMICO"){
 echo "<li class='timeline-inverted'>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
@@ -298,7 +299,7 @@ echo "<li class='timeline-inverted'>
 </div>
 </li>";
 }
-else if ($i%2!==0 && ($titulo=="TRATAMENTO TÉRMICO" || $titulo=="HEAT TREATMENT")){
+else if ($i%2!==0 && $titulot=="TRATAMENTO TÉRMICO"){
 echo "<li>
 <div class='timeline-image'>
 <img class='img-circle img-responsive' src='img/processes/$img' alt='$titulo' title='$titulo'>
