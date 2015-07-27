@@ -529,8 +529,8 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <h2>$nome</h2>
 <p class='item-intro text-muted'>$tipo</p>
 <img class='img-responsive img-centered imgprodut' src='img/produts/$img' alt='$nome $tipo' title='$nome $tipo' >
-<p>$descricao</p>
-<p>
+<p class='text-muted large'>$descricao</p>
+<p class='text-muted large'>
 $explicacao
 </p>
 <button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> $botaoProd</button>
