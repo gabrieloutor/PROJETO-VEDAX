@@ -424,26 +424,7 @@ Cep: <input class='campo_botaohome' name='cep$i' type='text' value='$cep'><br><b
 </div>
 </div>
 <div class='row'>
-<div class='col-lg-12'>
-<div class='row'>
-<h2 class='section-heading emailsdepart'>Emails por departamentos:</h2>
-<ul class='grid cs-style-3'>
-<?php for ($i = 1; $i <= $totalcont; $i++) {
-$row = mysqli_fetch_array($resultadocont);
-$email = replaceaccents($row["email"]);
-$departamento = replaceaccents($row["departamento$db"]);
-echo "<li>
-<figure>
-<h2 class='section-email-contact'>$departamento</h2>
-<figcaption>
-<h3>$email</h3>
-</figcaption>
-</figure>
-</li>";
-}?>
-</ul>
-</div>
-</div>
+    
 </div>
 </div>
 </section>
@@ -451,7 +432,7 @@ echo "<li>
 <div class='container'>
 <div class='row'>
 <div class='col-md-4'>
-<span class='copyright'>Copyright <a href='<?php echo $facebookdesenvolvedor ?>' target='_blank'>&copy;</a><?php echo "$empresa $ano"; ?> </span>
+<span class='copyright'>Copyright &copy; <?php echo "$empresa $ano"; ?> </span>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline social-buttons'>
@@ -463,7 +444,7 @@ echo "<li>
 </div>
 <div class='col-md-4'>
 <ul class='list-inline quicklinks'>
-<li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br' target='_blank' ><img src='../img/google-safe-browsing.png' alt ='' /></a>
+<li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br' target='_blank' ><img src='img/google-safe-browsing.png' alt ='' /></a>
 </li>
 </ul>
 </div>
@@ -497,6 +478,7 @@ echo"<form action='salvar.php' method='POST' name='salvarProdutosProntos' novali
 <textarea name='explicacao$i' class='campo_textoExplicacao' >$explicacao</textarea>
 <button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> $botaoProd</button>
 <input type='hidden' name='tipoLinguagem' value='$tipoLinguagem'>
+<input type='hidden' name='tipoI' value='$i'>
 <br/><br/><input type='hidden' name='salvarProdutosProntos' value='$totalprodutos'><br/>
 <input type='submit' class='salvarabout' value='Salvar Produto'>
 </div>
@@ -543,7 +525,15 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <script src='../js/classie.js'></script>
 <script src='../js/cbpAnimatedHeader.js'></script>
 <script src='../js/jqBootstrapValidation.js'></script>
+<script src='../js/contact_me.js'></script>
 <script src='../js/agency.js'></script>
+<script type='text/javascript'>
+		// Este evendo é acionado após o carregamento da página
+		jQuery(window).load(function() {
+			//Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+			jQuery("#loader").delay(2000).fadeOut("slow");
+		});
+</script>
 </body>
 </html>
 <?php mysqli_close($conexao)  ?>
