@@ -54,7 +54,7 @@ $row = mysqli_fetch_array($resultadodescricaco);
 $descricao=replaceaccents($row["descricao$db"]);
 ?>
 <meta name='description' content='<?php echo $descricao ?>'>
-<meta name='keywords' content='vedax,aço,conexões,flanges,forjados,carbono,empresa,produtos'>
+<meta name='keywords' content='vedax,aço,conexões,flanges normativos,flanges forjados,aneis forjados,conexoes forjadas,flanges especiais,forjados especiais,flanges,forjados,carbono,empresa,produtos,comprar,anéis,discos,tubos,metalurgia,hidraulicos,niquel'>
 <meta name='author' content='<?php echo $nomedesenvolvedor ?>'>
 <title><?php echo $empresa ?></title>
 <link rel='icon' href='img/favicon.ico' />
