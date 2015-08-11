@@ -192,6 +192,7 @@ $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
 }?>
+<iframe allowfullscreen width="853" height="480" src="https://youtube.com/watch?v=unxHiQV2XdI" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 </div>
@@ -451,7 +452,7 @@ echo "<p class='localizacao'> <span style='font-size: 12pt;'>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<select type='text' name='departament' class='form-control' id='departament' required data-validation-required-message='<?php echo $msgDepartaments; ?>'>
+<select name='departament' class='form-control' id='departament' required data-validation-required-message='<?php echo $msgDepartaments; ?>'>
 <option value=''><?php echo $dep ?></option>
 <?php for ($i = 1; $i <= $totalcont; $i++) {
 $row = mysqli_fetch_array($resultadoconta);
