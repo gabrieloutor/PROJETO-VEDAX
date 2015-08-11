@@ -12,7 +12,7 @@ div.col-md-4.certificates{width:50%;}
 .back-top{width:46px;height:46px;display:block;margin-bottom:7px;background:url('../img/up.arrow.png') no-repeat center center;-webkit-transition:1s;-moz-transition:1s;transition:1s;border-radius:50%;border:3px solid #ffffff;background-color:transparent;}
 #vedaxlogo{height:60px;position:absolute;top:6px;left:90px;}
 .localizacao{line-height:22px;padding-right:30px;}
-iframe{float:right;width:40%;height:160px;}
+#framelocation{float:right;width:40%;height:160px;}
 #imgempresa{text-align:center;}
 .hrlocalizacao{margin-top:160px;margin-bottom:20px;width:100%;border:0px;border-top:3px solid #eee}
 .finalempresa{font-size:28px;text-align:center;font-family:'BellGothicStdBlack';font-weight:bold;line-height:100%;color:#007cd2;}
@@ -25,7 +25,7 @@ div.col-md-4.certificates{left:25%;}
 section h2.emailsdepart{margin-left: 10px; line-height: 70px;font-size:30px;}
 .hrlocalizacao{margin-top:20px;margin-bottom:20px;border:0px;width:100%;border-top:3px solid #eee}
 .timeline>li .timeline-image{margin-left: -15px; width: 110px; height: 110px;}
-iframe{float:left;width:100%; margin-bottom: 20px;}
+#framelocation{float:left;width:100%; margin-bottom: 20px;}
 .localizacao{float:left;}
 #vedaxlogo{height:43px;position:absolute;top:4px;left:30px;}
 .vedaxempresa{width:80%;height:220px;text-align:center;display:inline;padding-right:3px;padding-bottom:2px;}
@@ -44,7 +44,7 @@ div.col-md-4.certificates{left:25%;}
 #vedaxlogo{height: 60px; position: absolute; top: 6px; left: 0px;}
 .vedaxempresa{width:40%;height:350px;}
 .hrlocalizacao{margin-top:20px;margin-bottom:20px;border:0px;width:100%;border-top:3px solid #eee}
-iframe{float:left;margin-bottom:20px;width:100%;height:200px;}
+#framelocation{float:left;margin-bottom:20px;width:100%;height:200px;}
 .img-circle{float:left;width:120px;height:120px;border-radius:50%;}
 .imgclients{width:100%;height:10%;}
 }
@@ -54,7 +54,7 @@ div.col-md-4.certificates{left:0%;}
 .container>.navbar-collapse, .container>.navbar-header{margin-right:0;margin-left:0}
 #vedaxlogo{height:60px;position:absolute;top:6px;left:90px;}
 img#iconLinguagem{position: fixed; left: 96.5%;}
-iframe{float:left;margin-bottom:20px;width:100%;height:200px;}
+#framelocation{float:left;margin-bottom:20px;width:100%;height:200px;}
 .img-circle{float:left;width:140px;height:140px;border-radius:50%;}
 .imgclients{width:100%;height:10%;}
 .localizacao{float:left;}
@@ -62,13 +62,13 @@ iframe{float:left;margin-bottom:20px;width:100%;height:200px;}
 @media(min-width:1100px){.container-fluid>.navbar-collapse, .container-fluid>.navbar-header,
 .container>.navbar-collapse, .container>.navbar-header{margin-right:0;margin-left:0}
 img#iconLinguagem{position: fixed; left: 96.5%;}
-iframe{float:left;margin-bottom:20px;width:100%;height:200px;}
+#framelocation{float:left;margin-bottom:20px;width:100%;height:200px;}
 .img-circle{float:left;width:140px;height:140px;border-radius:50%;}
 }
 @media(min-width:1200px){.imgprodut{height:500px;width:auto;}
 .container-fluid>.navbar-collapse, .container-fluid>.navbar-header,
 .container>.navbar-collapse, .container>.navbar-header{margin-right:0;margin-left:0}
 img#iconLinguagem{position: fixed; left: 96.5%;}
-iframe{float:right;width:49%;height:160px;}
+#framelocation{float:right;width:49%;height:160px;}
 .img-circle{float:left;width:140px;height:140px;border-radius:50%;}
 }
