@@ -192,7 +192,9 @@ $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
 }?>
-<!--<iframe allowfullscreen width="853" height="480" src="https://youtube.com/watch?v=unxHiQV2XdI" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="420" height="315"
+src="https://youtu.be/unxHiQV2XdI">
+</iframe>
 </div>
 </div>
 </div>
@@ -388,7 +390,7 @@ echo "<div class='col-md-4 certificates'>
 </div>
 <div class='row'>
 <div class='col-sm-4'>
-<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973' style='border:0'>
+<iframe id='framelocation' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.232269276931!2d-46.87779399999999!3d-23.48814200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03a4ba9ed573%3A0x6adc5c7c4bb3d157!2sVedax+Equipamentos+Hidr%C3%A1ulicos+Ltda!5e0!3m2!1spt-BR!2sbr!4v1426962668973' style='border:0'>
 </iframe>
 <?php for ($i = 1; $i <= $totalempresa; $i++) {
 $row = mysqli_fetch_array($resultadolocalizacao);
