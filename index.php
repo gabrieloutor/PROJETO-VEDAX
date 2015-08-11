@@ -574,6 +574,7 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <object data='pdf/$pdfCertificado' type='application/pdf'>
 <a href='pdf/$pdfCertificado'>test.pdf</a>
 </object>
+<br>
 <button type='button' class='btn btn-primary' data-dismiss='modal'><i class='fa fa-times'></i> $botaoPdf</button>
 </div>
 </div>
