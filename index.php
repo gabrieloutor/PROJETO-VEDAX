@@ -192,9 +192,9 @@ $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
 }?>
-<iframe width="420" height="315"
+<!--<iframe width="420" height="315"
 src="https://youtu.be/unxHiQV2XdI">
-</iframe>
+</iframe>-->
 </div>
 </div>
 </div>
