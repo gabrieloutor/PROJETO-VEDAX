@@ -191,10 +191,18 @@ for ($i = 1; $i <= $qtfoto; $i++) {
 $img = htmlentities($row["img$i"], ENT_COMPAT, 'ISO-8859-1', true);
 echo "<img src='img/about/$img' alt='Foto $i' class='vedaxempresa' /> ";
 }
-}?>
-<!--<iframe width="420" height="315"
-src="https://youtu.be/unxHiQV2XdI">
-</iframe>-->
+}
+if($db){
+echo "<iframe class='vedaxempresa'
+src='https://www.youtube.com/embed/bbBwZrxzsC0' allowfullscreen>
+</iframe>";
+}else{
+echo "<iframe class='vedaxempresa'
+src='https://www.youtube.com/embed/unxHiQV2XdI' allowfullscreen>
+</iframe>";    
+}
+?>
+
 </div>
 </div>
 </div>
