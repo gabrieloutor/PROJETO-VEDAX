@@ -509,6 +509,8 @@ echo "<option value='$departamento'>$departamento</option>";
 <div class='col-md-4'>
 <ul class='list-inline quicklinks'>
 <li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br' target='_blank' ><img src='img/google-safe-browsing.png' alt ='' /></a>
+</li><br>
+<li>Desenvolvido: <a href='http://www.facebook.com.br/gabrieloutor' target='_blank' >Gabriel Outor</a>
 </li>
 </ul>
 </div>
