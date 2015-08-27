@@ -526,11 +526,11 @@ echo "<li>Desenvolvido por: <a href='https://www.facebook.com/gabriel.outor' tar
 </footer>
 <?php for ($i = 1; $i <= $totalprodutos; $i++) {
 $row = mysqli_fetch_array($resultadoprodutos);
-$nome = replaceaccents($row["nome"]);
-$tipo = replaceaccents($row["tipo"]);
-$desc = replaceaccents($row["descricao"]);
+$nome = replaceaccents($row["nome$db"]);
+$tipo = replaceaccents($row["tipo$db"]);
+$desc = replaceaccents($row["descricao$db"]);
 $descricao=nl2br($desc);
-$expl = replaceaccents($row["explicacao"]);
+$expl = replaceaccents($row["explicacao$db"]);
 $expli = stripslashes($expl);
 $explicacao=nl2br($expli);
 $img = htmlentities($row["imgprodut"], ENT_COMPAT, 'ISO-8859-1', true);
