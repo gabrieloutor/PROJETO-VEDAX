@@ -510,8 +510,15 @@ echo "<option value='$departamento'>$departamento</option>";
 <ul class='list-inline quicklinks'>
 <li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br' target='_blank' ><img src='img/google-safe-browsing.png' alt ='' /></a>
 </li><br>
-<li>Desenvolvido: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
-</li>
+<?php
+if($db){
+echo "<li>Developed by: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
+</li>";
+}else{
+echo "<li>Desenvolvido por: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
+</li>";    
+}
+?>
 </ul>
 </div>
 </div>
