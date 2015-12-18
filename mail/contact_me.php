@@ -38,7 +38,6 @@ $mail->Body = "
     <html>
     <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <meta http-equiv='content-type' content='text/html; charset=iso-8859-1' />
         <style>
             body{
                 font-family: 'Calibri, Arial, Helvetica, sans-serif';
@@ -88,7 +87,7 @@ $mail->Body = "
         </h1>
         <h2>
             <!-- ALTERE A LINHA A BAIXO COM SEU DEPARTAMENTO -->
-            Tecnologia da Informação / Information Tecnology
+            Tecnologia da ".nl2br(htmlentities("Informação"))." / Information Tecnology
         </h2>
         <hr>
         <section>
