@@ -71,6 +71,9 @@ $mail->Body = "
                 font-size: 16px;
                 color:#666666;
             }
+            .logo{
+                width: 350px;
+            }
         </style>
     </head>
     <body>
@@ -106,7 +109,7 @@ $mail->Body = "
         </section>
         <hr>
         <!-- NÃO ALTERE A LINHA ABAIXO -->
-        <img src='http://gabrieloutor.herokuapp.com/images_assinatura/logo_vedax.png'>
+        <img class='logo' src='http://gabrieloutor.herokuapp.com/images_assinatura/logo_vedax.png'>
         </body>
         </html>";
 $mail->AltBody = "
