@@ -61,6 +61,7 @@ $descricao=replaceaccents($row["descricao$db"]);
 <link href='css/bootstrap.min.css' rel='stylesheet'>
 <link href='css/bootstrap.css' rel='stylesheet'>
 <link href='css/agency.css' rel='stylesheet'>
+<link rel='stylesheet' href='css/flickity.css' media='screen'>
 <link href='css/custom.css' rel='stylesheet'>
 <link href='font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -78,6 +79,11 @@ $descricao=replaceaccents($row["descricao$db"]);
             js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -107,7 +113,7 @@ $descricao=replaceaccents($row["descricao$db"]);
 <span class='icon-bar'></span>
 </button>
 <a class='navbar-brand page-scroll' href='#page-top' >
-<img src='img/logos/logovedax.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
+<img src='img/logos/logovedaxa.png' alt='<?php echo $empresa ?>' id='vedaxlogo' title='Logo Vedax' />
 </a>
 <a class='iconLing' href='<?php echo $urlLing ?>' >
 <img src='img/icons/<?php echo $img ?>' alt='icon' id='iconLinguagem' />
@@ -548,7 +554,21 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <div class='modal-body'>
 <h2>$nome</h2>
 <p class='item-intro text-muted'>$tipo</p>
-<img class='img-responsive img-centered imgprodut' src='img/produts/$img' alt='$nome $tipo' title='$nome $tipo' >
+    
+<div class='flexslider'>
+  <ul class='slides'>
+    <li>
+      <img src='img/produts/produtanelediscoforjado.jpg' />
+    </li>
+    <li>
+      <img src='img/produts/produtanelediscoforjado.jpg' />
+    </li>
+    <li>
+      <img src='img/produts/produtanelediscoforjado.jpg' />
+    </li>
+  </ul>
+</div>
+
 <p class='text-muted large'>$descricao</p>
 <p class='text-muted large'>
 $explicacao
@@ -596,10 +616,11 @@ echo"<div class='produts-modal modal fade' id='$abreviacao' tabindex='-1' role='
 <script src='js/bootstrap.min.js'></script>
 <script src='js/jquery.easing.min.js'></script>
 <script src='js/classie.js'></script>
+<script src='js/flickity.pkgd.min.js'></script>
 <script src='js/cbpAnimatedHeader.js'></script>
 <script src='js/jqBootstrapValidation.js'></script>
 <script src='js/contact_me.js'></script>
-<script src='js/agency.js'></script>
+<script src='js/agency.js'></script> 
 <script type='text/javascript'>
 		// Este evendo é acionado após o carregamento da página
 		jQuery(window).load(function() {
