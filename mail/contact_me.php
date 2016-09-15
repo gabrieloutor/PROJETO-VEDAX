@@ -8,11 +8,11 @@ if (isset($_POST['g-recaptcha-response'])) {
 
 // Se nenhum valor foi recebido, o usuário não realizou o captcha
 if (!$captcha_data) {
-    exit;
+    return false;
 }
 $resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Leb0AYUAAAAAG_Y7pMUU-UW-wNYWMiRZEmEH4Nd&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
 if (!$resposta.success) {
-    exit;
+    return false;
 }
 
 $data_envio = date('d/m/Y');
