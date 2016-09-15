@@ -483,6 +483,7 @@ echo "<option value='$departamento'>$departamento</option>";
 </div>
 <div class='col-md-6'>
 <div class='form-group'>
+    <div class="g-recaptcha" data-sitekey="6LcFyAYUAAAAAHGre0D9SaGnbIj2U9txw4kzQLLx"></div>
 <textarea name='message' class='form-control' placeholder='<?php echo $mensagemContato ?> *' id='message' required data-validation-required-message='<?php echo $msgMensagemContat ?>'></textarea>
 <p class='help-block text-danger'></p>
 </div>
