@@ -100,6 +100,7 @@ $descricao=replaceaccents($row["descricao$db"]);
 ::-webkit-scrollbar-thumb {border-radius:5px;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.5);}
 ::-webkit-scrollbar-thumb {background:#007cd2;}
 </style>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body id='page-top' class='index'>
 <div id='loader'></div>
