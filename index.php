@@ -522,7 +522,7 @@ if($db){
 echo "<li>Developed by: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
 </li>";
 }else{
-echo "<li>Desenvolvido por: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
+echo "<li>Website Desenvolvido por: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
 </li>";    
 }
 ?>
