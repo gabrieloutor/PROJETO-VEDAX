@@ -1,6 +1,20 @@
 <?php require "../config/config.ini"; ?>
 <?php
 date_default_timezone_set('America/Sao_Paulo');
+// Verificacao ReCaptcha
+if (isset($_POST['g-recaptcha-response'])) {
+    $captcha_data = $_POST['g-recaptcha-response'];
+}
+
+// Se nenhum valor foi recebido, o usuário não realizou o captcha
+if (!$captcha_data) {
+    exit;
+}
+$resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Leb0AYUAAAAAG_Y7pMUU-UW-wNYWMiRZEmEH4Nd&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
+if (!$resposta.success) {
+    exit;
+}
+
 $data_envio = date('d/m/Y');
 $hora_envio = date('H:i:s');
 require '../PHPMailer/PHPMailerAutoload.php';

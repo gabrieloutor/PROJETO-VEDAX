@@ -483,8 +483,8 @@ echo "<option value='$departamento'>$departamento</option>";
 </div>
 <div class='col-md-6'>
 <div class='form-group'>
-    <div class="g-recaptcha" data-sitekey="6LcFyAYUAAAAAHGre0D9SaGnbIj2U9txw4kzQLLx"></div>
 <textarea name='message' class='form-control' placeholder='<?php echo $mensagemContato ?> *' id='message' required data-validation-required-message='<?php echo $msgMensagemContat ?>'></textarea>
+<div class="g-recaptcha" data-sitekey="6Leb0AYUAAAAAAJ3H1cNof6eK-cBxOe5xMUCsPUX"></div>
 <p class='help-block text-danger'></p>
 </div>
 </div>
@@ -523,7 +523,7 @@ if($db){
 echo "<li>Developed by: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
 </li>";
 }else{
-echo "<li>Website Desenvolvido por: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
+echo "<li>Desenvolvido por: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
 </li>";    
 }
 ?>
