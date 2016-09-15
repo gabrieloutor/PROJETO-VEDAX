@@ -2,8 +2,8 @@
 <?php
 date_default_timezone_set('America/Sao_Paulo');
 // Verificacao ReCaptcha
-if (isset($_POST['g-recaptcha-response'])) {
-    $captcha_data = $_POST['g-recaptcha-response'];
+if (isset($_POST['recaptcha'])) {
+    $captcha_data = $_POST['recaptcha'];
 }
 
 // Se nenhum valor foi recebido, o usuário não realizou o captcha
