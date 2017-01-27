@@ -79,11 +79,6 @@ $descricao=replaceaccents($row["descricao$db"]);
             js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-<script type="text/javascript">
-  $(window).load(function() {
-    $('.flexslider').flexslider();
-  });
-</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -556,13 +551,7 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <h2>$nome</h2>
 <p class='item-intro text-muted'>$tipo</p>
     
-<div class='flexslider'>
-  <ul class='slides'>
-    <li>
-      <img src='img/produts/$img' alt='$nome'/>
-    </li>
-  </ul>
-</div>
+<img class='img-responsive img-centered imgprodut' src='img/produts/$img' alt='$nome $tipo' title='$nome $tipo' >
 
 <p class='text-muted large'>$descricao</p>
 <p class='text-muted large'>
