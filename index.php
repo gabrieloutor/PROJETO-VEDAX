@@ -79,7 +79,7 @@ $descricao=replaceaccents($row["descricao$db"]);
             js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   $(window).load(function() {
     $('.flexslider').flexslider();
   });
@@ -516,7 +516,7 @@ echo "<option value='$departamento'>$departamento</option>";
 <div class='col-md-4'>
 <ul class='list-inline quicklinks'>
 <li><a href='http://www.google.com/safebrowsing/diagnostic?site=www.vedax.ind.br' target='_blank' ><img src='img/google-safe-browsing.png' alt ='' /></a>
-</li><br>
+</li>
 <?php
 if($db){
 echo "<li>Developed by: <a href='https://www.facebook.com/gabriel.outor' target='_blank' >Gabriel Outor</a>
