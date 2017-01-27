@@ -559,13 +559,7 @@ echo"<div class='produts-modal modal fade' id='produtsModal$i' tabindex='-1' rol
 <div class='flexslider'>
   <ul class='slides'>
     <li>
-      <img src='img/produts/produtanelediscoforjado.jpg' />
-    </li>
-    <li>
-      <img src='img/produts/produtanelediscoforjado.jpg' />
-    </li>
-    <li>
-      <img src='img/produts/produtanelediscoforjado.jpg' />
+      <img src='img/produts/$img' alt='$nome'/>
     </li>
   </ul>
 </div>
