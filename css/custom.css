@@ -130,6 +130,5 @@ object{width:600px;height:850px;}}
 
 #localizacaoAtendimentoDois ul li.nav-two a.current, #localizacaoAtendimento ul li.nav-two a.current { 
 	background-color: #007cd2 !important; 
-	color: #ededed; 
+	color: #fff; 
 }
-
