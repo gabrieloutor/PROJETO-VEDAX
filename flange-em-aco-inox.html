@@ -1070,7 +1070,7 @@ Instrumentos 3D para medições dimensionais.</p>
 <p class='help-block text-danger'></p>
 </div>
 <div class='form-group'>
-<!--<select name='indication' class='form-control' id='indication' required data-validation-required-message='Por favor selecione uma indicação'>
+<select name='indication' class='form-control' id='indication' required data-validation-required-message='Por favor selecione uma indicação'>
 <option value=''>Como nos conheceu ? * </option>
 <option value='Busca no Google'>Busca no Google</option>
 <option value='Outros Buscadores'>Outros Buscadores</option>
@@ -1079,7 +1079,7 @@ Instrumentos 3D para medições dimensionais.</p>
 <option value='Facebook'>Facebook</option>
 <option value='Indicação'>Indicação</option>
 <option value='Outros'>Outros</option>
-</select>-->
+</select>
 <p class='help-block text-danger'></p>
 </div>
 </div>
@@ -1087,6 +1087,10 @@ Instrumentos 3D para medições dimensionais.</p>
 <div class='form-group'>
 <textarea name='message' class='form-control' placeholder='Mensagem *' id='message' required data-validation-required-message='Por favor digite sua mensagem'></textarea>
 <p class='help-block text-danger'></p>
+</div>
+<div class='form-group'>
+    <div class="g-recaptcha" data-sitekey="6Leb0AYUAAAAAAJ3H1cNof6eK-cBxOe5xMUCsPUX"></div>
+    <p class='help-block text-danger'></p>
 </div>
 </div>
 <div class='clearfix'></div>
@@ -1169,6 +1173,7 @@ Forjamento no perfil.
 <script async src='js/jqBootstrapValidation.js'></script>
 <script async src='js/contact_me.js'></script>
 <script async src='js/agency.js'></script> 
+<script async src='https://www.google.com/recaptcha/api.js'></script>
 <script type='text/javascript'>
 		// Este evendo é acionado após o carregamento da página
 		jQuery(window).load(function() {
