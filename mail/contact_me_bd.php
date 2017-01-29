@@ -16,7 +16,7 @@ require '../PHPMailer/PHPMailerAutoload.php';
 $stmt = $conexao->prepare("INSERT INTO faleconosco (dataHora, nome, email, telefone, departamento, conheceu, mensagem) VALUES (?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssssss", $dataHora, $nome, $email, $telefone, $departamento, $conheceu, $mensagem);
 
-$dataHora = '2012-06-18 10:34:09';
+$dataHora = date('Y-m-d H:i:s');
 $nome = htmlentities($_POST['name']);
 $email = $_POST['email'];
 $telefone = $_POST['phone'];
