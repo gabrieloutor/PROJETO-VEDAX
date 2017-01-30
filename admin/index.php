@@ -18,6 +18,11 @@ if (!isset($_POST['login'])){
             $_SESSION['loginInfor'] = $nome;
             $_SESSION['password'] = $senha;
             header("Location: administracao.php");
+            if($acesso == 5){
+                header("Location: orcamentos.php");
+                $stmt->close();
+            }
+            
         } else {
             unset ($_SESSION['login']);
             unset ($_SESSION['password']);
